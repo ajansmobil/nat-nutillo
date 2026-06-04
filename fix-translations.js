@@ -36,7 +36,7 @@ var EXTRA_PHRASES = [
   ["Gaziantep ve Türkiye geneli tedarik", "Supply across Gaziantep and Turkey", "توريد من غازي عنتاب وعبر تركيا", "Lieferung aus Gaziantep und in der gesamten Türkei", "가지안테프 및 터키 전역 공급"],
   ["Antep fıstığı ezme ve krema: kavrulmuş, doğal ve kremamsı çeşitler", "Gaziantep pistachio paste and cream: roasted, natural and creamy varieties", "معجون وكريمة فستق عنتاب: أصناف محمصة وطبيعية وكريمية", "Antep-Pistazienpaste und -creme: geröstete, natürliche und cremige Sorten", "가지안테프 피스타치오 페이스트·크림: 로스팅·천연·크리미 제품"],
   ["Gaziantep menşeli Antep fıstığından üretilen", "produced from Gaziantep pistachios from Gaziantep", "منتج من فستق عنتاب من غازي عنتاب", "hergestellt aus Antep-Pistazien aus Gaziantep", "가지안테프산 가지안테프 피스타치오로 생산"],
-  ["Nat Nutillo ürünleri seçilmiş hammaddeden, katkısız ve izlenebilir üretim anlayışıyla Gaziantep tesislerimizde hazırlanır. Toptan sipariş ve numune talepleri için iletişim sayfamızdan bize ulaşabilirsiniz.", "Nat Nutillo products are prepared at our Gaziantep facility from selected ingredients with an additive-free, traceable approach. For wholesale orders and samples, contact us via our contact page.", "تُحضَّر منتجات نات نوتيلو في منشأة غازي عنتاب من مواد خام مختارة بإنتاج قابل للتتبع وخالٍ من الإضافات غير الضرورية. للطلبات بالجملة والعينات تواصلوا معنا عبر صفحة الاتصال.", "Nat Nutillo-Produkte werden in unserer Anlage in Gaziantep aus ausgewählten Rohstoffen nachvollziehbar und möglichst ohne Zusatzstoffe hergestellt. Für Großbestellungen und Muster kontaktieren Sie uns über die Kontaktseite.", "Nat Nutillo 제품은 엄선 원료로 가지안테프 시설에서 무첨가·이력 추적 생산합니다. 도매·샘플 문의는 문의 페이지를 이용해 주세요."]
+  ["Tillo Tarim ürünleri seçilmiş hammaddeden, katkısız ve izlenebilir üretim anlayışıyla Gaziantep tesislerimizde hazırlanır. Toptan sipariş ve numune talepleri için iletişim sayfamızdan bize ulaşabilirsiniz.", "Tillo Tarim products are prepared at our Gaziantep facility from selected ingredients with an additive-free, traceable approach. For wholesale orders and samples, contact us via our contact page.", "تُحضَّر منتجات تيلو تاريم في منشأة غازي عنتاب من مواد خام مختارة بإنتاج قابل للتتبع وخالٍ من الإضافات غير الضرورية. للطلبات بالجملة والعينات تواصلوا معنا عبر صفحة الاتصال.", "Tillo Tarim-Produkte werden in unserer Anlage in Gaziantep aus ausgewählten Rohstoffen nachvollziehbar und möglichst ohne Zusatzstoffe hergestellt. Für Großbestellungen und Muster kontaktieren Sie uns über die Kontaktseite.", "Tillo Tarim 제품은 엄선 원료로 가지안테프 시설에서 무첨가·이력 추적 생산합니다. 도매·샘플 문의는 문의 페이지를 이용해 주세요."]
 ];
 var ALL_PHRASES = SORTED_PHRASES.concat(
   EXTRA_PHRASES.sort(function (a, b) {
@@ -484,13 +484,36 @@ function fixHubPages() {
         page.title = {
           tr: "Ürünlerimiz | " + BRAND,
           en: "Our Products | " + BRAND,
-          ar: "منتجاتنا | نات نوتيلو",
+          ar: "منتجاتنا | تيلو تاريم",
           de: "Unsere Produkte | " + BRAND,
           ko: "제품 | " + BRAND
         };
         page.name.tr = "Ürünler";
+      } else {
+        var ti;
+        for (ti = 0; ti < activeLangs.length; ti++) {
+          var tlang = activeLangs[ti];
+          var tnm = (page.name && page.name[tlang]) || (page.name && page.name.tr) || "";
+          if (!page.title) {
+            page.title = { tr: "" };
+          }
+          page.title[tlang] = tnm + " | " + BRAND;
+        }
       }
-      fixPageRecord(page, { skipProductText: true });
+      if (!page.text) {
+        page.text = { tr: "" };
+      }
+      var tx;
+      for (tx = 0; tx < activeLangs.length; tx++) {
+        var txlang = activeLangs[tx];
+        page.text[txlang] = buildSimpleText(page, txlang);
+      }
+      stripInactiveLangKeys(page.name);
+      stripInactiveLangKeys(page.description);
+      stripInactiveLangKeys(page.keyword);
+      stripInactiveLangKeys(page.title);
+      stripInactiveLangKeys(page.text);
+      stats.textBuilt++;
     });
   }
 }
@@ -515,7 +538,7 @@ function fixKurumsalJson() {
 
 
 function main() {
-  console.log("Nat Nutillo — fix-translations.js" + (dryRun ? " (dry-run)" : ""));
+  console.log("Tillo Tarim — fix-translations.js" + (dryRun ? " (dry-run)" : ""));
   loadActiveLangs();
   console.log("Aktif diller:", activeLangs.join(", "));
 
