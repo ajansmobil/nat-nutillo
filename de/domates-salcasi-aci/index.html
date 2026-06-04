@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=d7zfc" />
-  <link rel="preload" href="/src/cookie.css?v=d7zfc" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=fnq9c" />
+  <link rel="preload" href="/src/cookie.css?v=fnq9c" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=d7zfc" />
+    <link rel="stylesheet" href="/src/cookie.css?v=fnq9c" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=d7zfc" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=fnq9c" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=d7zfc">
+<link rel="stylesheet" href="style.css?v=fnq9c">
 </head>
 
 <body>
   <div id="header">
-<div class="pbt65">
-  <div class="pbt65title">
-    <div class="pbt65titlebody">
-      <div class="pbt65titlebodylang">
+<div class="hwc10">
+  <div class="hwc10title">
+    <div class="hwc10titlebody">
+      <div class="hwc10titlebodylang">
         <ul>
           <li><a href="/tr/domates-salcasi-aci/">TR</a></li><li><a href="/en/domates-salcasi-aci/">EN</a></li><li><a href="/ar/domates-salcasi-aci/">AR</a></li><li><a href="/de/domates-salcasi-aci/">DE</a></li><li><a href="/ko/domates-salcasi-aci/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="pbt65body">
+  <div class="hwc10body">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=kcd86"
+        src="/img/tillotarim-logo.png?v=aqs9j"
         alt="Tillo Tarim Logo"
-        class="pbt65bodylogo"
+        class="hwc10bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="pbt65-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="hwc10-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="pbt65-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="pbt65menubody">
-    <div class="pbt65menu" id="menu-2-root">
-      <div class="pbt65menulistbody">
-        <div class="pbt65menulist">
+  <div class="hwc10-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="hwc10menubody">
+    <div class="hwc10menu" id="menu-2-root">
+      <button type="button" class="hwc10-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="hwc10menulistbody">
+        <div class="hwc10menulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="hwc10menulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-hwc10"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="pbt65languages-mobile">
+      <div class="hwc10languages-mobile">
         <ul>
           <li><a href="/tr/domates-salcasi-aci/">TR</a></li><li><a href="/en/domates-salcasi-aci/">EN</a></li><li><a href="/ar/domates-salcasi-aci/">AR</a></li><li><a href="/de/domates-salcasi-aci/">DE</a></li><li><a href="/ko/domates-salcasi-aci/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".pbt65") : null;
+      var wrapper = root.closest ? root.closest(".hwc10") : null;
       var target = wrapper || root;
-      if (target.classList.contains("pbt65menu-open")) {
-        target.classList.remove("pbt65menu-open");
+      if (target.classList.contains("hwc10menu-open")) {
+        target.classList.remove("hwc10menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("pbt65menu-open");
+        target.classList.add("hwc10menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".hwc10") : null;
+      var target = wrapper || root;
+      target.classList.remove("hwc10menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".hwc10menulist-menu.dropdown-content-active-hwc10");
+      if (activeWrap) {
+        activeWrap.classList.add("hwc10-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".hwc10menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-hwc10")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("hwc10-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".hwc10menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("hwc10-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("hwc10-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".hwc10menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".hwc10menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("hwc10-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="x8k0f-title">
+  <div id="content"><div class="g2flm-title">
   <h1>Domates Salçası (Acı)</h1>
 </div>
-<div class="x8k0f">
-  <button type="button" class="x8k0f-menu-btn" aria-expanded="false" aria-controls="x8k0f-menu">
-    <span class="x8k0f-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined x8k0f-icon" aria-hidden="true">menu</span>
+<div class="g2flm">
+  <button type="button" class="g2flm-menu-btn" aria-expanded="false" aria-controls="g2flm-menu">
+    <span class="g2flm-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined g2flm-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="x8k0f-menu-overlay" id="x8k0f-menu-overlay" aria-hidden="true"></div>
-  <nav class="x8k0f-menu" id="x8k0f-menu" aria-label="Menü">
-    <button class="x8k0f-menu-close" type="button" aria-label="Menü schließen">
+  <div class="g2flm-menu-overlay" id="g2flm-menu-overlay" aria-hidden="true"></div>
+  <nav class="g2flm-menu" id="g2flm-menu" aria-label="Menü">
+    <button class="g2flm-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="x8k0f-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="x8k0f-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="x8k0f-menu-link" href="/de/findik-ezme-ve-krema/"><span class="x8k0f-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="x8k0f-menu-link" href="/de/badem-ezme-ve-krema/"><span class="x8k0f-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="x8k0f-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="x8k0f-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="x8k0f-menu-link" href="/de/kurutulmus-meyveler/"><span class="x8k0f-menu-link-text">Trockenfrüchte</span></a><a class="x8k0f-menu-link" href="/de/meyve-cipsleri/"><span class="x8k0f-menu-link-text">Fruchtchips</span></a><a class="x8k0f-menu-link" href="/de/kurutulmus-sebzeler/"><span class="x8k0f-menu-link-text">Trockengemüse</span></a><a class="x8k0f-menu-link" href="/de/recel-ve-marmelatlar/"><span class="x8k0f-menu-link-text">Marmeladen & Konfitüren</span></a><a class="x8k0f-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="x8k0f-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="x8k0f-menu-link" href="/de/meyve-sulari/"><span class="x8k0f-menu-link-text">Fruchtsäfte</span></a><a class="x8k0f-menu-link" href="/de/pekmez-ve-suruplar/"><span class="x8k0f-menu-link-text">Melasse & Sirupe</span></a><a class="x8k0f-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="x8k0f-menu-link-text">Milch & Milchprodukte</span></a><a class="x8k0f-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="x8k0f-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="x8k0f-menu-link" href="/de/sivi-yaglar/"><span class="x8k0f-menu-link-text">Flüssige Öle</span></a><a class="x8k0f-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="x8k0f-menu-link-text">Medizinische Aromaöle</span></a><a class="x8k0f-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="x8k0f-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="x8k0f-menu-link" href="/de/iqf-meyveler/"><span class="x8k0f-menu-link-text">IQF-Früchte</span></a>
+    <a class="g2flm-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="g2flm-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="g2flm-menu-link" href="/de/findik-ezme-ve-krema/"><span class="g2flm-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="g2flm-menu-link" href="/de/badem-ezme-ve-krema/"><span class="g2flm-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="g2flm-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="g2flm-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="g2flm-menu-link" href="/de/kurutulmus-meyveler/"><span class="g2flm-menu-link-text">Trockenfrüchte</span></a><a class="g2flm-menu-link" href="/de/meyve-cipsleri/"><span class="g2flm-menu-link-text">Fruchtchips</span></a><a class="g2flm-menu-link" href="/de/kurutulmus-sebzeler/"><span class="g2flm-menu-link-text">Trockengemüse</span></a><a class="g2flm-menu-link" href="/de/recel-ve-marmelatlar/"><span class="g2flm-menu-link-text">Marmeladen & Konfitüren</span></a><a class="g2flm-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="g2flm-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="g2flm-menu-link" href="/de/meyve-sulari/"><span class="g2flm-menu-link-text">Fruchtsäfte</span></a><a class="g2flm-menu-link" href="/de/pekmez-ve-suruplar/"><span class="g2flm-menu-link-text">Melasse & Sirupe</span></a><a class="g2flm-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="g2flm-menu-link-text">Milch & Milchprodukte</span></a><a class="g2flm-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="g2flm-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="g2flm-menu-link" href="/de/sivi-yaglar/"><span class="g2flm-menu-link-text">Flüssige Öle</span></a><a class="g2flm-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="g2flm-menu-link-text">Medizinische Aromaöle</span></a><a class="g2flm-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="g2flm-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="g2flm-menu-link" href="/de/iqf-meyveler/"><span class="g2flm-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="x8k0f-main">
-    <div class="x8k0f-row"><div class="x8k0f-row-media"><div class="x8k0f-img"><img src="/page/aq6ymeeq62/index.webp?v=u0ycu" alt="Domates Salçası (Acı)" loading="lazy" /></div></div><div class="x8k0f-row-desc"><p class="x8k0f-lead">Tillo Tarim Domates Salçası (Acı): Acı domates salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 830 g. Naturkost aus Gaziantep.</p><div class="x8k0f-desc-tags"><span class="x8k0f-desc-tag"><span class="x8k0f-desc-tag-label">Grammatur</span><span class="x8k0f-desc-tag-value">830 g</span></span><span class="x8k0f-desc-tag"><span class="x8k0f-desc-tag-label">Verpackung</span><span class="x8k0f-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="x8k0f-desc-tag"><span class="x8k0f-desc-tag-label">Herkunft</span><span class="x8k0f-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="x8k0f-body"><h2 style="font-size: 22px;">Domates Salçası (Acı)</h2>
+  <div class="g2flm-main">
+    <div class="g2flm-row"><div class="g2flm-row-media"><div class="g2flm-img"><img src="/page/aq6ymeeq62/index.webp?v=b0t9f" alt="Domates Salçası (Acı)" loading="lazy" /></div></div><div class="g2flm-row-desc"><p class="g2flm-lead">Tillo Tarim Domates Salçası (Acı): Acı domates salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 830 g. Naturkost aus Gaziantep.</p><div class="g2flm-desc-tags"><span class="g2flm-desc-tag"><span class="g2flm-desc-tag-label">Grammatur</span><span class="g2flm-desc-tag-value">830 g</span></span><span class="g2flm-desc-tag"><span class="g2flm-desc-tag-label">Verpackung</span><span class="g2flm-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="g2flm-desc-tag"><span class="g2flm-desc-tag-label">Herkunft</span><span class="g2flm-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="g2flm-body"><h2 style="font-size: 22px;">Domates Salçası (Acı)</h2>
 <p style="font-size: 16px;">Tillo Tarim Domates Salçası (Acı): Acı domates salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 830 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 830 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".x8k0f-menu-btn");
-    var menu = document.querySelector(".x8k0f-menu");
-    var overlay = document.querySelector(".x8k0f-menu-overlay");
-    var closeButton = document.querySelector(".x8k0f-menu-close");
+    var menuToggleBtn = document.querySelector(".g2flm-menu-btn");
+    var menu = document.querySelector(".g2flm-menu");
+    var overlay = document.querySelector(".g2flm-menu-overlay");
+    var closeButton = document.querySelector(".g2flm-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".x8k0f-menu-close")) {
+      if (link && !event.target.closest(".g2flm-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=d7zfc"></script>
-  <script defer src="/src/cookie.js?v=d7zfc"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=fnq9c"></script>
+  <script defer src="/src/cookie.js?v=fnq9c"></script>
 
   <script>
     setTimeout(function() {

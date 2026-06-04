@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=f1sbf" />
-  <link rel="preload" href="/src/cookie.css?v=f1sbf" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=el7sn" />
+  <link rel="preload" href="/src/cookie.css?v=el7sn" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=f1sbf" />
+    <link rel="stylesheet" href="/src/cookie.css?v=el7sn" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=f1sbf" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=el7sn" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=f1sbf">
+<link rel="stylesheet" href="style.css?v=el7sn">
 </head>
 
 <body>
   <div id="header">
-<div class="r6js4">
-  <div class="r6js4title">
-    <div class="r6js4titlebody">
-      <div class="r6js4titlebodylang">
+<div class="sgbbl">
+  <div class="sgbbltitle">
+    <div class="sgbbltitlebody">
+      <div class="sgbbltitlebodylang">
         <ul>
           <li><a href="/tr/cevizli-biber-mezesi/">TR</a></li><li><a href="/en/cevizli-biber-mezesi/">EN</a></li><li><a href="/ar/cevizli-biber-mezesi/">AR</a></li><li><a href="/de/cevizli-biber-mezesi/">DE</a></li><li><a href="/ko/cevizli-biber-mezesi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="r6js4body">
+  <div class="sgbblbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=s079g"
+        src="/img/tillotarim-logo.png?v=hpg8z"
         alt="Tillo Tarim Logo"
-        class="r6js4bodylogo"
+        class="sgbblbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="r6js4-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="sgbbl-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="r6js4-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="r6js4menubody">
-    <div class="r6js4menu" id="menu-2-root">
-      <div class="r6js4menulistbody">
-        <div class="r6js4menulist">
+  <div class="sgbbl-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="sgbblmenubody">
+    <div class="sgbblmenu" id="menu-2-root">
+      <button type="button" class="sgbbl-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="sgbblmenulistbody">
+        <div class="sgbblmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="sgbblmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-sgbbl"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="r6js4languages-mobile">
+      <div class="sgbbllanguages-mobile">
         <ul>
           <li><a href="/tr/cevizli-biber-mezesi/">TR</a></li><li><a href="/en/cevizli-biber-mezesi/">EN</a></li><li><a href="/ar/cevizli-biber-mezesi/">AR</a></li><li><a href="/de/cevizli-biber-mezesi/">DE</a></li><li><a href="/ko/cevizli-biber-mezesi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".r6js4") : null;
+      var wrapper = root.closest ? root.closest(".sgbbl") : null;
       var target = wrapper || root;
-      if (target.classList.contains("r6js4menu-open")) {
-        target.classList.remove("r6js4menu-open");
+      if (target.classList.contains("sgbblmenu-open")) {
+        target.classList.remove("sgbblmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("r6js4menu-open");
+        target.classList.add("sgbblmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".sgbbl") : null;
+      var target = wrapper || root;
+      target.classList.remove("sgbblmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".sgbblmenulist-menu.dropdown-content-active-sgbbl");
+      if (activeWrap) {
+        activeWrap.classList.add("sgbbl-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".sgbblmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-sgbbl")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("sgbbl-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".sgbblmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("sgbbl-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("sgbbl-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".sgbblmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".sgbblmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("sgbbl-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="mpwkh-title">
+  <div id="content"><div class="aq9wq-title">
   <h1>Cevizli Biber Mezesi</h1>
 </div>
-<div class="mpwkh">
-  <button type="button" class="mpwkh-menu-btn" aria-expanded="false" aria-controls="mpwkh-menu">
-    <span class="mpwkh-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined mpwkh-icon" aria-hidden="true">menu</span>
+<div class="aq9wq">
+  <button type="button" class="aq9wq-menu-btn" aria-expanded="false" aria-controls="aq9wq-menu">
+    <span class="aq9wq-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined aq9wq-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="mpwkh-menu-overlay" id="mpwkh-menu-overlay" aria-hidden="true"></div>
-  <nav class="mpwkh-menu" id="mpwkh-menu" aria-label="Menu">
-    <button class="mpwkh-menu-close" type="button" aria-label="Close Menu">
+  <div class="aq9wq-menu-overlay" id="aq9wq-menu-overlay" aria-hidden="true"></div>
+  <nav class="aq9wq-menu" id="aq9wq-menu" aria-label="Menu">
+    <button class="aq9wq-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="mpwkh-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="mpwkh-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="mpwkh-menu-link" href="/en/findik-ezme-ve-krema/"><span class="mpwkh-menu-link-text">Hazelnut Paste & Cream</span></a><a class="mpwkh-menu-link" href="/en/badem-ezme-ve-krema/"><span class="mpwkh-menu-link-text">Almond Paste & Cream</span></a><a class="mpwkh-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="mpwkh-menu-link-text">Peanut Paste & Cream</span></a><a class="mpwkh-menu-link" href="/en/kurutulmus-meyveler/"><span class="mpwkh-menu-link-text">Dried Fruits</span></a><a class="mpwkh-menu-link" href="/en/meyve-cipsleri/"><span class="mpwkh-menu-link-text">Fruit Chips</span></a><a class="mpwkh-menu-link" href="/en/kurutulmus-sebzeler/"><span class="mpwkh-menu-link-text">Dried Vegetables</span></a><a class="mpwkh-menu-link" href="/en/recel-ve-marmelatlar/"><span class="mpwkh-menu-link-text">Jams & Marmalades</span></a><a class="mpwkh-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="mpwkh-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="mpwkh-menu-link" href="/en/meyve-sulari/"><span class="mpwkh-menu-link-text">Fruit Juices</span></a><a class="mpwkh-menu-link" href="/en/pekmez-ve-suruplar/"><span class="mpwkh-menu-link-text">Molasses & Syrups</span></a><a class="mpwkh-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="mpwkh-menu-link-text">Milk & Dairy Products</span></a><a class="mpwkh-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="mpwkh-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="mpwkh-menu-link" href="/en/sivi-yaglar/"><span class="mpwkh-menu-link-text">Liquid Oils</span></a><a class="mpwkh-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="mpwkh-menu-link-text">Medicinal Aromatic Oils</span></a><a class="mpwkh-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="mpwkh-menu-link-text">IQF Sliced Vegetables</span></a><a class="mpwkh-menu-link" href="/en/iqf-meyveler/"><span class="mpwkh-menu-link-text">IQF Fruits</span></a>
+    <a class="aq9wq-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="aq9wq-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="aq9wq-menu-link" href="/en/findik-ezme-ve-krema/"><span class="aq9wq-menu-link-text">Hazelnut Paste & Cream</span></a><a class="aq9wq-menu-link" href="/en/badem-ezme-ve-krema/"><span class="aq9wq-menu-link-text">Almond Paste & Cream</span></a><a class="aq9wq-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="aq9wq-menu-link-text">Peanut Paste & Cream</span></a><a class="aq9wq-menu-link" href="/en/kurutulmus-meyveler/"><span class="aq9wq-menu-link-text">Dried Fruits</span></a><a class="aq9wq-menu-link" href="/en/meyve-cipsleri/"><span class="aq9wq-menu-link-text">Fruit Chips</span></a><a class="aq9wq-menu-link" href="/en/kurutulmus-sebzeler/"><span class="aq9wq-menu-link-text">Dried Vegetables</span></a><a class="aq9wq-menu-link" href="/en/recel-ve-marmelatlar/"><span class="aq9wq-menu-link-text">Jams & Marmalades</span></a><a class="aq9wq-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="aq9wq-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="aq9wq-menu-link" href="/en/meyve-sulari/"><span class="aq9wq-menu-link-text">Fruit Juices</span></a><a class="aq9wq-menu-link" href="/en/pekmez-ve-suruplar/"><span class="aq9wq-menu-link-text">Molasses & Syrups</span></a><a class="aq9wq-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="aq9wq-menu-link-text">Milk & Dairy Products</span></a><a class="aq9wq-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="aq9wq-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="aq9wq-menu-link" href="/en/sivi-yaglar/"><span class="aq9wq-menu-link-text">Liquid Oils</span></a><a class="aq9wq-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="aq9wq-menu-link-text">Medicinal Aromatic Oils</span></a><a class="aq9wq-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="aq9wq-menu-link-text">IQF Sliced Vegetables</span></a><a class="aq9wq-menu-link" href="/en/iqf-meyveler/"><span class="aq9wq-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="mpwkh-main">
-    <div class="mpwkh-row"><div class="mpwkh-row-media"><div class="mpwkh-img"><img src="/page/5uu2aeuyii/index.webp?v=laz6h" alt="Cevizli Biber Mezesi" loading="lazy" /></div></div><div class="mpwkh-row-desc"><p class="mpwkh-lead">Tillo Tarim Cevizli Biber Mezesi: Kahvaltılık meze. Tomato Paste, Pickles, Meze & Sauces category. Available sizes: 300 g. natural food from Gaziantep.</p><div class="mpwkh-desc-tags"><span class="mpwkh-desc-tag"><span class="mpwkh-desc-tag-label">Net weight</span><span class="mpwkh-desc-tag-value">300 g</span></span><span class="mpwkh-desc-tag"><span class="mpwkh-desc-tag-label">Packaging</span><span class="mpwkh-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="mpwkh-desc-tag"><span class="mpwkh-desc-tag-label">Origin</span><span class="mpwkh-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="mpwkh-body"><h2 style="font-size: 22px;">Cevizli Biber Mezesi</h2>
+  <div class="aq9wq-main">
+    <div class="aq9wq-row"><div class="aq9wq-row-media"><div class="aq9wq-img"><img src="/page/5uu2aeuyii/index.webp?v=l8smr" alt="Cevizli Biber Mezesi" loading="lazy" /></div></div><div class="aq9wq-row-desc"><p class="aq9wq-lead">Tillo Tarim Cevizli Biber Mezesi: Kahvaltılık meze. Tomato Paste, Pickles, Meze & Sauces category. Available sizes: 300 g. natural food from Gaziantep.</p><div class="aq9wq-desc-tags"><span class="aq9wq-desc-tag"><span class="aq9wq-desc-tag-label">Net weight</span><span class="aq9wq-desc-tag-value">300 g</span></span><span class="aq9wq-desc-tag"><span class="aq9wq-desc-tag-label">Packaging</span><span class="aq9wq-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="aq9wq-desc-tag"><span class="aq9wq-desc-tag-label">Origin</span><span class="aq9wq-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="aq9wq-body"><h2 style="font-size: 22px;">Cevizli Biber Mezesi</h2>
 <p style="font-size: 16px;">Tillo Tarim Cevizli Biber Mezesi: Kahvaltılık meze. Tomato Paste, Pickles, Meze & Sauces category. Available sizes: 300 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 300 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".mpwkh-menu-btn");
-    var menu = document.querySelector(".mpwkh-menu");
-    var overlay = document.querySelector(".mpwkh-menu-overlay");
-    var closeButton = document.querySelector(".mpwkh-menu-close");
+    var menuToggleBtn = document.querySelector(".aq9wq-menu-btn");
+    var menu = document.querySelector(".aq9wq-menu");
+    var overlay = document.querySelector(".aq9wq-menu-overlay");
+    var closeButton = document.querySelector(".aq9wq-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".mpwkh-menu-close")) {
+      if (link && !event.target.closest(".aq9wq-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=f1sbf"></script>
-  <script defer src="/src/cookie.js?v=f1sbf"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=el7sn"></script>
+  <script defer src="/src/cookie.js?v=el7sn"></script>
 
   <script>
     setTimeout(function() {

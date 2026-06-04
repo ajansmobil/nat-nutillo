@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=e1a1a" />
-  <link rel="preload" href="/src/cookie.css?v=e1a1a" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=uid8u" />
+  <link rel="preload" href="/src/cookie.css?v=uid8u" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=e1a1a" />
+    <link rel="stylesheet" href="/src/cookie.css?v=uid8u" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=e1a1a" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=uid8u" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=e1a1a">
+<link rel="stylesheet" href="style.css?v=uid8u">
 </head>
 
 <body>
   <div id="header">
-<div class="g570m">
-  <div class="g570mtitle">
-    <div class="g570mtitlebody">
-      <div class="g570mtitlebodylang">
+<div class="ytv2j">
+  <div class="ytv2jtitle">
+    <div class="ytv2jtitlebody">
+      <div class="ytv2jtitlebodylang">
         <ul>
           <li><a href="/tr/kuru-kabak/">TR</a></li><li><a href="/en/kuru-kabak/">EN</a></li><li><a href="/ar/kuru-kabak/">AR</a></li><li><a href="/de/kuru-kabak/">DE</a></li><li><a href="/ko/kuru-kabak/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="g570mbody">
+  <div class="ytv2jbody">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=ohs8s"
+        src="/img/tillotarim-logo.png?v=odu8y"
         alt="Tillo Tarim Logo"
-        class="g570mbodylogo"
+        class="ytv2jbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="g570m-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="ytv2j-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="g570m-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="g570mmenubody">
-    <div class="g570mmenu" id="menu-2-root">
-      <div class="g570mmenulistbody">
-        <div class="g570mmenulist">
+  <div class="ytv2j-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="ytv2jmenubody">
+    <div class="ytv2jmenu" id="menu-2-root">
+      <button type="button" class="ytv2j-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="ytv2jmenulistbody">
+        <div class="ytv2jmenulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="ytv2jmenulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-ytv2j"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="g570mlanguages-mobile">
+      <div class="ytv2jlanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-kabak/">TR</a></li><li><a href="/en/kuru-kabak/">EN</a></li><li><a href="/ar/kuru-kabak/">AR</a></li><li><a href="/de/kuru-kabak/">DE</a></li><li><a href="/ko/kuru-kabak/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".g570m") : null;
+      var wrapper = root.closest ? root.closest(".ytv2j") : null;
       var target = wrapper || root;
-      if (target.classList.contains("g570mmenu-open")) {
-        target.classList.remove("g570mmenu-open");
+      if (target.classList.contains("ytv2jmenu-open")) {
+        target.classList.remove("ytv2jmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("g570mmenu-open");
+        target.classList.add("ytv2jmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".ytv2j") : null;
+      var target = wrapper || root;
+      target.classList.remove("ytv2jmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".ytv2jmenulist-menu.dropdown-content-active-ytv2j");
+      if (activeWrap) {
+        activeWrap.classList.add("ytv2j-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".ytv2jmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-ytv2j")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("ytv2j-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".ytv2jmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("ytv2j-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("ytv2j-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".ytv2jmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".ytv2jmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("ytv2j-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="ynjc7-title">
+  <div id="content"><div class="rcurw-title">
   <h1>건조 Kabak</h1>
 </div>
-<div class="ynjc7">
-  <button type="button" class="ynjc7-menu-btn" aria-expanded="false" aria-controls="ynjc7-menu">
-    <span class="ynjc7-menu-btn-label">메뉴</span>
-    <span class="material-symbols-outlined ynjc7-icon" aria-hidden="true">menu</span>
+<div class="rcurw">
+  <button type="button" class="rcurw-menu-btn" aria-expanded="false" aria-controls="rcurw-menu">
+    <span class="rcurw-menu-btn-label">메뉴</span>
+    <span class="material-symbols-outlined rcurw-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="ynjc7-menu-overlay" id="ynjc7-menu-overlay" aria-hidden="true"></div>
-  <nav class="ynjc7-menu" id="ynjc7-menu" aria-label="메뉴">
-    <button class="ynjc7-menu-close" type="button" aria-label="메뉴 닫기">
+  <div class="rcurw-menu-overlay" id="rcurw-menu-overlay" aria-hidden="true"></div>
+  <nav class="rcurw-menu" id="rcurw-menu" aria-label="메뉴">
+    <button class="rcurw-menu-close" type="button" aria-label="메뉴 닫기">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="ynjc7-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="ynjc7-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="ynjc7-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="ynjc7-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="ynjc7-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="ynjc7-menu-link-text">아몬드 페이스트·크림</span></a><a class="ynjc7-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="ynjc7-menu-link-text">땅콩 페이스트·크림</span></a><a class="ynjc7-menu-link" href="/ko/kurutulmus-meyveler/"><span class="ynjc7-menu-link-text">건과일</span></a><a class="ynjc7-menu-link" href="/ko/meyve-cipsleri/"><span class="ynjc7-menu-link-text">과일 칩</span></a><a class="ynjc7-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="ynjc7-menu-link-text">건채소</span></a><a class="ynjc7-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="ynjc7-menu-link-text">잼·마멀레이드</span></a><a class="ynjc7-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="ynjc7-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="ynjc7-menu-link" href="/ko/meyve-sulari/"><span class="ynjc7-menu-link-text">과일 주스</span></a><a class="ynjc7-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="ynjc7-menu-link-text">당밀·시럽</span></a><a class="ynjc7-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="ynjc7-menu-link-text">우유·유제품</span></a><a class="ynjc7-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="ynjc7-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="ynjc7-menu-link" href="/ko/sivi-yaglar/"><span class="ynjc7-menu-link-text">유장류 오일</span></a><a class="ynjc7-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="ynjc7-menu-link-text">의료용 아로마 오일</span></a><a class="ynjc7-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="ynjc7-menu-link-text">IQF 채소 슬라이스</span></a><a class="ynjc7-menu-link" href="/ko/iqf-meyveler/"><span class="ynjc7-menu-link-text">IQF 과일</span></a>
+    <a class="rcurw-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="rcurw-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="rcurw-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="rcurw-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="rcurw-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="rcurw-menu-link-text">아몬드 페이스트·크림</span></a><a class="rcurw-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="rcurw-menu-link-text">땅콩 페이스트·크림</span></a><a class="rcurw-menu-link" href="/ko/kurutulmus-meyveler/"><span class="rcurw-menu-link-text">건과일</span></a><a class="rcurw-menu-link" href="/ko/meyve-cipsleri/"><span class="rcurw-menu-link-text">과일 칩</span></a><a class="rcurw-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="rcurw-menu-link-text">건채소</span></a><a class="rcurw-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="rcurw-menu-link-text">잼·마멀레이드</span></a><a class="rcurw-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="rcurw-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="rcurw-menu-link" href="/ko/meyve-sulari/"><span class="rcurw-menu-link-text">과일 주스</span></a><a class="rcurw-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="rcurw-menu-link-text">당밀·시럽</span></a><a class="rcurw-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="rcurw-menu-link-text">우유·유제품</span></a><a class="rcurw-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="rcurw-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="rcurw-menu-link" href="/ko/sivi-yaglar/"><span class="rcurw-menu-link-text">유장류 오일</span></a><a class="rcurw-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="rcurw-menu-link-text">의료용 아로마 오일</span></a><a class="rcurw-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="rcurw-menu-link-text">IQF 채소 슬라이스</span></a><a class="rcurw-menu-link" href="/ko/iqf-meyveler/"><span class="rcurw-menu-link-text">IQF 과일</span></a>
   </nav>
-  <div class="ynjc7-main">
-    <div class="ynjc7-row"><div class="ynjc7-row-media"><div class="ynjc7-img"><img src="/page/8auie6622m/index.webp?v=k8hg6" alt="건조 Kabak" loading="lazy" /></div></div><div class="ynjc7-row-desc"><p class="ynjc7-lead">Tillo Tarim 건조 Kabak: 슬라이스 kabak kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p><div class="ynjc7-desc-tags"><span class="ynjc7-desc-tag"><span class="ynjc7-desc-tag-label">중량</span><span class="ynjc7-desc-tag-value">100 g</span></span><span class="ynjc7-desc-tag"><span class="ynjc7-desc-tag-label">포장</span><span class="ynjc7-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="ynjc7-desc-tag"><span class="ynjc7-desc-tag-label">원산지</span><span class="ynjc7-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="ynjc7-body"><h2 style="font-size: 22px;">건조 Kabak</h2>
+  <div class="rcurw-main">
+    <div class="rcurw-row"><div class="rcurw-row-media"><div class="rcurw-img"><img src="/page/8auie6622m/index.webp?v=jqccw" alt="건조 Kabak" loading="lazy" /></div></div><div class="rcurw-row-desc"><p class="rcurw-lead">Tillo Tarim 건조 Kabak: 슬라이스 kabak kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p><div class="rcurw-desc-tags"><span class="rcurw-desc-tag"><span class="rcurw-desc-tag-label">중량</span><span class="rcurw-desc-tag-value">100 g</span></span><span class="rcurw-desc-tag"><span class="rcurw-desc-tag-label">포장</span><span class="rcurw-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="rcurw-desc-tag"><span class="rcurw-desc-tag-label">원산지</span><span class="rcurw-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="rcurw-body"><h2 style="font-size: 22px;">건조 Kabak</h2>
 <p style="font-size: 16px;">Tillo Tarim 건조 Kabak: 슬라이스 kabak kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>중량:</strong> 100 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".ynjc7-menu-btn");
-    var menu = document.querySelector(".ynjc7-menu");
-    var overlay = document.querySelector(".ynjc7-menu-overlay");
-    var closeButton = document.querySelector(".ynjc7-menu-close");
+    var menuToggleBtn = document.querySelector(".rcurw-menu-btn");
+    var menu = document.querySelector(".rcurw-menu");
+    var overlay = document.querySelector(".rcurw-menu-overlay");
+    var closeButton = document.querySelector(".rcurw-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".ynjc7-menu-close")) {
+      if (link && !event.target.closest(".rcurw-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=e1a1a"></script>
-  <script defer src="/src/cookie.js?v=e1a1a"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=uid8u"></script>
+  <script defer src="/src/cookie.js?v=uid8u"></script>
 
   <script>
     setTimeout(function() {

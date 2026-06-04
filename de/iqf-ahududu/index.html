@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=o8oof" />
-  <link rel="preload" href="/src/cookie.css?v=o8oof" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=iblqv" />
+  <link rel="preload" href="/src/cookie.css?v=iblqv" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=o8oof" />
+    <link rel="stylesheet" href="/src/cookie.css?v=iblqv" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=o8oof" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=iblqv" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=o8oof">
+<link rel="stylesheet" href="style.css?v=iblqv">
 </head>
 
 <body>
   <div id="header">
-<div class="vmn2i">
-  <div class="vmn2ititle">
-    <div class="vmn2ititlebody">
-      <div class="vmn2ititlebodylang">
+<div class="u21dr">
+  <div class="u21drtitle">
+    <div class="u21drtitlebody">
+      <div class="u21drtitlebodylang">
         <ul>
           <li><a href="/tr/iqf-ahududu/">TR</a></li><li><a href="/en/iqf-ahududu/">EN</a></li><li><a href="/ar/iqf-ahududu/">AR</a></li><li><a href="/de/iqf-ahududu/">DE</a></li><li><a href="/ko/iqf-ahududu/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="vmn2ibody">
+  <div class="u21drbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=skqea"
+        src="/img/tillotarim-logo.png?v=yceqh"
         alt="Tillo Tarim Logo"
-        class="vmn2ibodylogo"
+        class="u21drbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="vmn2i-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="u21dr-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="vmn2i-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="vmn2imenubody">
-    <div class="vmn2imenu" id="menu-2-root">
-      <div class="vmn2imenulistbody">
-        <div class="vmn2imenulist">
+  <div class="u21dr-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="u21drmenubody">
+    <div class="u21drmenu" id="menu-2-root">
+      <button type="button" class="u21dr-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="u21drmenulistbody">
+        <div class="u21drmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="u21drmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-u21dr"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="vmn2ilanguages-mobile">
+      <div class="u21drlanguages-mobile">
         <ul>
           <li><a href="/tr/iqf-ahududu/">TR</a></li><li><a href="/en/iqf-ahududu/">EN</a></li><li><a href="/ar/iqf-ahududu/">AR</a></li><li><a href="/de/iqf-ahududu/">DE</a></li><li><a href="/ko/iqf-ahududu/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".vmn2i") : null;
+      var wrapper = root.closest ? root.closest(".u21dr") : null;
       var target = wrapper || root;
-      if (target.classList.contains("vmn2imenu-open")) {
-        target.classList.remove("vmn2imenu-open");
+      if (target.classList.contains("u21drmenu-open")) {
+        target.classList.remove("u21drmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("vmn2imenu-open");
+        target.classList.add("u21drmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".u21dr") : null;
+      var target = wrapper || root;
+      target.classList.remove("u21drmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".u21drmenulist-menu.dropdown-content-active-u21dr");
+      if (activeWrap) {
+        activeWrap.classList.add("u21dr-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".u21drmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-u21dr")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("u21dr-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".u21drmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("u21dr-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("u21dr-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".u21drmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".u21drmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("u21dr-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="wymqq-title">
+  <div id="content"><div class="rtxqd-title">
   <h1>IQF Ahududu</h1>
 </div>
-<div class="wymqq">
-  <button type="button" class="wymqq-menu-btn" aria-expanded="false" aria-controls="wymqq-menu">
-    <span class="wymqq-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined wymqq-icon" aria-hidden="true">menu</span>
+<div class="rtxqd">
+  <button type="button" class="rtxqd-menu-btn" aria-expanded="false" aria-controls="rtxqd-menu">
+    <span class="rtxqd-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined rtxqd-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="wymqq-menu-overlay" id="wymqq-menu-overlay" aria-hidden="true"></div>
-  <nav class="wymqq-menu" id="wymqq-menu" aria-label="Menü">
-    <button class="wymqq-menu-close" type="button" aria-label="Menü schließen">
+  <div class="rtxqd-menu-overlay" id="rtxqd-menu-overlay" aria-hidden="true"></div>
+  <nav class="rtxqd-menu" id="rtxqd-menu" aria-label="Menü">
+    <button class="rtxqd-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="wymqq-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="wymqq-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="wymqq-menu-link" href="/de/findik-ezme-ve-krema/"><span class="wymqq-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="wymqq-menu-link" href="/de/badem-ezme-ve-krema/"><span class="wymqq-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="wymqq-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="wymqq-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="wymqq-menu-link" href="/de/kurutulmus-meyveler/"><span class="wymqq-menu-link-text">Trockenfrüchte</span></a><a class="wymqq-menu-link" href="/de/meyve-cipsleri/"><span class="wymqq-menu-link-text">Fruchtchips</span></a><a class="wymqq-menu-link" href="/de/kurutulmus-sebzeler/"><span class="wymqq-menu-link-text">Trockengemüse</span></a><a class="wymqq-menu-link" href="/de/recel-ve-marmelatlar/"><span class="wymqq-menu-link-text">Marmeladen & Konfitüren</span></a><a class="wymqq-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wymqq-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="wymqq-menu-link" href="/de/meyve-sulari/"><span class="wymqq-menu-link-text">Fruchtsäfte</span></a><a class="wymqq-menu-link" href="/de/pekmez-ve-suruplar/"><span class="wymqq-menu-link-text">Melasse & Sirupe</span></a><a class="wymqq-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="wymqq-menu-link-text">Milch & Milchprodukte</span></a><a class="wymqq-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="wymqq-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="wymqq-menu-link" href="/de/sivi-yaglar/"><span class="wymqq-menu-link-text">Flüssige Öle</span></a><a class="wymqq-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="wymqq-menu-link-text">Medizinische Aromaöle</span></a><a class="wymqq-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="wymqq-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="wymqq-menu-link" href="/de/iqf-meyveler/"><span class="wymqq-menu-link-text">IQF-Früchte</span></a>
+    <a class="rtxqd-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="rtxqd-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="rtxqd-menu-link" href="/de/findik-ezme-ve-krema/"><span class="rtxqd-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="rtxqd-menu-link" href="/de/badem-ezme-ve-krema/"><span class="rtxqd-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="rtxqd-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="rtxqd-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="rtxqd-menu-link" href="/de/kurutulmus-meyveler/"><span class="rtxqd-menu-link-text">Trockenfrüchte</span></a><a class="rtxqd-menu-link" href="/de/meyve-cipsleri/"><span class="rtxqd-menu-link-text">Fruchtchips</span></a><a class="rtxqd-menu-link" href="/de/kurutulmus-sebzeler/"><span class="rtxqd-menu-link-text">Trockengemüse</span></a><a class="rtxqd-menu-link" href="/de/recel-ve-marmelatlar/"><span class="rtxqd-menu-link-text">Marmeladen & Konfitüren</span></a><a class="rtxqd-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="rtxqd-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="rtxqd-menu-link" href="/de/meyve-sulari/"><span class="rtxqd-menu-link-text">Fruchtsäfte</span></a><a class="rtxqd-menu-link" href="/de/pekmez-ve-suruplar/"><span class="rtxqd-menu-link-text">Melasse & Sirupe</span></a><a class="rtxqd-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="rtxqd-menu-link-text">Milch & Milchprodukte</span></a><a class="rtxqd-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="rtxqd-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="rtxqd-menu-link" href="/de/sivi-yaglar/"><span class="rtxqd-menu-link-text">Flüssige Öle</span></a><a class="rtxqd-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="rtxqd-menu-link-text">Medizinische Aromaöle</span></a><a class="rtxqd-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="rtxqd-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="rtxqd-menu-link" href="/de/iqf-meyveler/"><span class="rtxqd-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="wymqq-main">
-    <div class="wymqq-row"><div class="wymqq-row-media"><div class="wymqq-img"><img src="/page/kmei2i6im2/index.webp?v=yvjsk" alt="IQF Ahududu" loading="lazy" /></div></div><div class="wymqq-row-desc"><p class="wymqq-lead">Tillo Tarim IQF Ahududu: Böğürtlen familyası. IQF-Früchte Kategorie. Verfügbare Grammaturen: 10 kg. Naturkost aus Gaziantep.</p><div class="wymqq-desc-tags"><span class="wymqq-desc-tag"><span class="wymqq-desc-tag-label">Grammatur</span><span class="wymqq-desc-tag-value">10 kg</span></span><span class="wymqq-desc-tag"><span class="wymqq-desc-tag-label">Verpackung</span><span class="wymqq-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="wymqq-desc-tag"><span class="wymqq-desc-tag-label">Herkunft</span><span class="wymqq-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="wymqq-body"><h2 style="font-size: 22px;">IQF Ahududu</h2>
+  <div class="rtxqd-main">
+    <div class="rtxqd-row"><div class="rtxqd-row-media"><div class="rtxqd-img"><img src="/page/kmei2i6im2/index.webp?v=asppx" alt="IQF Ahududu" loading="lazy" /></div></div><div class="rtxqd-row-desc"><p class="rtxqd-lead">Tillo Tarim IQF Ahududu: Böğürtlen familyası. IQF-Früchte Kategorie. Verfügbare Grammaturen: 10 kg. Naturkost aus Gaziantep.</p><div class="rtxqd-desc-tags"><span class="rtxqd-desc-tag"><span class="rtxqd-desc-tag-label">Grammatur</span><span class="rtxqd-desc-tag-value">10 kg</span></span><span class="rtxqd-desc-tag"><span class="rtxqd-desc-tag-label">Verpackung</span><span class="rtxqd-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="rtxqd-desc-tag"><span class="rtxqd-desc-tag-label">Herkunft</span><span class="rtxqd-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="rtxqd-body"><h2 style="font-size: 22px;">IQF Ahududu</h2>
 <p style="font-size: 16px;">Tillo Tarim IQF Ahududu: Böğürtlen familyası. IQF-Früchte Kategorie. Verfügbare Grammaturen: 10 kg. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 10 kg</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".wymqq-menu-btn");
-    var menu = document.querySelector(".wymqq-menu");
-    var overlay = document.querySelector(".wymqq-menu-overlay");
-    var closeButton = document.querySelector(".wymqq-menu-close");
+    var menuToggleBtn = document.querySelector(".rtxqd-menu-btn");
+    var menu = document.querySelector(".rtxqd-menu");
+    var overlay = document.querySelector(".rtxqd-menu-overlay");
+    var closeButton = document.querySelector(".rtxqd-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".wymqq-menu-close")) {
+      if (link && !event.target.closest(".rtxqd-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=o8oof"></script>
-  <script defer src="/src/cookie.js?v=o8oof"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=iblqv"></script>
+  <script defer src="/src/cookie.js?v=iblqv"></script>
 
   <script>
     setTimeout(function() {

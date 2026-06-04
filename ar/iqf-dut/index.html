@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=iszt0" />
-  <link rel="preload" href="/src/cookie.css?v=iszt0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=rwp7i" />
+  <link rel="preload" href="/src/cookie.css?v=rwp7i" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=iszt0" />
+    <link rel="stylesheet" href="/src/cookie.css?v=rwp7i" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=iszt0" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=rwp7i" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=iszt0">
+<link rel="stylesheet" href="style.css?v=rwp7i">
 </head>
 
 <body>
   <div id="header">
-<div class="rc313">
-  <div class="rc313title">
-    <div class="rc313titlebody">
-      <div class="rc313titlebodylang">
+<div class="wqeca">
+  <div class="wqecatitle">
+    <div class="wqecatitlebody">
+      <div class="wqecatitlebodylang">
         <ul>
           <li><a href="/tr/iqf-dut/">TR</a></li><li><a href="/en/iqf-dut/">EN</a></li><li><a href="/ar/iqf-dut/">AR</a></li><li><a href="/de/iqf-dut/">DE</a></li><li><a href="/ko/iqf-dut/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="rc313body">
+  <div class="wqecabody">
     <a href="/ar/"
       ><img
-        src="/img/tillotarim-logo.png?v=k6xhb"
+        src="/img/tillotarim-logo.png?v=aeq2p"
         alt="Tillo Tarim Logo"
-        class="rc313bodylogo"
+        class="wqecabodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="rc313-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="wqeca-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="rc313-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="rc313menubody">
-    <div class="rc313menu" id="menu-2-root">
-      <div class="rc313menulistbody">
-        <div class="rc313menulist">
+  <div class="wqeca-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="wqecamenubody">
+    <div class="wqecamenu" id="menu-2-root">
+      <button type="button" class="wqeca-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="wqecamenulistbody">
+        <div class="wqecamenulist">
           <ul>
-            <a href="/ar/">الصفحة الرئيسية </a><a href="/ar/hakkimizda/">مؤسسي</a><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
+            <a href="/ar/">الصفحة الرئيسية</a><div class="wqecamenulist-menu"><a href="/ar/hakkimizda/">مؤسسي</a><div class="dropdown-content-wqeca"><a href="/ar/hakkimizda/">من نحن</a><a href="/ar/misyon/">الرسالة</a><a href="/ar/vizyon/">الرؤية</a><a href="/ar/kalite-politikamiz/">سياسة الجودة</a><a href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a href="/ar/kisisel-veriler/">البيانات الشخصية</a><a href="/ar/kullanici-haklari/">حقوق المستخدم</a><a href="/ar/yasal-uyari/">إشعار قانوني</a></div></div><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
           </ul>
         </div>
       </div>
       
-      <div class="rc313languages-mobile">
+      <div class="wqecalanguages-mobile">
         <ul>
           <li><a href="/tr/iqf-dut/">TR</a></li><li><a href="/en/iqf-dut/">EN</a></li><li><a href="/ar/iqf-dut/">AR</a></li><li><a href="/de/iqf-dut/">DE</a></li><li><a href="/ko/iqf-dut/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".rc313") : null;
+      var wrapper = root.closest ? root.closest(".wqeca") : null;
       var target = wrapper || root;
-      if (target.classList.contains("rc313menu-open")) {
-        target.classList.remove("rc313menu-open");
+      if (target.classList.contains("wqecamenu-open")) {
+        target.classList.remove("wqecamenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("rc313menu-open");
+        target.classList.add("wqecamenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".wqeca") : null;
+      var target = wrapper || root;
+      target.classList.remove("wqecamenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".wqecamenulist-menu.dropdown-content-active-wqeca");
+      if (activeWrap) {
+        activeWrap.classList.add("wqeca-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".wqecamenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-wqeca")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("wqeca-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".wqecamenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("wqeca-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("wqeca-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".wqecamenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".wqecamenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("wqeca-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="lz5wc-title">
+  <div id="content"><div class="vw2jw-title">
   <h1>IQF Dut</h1>
 </div>
-<div class="lz5wc">
-  <button type="button" class="lz5wc-menu-btn" aria-expanded="false" aria-controls="lz5wc-menu">
-    <span class="lz5wc-menu-btn-label">قائمة الصفحات</span>
-    <span class="material-symbols-outlined lz5wc-icon" aria-hidden="true">menu</span>
+<div class="vw2jw">
+  <button type="button" class="vw2jw-menu-btn" aria-expanded="false" aria-controls="vw2jw-menu">
+    <span class="vw2jw-menu-btn-label">قائمة الصفحات</span>
+    <span class="material-symbols-outlined vw2jw-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="lz5wc-menu-overlay" id="lz5wc-menu-overlay" aria-hidden="true"></div>
-  <nav class="lz5wc-menu" id="lz5wc-menu" aria-label="قائمة الصفحات">
-    <button class="lz5wc-menu-close" type="button" aria-label="إغلاق القائمة">
+  <div class="vw2jw-menu-overlay" id="vw2jw-menu-overlay" aria-hidden="true"></div>
+  <nav class="vw2jw-menu" id="vw2jw-menu" aria-label="قائمة الصفحات">
+    <button class="vw2jw-menu-close" type="button" aria-label="إغلاق القائمة">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="lz5wc-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="lz5wc-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="lz5wc-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="lz5wc-menu-link-text">معجون وكريمة بندق</span></a><a class="lz5wc-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="lz5wc-menu-link-text">معجون وكريمة لوز</span></a><a class="lz5wc-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="lz5wc-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="lz5wc-menu-link" href="/ar/kurutulmus-meyveler/"><span class="lz5wc-menu-link-text">فواكه مجففة</span></a><a class="lz5wc-menu-link" href="/ar/meyve-cipsleri/"><span class="lz5wc-menu-link-text">رقائق فواكه</span></a><a class="lz5wc-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="lz5wc-menu-link-text">خضروات مجففة</span></a><a class="lz5wc-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="lz5wc-menu-link-text">مربى ومربيات</span></a><a class="lz5wc-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="lz5wc-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="lz5wc-menu-link" href="/ar/meyve-sulari/"><span class="lz5wc-menu-link-text">عصائر فواكه</span></a><a class="lz5wc-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="lz5wc-menu-link-text">دبس وشراب</span></a><a class="lz5wc-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="lz5wc-menu-link-text">حليب ومنتجات ألبان</span></a><a class="lz5wc-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="lz5wc-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="lz5wc-menu-link" href="/ar/sivi-yaglar/"><span class="lz5wc-menu-link-text">زيوت سائلة</span></a><a class="lz5wc-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="lz5wc-menu-link-text">زيوت عطرية طبية</span></a><a class="lz5wc-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="lz5wc-menu-link-text">خضروات IQF مقطعة</span></a><a class="lz5wc-menu-link" href="/ar/iqf-meyveler/"><span class="lz5wc-menu-link-text">فواكه IQF</span></a>
+    <a class="vw2jw-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="vw2jw-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="vw2jw-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="vw2jw-menu-link-text">معجون وكريمة بندق</span></a><a class="vw2jw-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="vw2jw-menu-link-text">معجون وكريمة لوز</span></a><a class="vw2jw-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="vw2jw-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="vw2jw-menu-link" href="/ar/kurutulmus-meyveler/"><span class="vw2jw-menu-link-text">فواكه مجففة</span></a><a class="vw2jw-menu-link" href="/ar/meyve-cipsleri/"><span class="vw2jw-menu-link-text">رقائق فواكه</span></a><a class="vw2jw-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="vw2jw-menu-link-text">خضروات مجففة</span></a><a class="vw2jw-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="vw2jw-menu-link-text">مربى ومربيات</span></a><a class="vw2jw-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="vw2jw-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="vw2jw-menu-link" href="/ar/meyve-sulari/"><span class="vw2jw-menu-link-text">عصائر فواكه</span></a><a class="vw2jw-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="vw2jw-menu-link-text">دبس وشراب</span></a><a class="vw2jw-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="vw2jw-menu-link-text">حليب ومنتجات ألبان</span></a><a class="vw2jw-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="vw2jw-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="vw2jw-menu-link" href="/ar/sivi-yaglar/"><span class="vw2jw-menu-link-text">زيوت سائلة</span></a><a class="vw2jw-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="vw2jw-menu-link-text">زيوت عطرية طبية</span></a><a class="vw2jw-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="vw2jw-menu-link-text">خضروات IQF مقطعة</span></a><a class="vw2jw-menu-link" href="/ar/iqf-meyveler/"><span class="vw2jw-menu-link-text">فواكه IQF</span></a>
   </nav>
-  <div class="lz5wc-main">
-    <div class="lz5wc-row"><div class="lz5wc-row-media"><div class="lz5wc-img"><img src="/page/ri6qeqm6iy/index.webp?v=a5032" alt="IQF Dut" loading="lazy" /></div></div><div class="lz5wc-row-desc"><p class="lz5wc-lead">تيلو تاريم IQF Dut: Siyah dut. فواكه IQF ضمن فئة  الأحجام المتوفرة: 10 kg. أغذية طبيعية من غازي عنتاب.</p><div class="lz5wc-desc-tags"><span class="lz5wc-desc-tag"><span class="lz5wc-desc-tag-label">الوزن الصافي</span><span class="lz5wc-desc-tag-value">10 kg</span></span><span class="lz5wc-desc-tag"><span class="lz5wc-desc-tag-label">التعبئة</span><span class="lz5wc-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="lz5wc-desc-tag"><span class="lz5wc-desc-tag-label">منشأ المنتج</span><span class="lz5wc-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="lz5wc-body"><h2 style="font-size: 22px;">IQF Dut</h2>
+  <div class="vw2jw-main">
+    <div class="vw2jw-row"><div class="vw2jw-row-media"><div class="vw2jw-img"><img src="/page/ri6qeqm6iy/index.webp?v=to5ac" alt="IQF Dut" loading="lazy" /></div></div><div class="vw2jw-row-desc"><p class="vw2jw-lead">تيلو تاريم IQF Dut: Siyah dut. فواكه IQF ضمن فئة  الأحجام المتوفرة: 10 kg. أغذية طبيعية من غازي عنتاب.</p><div class="vw2jw-desc-tags"><span class="vw2jw-desc-tag"><span class="vw2jw-desc-tag-label">الوزن الصافي</span><span class="vw2jw-desc-tag-value">10 kg</span></span><span class="vw2jw-desc-tag"><span class="vw2jw-desc-tag-label">التعبئة</span><span class="vw2jw-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="vw2jw-desc-tag"><span class="vw2jw-desc-tag-label">منشأ المنتج</span><span class="vw2jw-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="vw2jw-body"><h2 style="font-size: 22px;">IQF Dut</h2>
 <p style="font-size: 16px;">تيلو تاريم IQF Dut: Siyah dut. فواكه IQF ضمن فئة  الأحجام المتوفرة: 10 kg. أغذية طبيعية من غازي عنتاب.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>الوزن الصافي:</strong> 10 kg</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".lz5wc-menu-btn");
-    var menu = document.querySelector(".lz5wc-menu");
-    var overlay = document.querySelector(".lz5wc-menu-overlay");
-    var closeButton = document.querySelector(".lz5wc-menu-close");
+    var menuToggleBtn = document.querySelector(".vw2jw-menu-btn");
+    var menu = document.querySelector(".vw2jw-menu");
+    var overlay = document.querySelector(".vw2jw-menu-overlay");
+    var closeButton = document.querySelector(".vw2jw-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".lz5wc-menu-close")) {
+      if (link && !event.target.closest(".vw2jw-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=iszt0"></script>
-  <script defer src="/src/cookie.js?v=iszt0"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=rwp7i"></script>
+  <script defer src="/src/cookie.js?v=rwp7i"></script>
 
   <script>
     setTimeout(function() {

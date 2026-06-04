@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=jjbbn" />
-  <link rel="preload" href="/src/cookie.css?v=jjbbn" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=s6xg4" />
+  <link rel="preload" href="/src/cookie.css?v=s6xg4" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=jjbbn" />
+    <link rel="stylesheet" href="/src/cookie.css?v=s6xg4" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=jjbbn" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=s6xg4" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=jjbbn">
+<link rel="stylesheet" href="style.css?v=s6xg4">
 </head>
 
 <body>
   <div id="header">
-<div class="ruj1x">
-  <div class="ruj1xtitle">
-    <div class="ruj1xtitlebody">
-      <div class="ruj1xtitlebodylang">
+<div class="mo1pm">
+  <div class="mo1pmtitle">
+    <div class="mo1pmtitlebody">
+      <div class="mo1pmtitlebodylang">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ruj1xbody">
+  <div class="mo1pmbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=ip8zq"
+        src="/img/tillotarim-logo.png?v=njn10"
         alt="Tillo Tarim Logo"
-        class="ruj1xbodylogo"
+        class="mo1pmbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ruj1x-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="mo1pm-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ruj1x-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ruj1xmenubody">
-    <div class="ruj1xmenu" id="menu-2-root">
-      <div class="ruj1xmenulistbody">
-        <div class="ruj1xmenulist">
+  <div class="mo1pm-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="mo1pmmenubody">
+    <div class="mo1pmmenu" id="menu-2-root">
+      <button type="button" class="mo1pm-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="mo1pmmenulistbody">
+        <div class="mo1pmmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="mo1pmmenulist-menu dropdown-content-active-mo1pm"><a class="mo1pm-menu-list-active" href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-mo1pm"><a href="/de/hakkimizda/">Über uns</a><a class="mo1pm-menu-list-active" href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="ruj1xlanguages-mobile">
+      <div class="mo1pmlanguages-mobile">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ruj1x") : null;
+      var wrapper = root.closest ? root.closest(".mo1pm") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ruj1xmenu-open")) {
-        target.classList.remove("ruj1xmenu-open");
+      if (target.classList.contains("mo1pmmenu-open")) {
+        target.classList.remove("mo1pmmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ruj1xmenu-open");
+        target.classList.add("mo1pmmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".mo1pm") : null;
+      var target = wrapper || root;
+      target.classList.remove("mo1pmmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".mo1pmmenulist-menu.dropdown-content-active-mo1pm");
+      if (activeWrap) {
+        activeWrap.classList.add("mo1pm-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".mo1pmmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-mo1pm")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("mo1pm-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".mo1pmmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("mo1pm-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("mo1pm-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".mo1pmmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".mo1pmmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("mo1pm-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="nvipa-title f36">
+  <div id="content"><div class="ux9ax-title f36">
   <h1>Mission</h1>
 </div>
-<div class="nvipa">
+<div class="ux9ax">
   <button
     type="button"
-    class="nvipa-menu-btn"
+    class="ux9ax-menu-btn"
     aria-expanded="false"
-    aria-controls="nvipa-menu"
+    aria-controls="ux9ax-menu"
   >
-    <span class="nvipa-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined nvipa-icon" aria-hidden="true">menu</span>
+    <span class="ux9ax-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined ux9ax-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="nvipa-menu-overlay" id="nvipa-menu-overlay" aria-hidden="true"></div>
-  <nav class="nvipa-menu" id="nvipa-menu" aria-label="Menü">
-    <button class="nvipa-menu-close" type="button" aria-label="Menü schließen" aria-controls="nvipa-menu">
+  <div class="ux9ax-menu-overlay" id="ux9ax-menu-overlay" aria-hidden="true"></div>
+  <nav class="ux9ax-menu" id="ux9ax-menu" aria-label="Menü">
+    <button class="ux9ax-menu-close" type="button" aria-label="Menü schließen" aria-controls="ux9ax-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="nvipa-menu-link" href="/de/hakkimizda/">Über uns</a><a class="nvipa-menu-link active" href="/de/misyon/">Mission</a><a class="nvipa-menu-link" href="/de/vizyon/">Vision</a><a class="nvipa-menu-link" href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a class="nvipa-menu-link" href="/de/gizlilik-politikasi/">Datenschutz</a><a class="nvipa-menu-link" href="/de/kisisel-veriler/">Personenbezogene Daten</a><a class="nvipa-menu-link" href="/de/kullanici-haklari/">Nutzerrechte</a><a class="nvipa-menu-link" href="/de/yasal-uyari/">Impressum</a>
+    <a class="ux9ax-menu-link" href="/de/hakkimizda/">Über uns</a><a class="ux9ax-menu-link active" href="/de/misyon/">Mission</a><a class="ux9ax-menu-link" href="/de/vizyon/">Vision</a><a class="ux9ax-menu-link" href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a class="ux9ax-menu-link" href="/de/gizlilik-politikasi/">Datenschutz</a><a class="ux9ax-menu-link" href="/de/kisisel-veriler/">Personenbezogene Daten</a><a class="ux9ax-menu-link" href="/de/kullanici-haklari/">Nutzerrechte</a><a class="ux9ax-menu-link" href="/de/yasal-uyari/">Impressum</a>
   </nav>
-  <div class="nvipa-main">
+  <div class="ux9ax-main">
     
     
-    <div class="nvipa-body"><h2 style="font-size: 24px;">Mission</h2>
-<p style="font-size: 16px;">Tillo Tarim Missionu. Doğal hammaddeden katkısız ürünler; çevreye duyarlı ve sürdürülebilir üretim.</p></div>
+    <div class="ux9ax-body"><div class="mob-kurum-wrap"><div class="mob-kurum-hero"><span class="mob-kurum-hero-label">Mission</span><p class="mob-kurum-hero-title">Von natürlichen Rohstoffen zu verlässlichen Produkten</p></div><p class="mob-kurum-lead">Unsere Mission: ausgewählte Rohstoffe in <strong>lebensmittelsicherheitskonformen</strong>, naturnahen Prozessen verarbeiten und verlässliche Naturkost liefern.</p><div class="mob-kurum-grid"><div class="mob-kurum-card"><strong>Natur</strong><span>Minimale Eingriffe von der Annahme bis zur Verpackung.</span></div><div class="mob-kurum-card"><strong>Sicherheit</strong><span>Hygiene, Kühlkette und Chargenprotokolle.</span></div><div class="mob-kurum-card"><strong>Nachhaltigkeit</strong><span>Mindere Ausschuss, effiziente Energie, verantwortliche Beschaffung.</span></div><div class="mob-kurum-card"><strong>Partnerschaft</strong><span>Muster, Etikettenfreigabe und pünktlicher Versand.</span></div></div><div class="mob-kurum-cta"><p class="mob-kurum-cta-text">Gemeinsam in Ihre Lieferkette integrieren.</p><a class="mob-kurum-cta-link" href="/de/iletisim/">Angebot anfragen</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".nvipa-menu-btn");
-    var menu = document.querySelector(".nvipa-menu");
-    var overlay = document.querySelector(".nvipa-menu-overlay");
-    var closeButton = document.querySelector(".nvipa-menu-close");
+    var menuToggleBtn = document.querySelector(".ux9ax-menu-btn");
+    var menu = document.querySelector(".ux9ax-menu");
+    var overlay = document.querySelector(".ux9ax-menu-overlay");
+    var closeButton = document.querySelector(".ux9ax-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".nvipa-menu-close");
+      var closeBtn = event.target.closest(".ux9ax-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".nvipa-top");
+    var topButtons = document.querySelectorAll(".ux9ax-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".nvipa-menu-group");
+        var group = this.closest(".ux9ax-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".nvipa-sub");
+        var sub = group.querySelector(".ux9ax-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".nvipa-icon");
+        var icon = this.querySelector(".ux9ax-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=jjbbn"></script>
-  <script defer src="/src/cookie.js?v=jjbbn"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=s6xg4"></script>
+  <script defer src="/src/cookie.js?v=s6xg4"></script>
 
   <script>
     setTimeout(function() {

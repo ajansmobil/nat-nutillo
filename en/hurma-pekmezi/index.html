@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=v4vnf" />
-  <link rel="preload" href="/src/cookie.css?v=v4vnf" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=jyt74" />
+  <link rel="preload" href="/src/cookie.css?v=jyt74" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=v4vnf" />
+    <link rel="stylesheet" href="/src/cookie.css?v=jyt74" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=v4vnf" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=jyt74" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=v4vnf">
+<link rel="stylesheet" href="style.css?v=jyt74">
 </head>
 
 <body>
   <div id="header">
-<div class="o9plx">
-  <div class="o9plxtitle">
-    <div class="o9plxtitlebody">
-      <div class="o9plxtitlebodylang">
+<div class="vowjb">
+  <div class="vowjbtitle">
+    <div class="vowjbtitlebody">
+      <div class="vowjbtitlebodylang">
         <ul>
           <li><a href="/tr/hurma-pekmezi/">TR</a></li><li><a href="/en/hurma-pekmezi/">EN</a></li><li><a href="/ar/hurma-pekmezi/">AR</a></li><li><a href="/de/hurma-pekmezi/">DE</a></li><li><a href="/ko/hurma-pekmezi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="o9plxbody">
+  <div class="vowjbbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=fbyvh"
+        src="/img/tillotarim-logo.png?v=npbel"
         alt="Tillo Tarim Logo"
-        class="o9plxbodylogo"
+        class="vowjbbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="o9plx-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="vowjb-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="o9plx-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="o9plxmenubody">
-    <div class="o9plxmenu" id="menu-2-root">
-      <div class="o9plxmenulistbody">
-        <div class="o9plxmenulist">
+  <div class="vowjb-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="vowjbmenubody">
+    <div class="vowjbmenu" id="menu-2-root">
+      <button type="button" class="vowjb-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="vowjbmenulistbody">
+        <div class="vowjbmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="vowjbmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-vowjb"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="o9plxlanguages-mobile">
+      <div class="vowjblanguages-mobile">
         <ul>
           <li><a href="/tr/hurma-pekmezi/">TR</a></li><li><a href="/en/hurma-pekmezi/">EN</a></li><li><a href="/ar/hurma-pekmezi/">AR</a></li><li><a href="/de/hurma-pekmezi/">DE</a></li><li><a href="/ko/hurma-pekmezi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".o9plx") : null;
+      var wrapper = root.closest ? root.closest(".vowjb") : null;
       var target = wrapper || root;
-      if (target.classList.contains("o9plxmenu-open")) {
-        target.classList.remove("o9plxmenu-open");
+      if (target.classList.contains("vowjbmenu-open")) {
+        target.classList.remove("vowjbmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("o9plxmenu-open");
+        target.classList.add("vowjbmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".vowjb") : null;
+      var target = wrapper || root;
+      target.classList.remove("vowjbmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".vowjbmenulist-menu.dropdown-content-active-vowjb");
+      if (activeWrap) {
+        activeWrap.classList.add("vowjb-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".vowjbmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-vowjb")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("vowjb-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".vowjbmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("vowjb-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("vowjb-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".vowjbmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".vowjbmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("vowjb-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="a3m7f-title">
+  <div id="content"><div class="fujb2-title">
   <h1>Hurma Molasses</h1>
 </div>
-<div class="a3m7f">
-  <button type="button" class="a3m7f-menu-btn" aria-expanded="false" aria-controls="a3m7f-menu">
-    <span class="a3m7f-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined a3m7f-icon" aria-hidden="true">menu</span>
+<div class="fujb2">
+  <button type="button" class="fujb2-menu-btn" aria-expanded="false" aria-controls="fujb2-menu">
+    <span class="fujb2-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined fujb2-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="a3m7f-menu-overlay" id="a3m7f-menu-overlay" aria-hidden="true"></div>
-  <nav class="a3m7f-menu" id="a3m7f-menu" aria-label="Menu">
-    <button class="a3m7f-menu-close" type="button" aria-label="Close Menu">
+  <div class="fujb2-menu-overlay" id="fujb2-menu-overlay" aria-hidden="true"></div>
+  <nav class="fujb2-menu" id="fujb2-menu" aria-label="Menu">
+    <button class="fujb2-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="a3m7f-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="a3m7f-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="a3m7f-menu-link" href="/en/findik-ezme-ve-krema/"><span class="a3m7f-menu-link-text">Hazelnut Paste & Cream</span></a><a class="a3m7f-menu-link" href="/en/badem-ezme-ve-krema/"><span class="a3m7f-menu-link-text">Almond Paste & Cream</span></a><a class="a3m7f-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="a3m7f-menu-link-text">Peanut Paste & Cream</span></a><a class="a3m7f-menu-link" href="/en/kurutulmus-meyveler/"><span class="a3m7f-menu-link-text">Dried Fruits</span></a><a class="a3m7f-menu-link" href="/en/meyve-cipsleri/"><span class="a3m7f-menu-link-text">Fruit Chips</span></a><a class="a3m7f-menu-link" href="/en/kurutulmus-sebzeler/"><span class="a3m7f-menu-link-text">Dried Vegetables</span></a><a class="a3m7f-menu-link" href="/en/recel-ve-marmelatlar/"><span class="a3m7f-menu-link-text">Jams & Marmalades</span></a><a class="a3m7f-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="a3m7f-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="a3m7f-menu-link" href="/en/meyve-sulari/"><span class="a3m7f-menu-link-text">Fruit Juices</span></a><a class="a3m7f-menu-link" href="/en/pekmez-ve-suruplar/"><span class="a3m7f-menu-link-text">Molasses & Syrups</span></a><a class="a3m7f-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="a3m7f-menu-link-text">Milk & Dairy Products</span></a><a class="a3m7f-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="a3m7f-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="a3m7f-menu-link" href="/en/sivi-yaglar/"><span class="a3m7f-menu-link-text">Liquid Oils</span></a><a class="a3m7f-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="a3m7f-menu-link-text">Medicinal Aromatic Oils</span></a><a class="a3m7f-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="a3m7f-menu-link-text">IQF Sliced Vegetables</span></a><a class="a3m7f-menu-link" href="/en/iqf-meyveler/"><span class="a3m7f-menu-link-text">IQF Fruits</span></a>
+    <a class="fujb2-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="fujb2-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="fujb2-menu-link" href="/en/findik-ezme-ve-krema/"><span class="fujb2-menu-link-text">Hazelnut Paste & Cream</span></a><a class="fujb2-menu-link" href="/en/badem-ezme-ve-krema/"><span class="fujb2-menu-link-text">Almond Paste & Cream</span></a><a class="fujb2-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="fujb2-menu-link-text">Peanut Paste & Cream</span></a><a class="fujb2-menu-link" href="/en/kurutulmus-meyveler/"><span class="fujb2-menu-link-text">Dried Fruits</span></a><a class="fujb2-menu-link" href="/en/meyve-cipsleri/"><span class="fujb2-menu-link-text">Fruit Chips</span></a><a class="fujb2-menu-link" href="/en/kurutulmus-sebzeler/"><span class="fujb2-menu-link-text">Dried Vegetables</span></a><a class="fujb2-menu-link" href="/en/recel-ve-marmelatlar/"><span class="fujb2-menu-link-text">Jams & Marmalades</span></a><a class="fujb2-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="fujb2-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="fujb2-menu-link" href="/en/meyve-sulari/"><span class="fujb2-menu-link-text">Fruit Juices</span></a><a class="fujb2-menu-link" href="/en/pekmez-ve-suruplar/"><span class="fujb2-menu-link-text">Molasses & Syrups</span></a><a class="fujb2-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="fujb2-menu-link-text">Milk & Dairy Products</span></a><a class="fujb2-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="fujb2-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="fujb2-menu-link" href="/en/sivi-yaglar/"><span class="fujb2-menu-link-text">Liquid Oils</span></a><a class="fujb2-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="fujb2-menu-link-text">Medicinal Aromatic Oils</span></a><a class="fujb2-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="fujb2-menu-link-text">IQF Sliced Vegetables</span></a><a class="fujb2-menu-link" href="/en/iqf-meyveler/"><span class="fujb2-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="a3m7f-main">
-    <div class="a3m7f-row"><div class="a3m7f-row-media"><div class="a3m7f-img"><img src="/page/p2uy2miqy6/index.webp?v=mjb61" alt="Hurma Molasses" loading="lazy" /></div></div><div class="a3m7f-row-desc"><p class="a3m7f-lead">Tillo Tarim Hurma Molasses: Hurma özü pekmez. Molasses & Syrups category. Available sizes: 400 g. natural food from Gaziantep.</p><div class="a3m7f-desc-tags"><span class="a3m7f-desc-tag"><span class="a3m7f-desc-tag-label">Net weight</span><span class="a3m7f-desc-tag-value">400 g</span></span><span class="a3m7f-desc-tag"><span class="a3m7f-desc-tag-label">Packaging</span><span class="a3m7f-desc-tag-value">Cam kavanoz / plastik şişe</span></span><span class="a3m7f-desc-tag"><span class="a3m7f-desc-tag-label">Origin</span><span class="a3m7f-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="a3m7f-body"><h2 style="font-size: 22px;">Hurma Molasses</h2>
+  <div class="fujb2-main">
+    <div class="fujb2-row"><div class="fujb2-row-media"><div class="fujb2-img"><img src="/page/p2uy2miqy6/index.webp?v=vu36j" alt="Hurma Molasses" loading="lazy" /></div></div><div class="fujb2-row-desc"><p class="fujb2-lead">Tillo Tarim Hurma Molasses: Hurma özü pekmez. Molasses & Syrups category. Available sizes: 400 g. natural food from Gaziantep.</p><div class="fujb2-desc-tags"><span class="fujb2-desc-tag"><span class="fujb2-desc-tag-label">Net weight</span><span class="fujb2-desc-tag-value">400 g</span></span><span class="fujb2-desc-tag"><span class="fujb2-desc-tag-label">Packaging</span><span class="fujb2-desc-tag-value">Cam kavanoz / plastik şişe</span></span><span class="fujb2-desc-tag"><span class="fujb2-desc-tag-label">Origin</span><span class="fujb2-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="fujb2-body"><h2 style="font-size: 22px;">Hurma Molasses</h2>
 <p style="font-size: 16px;">Tillo Tarim Hurma Molasses: Hurma özü pekmez. Molasses & Syrups category. Available sizes: 400 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 400 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".a3m7f-menu-btn");
-    var menu = document.querySelector(".a3m7f-menu");
-    var overlay = document.querySelector(".a3m7f-menu-overlay");
-    var closeButton = document.querySelector(".a3m7f-menu-close");
+    var menuToggleBtn = document.querySelector(".fujb2-menu-btn");
+    var menu = document.querySelector(".fujb2-menu");
+    var overlay = document.querySelector(".fujb2-menu-overlay");
+    var closeButton = document.querySelector(".fujb2-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".a3m7f-menu-close")) {
+      if (link && !event.target.closest(".fujb2-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=v4vnf"></script>
-  <script defer src="/src/cookie.js?v=v4vnf"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=jyt74"></script>
+  <script defer src="/src/cookie.js?v=jyt74"></script>
 
   <script>
     setTimeout(function() {

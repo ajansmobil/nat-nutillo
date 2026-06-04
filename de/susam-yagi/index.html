@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=s8ksz" />
-  <link rel="preload" href="/src/cookie.css?v=s8ksz" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=j28va" />
+  <link rel="preload" href="/src/cookie.css?v=j28va" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=s8ksz" />
+    <link rel="stylesheet" href="/src/cookie.css?v=j28va" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=s8ksz" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=j28va" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=s8ksz">
+<link rel="stylesheet" href="style.css?v=j28va">
 </head>
 
 <body>
   <div id="header">
-<div class="ugytv">
-  <div class="ugytvtitle">
-    <div class="ugytvtitlebody">
-      <div class="ugytvtitlebodylang">
+<div class="a3jm9">
+  <div class="a3jm9title">
+    <div class="a3jm9titlebody">
+      <div class="a3jm9titlebodylang">
         <ul>
           <li><a href="/tr/susam-yagi/">TR</a></li><li><a href="/en/susam-yagi/">EN</a></li><li><a href="/ar/susam-yagi/">AR</a></li><li><a href="/de/susam-yagi/">DE</a></li><li><a href="/ko/susam-yagi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ugytvbody">
+  <div class="a3jm9body">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=tvpwz"
+        src="/img/tillotarim-logo.png?v=y96tn"
         alt="Tillo Tarim Logo"
-        class="ugytvbodylogo"
+        class="a3jm9bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ugytv-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="a3jm9-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ugytv-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ugytvmenubody">
-    <div class="ugytvmenu" id="menu-2-root">
-      <div class="ugytvmenulistbody">
-        <div class="ugytvmenulist">
+  <div class="a3jm9-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="a3jm9menubody">
+    <div class="a3jm9menu" id="menu-2-root">
+      <button type="button" class="a3jm9-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="a3jm9menulistbody">
+        <div class="a3jm9menulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="a3jm9menulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-a3jm9"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="ugytvlanguages-mobile">
+      <div class="a3jm9languages-mobile">
         <ul>
           <li><a href="/tr/susam-yagi/">TR</a></li><li><a href="/en/susam-yagi/">EN</a></li><li><a href="/ar/susam-yagi/">AR</a></li><li><a href="/de/susam-yagi/">DE</a></li><li><a href="/ko/susam-yagi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ugytv") : null;
+      var wrapper = root.closest ? root.closest(".a3jm9") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ugytvmenu-open")) {
-        target.classList.remove("ugytvmenu-open");
+      if (target.classList.contains("a3jm9menu-open")) {
+        target.classList.remove("a3jm9menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ugytvmenu-open");
+        target.classList.add("a3jm9menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".a3jm9") : null;
+      var target = wrapper || root;
+      target.classList.remove("a3jm9menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".a3jm9menulist-menu.dropdown-content-active-a3jm9");
+      if (activeWrap) {
+        activeWrap.classList.add("a3jm9-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".a3jm9menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-a3jm9")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("a3jm9-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".a3jm9menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("a3jm9-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("a3jm9-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".a3jm9menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".a3jm9menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("a3jm9-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="m83kd-title">
+  <div id="content"><div class="hax5m-title">
   <h1>Susam Öl</h1>
 </div>
-<div class="m83kd">
-  <button type="button" class="m83kd-menu-btn" aria-expanded="false" aria-controls="m83kd-menu">
-    <span class="m83kd-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined m83kd-icon" aria-hidden="true">menu</span>
+<div class="hax5m">
+  <button type="button" class="hax5m-menu-btn" aria-expanded="false" aria-controls="hax5m-menu">
+    <span class="hax5m-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined hax5m-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="m83kd-menu-overlay" id="m83kd-menu-overlay" aria-hidden="true"></div>
-  <nav class="m83kd-menu" id="m83kd-menu" aria-label="Menü">
-    <button class="m83kd-menu-close" type="button" aria-label="Menü schließen">
+  <div class="hax5m-menu-overlay" id="hax5m-menu-overlay" aria-hidden="true"></div>
+  <nav class="hax5m-menu" id="hax5m-menu" aria-label="Menü">
+    <button class="hax5m-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="m83kd-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="m83kd-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="m83kd-menu-link" href="/de/findik-ezme-ve-krema/"><span class="m83kd-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="m83kd-menu-link" href="/de/badem-ezme-ve-krema/"><span class="m83kd-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="m83kd-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="m83kd-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="m83kd-menu-link" href="/de/kurutulmus-meyveler/"><span class="m83kd-menu-link-text">Trockenfrüchte</span></a><a class="m83kd-menu-link" href="/de/meyve-cipsleri/"><span class="m83kd-menu-link-text">Fruchtchips</span></a><a class="m83kd-menu-link" href="/de/kurutulmus-sebzeler/"><span class="m83kd-menu-link-text">Trockengemüse</span></a><a class="m83kd-menu-link" href="/de/recel-ve-marmelatlar/"><span class="m83kd-menu-link-text">Marmeladen & Konfitüren</span></a><a class="m83kd-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="m83kd-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="m83kd-menu-link" href="/de/meyve-sulari/"><span class="m83kd-menu-link-text">Fruchtsäfte</span></a><a class="m83kd-menu-link" href="/de/pekmez-ve-suruplar/"><span class="m83kd-menu-link-text">Melasse & Sirupe</span></a><a class="m83kd-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="m83kd-menu-link-text">Milch & Milchprodukte</span></a><a class="m83kd-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="m83kd-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="m83kd-menu-link" href="/de/sivi-yaglar/"><span class="m83kd-menu-link-text">Flüssige Öle</span></a><a class="m83kd-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="m83kd-menu-link-text">Medizinische Aromaöle</span></a><a class="m83kd-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="m83kd-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="m83kd-menu-link" href="/de/iqf-meyveler/"><span class="m83kd-menu-link-text">IQF-Früchte</span></a>
+    <a class="hax5m-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="hax5m-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="hax5m-menu-link" href="/de/findik-ezme-ve-krema/"><span class="hax5m-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="hax5m-menu-link" href="/de/badem-ezme-ve-krema/"><span class="hax5m-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="hax5m-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="hax5m-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="hax5m-menu-link" href="/de/kurutulmus-meyveler/"><span class="hax5m-menu-link-text">Trockenfrüchte</span></a><a class="hax5m-menu-link" href="/de/meyve-cipsleri/"><span class="hax5m-menu-link-text">Fruchtchips</span></a><a class="hax5m-menu-link" href="/de/kurutulmus-sebzeler/"><span class="hax5m-menu-link-text">Trockengemüse</span></a><a class="hax5m-menu-link" href="/de/recel-ve-marmelatlar/"><span class="hax5m-menu-link-text">Marmeladen & Konfitüren</span></a><a class="hax5m-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="hax5m-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="hax5m-menu-link" href="/de/meyve-sulari/"><span class="hax5m-menu-link-text">Fruchtsäfte</span></a><a class="hax5m-menu-link" href="/de/pekmez-ve-suruplar/"><span class="hax5m-menu-link-text">Melasse & Sirupe</span></a><a class="hax5m-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="hax5m-menu-link-text">Milch & Milchprodukte</span></a><a class="hax5m-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="hax5m-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="hax5m-menu-link" href="/de/sivi-yaglar/"><span class="hax5m-menu-link-text">Flüssige Öle</span></a><a class="hax5m-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="hax5m-menu-link-text">Medizinische Aromaöle</span></a><a class="hax5m-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="hax5m-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="hax5m-menu-link" href="/de/iqf-meyveler/"><span class="hax5m-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="m83kd-main">
-    <div class="m83kd-row"><div class="m83kd-row-media"><div class="m83kd-img"><img src="/page/vaueunqm62/index.webp?v=f8u07" alt="Susam Öl" loading="lazy" /></div></div><div class="m83kd-row-desc"><p class="m83kd-lead">Tillo Tarim Susam Öl: Tost susam. Medizinische Aromaöle Kategorie. Verfügbare Grammaturen: 250 ml. Naturkost aus Gaziantep.</p><div class="m83kd-desc-tags"><span class="m83kd-desc-tag"><span class="m83kd-desc-tag-label">Grammatur</span><span class="m83kd-desc-tag-value">250 ml</span></span><span class="m83kd-desc-tag"><span class="m83kd-desc-tag-label">Verpackung</span><span class="m83kd-desc-tag-value">Cam şişe / damlalıklı şişe</span></span><span class="m83kd-desc-tag"><span class="m83kd-desc-tag-label">Herkunft</span><span class="m83kd-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="m83kd-body"><h2 style="font-size: 22px;">Susam Öl</h2>
+  <div class="hax5m-main">
+    <div class="hax5m-row"><div class="hax5m-row-media"><div class="hax5m-img"><img src="/page/vaueunqm62/index.webp?v=r7ke2" alt="Susam Öl" loading="lazy" /></div></div><div class="hax5m-row-desc"><p class="hax5m-lead">Tillo Tarim Susam Öl: Tost susam. Medizinische Aromaöle Kategorie. Verfügbare Grammaturen: 250 ml. Naturkost aus Gaziantep.</p><div class="hax5m-desc-tags"><span class="hax5m-desc-tag"><span class="hax5m-desc-tag-label">Grammatur</span><span class="hax5m-desc-tag-value">250 ml</span></span><span class="hax5m-desc-tag"><span class="hax5m-desc-tag-label">Verpackung</span><span class="hax5m-desc-tag-value">Cam şişe / damlalıklı şişe</span></span><span class="hax5m-desc-tag"><span class="hax5m-desc-tag-label">Herkunft</span><span class="hax5m-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="hax5m-body"><h2 style="font-size: 22px;">Susam Öl</h2>
 <p style="font-size: 16px;">Tillo Tarim Susam Öl: Tost susam. Medizinische Aromaöle Kategorie. Verfügbare Grammaturen: 250 ml. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 250 ml</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".m83kd-menu-btn");
-    var menu = document.querySelector(".m83kd-menu");
-    var overlay = document.querySelector(".m83kd-menu-overlay");
-    var closeButton = document.querySelector(".m83kd-menu-close");
+    var menuToggleBtn = document.querySelector(".hax5m-menu-btn");
+    var menu = document.querySelector(".hax5m-menu");
+    var overlay = document.querySelector(".hax5m-menu-overlay");
+    var closeButton = document.querySelector(".hax5m-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".m83kd-menu-close")) {
+      if (link && !event.target.closest(".hax5m-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=s8ksz"></script>
-  <script defer src="/src/cookie.js?v=s8ksz"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=j28va"></script>
+  <script defer src="/src/cookie.js?v=j28va"></script>
 
   <script>
     setTimeout(function() {

@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=j3r84" />
-  <link rel="preload" href="/src/cookie.css?v=j3r84" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=txqp6" />
+  <link rel="preload" href="/src/cookie.css?v=txqp6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=j3r84" />
+    <link rel="stylesheet" href="/src/cookie.css?v=txqp6" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=j3r84" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=txqp6" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=j3r84">
+<link rel="stylesheet" href="style.css?v=txqp6">
 </head>
 
 <body>
   <div id="header">
-<div class="dg596">
-  <div class="dg596title">
-    <div class="dg596titlebody">
-      <div class="dg596titlebodylang">
+<div class="phuki">
+  <div class="phukititle">
+    <div class="phukititlebody">
+      <div class="phukititlebodylang">
         <ul>
           <li><a href="/tr/kurutulmus-sebzeler/">TR</a></li><li><a href="/en/kurutulmus-sebzeler/">EN</a></li><li><a href="/ar/kurutulmus-sebzeler/">AR</a></li><li><a href="/de/kurutulmus-sebzeler/">DE</a></li><li><a href="/ko/kurutulmus-sebzeler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="dg596body">
+  <div class="phukibody">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=tr406"
+        src="/img/tillotarim-logo.png?v=xvi7r"
         alt="Tillo Tarim Logo"
-        class="dg596bodylogo"
+        class="phukibodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="dg596-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="phuki-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="dg596-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="dg596menubody">
-    <div class="dg596menu" id="menu-2-root">
-      <div class="dg596menulistbody">
-        <div class="dg596menulist">
+  <div class="phuki-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="phukimenubody">
+    <div class="phukimenu" id="menu-2-root">
+      <button type="button" class="phuki-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="phukimenulistbody">
+        <div class="phukimenulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="phukimenulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-phuki"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="dg596languages-mobile">
+      <div class="phukilanguages-mobile">
         <ul>
           <li><a href="/tr/kurutulmus-sebzeler/">TR</a></li><li><a href="/en/kurutulmus-sebzeler/">EN</a></li><li><a href="/ar/kurutulmus-sebzeler/">AR</a></li><li><a href="/de/kurutulmus-sebzeler/">DE</a></li><li><a href="/ko/kurutulmus-sebzeler/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".dg596") : null;
+      var wrapper = root.closest ? root.closest(".phuki") : null;
       var target = wrapper || root;
-      if (target.classList.contains("dg596menu-open")) {
-        target.classList.remove("dg596menu-open");
+      if (target.classList.contains("phukimenu-open")) {
+        target.classList.remove("phukimenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("dg596menu-open");
+        target.classList.add("phukimenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".phuki") : null;
+      var target = wrapper || root;
+      target.classList.remove("phukimenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".phukimenulist-menu.dropdown-content-active-phuki");
+      if (activeWrap) {
+        activeWrap.classList.add("phuki-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".phukimenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-phuki")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("phuki-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".phukimenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("phuki-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("phuki-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".phukimenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".phukimenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("phuki-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="tb3dx-title f36">
+  <div id="content"><div class="lcob5-title f36">
   <h1>건채소</h1>
 </div>
 
-<div class="tb3dx"><h2 style="font-size: 24px;">건채소</h2>
+<div class="lcob5"><h2 style="font-size: 24px;">건채소</h2>
 <p style="font-size: 16px;">Tillo Tarim 건채소. 건조 sebzeler: biber, patlıcan, kabak; çorba ve yemeklik. Mevsim sebzelerinin kurutulmuş hali; çorba, yemek ve garni…</p></div>
 
 
 ------------------------
-<div class="lffvh lffvhcat3">
-  <div class="lffvhbody"><a class="lffvhbodycardlink" href="/ko/kuru-kapia-biber/" title="건조 Kapia Biber"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/tq6iua6qyy/index.webp" alt="건조 Kapia Biber" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Kapia Biber</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-aci-biber/" title="건조 Acı Biber"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/02aimeaaeu/index.webp" alt="건조 Acı Biber" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Acı Biber</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-tatli-biber/" title="건조 Tatlı Biber"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/7iaq2myimy/index.webp" alt="건조 Tatlı Biber" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Tatlı Biber</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-patlican/" title="건조 Patlıcan"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/eyaiaqyee6/index.webp" alt="건조 Patlıcan" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Patlıcan</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-dolmalik-biber/" title="건조 Dolmalık Biber"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/1uu6yeqeua/index.webp" alt="건조 Dolmalık Biber" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Dolmalık Biber</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-kabak/" title="건조 Kabak"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/8auie6622m/index.webp" alt="건조 Kabak" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Kabak</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-havuc/" title="건조 Havuç"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/f6yiiqmyme/index.webp" alt="건조 Havuç" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Havuç</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/kuru-domates/" title="건조 Domates"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/2i6iu2mmu2/index.webp" alt="건조 Domates" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>건조 Domates</span></div><div class="lffvhbodyitemaccent"></div></div></a><a class="lffvhbodycardlink" href="/ko/sebze-kurusu-karisimi/" title="Sebze Kurusu 믹스"><div class="lffvhbodycard"><div class="lffvhbodyitemimg"><img src="/page/9iq2qyeiia/index.webp" alt="Sebze Kurusu 믹스" loading="lazy"></div><div class="lffvhbodyitemtitle"><span>Sebze Kurusu 믹스</span></div><div class="lffvhbodyitemaccent"></div></div></a></div>
+<div class="fed5p fed5pcat3">
+  <div class="fed5pbody"><a class="fed5pbodycardlink" href="/ko/kuru-kapia-biber/" title="건조 Kapia Biber"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/tq6iua6qyy/index.webp" alt="건조 Kapia Biber" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Kapia Biber</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-aci-biber/" title="건조 Acı Biber"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/02aimeaaeu/index.webp" alt="건조 Acı Biber" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Acı Biber</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-tatli-biber/" title="건조 Tatlı Biber"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/7iaq2myimy/index.webp" alt="건조 Tatlı Biber" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Tatlı Biber</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-patlican/" title="건조 Patlıcan"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/eyaiaqyee6/index.webp" alt="건조 Patlıcan" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Patlıcan</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-dolmalik-biber/" title="건조 Dolmalık Biber"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/1uu6yeqeua/index.webp" alt="건조 Dolmalık Biber" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Dolmalık Biber</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-kabak/" title="건조 Kabak"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/8auie6622m/index.webp" alt="건조 Kabak" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Kabak</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-havuc/" title="건조 Havuç"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/f6yiiqmyme/index.webp" alt="건조 Havuç" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Havuç</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/kuru-domates/" title="건조 Domates"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/2i6iu2mmu2/index.webp" alt="건조 Domates" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>건조 Domates</span></div><div class="fed5pbodyitemaccent"></div></div></a><a class="fed5pbodycardlink" href="/ko/sebze-kurusu-karisimi/" title="Sebze Kurusu 믹스"><div class="fed5pbodycard"><div class="fed5pbodyitemimg"><img src="/page/9iq2qyeiia/index.webp" alt="Sebze Kurusu 믹스" loading="lazy"></div><div class="fed5pbodyitemtitle"><span>Sebze Kurusu 믹스</span></div><div class="fed5pbodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".lffvhcat3");
+    var moduleRoots = document.querySelectorAll(".fed5pcat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".lffvhbodycardlink");
+        var cards = root.querySelectorAll(".fed5pbodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("lffvhcardvisible");
+            cards[i].classList.add("fed5pcardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("lffvhcardvisible");
+            cards[j].classList.add("fed5pcardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("lffvhcardvisible");
+                entry.target.classList.add("fed5pcardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=j3r84"></script>
-  <script defer src="/src/cookie.js?v=j3r84"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=txqp6"></script>
+  <script defer src="/src/cookie.js?v=txqp6"></script>
 
   <script>
     setTimeout(function() {

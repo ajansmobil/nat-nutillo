@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=rvobd" />
-  <link rel="preload" href="/src/cookie.css?v=rvobd" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=dzri2" />
+  <link rel="preload" href="/src/cookie.css?v=dzri2" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=rvobd" />
+    <link rel="stylesheet" href="/src/cookie.css?v=dzri2" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=rvobd" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=dzri2" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=rvobd">
+<link rel="stylesheet" href="style.css?v=dzri2">
 </head>
 
 <body>
   <div id="header">
-<div class="oq4ba">
-  <div class="oq4batitle">
-    <div class="oq4batitlebody">
-      <div class="oq4batitlebodylang">
+<div class="dbhps">
+  <div class="dbhpstitle">
+    <div class="dbhpstitlebody">
+      <div class="dbhpstitlebodylang">
         <ul>
           <li><a href="/tr/cennet-hurmasi-kuru/">TR</a></li><li><a href="/en/cennet-hurmasi-kuru/">EN</a></li><li><a href="/ar/cennet-hurmasi-kuru/">AR</a></li><li><a href="/de/cennet-hurmasi-kuru/">DE</a></li><li><a href="/ko/cennet-hurmasi-kuru/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="oq4babody">
+  <div class="dbhpsbody">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=hwxvd"
+        src="/img/tillotarim-logo.png?v=x6y5z"
         alt="Tillo Tarim Logo"
-        class="oq4babodylogo"
+        class="dbhpsbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="oq4ba-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="dbhps-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="oq4ba-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="oq4bamenubody">
-    <div class="oq4bamenu" id="menu-2-root">
-      <div class="oq4bamenulistbody">
-        <div class="oq4bamenulist">
+  <div class="dbhps-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="dbhpsmenubody">
+    <div class="dbhpsmenu" id="menu-2-root">
+      <button type="button" class="dbhps-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="dbhpsmenulistbody">
+        <div class="dbhpsmenulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="dbhpsmenulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-dbhps"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="oq4balanguages-mobile">
+      <div class="dbhpslanguages-mobile">
         <ul>
           <li><a href="/tr/cennet-hurmasi-kuru/">TR</a></li><li><a href="/en/cennet-hurmasi-kuru/">EN</a></li><li><a href="/ar/cennet-hurmasi-kuru/">AR</a></li><li><a href="/de/cennet-hurmasi-kuru/">DE</a></li><li><a href="/ko/cennet-hurmasi-kuru/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".oq4ba") : null;
+      var wrapper = root.closest ? root.closest(".dbhps") : null;
       var target = wrapper || root;
-      if (target.classList.contains("oq4bamenu-open")) {
-        target.classList.remove("oq4bamenu-open");
+      if (target.classList.contains("dbhpsmenu-open")) {
+        target.classList.remove("dbhpsmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("oq4bamenu-open");
+        target.classList.add("dbhpsmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".dbhps") : null;
+      var target = wrapper || root;
+      target.classList.remove("dbhpsmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".dbhpsmenulist-menu.dropdown-content-active-dbhps");
+      if (activeWrap) {
+        activeWrap.classList.add("dbhps-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".dbhpsmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-dbhps")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("dbhps-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".dbhpsmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("dbhps-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("dbhps-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".dbhpsmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".dbhpsmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("dbhps-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="s8oyo-title">
+  <div id="content"><div class="mgk91-title">
   <h1>Cennet Hurması (Kuru)</h1>
 </div>
-<div class="s8oyo">
-  <button type="button" class="s8oyo-menu-btn" aria-expanded="false" aria-controls="s8oyo-menu">
-    <span class="s8oyo-menu-btn-label">메뉴</span>
-    <span class="material-symbols-outlined s8oyo-icon" aria-hidden="true">menu</span>
+<div class="mgk91">
+  <button type="button" class="mgk91-menu-btn" aria-expanded="false" aria-controls="mgk91-menu">
+    <span class="mgk91-menu-btn-label">메뉴</span>
+    <span class="material-symbols-outlined mgk91-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="s8oyo-menu-overlay" id="s8oyo-menu-overlay" aria-hidden="true"></div>
-  <nav class="s8oyo-menu" id="s8oyo-menu" aria-label="메뉴">
-    <button class="s8oyo-menu-close" type="button" aria-label="메뉴 닫기">
+  <div class="mgk91-menu-overlay" id="mgk91-menu-overlay" aria-hidden="true"></div>
+  <nav class="mgk91-menu" id="mgk91-menu" aria-label="메뉴">
+    <button class="mgk91-menu-close" type="button" aria-label="메뉴 닫기">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="s8oyo-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="s8oyo-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="s8oyo-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="s8oyo-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="s8oyo-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="s8oyo-menu-link-text">아몬드 페이스트·크림</span></a><a class="s8oyo-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="s8oyo-menu-link-text">땅콩 페이스트·크림</span></a><a class="s8oyo-menu-link" href="/ko/kurutulmus-meyveler/"><span class="s8oyo-menu-link-text">건과일</span></a><a class="s8oyo-menu-link" href="/ko/meyve-cipsleri/"><span class="s8oyo-menu-link-text">과일 칩</span></a><a class="s8oyo-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="s8oyo-menu-link-text">건채소</span></a><a class="s8oyo-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="s8oyo-menu-link-text">잼·마멀레이드</span></a><a class="s8oyo-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="s8oyo-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="s8oyo-menu-link" href="/ko/meyve-sulari/"><span class="s8oyo-menu-link-text">과일 주스</span></a><a class="s8oyo-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="s8oyo-menu-link-text">당밀·시럽</span></a><a class="s8oyo-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="s8oyo-menu-link-text">우유·유제품</span></a><a class="s8oyo-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="s8oyo-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="s8oyo-menu-link" href="/ko/sivi-yaglar/"><span class="s8oyo-menu-link-text">유장류 오일</span></a><a class="s8oyo-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="s8oyo-menu-link-text">의료용 아로마 오일</span></a><a class="s8oyo-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="s8oyo-menu-link-text">IQF 채소 슬라이스</span></a><a class="s8oyo-menu-link" href="/ko/iqf-meyveler/"><span class="s8oyo-menu-link-text">IQF 과일</span></a>
+    <a class="mgk91-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="mgk91-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="mgk91-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="mgk91-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="mgk91-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="mgk91-menu-link-text">아몬드 페이스트·크림</span></a><a class="mgk91-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="mgk91-menu-link-text">땅콩 페이스트·크림</span></a><a class="mgk91-menu-link" href="/ko/kurutulmus-meyveler/"><span class="mgk91-menu-link-text">건과일</span></a><a class="mgk91-menu-link" href="/ko/meyve-cipsleri/"><span class="mgk91-menu-link-text">과일 칩</span></a><a class="mgk91-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="mgk91-menu-link-text">건채소</span></a><a class="mgk91-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="mgk91-menu-link-text">잼·마멀레이드</span></a><a class="mgk91-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="mgk91-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="mgk91-menu-link" href="/ko/meyve-sulari/"><span class="mgk91-menu-link-text">과일 주스</span></a><a class="mgk91-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="mgk91-menu-link-text">당밀·시럽</span></a><a class="mgk91-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="mgk91-menu-link-text">우유·유제품</span></a><a class="mgk91-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="mgk91-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="mgk91-menu-link" href="/ko/sivi-yaglar/"><span class="mgk91-menu-link-text">유장류 오일</span></a><a class="mgk91-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="mgk91-menu-link-text">의료용 아로마 오일</span></a><a class="mgk91-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="mgk91-menu-link-text">IQF 채소 슬라이스</span></a><a class="mgk91-menu-link" href="/ko/iqf-meyveler/"><span class="mgk91-menu-link-text">IQF 과일</span></a>
   </nav>
-  <div class="s8oyo-main">
-    <div class="s8oyo-row"><div class="s8oyo-row-media"><div class="s8oyo-img"><img src="/page/pmq6y66qiu/index.webp?v=vahcf" alt="Cennet Hurması (Kuru)" loading="lazy" /></div></div><div class="s8oyo-row-desc"><p class="s8oyo-lead">Tillo Tarim Cennet Hurması (Kuru): Özel seçim hurma. 건과일 카테고리. 제공 중량: 300 g. 가지안테프산 천연 식품.</p><div class="s8oyo-desc-tags"><span class="s8oyo-desc-tag"><span class="s8oyo-desc-tag-label">중량</span><span class="s8oyo-desc-tag-value">300 g</span></span><span class="s8oyo-desc-tag"><span class="s8oyo-desc-tag-label">포장</span><span class="s8oyo-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="s8oyo-desc-tag"><span class="s8oyo-desc-tag-label">원산지</span><span class="s8oyo-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="s8oyo-body"><h2 style="font-size: 22px;">Cennet Hurması (Kuru)</h2>
+  <div class="mgk91-main">
+    <div class="mgk91-row"><div class="mgk91-row-media"><div class="mgk91-img"><img src="/page/pmq6y66qiu/index.webp?v=t1j8c" alt="Cennet Hurması (Kuru)" loading="lazy" /></div></div><div class="mgk91-row-desc"><p class="mgk91-lead">Tillo Tarim Cennet Hurması (Kuru): Özel seçim hurma. 건과일 카테고리. 제공 중량: 300 g. 가지안테프산 천연 식품.</p><div class="mgk91-desc-tags"><span class="mgk91-desc-tag"><span class="mgk91-desc-tag-label">중량</span><span class="mgk91-desc-tag-value">300 g</span></span><span class="mgk91-desc-tag"><span class="mgk91-desc-tag-label">포장</span><span class="mgk91-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="mgk91-desc-tag"><span class="mgk91-desc-tag-label">원산지</span><span class="mgk91-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="mgk91-body"><h2 style="font-size: 22px;">Cennet Hurması (Kuru)</h2>
 <p style="font-size: 16px;">Tillo Tarim Cennet Hurması (Kuru): Özel seçim hurma. 건과일 카테고리. 제공 중량: 300 g. 가지안테프산 천연 식품.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>중량:</strong> 300 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".s8oyo-menu-btn");
-    var menu = document.querySelector(".s8oyo-menu");
-    var overlay = document.querySelector(".s8oyo-menu-overlay");
-    var closeButton = document.querySelector(".s8oyo-menu-close");
+    var menuToggleBtn = document.querySelector(".mgk91-menu-btn");
+    var menu = document.querySelector(".mgk91-menu");
+    var overlay = document.querySelector(".mgk91-menu-overlay");
+    var closeButton = document.querySelector(".mgk91-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".s8oyo-menu-close")) {
+      if (link && !event.target.closest(".mgk91-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=rvobd"></script>
-  <script defer src="/src/cookie.js?v=rvobd"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=dzri2"></script>
+  <script defer src="/src/cookie.js?v=dzri2"></script>
 
   <script>
     setTimeout(function() {

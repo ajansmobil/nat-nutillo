@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=ylrnv" />
-  <link rel="preload" href="/src/cookie.css?v=ylrnv" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=y80ly" />
+  <link rel="preload" href="/src/cookie.css?v=y80ly" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=ylrnv" />
+    <link rel="stylesheet" href="/src/cookie.css?v=y80ly" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=ylrnv" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=y80ly" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=ylrnv">
+<link rel="stylesheet" href="style.css?v=y80ly">
 </head>
 
 <body>
   <div id="header">
-<div class="mfv1u">
-  <div class="mfv1utitle">
-    <div class="mfv1utitlebody">
-      <div class="mfv1utitlebodylang">
+<div class="herf5">
+  <div class="herf5title">
+    <div class="herf5titlebody">
+      <div class="herf5titlebodylang">
         <ul>
           <li><a href="/tr/hakkimizda/">TR</a></li><li><a href="/en/hakkimizda/">EN</a></li><li><a href="/ar/hakkimizda/">AR</a></li><li><a href="/de/hakkimizda/">DE</a></li><li><a href="/ko/hakkimizda/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="mfv1ubody">
+  <div class="herf5body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=dcdmk"
+        src="/img/tillotarim-logo.png?v=ibp12"
         alt="Tillo Tarim Logo"
-        class="mfv1ubodylogo"
+        class="herf5bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="mfv1u-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="herf5-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="mfv1u-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="mfv1umenubody">
-    <div class="mfv1umenu" id="menu-2-root">
-      <div class="mfv1umenulistbody">
-        <div class="mfv1umenulist">
+  <div class="herf5-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="herf5menubody">
+    <div class="herf5menu" id="menu-2-root">
+      <button type="button" class="herf5-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="herf5menulistbody">
+        <div class="herf5menulist">
           <ul>
-            <a href="/en/">Home </a><a class="mfv1u-menu-list-active" href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="herf5menulist-menu dropdown-content-active-herf5"><a class="herf5-menu-list-active" href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-herf5"><a class="herf5-menu-list-active" href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="mfv1ulanguages-mobile">
+      <div class="herf5languages-mobile">
         <ul>
           <li><a href="/tr/hakkimizda/">TR</a></li><li><a href="/en/hakkimizda/">EN</a></li><li><a href="/ar/hakkimizda/">AR</a></li><li><a href="/de/hakkimizda/">DE</a></li><li><a href="/ko/hakkimizda/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".mfv1u") : null;
+      var wrapper = root.closest ? root.closest(".herf5") : null;
       var target = wrapper || root;
-      if (target.classList.contains("mfv1umenu-open")) {
-        target.classList.remove("mfv1umenu-open");
+      if (target.classList.contains("herf5menu-open")) {
+        target.classList.remove("herf5menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("mfv1umenu-open");
+        target.classList.add("herf5menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".herf5") : null;
+      var target = wrapper || root;
+      target.classList.remove("herf5menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".herf5menulist-menu.dropdown-content-active-herf5");
+      if (activeWrap) {
+        activeWrap.classList.add("herf5-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".herf5menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-herf5")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("herf5-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".herf5menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("herf5-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("herf5-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".herf5menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".herf5menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("herf5-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="k7g3w-title f36">
+  <div id="content"><div class="z3et7-title f36">
   <h1>About Us</h1>
 </div>
-<div class="k7g3w">
+<div class="z3et7">
   <button
     type="button"
-    class="k7g3w-menu-btn"
+    class="z3et7-menu-btn"
     aria-expanded="false"
-    aria-controls="k7g3w-menu"
+    aria-controls="z3et7-menu"
   >
-    <span class="k7g3w-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined k7g3w-icon" aria-hidden="true">menu</span>
+    <span class="z3et7-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined z3et7-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="k7g3w-menu-overlay" id="k7g3w-menu-overlay" aria-hidden="true"></div>
-  <nav class="k7g3w-menu" id="k7g3w-menu" aria-label="Menu">
-    <button class="k7g3w-menu-close" type="button" aria-label="Close Menu" aria-controls="k7g3w-menu">
+  <div class="z3et7-menu-overlay" id="z3et7-menu-overlay" aria-hidden="true"></div>
+  <nav class="z3et7-menu" id="z3et7-menu" aria-label="Menu">
+    <button class="z3et7-menu-close" type="button" aria-label="Close Menu" aria-controls="z3et7-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="k7g3w-menu-link active" href="/en/hakkimizda/">About Us</a><a class="k7g3w-menu-link" href="/en/misyon/">Mission</a><a class="k7g3w-menu-link" href="/en/vizyon/">Vision</a><a class="k7g3w-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="k7g3w-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="k7g3w-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="k7g3w-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="k7g3w-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
+    <a class="z3et7-menu-link active" href="/en/hakkimizda/">About Us</a><a class="z3et7-menu-link" href="/en/misyon/">Mission</a><a class="z3et7-menu-link" href="/en/vizyon/">Vision</a><a class="z3et7-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="z3et7-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="z3et7-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="z3et7-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="z3et7-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
   </nav>
-  <div class="k7g3w-main">
+  <div class="z3et7-main">
     
     
-    <div class="k7g3w-body"><h2 style="font-size: 24px;">About Us</h2>
-<p style="font-size: 16px;">Tillo Tarim hakkında. natural food production rooted in Gaziantep, kalite ve müşteri odaklı hizmet anlayışımız.</p></div>
+    <div class="z3et7-body"><div class="mob-kurum-wrap"><div class="mob-kurum-hero"><span class="mob-kurum-hero-label">Corporate</span><p class="mob-kurum-hero-title">Natural food from Gaziantep to tables worldwide</p></div><p class="mob-kurum-lead"><strong>Tillo Tarim</strong> processes crops from fertile Southeastern Anatolia into pistachio spreads, dried fruits and vegetables, jams, molasses, dairy, IQF and aromatic oils — with a focus on clean labels and traceability.</p><div class="mob-kurum-pills"><span class="mob-kurum-pill">Additive-conscious production</span><span class="mob-kurum-pill">Traceable supply</span><span class="mob-kurum-pill">Wholesale &amp; retail</span><span class="mob-kurum-pill">17 product groups</span></div><div class="mob-kurum-stat-band"><div class="mob-kurum-stat-item"><strong>150+</strong><span>SKU range</span></div><div class="mob-kurum-stat-item"><strong>17</strong><span>Categories</span></div><div class="mob-kurum-stat-item"><strong>Gaziantep</strong><span>Production hub</span></div><div class="mob-kurum-stat-item"><strong>5 langs</strong><span>TR · EN · AR · DE · KO</span></div></div><div class="mob-kurum-grid"><div class="mob-kurum-card"><strong>Nature</strong><span>Selected raw materials and gentle processing to preserve taste and nutrition.</span></div><div class="mob-kurum-card"><strong>Quality</strong><span>Food safety, hygiene and batch-level traceability on every shipment.</span></div><div class="mob-kurum-card"><strong>Supply</strong><span>Flexible packaging for retail, HORECA, export and industrial buyers.</span></div><div class="mob-kurum-card"><strong>Trust</strong><span>Transparent label data, samples and technical documentation.</span></div></div><p class="mob-kurum-text">We combine regional farming heritage with modern facilities — drying, milling, canning and cold chain — aiming for consistent quality. Lot records cover intake, production and dispatch.</p><p class="mob-kurum-text">Pack weights, packaging and label layouts can be tailored. Our sales team responds quickly to wholesale, distributorship and product enquiries.</p><ul class="mob-kurum-list mob-kurum-list-check"><li>Gaziantep-based production and logistics</li><li>Natural formulations with minimal unnecessary additives</li><li>Samples, analysis reports and label approval workflow</li><li>Long-term supply partnership approach</li></ul><div class="mob-kurum-cta"><p class="mob-kurum-cta-text">Contact us for catalogue, samples or wholesale quotes.</p><a class="mob-kurum-cta-link" href="/en/iletisim/">Get in touch</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".k7g3w-menu-btn");
-    var menu = document.querySelector(".k7g3w-menu");
-    var overlay = document.querySelector(".k7g3w-menu-overlay");
-    var closeButton = document.querySelector(".k7g3w-menu-close");
+    var menuToggleBtn = document.querySelector(".z3et7-menu-btn");
+    var menu = document.querySelector(".z3et7-menu");
+    var overlay = document.querySelector(".z3et7-menu-overlay");
+    var closeButton = document.querySelector(".z3et7-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".k7g3w-menu-close");
+      var closeBtn = event.target.closest(".z3et7-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".k7g3w-top");
+    var topButtons = document.querySelectorAll(".z3et7-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".k7g3w-menu-group");
+        var group = this.closest(".z3et7-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".k7g3w-sub");
+        var sub = group.querySelector(".z3et7-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".k7g3w-icon");
+        var icon = this.querySelector(".z3et7-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=ylrnv"></script>
-  <script defer src="/src/cookie.js?v=ylrnv"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=y80ly"></script>
+  <script defer src="/src/cookie.js?v=y80ly"></script>
 
   <script>
     setTimeout(function() {

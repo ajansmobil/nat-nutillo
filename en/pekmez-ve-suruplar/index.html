@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=o2uyx" />
-  <link rel="preload" href="/src/cookie.css?v=o2uyx" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=uk39e" />
+  <link rel="preload" href="/src/cookie.css?v=uk39e" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=o2uyx" />
+    <link rel="stylesheet" href="/src/cookie.css?v=uk39e" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=o2uyx" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=uk39e" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=o2uyx">
+<link rel="stylesheet" href="style.css?v=uk39e">
 </head>
 
 <body>
   <div id="header">
-<div class="q65um">
-  <div class="q65umtitle">
-    <div class="q65umtitlebody">
-      <div class="q65umtitlebodylang">
+<div class="il11x">
+  <div class="il11xtitle">
+    <div class="il11xtitlebody">
+      <div class="il11xtitlebodylang">
         <ul>
           <li><a href="/tr/pekmez-ve-suruplar/">TR</a></li><li><a href="/en/pekmez-ve-suruplar/">EN</a></li><li><a href="/ar/pekmez-ve-suruplar/">AR</a></li><li><a href="/de/pekmez-ve-suruplar/">DE</a></li><li><a href="/ko/pekmez-ve-suruplar/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="q65umbody">
+  <div class="il11xbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=uloz5"
+        src="/img/tillotarim-logo.png?v=tls0r"
         alt="Tillo Tarim Logo"
-        class="q65umbodylogo"
+        class="il11xbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="q65um-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="il11x-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="q65um-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="q65ummenubody">
-    <div class="q65ummenu" id="menu-2-root">
-      <div class="q65ummenulistbody">
-        <div class="q65ummenulist">
+  <div class="il11x-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="il11xmenubody">
+    <div class="il11xmenu" id="menu-2-root">
+      <button type="button" class="il11x-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="il11xmenulistbody">
+        <div class="il11xmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="il11xmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-il11x"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="q65umlanguages-mobile">
+      <div class="il11xlanguages-mobile">
         <ul>
           <li><a href="/tr/pekmez-ve-suruplar/">TR</a></li><li><a href="/en/pekmez-ve-suruplar/">EN</a></li><li><a href="/ar/pekmez-ve-suruplar/">AR</a></li><li><a href="/de/pekmez-ve-suruplar/">DE</a></li><li><a href="/ko/pekmez-ve-suruplar/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".q65um") : null;
+      var wrapper = root.closest ? root.closest(".il11x") : null;
       var target = wrapper || root;
-      if (target.classList.contains("q65ummenu-open")) {
-        target.classList.remove("q65ummenu-open");
+      if (target.classList.contains("il11xmenu-open")) {
+        target.classList.remove("il11xmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("q65ummenu-open");
+        target.classList.add("il11xmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".il11x") : null;
+      var target = wrapper || root;
+      target.classList.remove("il11xmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".il11xmenulist-menu.dropdown-content-active-il11x");
+      if (activeWrap) {
+        activeWrap.classList.add("il11x-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".il11xmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-il11x")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("il11x-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".il11xmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("il11x-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("il11x-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".il11xmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".il11xmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("il11x-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="yv2gm-title f36">
+  <div id="content"><div class="ms6fb-title f36">
   <h1>Molasses & Syrups</h1>
 </div>
 
-<div class="yv2gm"><h2 style="font-size: 24px;">Molasses & Syrups</h2>
+<div class="ms6fb"><h2 style="font-size: 24px;">Molasses & Syrups</h2>
 <p style="font-size: 16px;">Tillo Tarim Molasses & Syrups. Pekmez ve şuruplar: üzüm, dut, hurma, keçiboynuzu. Doğal pekmez ve meyve şurupları; kahvaltı ve sağlıklı tatlandırıcı. Gazi…</p></div>
 
 
 ------------------------
-<div class="ismkx ismkxcat3">
-  <div class="ismkxbody"><a class="ismkxbodycardlink" href="/en/uzum-pekmezi/" title="Üzüm Molasses"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/i62q2eiy66/index.webp" alt="Üzüm Molasses" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Üzüm Molasses</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/hurma-pekmezi/" title="Hurma Molasses"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/p2uy2miqy6/index.webp" alt="Hurma Molasses" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Hurma Molasses</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/dut-pekmezi/" title="Dut Molasses"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/caiiqyaumm/index.webp" alt="Dut Molasses" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Dut Molasses</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/keciboynuzu-pekmezi/" title="Keçiboynuzu Molasses"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/jeyuyiauai/index.webp" alt="Keçiboynuzu Molasses" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Keçiboynuzu Molasses</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/orman-meyveleri-surubu/" title="Orman Meyveleri Şurubu"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/quq2yy6yeu/index.webp" alt="Orman Meyveleri Şurubu" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Orman Meyveleri Şurubu</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/nar-surubu/" title="Nar Şurubu"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/dieuie66eq/index.webp" alt="Nar Şurubu" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Nar Şurubu</span></div><div class="ismkxbodyitemaccent"></div></div></a><a class="ismkxbodycardlink" href="/en/andiz-pekmezi/" title="Andız Molasses"><div class="ismkxbodycard"><div class="ismkxbodyitemimg"><img src="/page/km2u6qqaiy/index.webp" alt="Andız Molasses" loading="lazy"></div><div class="ismkxbodyitemtitle"><span>Andız Molasses</span></div><div class="ismkxbodyitemaccent"></div></div></a></div>
+<div class="q0nhp q0nhpcat3">
+  <div class="q0nhpbody"><a class="q0nhpbodycardlink" href="/en/uzum-pekmezi/" title="Üzüm Molasses"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/i62q2eiy66/index.webp" alt="Üzüm Molasses" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Üzüm Molasses</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/hurma-pekmezi/" title="Hurma Molasses"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/p2uy2miqy6/index.webp" alt="Hurma Molasses" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Hurma Molasses</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/dut-pekmezi/" title="Dut Molasses"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/caiiqyaumm/index.webp" alt="Dut Molasses" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Dut Molasses</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/keciboynuzu-pekmezi/" title="Keçiboynuzu Molasses"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/jeyuyiauai/index.webp" alt="Keçiboynuzu Molasses" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Keçiboynuzu Molasses</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/orman-meyveleri-surubu/" title="Orman Meyveleri Şurubu"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/quq2yy6yeu/index.webp" alt="Orman Meyveleri Şurubu" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Orman Meyveleri Şurubu</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/nar-surubu/" title="Nar Şurubu"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/dieuie66eq/index.webp" alt="Nar Şurubu" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Nar Şurubu</span></div><div class="q0nhpbodyitemaccent"></div></div></a><a class="q0nhpbodycardlink" href="/en/andiz-pekmezi/" title="Andız Molasses"><div class="q0nhpbodycard"><div class="q0nhpbodyitemimg"><img src="/page/km2u6qqaiy/index.webp" alt="Andız Molasses" loading="lazy"></div><div class="q0nhpbodyitemtitle"><span>Andız Molasses</span></div><div class="q0nhpbodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".ismkxcat3");
+    var moduleRoots = document.querySelectorAll(".q0nhpcat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".ismkxbodycardlink");
+        var cards = root.querySelectorAll(".q0nhpbodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("ismkxcardvisible");
+            cards[i].classList.add("q0nhpcardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("ismkxcardvisible");
+            cards[j].classList.add("q0nhpcardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("ismkxcardvisible");
+                entry.target.classList.add("q0nhpcardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=o2uyx"></script>
-  <script defer src="/src/cookie.js?v=o2uyx"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=uk39e"></script>
+  <script defer src="/src/cookie.js?v=uk39e"></script>
 
   <script>
     setTimeout(function() {

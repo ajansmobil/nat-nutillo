@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=xp6sw" />
-  <link rel="preload" href="/src/cookie.css?v=xp6sw" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=xi972" />
+  <link rel="preload" href="/src/cookie.css?v=xi972" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=xp6sw" />
+    <link rel="stylesheet" href="/src/cookie.css?v=xi972" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=xp6sw" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=xi972" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=xp6sw">
+<link rel="stylesheet" href="style.css?v=xi972">
 </head>
 
 <body>
   <div id="header">
-<div class="m974w">
-  <div class="m974wtitle">
-    <div class="m974wtitlebody">
-      <div class="m974wtitlebodylang">
+<div class="f9but">
+  <div class="f9buttitle">
+    <div class="f9buttitlebody">
+      <div class="f9buttitlebodylang">
         <ul>
           <li><a href="/tr/kurutulmus-sebzeler/">TR</a></li><li><a href="/en/kurutulmus-sebzeler/">EN</a></li><li><a href="/ar/kurutulmus-sebzeler/">AR</a></li><li><a href="/de/kurutulmus-sebzeler/">DE</a></li><li><a href="/ko/kurutulmus-sebzeler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="m974wbody">
+  <div class="f9butbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=d5dci"
+        src="/img/tillotarim-logo.png?v=fij74"
         alt="Tillo Tarim Logo"
-        class="m974wbodylogo"
+        class="f9butbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="m974w-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="f9but-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="m974w-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="m974wmenubody">
-    <div class="m974wmenu" id="menu-2-root">
-      <div class="m974wmenulistbody">
-        <div class="m974wmenulist">
+  <div class="f9but-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="f9butmenubody">
+    <div class="f9butmenu" id="menu-2-root">
+      <button type="button" class="f9but-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="f9butmenulistbody">
+        <div class="f9butmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="f9butmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-f9but"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="m974wlanguages-mobile">
+      <div class="f9butlanguages-mobile">
         <ul>
           <li><a href="/tr/kurutulmus-sebzeler/">TR</a></li><li><a href="/en/kurutulmus-sebzeler/">EN</a></li><li><a href="/ar/kurutulmus-sebzeler/">AR</a></li><li><a href="/de/kurutulmus-sebzeler/">DE</a></li><li><a href="/ko/kurutulmus-sebzeler/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".m974w") : null;
+      var wrapper = root.closest ? root.closest(".f9but") : null;
       var target = wrapper || root;
-      if (target.classList.contains("m974wmenu-open")) {
-        target.classList.remove("m974wmenu-open");
+      if (target.classList.contains("f9butmenu-open")) {
+        target.classList.remove("f9butmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("m974wmenu-open");
+        target.classList.add("f9butmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".f9but") : null;
+      var target = wrapper || root;
+      target.classList.remove("f9butmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".f9butmenulist-menu.dropdown-content-active-f9but");
+      if (activeWrap) {
+        activeWrap.classList.add("f9but-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".f9butmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-f9but")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("f9but-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".f9butmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("f9but-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("f9but-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".f9butmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".f9butmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("f9but-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="guod3-title f36">
+  <div id="content"><div class="hg050-title f36">
   <h1>Trockengemüse</h1>
 </div>
 
-<div class="guod3"><h2 style="font-size: 24px;">Trockengemüse</h2>
+<div class="hg050"><h2 style="font-size: 24px;">Trockengemüse</h2>
 <p style="font-size: 16px;">Tillo Tarim Trockengemüse. Getrocknete sebzeler: biber, patlıcan, kabak; çorba ve yemeklik. Mevsim sebzelerinin kurutulmuş hali; çorba, yemek ve garni…</p></div>
 
 
 ------------------------
-<div class="guyl6 guyl6cat3">
-  <div class="guyl6body"><a class="guyl6bodycardlink" href="/de/kuru-kapia-biber/" title="Getrocknete Kapia Biber"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/tq6iua6qyy/index.webp" alt="Getrocknete Kapia Biber" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Kapia Biber</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-aci-biber/" title="Getrocknete Acı Biber"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/02aimeaaeu/index.webp" alt="Getrocknete Acı Biber" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Acı Biber</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-tatli-biber/" title="Getrocknete Tatlı Biber"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/7iaq2myimy/index.webp" alt="Getrocknete Tatlı Biber" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Tatlı Biber</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-patlican/" title="Getrocknete Patlıcan"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/eyaiaqyee6/index.webp" alt="Getrocknete Patlıcan" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Patlıcan</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-dolmalik-biber/" title="Getrocknete Dolmalık Biber"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/1uu6yeqeua/index.webp" alt="Getrocknete Dolmalık Biber" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Dolmalık Biber</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-kabak/" title="Getrocknete Kabak"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/8auie6622m/index.webp" alt="Getrocknete Kabak" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Kabak</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-havuc/" title="Getrocknete Havuç"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/f6yiiqmyme/index.webp" alt="Getrocknete Havuç" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Havuç</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/kuru-domates/" title="Getrocknete Domates"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/2i6iu2mmu2/index.webp" alt="Getrocknete Domates" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Getrocknete Domates</span></div><div class="guyl6bodyitemaccent"></div></div></a><a class="guyl6bodycardlink" href="/de/sebze-kurusu-karisimi/" title="Sebze Kurusu Mischung"><div class="guyl6bodycard"><div class="guyl6bodyitemimg"><img src="/page/9iq2qyeiia/index.webp" alt="Sebze Kurusu Mischung" loading="lazy"></div><div class="guyl6bodyitemtitle"><span>Sebze Kurusu Mischung</span></div><div class="guyl6bodyitemaccent"></div></div></a></div>
+<div class="ynh0o ynh0ocat3">
+  <div class="ynh0obody"><a class="ynh0obodycardlink" href="/de/kuru-kapia-biber/" title="Getrocknete Kapia Biber"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/tq6iua6qyy/index.webp" alt="Getrocknete Kapia Biber" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Kapia Biber</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-aci-biber/" title="Getrocknete Acı Biber"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/02aimeaaeu/index.webp" alt="Getrocknete Acı Biber" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Acı Biber</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-tatli-biber/" title="Getrocknete Tatlı Biber"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/7iaq2myimy/index.webp" alt="Getrocknete Tatlı Biber" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Tatlı Biber</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-patlican/" title="Getrocknete Patlıcan"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/eyaiaqyee6/index.webp" alt="Getrocknete Patlıcan" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Patlıcan</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-dolmalik-biber/" title="Getrocknete Dolmalık Biber"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/1uu6yeqeua/index.webp" alt="Getrocknete Dolmalık Biber" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Dolmalık Biber</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-kabak/" title="Getrocknete Kabak"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/8auie6622m/index.webp" alt="Getrocknete Kabak" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Kabak</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-havuc/" title="Getrocknete Havuç"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/f6yiiqmyme/index.webp" alt="Getrocknete Havuç" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Havuç</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/kuru-domates/" title="Getrocknete Domates"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/2i6iu2mmu2/index.webp" alt="Getrocknete Domates" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Getrocknete Domates</span></div><div class="ynh0obodyitemaccent"></div></div></a><a class="ynh0obodycardlink" href="/de/sebze-kurusu-karisimi/" title="Sebze Kurusu Mischung"><div class="ynh0obodycard"><div class="ynh0obodyitemimg"><img src="/page/9iq2qyeiia/index.webp" alt="Sebze Kurusu Mischung" loading="lazy"></div><div class="ynh0obodyitemtitle"><span>Sebze Kurusu Mischung</span></div><div class="ynh0obodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".guyl6cat3");
+    var moduleRoots = document.querySelectorAll(".ynh0ocat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".guyl6bodycardlink");
+        var cards = root.querySelectorAll(".ynh0obodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("guyl6cardvisible");
+            cards[i].classList.add("ynh0ocardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("guyl6cardvisible");
+            cards[j].classList.add("ynh0ocardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("guyl6cardvisible");
+                entry.target.classList.add("ynh0ocardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=xp6sw"></script>
-  <script defer src="/src/cookie.js?v=xp6sw"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=xi972"></script>
+  <script defer src="/src/cookie.js?v=xi972"></script>
 
   <script>
     setTimeout(function() {

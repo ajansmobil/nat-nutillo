@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=id62m" />
-  <link rel="preload" href="/src/cookie.css?v=id62m" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=mzdv6" />
+  <link rel="preload" href="/src/cookie.css?v=mzdv6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=id62m" />
+    <link rel="stylesheet" href="/src/cookie.css?v=mzdv6" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=id62m" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=mzdv6" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=id62m">
+<link rel="stylesheet" href="style.css?v=mzdv6">
 </head>
 
 <body>
   <div id="header">
-<div class="r39ty">
-  <div class="r39tytitle">
-    <div class="r39tytitlebody">
-      <div class="r39tytitlebodylang">
+<div class="iobvo">
+  <div class="iobvotitle">
+    <div class="iobvotitlebody">
+      <div class="iobvotitlebodylang">
         <ul>
           <li><a href="/tr/cokelek/">TR</a></li><li><a href="/en/cokelek/">EN</a></li><li><a href="/ar/cokelek/">AR</a></li><li><a href="/de/cokelek/">DE</a></li><li><a href="/ko/cokelek/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="r39tybody">
+  <div class="iobvobody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=b1ghu"
+        src="/img/tillotarim-logo.png?v=ib8s8"
         alt="Tillo Tarim Logo"
-        class="r39tybodylogo"
+        class="iobvobodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="r39ty-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="iobvo-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="r39ty-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="r39tymenubody">
-    <div class="r39tymenu" id="menu-2-root">
-      <div class="r39tymenulistbody">
-        <div class="r39tymenulist">
+  <div class="iobvo-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="iobvomenubody">
+    <div class="iobvomenu" id="menu-2-root">
+      <button type="button" class="iobvo-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="iobvomenulistbody">
+        <div class="iobvomenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="iobvomenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-iobvo"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="r39tylanguages-mobile">
+      <div class="iobvolanguages-mobile">
         <ul>
           <li><a href="/tr/cokelek/">TR</a></li><li><a href="/en/cokelek/">EN</a></li><li><a href="/ar/cokelek/">AR</a></li><li><a href="/de/cokelek/">DE</a></li><li><a href="/ko/cokelek/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".r39ty") : null;
+      var wrapper = root.closest ? root.closest(".iobvo") : null;
       var target = wrapper || root;
-      if (target.classList.contains("r39tymenu-open")) {
-        target.classList.remove("r39tymenu-open");
+      if (target.classList.contains("iobvomenu-open")) {
+        target.classList.remove("iobvomenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("r39tymenu-open");
+        target.classList.add("iobvomenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".iobvo") : null;
+      var target = wrapper || root;
+      target.classList.remove("iobvomenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".iobvomenulist-menu.dropdown-content-active-iobvo");
+      if (activeWrap) {
+        activeWrap.classList.add("iobvo-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".iobvomenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-iobvo")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("iobvo-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".iobvomenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("iobvo-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("iobvo-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".iobvomenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".iobvomenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("iobvo-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="fmdat-title">
+  <div id="content"><div class="wfe7v-title">
   <h1>Çökelek</h1>
 </div>
-<div class="fmdat">
-  <button type="button" class="fmdat-menu-btn" aria-expanded="false" aria-controls="fmdat-menu">
-    <span class="fmdat-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined fmdat-icon" aria-hidden="true">menu</span>
+<div class="wfe7v">
+  <button type="button" class="wfe7v-menu-btn" aria-expanded="false" aria-controls="wfe7v-menu">
+    <span class="wfe7v-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined wfe7v-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="fmdat-menu-overlay" id="fmdat-menu-overlay" aria-hidden="true"></div>
-  <nav class="fmdat-menu" id="fmdat-menu" aria-label="Menü">
-    <button class="fmdat-menu-close" type="button" aria-label="Menü schließen">
+  <div class="wfe7v-menu-overlay" id="wfe7v-menu-overlay" aria-hidden="true"></div>
+  <nav class="wfe7v-menu" id="wfe7v-menu" aria-label="Menü">
+    <button class="wfe7v-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="fmdat-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="fmdat-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="fmdat-menu-link" href="/de/findik-ezme-ve-krema/"><span class="fmdat-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="fmdat-menu-link" href="/de/badem-ezme-ve-krema/"><span class="fmdat-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="fmdat-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="fmdat-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="fmdat-menu-link" href="/de/kurutulmus-meyveler/"><span class="fmdat-menu-link-text">Trockenfrüchte</span></a><a class="fmdat-menu-link" href="/de/meyve-cipsleri/"><span class="fmdat-menu-link-text">Fruchtchips</span></a><a class="fmdat-menu-link" href="/de/kurutulmus-sebzeler/"><span class="fmdat-menu-link-text">Trockengemüse</span></a><a class="fmdat-menu-link" href="/de/recel-ve-marmelatlar/"><span class="fmdat-menu-link-text">Marmeladen & Konfitüren</span></a><a class="fmdat-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="fmdat-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="fmdat-menu-link" href="/de/meyve-sulari/"><span class="fmdat-menu-link-text">Fruchtsäfte</span></a><a class="fmdat-menu-link" href="/de/pekmez-ve-suruplar/"><span class="fmdat-menu-link-text">Melasse & Sirupe</span></a><a class="fmdat-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="fmdat-menu-link-text">Milch & Milchprodukte</span></a><a class="fmdat-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="fmdat-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="fmdat-menu-link" href="/de/sivi-yaglar/"><span class="fmdat-menu-link-text">Flüssige Öle</span></a><a class="fmdat-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="fmdat-menu-link-text">Medizinische Aromaöle</span></a><a class="fmdat-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="fmdat-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="fmdat-menu-link" href="/de/iqf-meyveler/"><span class="fmdat-menu-link-text">IQF-Früchte</span></a>
+    <a class="wfe7v-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="wfe7v-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="wfe7v-menu-link" href="/de/findik-ezme-ve-krema/"><span class="wfe7v-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="wfe7v-menu-link" href="/de/badem-ezme-ve-krema/"><span class="wfe7v-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="wfe7v-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="wfe7v-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="wfe7v-menu-link" href="/de/kurutulmus-meyveler/"><span class="wfe7v-menu-link-text">Trockenfrüchte</span></a><a class="wfe7v-menu-link" href="/de/meyve-cipsleri/"><span class="wfe7v-menu-link-text">Fruchtchips</span></a><a class="wfe7v-menu-link" href="/de/kurutulmus-sebzeler/"><span class="wfe7v-menu-link-text">Trockengemüse</span></a><a class="wfe7v-menu-link" href="/de/recel-ve-marmelatlar/"><span class="wfe7v-menu-link-text">Marmeladen & Konfitüren</span></a><a class="wfe7v-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wfe7v-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="wfe7v-menu-link" href="/de/meyve-sulari/"><span class="wfe7v-menu-link-text">Fruchtsäfte</span></a><a class="wfe7v-menu-link" href="/de/pekmez-ve-suruplar/"><span class="wfe7v-menu-link-text">Melasse & Sirupe</span></a><a class="wfe7v-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="wfe7v-menu-link-text">Milch & Milchprodukte</span></a><a class="wfe7v-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="wfe7v-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="wfe7v-menu-link" href="/de/sivi-yaglar/"><span class="wfe7v-menu-link-text">Flüssige Öle</span></a><a class="wfe7v-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="wfe7v-menu-link-text">Medizinische Aromaöle</span></a><a class="wfe7v-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="wfe7v-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="wfe7v-menu-link" href="/de/iqf-meyveler/"><span class="wfe7v-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="fmdat-main">
-    <div class="fmdat-row"><div class="fmdat-row-media"><div class="fmdat-img"><img src="/page/3queyi2ieu/index.webp?v=h22a6" alt="Çökelek" loading="lazy" /></div></div><div class="fmdat-row-desc"><p class="fmdat-lead">Tillo Tarim Çökelek: Geleneksel çökelek. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 400 g. Naturkost aus Gaziantep.</p><div class="fmdat-desc-tags"><span class="fmdat-desc-tag"><span class="fmdat-desc-tag-label">Grammatur</span><span class="fmdat-desc-tag-value">400 g</span></span><span class="fmdat-desc-tag"><span class="fmdat-desc-tag-label">Verpackung</span><span class="fmdat-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="fmdat-desc-tag"><span class="fmdat-desc-tag-label">Herkunft</span><span class="fmdat-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="fmdat-body"><h2 style="font-size: 22px;">Çökelek</h2>
+  <div class="wfe7v-main">
+    <div class="wfe7v-row"><div class="wfe7v-row-media"><div class="wfe7v-img"><img src="/page/3queyi2ieu/index.webp?v=dnykn" alt="Çökelek" loading="lazy" /></div></div><div class="wfe7v-row-desc"><p class="wfe7v-lead">Tillo Tarim Çökelek: Geleneksel çökelek. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 400 g. Naturkost aus Gaziantep.</p><div class="wfe7v-desc-tags"><span class="wfe7v-desc-tag"><span class="wfe7v-desc-tag-label">Grammatur</span><span class="wfe7v-desc-tag-value">400 g</span></span><span class="wfe7v-desc-tag"><span class="wfe7v-desc-tag-label">Verpackung</span><span class="wfe7v-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="wfe7v-desc-tag"><span class="wfe7v-desc-tag-label">Herkunft</span><span class="wfe7v-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="wfe7v-body"><h2 style="font-size: 22px;">Çökelek</h2>
 <p style="font-size: 16px;">Tillo Tarim Çökelek: Geleneksel çökelek. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 400 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 400 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".fmdat-menu-btn");
-    var menu = document.querySelector(".fmdat-menu");
-    var overlay = document.querySelector(".fmdat-menu-overlay");
-    var closeButton = document.querySelector(".fmdat-menu-close");
+    var menuToggleBtn = document.querySelector(".wfe7v-menu-btn");
+    var menu = document.querySelector(".wfe7v-menu");
+    var overlay = document.querySelector(".wfe7v-menu-overlay");
+    var closeButton = document.querySelector(".wfe7v-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".fmdat-menu-close")) {
+      if (link && !event.target.closest(".wfe7v-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=id62m"></script>
-  <script defer src="/src/cookie.js?v=id62m"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=mzdv6"></script>
+  <script defer src="/src/cookie.js?v=mzdv6"></script>
 
   <script>
     setTimeout(function() {

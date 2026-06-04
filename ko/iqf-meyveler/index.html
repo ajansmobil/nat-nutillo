@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=i3ep5" />
-  <link rel="preload" href="/src/cookie.css?v=i3ep5" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=z80gn" />
+  <link rel="preload" href="/src/cookie.css?v=z80gn" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=i3ep5" />
+    <link rel="stylesheet" href="/src/cookie.css?v=z80gn" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=i3ep5" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=z80gn" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=i3ep5">
+<link rel="stylesheet" href="style.css?v=z80gn">
 </head>
 
 <body>
   <div id="header">
-<div class="ssxbf">
-  <div class="ssxbftitle">
-    <div class="ssxbftitlebody">
-      <div class="ssxbftitlebodylang">
+<div class="lu534">
+  <div class="lu534title">
+    <div class="lu534titlebody">
+      <div class="lu534titlebodylang">
         <ul>
           <li><a href="/tr/iqf-meyveler/">TR</a></li><li><a href="/en/iqf-meyveler/">EN</a></li><li><a href="/ar/iqf-meyveler/">AR</a></li><li><a href="/de/iqf-meyveler/">DE</a></li><li><a href="/ko/iqf-meyveler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ssxbfbody">
+  <div class="lu534body">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=m2ru2"
+        src="/img/tillotarim-logo.png?v=pfyvf"
         alt="Tillo Tarim Logo"
-        class="ssxbfbodylogo"
+        class="lu534bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ssxbf-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="lu534-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ssxbf-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ssxbfmenubody">
-    <div class="ssxbfmenu" id="menu-2-root">
-      <div class="ssxbfmenulistbody">
-        <div class="ssxbfmenulist">
+  <div class="lu534-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="lu534menubody">
+    <div class="lu534menu" id="menu-2-root">
+      <button type="button" class="lu534-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="lu534menulistbody">
+        <div class="lu534menulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="lu534menulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-lu534"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="ssxbflanguages-mobile">
+      <div class="lu534languages-mobile">
         <ul>
           <li><a href="/tr/iqf-meyveler/">TR</a></li><li><a href="/en/iqf-meyveler/">EN</a></li><li><a href="/ar/iqf-meyveler/">AR</a></li><li><a href="/de/iqf-meyveler/">DE</a></li><li><a href="/ko/iqf-meyveler/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ssxbf") : null;
+      var wrapper = root.closest ? root.closest(".lu534") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ssxbfmenu-open")) {
-        target.classList.remove("ssxbfmenu-open");
+      if (target.classList.contains("lu534menu-open")) {
+        target.classList.remove("lu534menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ssxbfmenu-open");
+        target.classList.add("lu534menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".lu534") : null;
+      var target = wrapper || root;
+      target.classList.remove("lu534menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".lu534menulist-menu.dropdown-content-active-lu534");
+      if (activeWrap) {
+        activeWrap.classList.add("lu534-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".lu534menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-lu534")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("lu534-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".lu534menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("lu534-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("lu534-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".lu534menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".lu534menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("lu534-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="nann0-title f36">
+  <div id="content"><div class="ljhaf-title f36">
   <h1>IQF 과일</h1>
 </div>
 
-<div class="nann0"><h2 style="font-size: 24px;">IQF 과일</h2>
+<div class="ljhaf"><h2 style="font-size: 24px;">IQF 과일</h2>
 <p style="font-size: 16px;">Tillo Tarim IQF 과일. IQF meyveler: çilek, kiraz, nar, ahududu ve karışım. Hızlı dondurulmuş bütün ve dilim meyveler; smoothie ve pastacılık. Gaziantep…</p></div>
 
 
 ------------------------
-<div class="io6cm io6cmcat3">
-  <div class="io6cmbody"><a class="io6cmbodycardlink" href="/ko/iqf-cilek/" title="IQF Çilek"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/cu262a7mym/index.webp" alt="IQF Çilek" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Çilek</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-kiraz/" title="IQF Kiraz"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/jqmqqeiaaa/index.webp" alt="IQF Kiraz" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Kiraz</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-uzum/" title="IQF Üzüm"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/6ieaye2y22/index.webp" alt="IQF Üzüm" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Üzüm</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-nar-tanesi/" title="IQF Nar Tanesi"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/dmiqaeummi/index.webp" alt="IQF Nar Tanesi" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Nar Tanesi</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-ahududu/" title="IQF Ahududu"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/kmei2i6im2/index.webp" alt="IQF Ahududu" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Ahududu</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-dut/" title="IQF Dut"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/ri6qeqm6iy/index.webp" alt="IQF Dut" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Dut</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-orman-meyveleri-mix/" title="IQF Orman Meyveleri Mix"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/e62uqi6yme/index.webp" alt="IQF Orman Meyveleri Mix" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Orman Meyveleri Mix</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-mango-dilim/" title="IQF Mango 슬라이스"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/luq6y26ieq/index.webp" alt="IQF Mango 슬라이스" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Mango 슬라이스</span></div><div class="io6cmbodyitemaccent"></div></div></a><a class="io6cmbodycardlink" href="/ko/iqf-ananas-dilim/" title="IQF Ananas 슬라이스"><div class="io6cmbodycard"><div class="io6cmbodyitemimg"><img src="/page/sa2uqym6ey/index.webp" alt="IQF Ananas 슬라이스" loading="lazy"></div><div class="io6cmbodyitemtitle"><span>IQF Ananas 슬라이스</span></div><div class="io6cmbodyitemaccent"></div></div></a></div>
+<div class="aoes5 aoes5cat3">
+  <div class="aoes5body"><a class="aoes5bodycardlink" href="/ko/iqf-cilek/" title="IQF Çilek"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/cu262a7mym/index.webp" alt="IQF Çilek" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Çilek</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-kiraz/" title="IQF Kiraz"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/jqmqqeiaaa/index.webp" alt="IQF Kiraz" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Kiraz</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-uzum/" title="IQF Üzüm"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/6ieaye2y22/index.webp" alt="IQF Üzüm" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Üzüm</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-nar-tanesi/" title="IQF Nar Tanesi"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/dmiqaeummi/index.webp" alt="IQF Nar Tanesi" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Nar Tanesi</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-ahududu/" title="IQF Ahududu"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/kmei2i6im2/index.webp" alt="IQF Ahududu" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Ahududu</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-dut/" title="IQF Dut"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/ri6qeqm6iy/index.webp" alt="IQF Dut" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Dut</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-orman-meyveleri-mix/" title="IQF Orman Meyveleri Mix"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/e62uqi6yme/index.webp" alt="IQF Orman Meyveleri Mix" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Orman Meyveleri Mix</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-mango-dilim/" title="IQF Mango 슬라이스"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/luq6y26ieq/index.webp" alt="IQF Mango 슬라이스" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Mango 슬라이스</span></div><div class="aoes5bodyitemaccent"></div></div></a><a class="aoes5bodycardlink" href="/ko/iqf-ananas-dilim/" title="IQF Ananas 슬라이스"><div class="aoes5bodycard"><div class="aoes5bodyitemimg"><img src="/page/sa2uqym6ey/index.webp" alt="IQF Ananas 슬라이스" loading="lazy"></div><div class="aoes5bodyitemtitle"><span>IQF Ananas 슬라이스</span></div><div class="aoes5bodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".io6cmcat3");
+    var moduleRoots = document.querySelectorAll(".aoes5cat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".io6cmbodycardlink");
+        var cards = root.querySelectorAll(".aoes5bodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("io6cmcardvisible");
+            cards[i].classList.add("aoes5cardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("io6cmcardvisible");
+            cards[j].classList.add("aoes5cardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("io6cmcardvisible");
+                entry.target.classList.add("aoes5cardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=i3ep5"></script>
-  <script defer src="/src/cookie.js?v=i3ep5"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=z80gn"></script>
+  <script defer src="/src/cookie.js?v=z80gn"></script>
 
   <script>
     setTimeout(function() {

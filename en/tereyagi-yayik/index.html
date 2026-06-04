@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=nyfaw" />
-  <link rel="preload" href="/src/cookie.css?v=nyfaw" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=ceqsg" />
+  <link rel="preload" href="/src/cookie.css?v=ceqsg" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=nyfaw" />
+    <link rel="stylesheet" href="/src/cookie.css?v=ceqsg" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=nyfaw" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=ceqsg" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=nyfaw">
+<link rel="stylesheet" href="style.css?v=ceqsg">
 </head>
 
 <body>
   <div id="header">
-<div class="p5es5">
-  <div class="p5es5title">
-    <div class="p5es5titlebody">
-      <div class="p5es5titlebodylang">
+<div class="cebal">
+  <div class="cebaltitle">
+    <div class="cebaltitlebody">
+      <div class="cebaltitlebodylang">
         <ul>
           <li><a href="/tr/tereyagi-yayik/">TR</a></li><li><a href="/en/tereyagi-yayik/">EN</a></li><li><a href="/ar/tereyagi-yayik/">AR</a></li><li><a href="/de/tereyagi-yayik/">DE</a></li><li><a href="/ko/tereyagi-yayik/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="p5es5body">
+  <div class="cebalbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=l1ohp"
+        src="/img/tillotarim-logo.png?v=xakgv"
         alt="Tillo Tarim Logo"
-        class="p5es5bodylogo"
+        class="cebalbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="p5es5-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="cebal-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="p5es5-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="p5es5menubody">
-    <div class="p5es5menu" id="menu-2-root">
-      <div class="p5es5menulistbody">
-        <div class="p5es5menulist">
+  <div class="cebal-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="cebalmenubody">
+    <div class="cebalmenu" id="menu-2-root">
+      <button type="button" class="cebal-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="cebalmenulistbody">
+        <div class="cebalmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="cebalmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-cebal"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="p5es5languages-mobile">
+      <div class="ceballanguages-mobile">
         <ul>
           <li><a href="/tr/tereyagi-yayik/">TR</a></li><li><a href="/en/tereyagi-yayik/">EN</a></li><li><a href="/ar/tereyagi-yayik/">AR</a></li><li><a href="/de/tereyagi-yayik/">DE</a></li><li><a href="/ko/tereyagi-yayik/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".p5es5") : null;
+      var wrapper = root.closest ? root.closest(".cebal") : null;
       var target = wrapper || root;
-      if (target.classList.contains("p5es5menu-open")) {
-        target.classList.remove("p5es5menu-open");
+      if (target.classList.contains("cebalmenu-open")) {
+        target.classList.remove("cebalmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("p5es5menu-open");
+        target.classList.add("cebalmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".cebal") : null;
+      var target = wrapper || root;
+      target.classList.remove("cebalmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".cebalmenulist-menu.dropdown-content-active-cebal");
+      if (activeWrap) {
+        activeWrap.classList.add("cebal-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".cebalmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-cebal")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("cebal-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".cebalmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("cebal-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("cebal-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".cebalmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".cebalmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("cebal-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="ts54i-title">
+  <div id="content"><div class="emcvu-title">
   <h1>Tereyağı (Yayık)</h1>
 </div>
-<div class="ts54i">
-  <button type="button" class="ts54i-menu-btn" aria-expanded="false" aria-controls="ts54i-menu">
-    <span class="ts54i-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined ts54i-icon" aria-hidden="true">menu</span>
+<div class="emcvu">
+  <button type="button" class="emcvu-menu-btn" aria-expanded="false" aria-controls="emcvu-menu">
+    <span class="emcvu-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined emcvu-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="ts54i-menu-overlay" id="ts54i-menu-overlay" aria-hidden="true"></div>
-  <nav class="ts54i-menu" id="ts54i-menu" aria-label="Menu">
-    <button class="ts54i-menu-close" type="button" aria-label="Close Menu">
+  <div class="emcvu-menu-overlay" id="emcvu-menu-overlay" aria-hidden="true"></div>
+  <nav class="emcvu-menu" id="emcvu-menu" aria-label="Menu">
+    <button class="emcvu-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="ts54i-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="ts54i-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="ts54i-menu-link" href="/en/findik-ezme-ve-krema/"><span class="ts54i-menu-link-text">Hazelnut Paste & Cream</span></a><a class="ts54i-menu-link" href="/en/badem-ezme-ve-krema/"><span class="ts54i-menu-link-text">Almond Paste & Cream</span></a><a class="ts54i-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="ts54i-menu-link-text">Peanut Paste & Cream</span></a><a class="ts54i-menu-link" href="/en/kurutulmus-meyveler/"><span class="ts54i-menu-link-text">Dried Fruits</span></a><a class="ts54i-menu-link" href="/en/meyve-cipsleri/"><span class="ts54i-menu-link-text">Fruit Chips</span></a><a class="ts54i-menu-link" href="/en/kurutulmus-sebzeler/"><span class="ts54i-menu-link-text">Dried Vegetables</span></a><a class="ts54i-menu-link" href="/en/recel-ve-marmelatlar/"><span class="ts54i-menu-link-text">Jams & Marmalades</span></a><a class="ts54i-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="ts54i-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="ts54i-menu-link" href="/en/meyve-sulari/"><span class="ts54i-menu-link-text">Fruit Juices</span></a><a class="ts54i-menu-link" href="/en/pekmez-ve-suruplar/"><span class="ts54i-menu-link-text">Molasses & Syrups</span></a><a class="ts54i-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="ts54i-menu-link-text">Milk & Dairy Products</span></a><a class="ts54i-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="ts54i-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="ts54i-menu-link" href="/en/sivi-yaglar/"><span class="ts54i-menu-link-text">Liquid Oils</span></a><a class="ts54i-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="ts54i-menu-link-text">Medicinal Aromatic Oils</span></a><a class="ts54i-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="ts54i-menu-link-text">IQF Sliced Vegetables</span></a><a class="ts54i-menu-link" href="/en/iqf-meyveler/"><span class="ts54i-menu-link-text">IQF Fruits</span></a>
+    <a class="emcvu-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="emcvu-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="emcvu-menu-link" href="/en/findik-ezme-ve-krema/"><span class="emcvu-menu-link-text">Hazelnut Paste & Cream</span></a><a class="emcvu-menu-link" href="/en/badem-ezme-ve-krema/"><span class="emcvu-menu-link-text">Almond Paste & Cream</span></a><a class="emcvu-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="emcvu-menu-link-text">Peanut Paste & Cream</span></a><a class="emcvu-menu-link" href="/en/kurutulmus-meyveler/"><span class="emcvu-menu-link-text">Dried Fruits</span></a><a class="emcvu-menu-link" href="/en/meyve-cipsleri/"><span class="emcvu-menu-link-text">Fruit Chips</span></a><a class="emcvu-menu-link" href="/en/kurutulmus-sebzeler/"><span class="emcvu-menu-link-text">Dried Vegetables</span></a><a class="emcvu-menu-link" href="/en/recel-ve-marmelatlar/"><span class="emcvu-menu-link-text">Jams & Marmalades</span></a><a class="emcvu-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="emcvu-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="emcvu-menu-link" href="/en/meyve-sulari/"><span class="emcvu-menu-link-text">Fruit Juices</span></a><a class="emcvu-menu-link" href="/en/pekmez-ve-suruplar/"><span class="emcvu-menu-link-text">Molasses & Syrups</span></a><a class="emcvu-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="emcvu-menu-link-text">Milk & Dairy Products</span></a><a class="emcvu-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="emcvu-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="emcvu-menu-link" href="/en/sivi-yaglar/"><span class="emcvu-menu-link-text">Liquid Oils</span></a><a class="emcvu-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="emcvu-menu-link-text">Medicinal Aromatic Oils</span></a><a class="emcvu-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="emcvu-menu-link-text">IQF Sliced Vegetables</span></a><a class="emcvu-menu-link" href="/en/iqf-meyveler/"><span class="emcvu-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="ts54i-main">
-    <div class="ts54i-row"><div class="ts54i-row-media"><div class="ts54i-img"><img src="/page/r22yqei22i/index.webp?v=rwb7u" alt="Tereyağı (Yayık)" loading="lazy" /></div></div><div class="ts54i-row-desc"><p class="ts54i-lead">Tillo Tarim Tereyağı (Yayık): Köy tereyağı. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p><div class="ts54i-desc-tags"><span class="ts54i-desc-tag"><span class="ts54i-desc-tag-label">Net weight</span><span class="ts54i-desc-tag-value">500 g / 1 kg</span></span><span class="ts54i-desc-tag"><span class="ts54i-desc-tag-label">Packaging</span><span class="ts54i-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="ts54i-desc-tag"><span class="ts54i-desc-tag-label">Origin</span><span class="ts54i-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="ts54i-body"><h2 style="font-size: 22px;">Tereyağı (Yayık)</h2>
+  <div class="emcvu-main">
+    <div class="emcvu-row"><div class="emcvu-row-media"><div class="emcvu-img"><img src="/page/r22yqei22i/index.webp?v=v23ko" alt="Tereyağı (Yayık)" loading="lazy" /></div></div><div class="emcvu-row-desc"><p class="emcvu-lead">Tillo Tarim Tereyağı (Yayık): Köy tereyağı. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p><div class="emcvu-desc-tags"><span class="emcvu-desc-tag"><span class="emcvu-desc-tag-label">Net weight</span><span class="emcvu-desc-tag-value">500 g / 1 kg</span></span><span class="emcvu-desc-tag"><span class="emcvu-desc-tag-label">Packaging</span><span class="emcvu-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="emcvu-desc-tag"><span class="emcvu-desc-tag-label">Origin</span><span class="emcvu-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="emcvu-body"><h2 style="font-size: 22px;">Tereyağı (Yayık)</h2>
 <p style="font-size: 16px;">Tillo Tarim Tereyağı (Yayık): Köy tereyağı. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 500 g / 1 kg</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".ts54i-menu-btn");
-    var menu = document.querySelector(".ts54i-menu");
-    var overlay = document.querySelector(".ts54i-menu-overlay");
-    var closeButton = document.querySelector(".ts54i-menu-close");
+    var menuToggleBtn = document.querySelector(".emcvu-menu-btn");
+    var menu = document.querySelector(".emcvu-menu");
+    var overlay = document.querySelector(".emcvu-menu-overlay");
+    var closeButton = document.querySelector(".emcvu-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".ts54i-menu-close")) {
+      if (link && !event.target.closest(".emcvu-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=nyfaw"></script>
-  <script defer src="/src/cookie.js?v=nyfaw"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=ceqsg"></script>
+  <script defer src="/src/cookie.js?v=ceqsg"></script>
 
   <script>
     setTimeout(function() {

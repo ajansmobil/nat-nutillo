@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=bisiz" />
-  <link rel="preload" href="/src/cookie.css?v=bisiz" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=ka5rs" />
+  <link rel="preload" href="/src/cookie.css?v=ka5rs" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=bisiz" />
+    <link rel="stylesheet" href="/src/cookie.css?v=ka5rs" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=bisiz" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=ka5rs" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=bisiz">
+<link rel="stylesheet" href="style.css?v=ka5rs">
 </head>
 
 <body>
   <div id="header">
-<div class="p2w8s">
-  <div class="p2w8stitle">
-    <div class="p2w8stitlebody">
-      <div class="p2w8stitlebodylang">
+<div class="munyl">
+  <div class="munyltitle">
+    <div class="munyltitlebody">
+      <div class="munyltitlebodylang">
         <ul>
           <li><a href="/tr/kuru-i-ncir/">TR</a></li><li><a href="/en/kuru-i-ncir/">EN</a></li><li><a href="/ar/kuru-i-ncir/">AR</a></li><li><a href="/de/kuru-i-ncir/">DE</a></li><li><a href="/ko/kuru-i-ncir/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="p2w8sbody">
+  <div class="munylbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=vbowm"
+        src="/img/tillotarim-logo.png?v=oph1y"
         alt="Tillo Tarim Logo"
-        class="p2w8sbodylogo"
+        class="munylbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="p2w8s-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="munyl-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="p2w8s-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="p2w8smenubody">
-    <div class="p2w8smenu" id="menu-2-root">
-      <div class="p2w8smenulistbody">
-        <div class="p2w8smenulist">
+  <div class="munyl-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="munylmenubody">
+    <div class="munylmenu" id="menu-2-root">
+      <button type="button" class="munyl-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="munylmenulistbody">
+        <div class="munylmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="munylmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-munyl"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="p2w8slanguages-mobile">
+      <div class="munyllanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-i-ncir/">TR</a></li><li><a href="/en/kuru-i-ncir/">EN</a></li><li><a href="/ar/kuru-i-ncir/">AR</a></li><li><a href="/de/kuru-i-ncir/">DE</a></li><li><a href="/ko/kuru-i-ncir/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".p2w8s") : null;
+      var wrapper = root.closest ? root.closest(".munyl") : null;
       var target = wrapper || root;
-      if (target.classList.contains("p2w8smenu-open")) {
-        target.classList.remove("p2w8smenu-open");
+      if (target.classList.contains("munylmenu-open")) {
+        target.classList.remove("munylmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("p2w8smenu-open");
+        target.classList.add("munylmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".munyl") : null;
+      var target = wrapper || root;
+      target.classList.remove("munylmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".munylmenulist-menu.dropdown-content-active-munyl");
+      if (activeWrap) {
+        activeWrap.classList.add("munyl-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".munylmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-munyl")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("munyl-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".munylmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("munyl-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("munyl-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".munylmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".munylmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("munyl-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="m6eyn-title">
+  <div id="content"><div class="lph33-title">
   <h1>Getrocknete İncir</h1>
 </div>
-<div class="m6eyn">
-  <button type="button" class="m6eyn-menu-btn" aria-expanded="false" aria-controls="m6eyn-menu">
-    <span class="m6eyn-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined m6eyn-icon" aria-hidden="true">menu</span>
+<div class="lph33">
+  <button type="button" class="lph33-menu-btn" aria-expanded="false" aria-controls="lph33-menu">
+    <span class="lph33-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined lph33-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="m6eyn-menu-overlay" id="m6eyn-menu-overlay" aria-hidden="true"></div>
-  <nav class="m6eyn-menu" id="m6eyn-menu" aria-label="Menü">
-    <button class="m6eyn-menu-close" type="button" aria-label="Menü schließen">
+  <div class="lph33-menu-overlay" id="lph33-menu-overlay" aria-hidden="true"></div>
+  <nav class="lph33-menu" id="lph33-menu" aria-label="Menü">
+    <button class="lph33-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="m6eyn-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="m6eyn-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="m6eyn-menu-link" href="/de/findik-ezme-ve-krema/"><span class="m6eyn-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="m6eyn-menu-link" href="/de/badem-ezme-ve-krema/"><span class="m6eyn-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="m6eyn-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="m6eyn-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="m6eyn-menu-link" href="/de/kurutulmus-meyveler/"><span class="m6eyn-menu-link-text">Trockenfrüchte</span></a><a class="m6eyn-menu-link" href="/de/meyve-cipsleri/"><span class="m6eyn-menu-link-text">Fruchtchips</span></a><a class="m6eyn-menu-link" href="/de/kurutulmus-sebzeler/"><span class="m6eyn-menu-link-text">Trockengemüse</span></a><a class="m6eyn-menu-link" href="/de/recel-ve-marmelatlar/"><span class="m6eyn-menu-link-text">Marmeladen & Konfitüren</span></a><a class="m6eyn-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="m6eyn-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="m6eyn-menu-link" href="/de/meyve-sulari/"><span class="m6eyn-menu-link-text">Fruchtsäfte</span></a><a class="m6eyn-menu-link" href="/de/pekmez-ve-suruplar/"><span class="m6eyn-menu-link-text">Melasse & Sirupe</span></a><a class="m6eyn-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="m6eyn-menu-link-text">Milch & Milchprodukte</span></a><a class="m6eyn-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="m6eyn-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="m6eyn-menu-link" href="/de/sivi-yaglar/"><span class="m6eyn-menu-link-text">Flüssige Öle</span></a><a class="m6eyn-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="m6eyn-menu-link-text">Medizinische Aromaöle</span></a><a class="m6eyn-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="m6eyn-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="m6eyn-menu-link" href="/de/iqf-meyveler/"><span class="m6eyn-menu-link-text">IQF-Früchte</span></a>
+    <a class="lph33-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="lph33-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="lph33-menu-link" href="/de/findik-ezme-ve-krema/"><span class="lph33-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="lph33-menu-link" href="/de/badem-ezme-ve-krema/"><span class="lph33-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="lph33-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="lph33-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="lph33-menu-link" href="/de/kurutulmus-meyveler/"><span class="lph33-menu-link-text">Trockenfrüchte</span></a><a class="lph33-menu-link" href="/de/meyve-cipsleri/"><span class="lph33-menu-link-text">Fruchtchips</span></a><a class="lph33-menu-link" href="/de/kurutulmus-sebzeler/"><span class="lph33-menu-link-text">Trockengemüse</span></a><a class="lph33-menu-link" href="/de/recel-ve-marmelatlar/"><span class="lph33-menu-link-text">Marmeladen & Konfitüren</span></a><a class="lph33-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="lph33-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="lph33-menu-link" href="/de/meyve-sulari/"><span class="lph33-menu-link-text">Fruchtsäfte</span></a><a class="lph33-menu-link" href="/de/pekmez-ve-suruplar/"><span class="lph33-menu-link-text">Melasse & Sirupe</span></a><a class="lph33-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="lph33-menu-link-text">Milch & Milchprodukte</span></a><a class="lph33-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="lph33-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="lph33-menu-link" href="/de/sivi-yaglar/"><span class="lph33-menu-link-text">Flüssige Öle</span></a><a class="lph33-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="lph33-menu-link-text">Medizinische Aromaöle</span></a><a class="lph33-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="lph33-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="lph33-menu-link" href="/de/iqf-meyveler/"><span class="lph33-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="m6eyn-main">
-    <div class="m6eyn-row"><div class="m6eyn-row-media"><div class="m6eyn-img"><img src="/page/9uaqaq2ea2/index.webp?v=mq7p8" alt="Getrocknete İncir" loading="lazy" /></div></div><div class="m6eyn-row-desc"><p class="m6eyn-lead">Tillo Tarim Getrocknete İncir: Aydın ve Bursa inciri. Trockenfrüchte Kategorie. Verfügbare Grammaturen: 250 g / 500 g. Naturkost aus Gaziantep.</p><div class="m6eyn-desc-tags"><span class="m6eyn-desc-tag"><span class="m6eyn-desc-tag-label">Grammatur</span><span class="m6eyn-desc-tag-value">250 g / 500 g</span></span><span class="m6eyn-desc-tag"><span class="m6eyn-desc-tag-label">Verpackung</span><span class="m6eyn-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="m6eyn-desc-tag"><span class="m6eyn-desc-tag-label">Herkunft</span><span class="m6eyn-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="m6eyn-body"><h2 style="font-size: 22px;">Getrocknete İncir</h2>
+  <div class="lph33-main">
+    <div class="lph33-row"><div class="lph33-row-media"><div class="lph33-img"><img src="/page/9uaqaq2ea2/index.webp?v=t7dc3" alt="Getrocknete İncir" loading="lazy" /></div></div><div class="lph33-row-desc"><p class="lph33-lead">Tillo Tarim Getrocknete İncir: Aydın ve Bursa inciri. Trockenfrüchte Kategorie. Verfügbare Grammaturen: 250 g / 500 g. Naturkost aus Gaziantep.</p><div class="lph33-desc-tags"><span class="lph33-desc-tag"><span class="lph33-desc-tag-label">Grammatur</span><span class="lph33-desc-tag-value">250 g / 500 g</span></span><span class="lph33-desc-tag"><span class="lph33-desc-tag-label">Verpackung</span><span class="lph33-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="lph33-desc-tag"><span class="lph33-desc-tag-label">Herkunft</span><span class="lph33-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="lph33-body"><h2 style="font-size: 22px;">Getrocknete İncir</h2>
 <p style="font-size: 16px;">Tillo Tarim Getrocknete İncir: Aydın ve Bursa inciri. Trockenfrüchte Kategorie. Verfügbare Grammaturen: 250 g / 500 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 250 g / 500 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".m6eyn-menu-btn");
-    var menu = document.querySelector(".m6eyn-menu");
-    var overlay = document.querySelector(".m6eyn-menu-overlay");
-    var closeButton = document.querySelector(".m6eyn-menu-close");
+    var menuToggleBtn = document.querySelector(".lph33-menu-btn");
+    var menu = document.querySelector(".lph33-menu");
+    var overlay = document.querySelector(".lph33-menu-overlay");
+    var closeButton = document.querySelector(".lph33-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".m6eyn-menu-close")) {
+      if (link && !event.target.closest(".lph33-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=bisiz"></script>
-  <script defer src="/src/cookie.js?v=bisiz"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=ka5rs"></script>
+  <script defer src="/src/cookie.js?v=ka5rs"></script>
 
   <script>
     setTimeout(function() {

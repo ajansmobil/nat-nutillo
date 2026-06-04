@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=z7yiy" />
-  <link rel="preload" href="/src/cookie.css?v=z7yiy" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=p5tc5" />
+  <link rel="preload" href="/src/cookie.css?v=p5tc5" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=z7yiy" />
+    <link rel="stylesheet" href="/src/cookie.css?v=p5tc5" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=z7yiy" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=p5tc5" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=z7yiy">
+<link rel="stylesheet" href="style.css?v=p5tc5">
 </head>
 
 <body>
   <div id="header">
-<div class="gwmu8">
-  <div class="gwmu8title">
-    <div class="gwmu8titlebody">
-      <div class="gwmu8titlebodylang">
+<div class="mp86q">
+  <div class="mp86qtitle">
+    <div class="mp86qtitlebody">
+      <div class="mp86qtitlebodylang">
         <ul>
           <li><a href="/tr/kuru-tatli-biber/">TR</a></li><li><a href="/en/kuru-tatli-biber/">EN</a></li><li><a href="/ar/kuru-tatli-biber/">AR</a></li><li><a href="/de/kuru-tatli-biber/">DE</a></li><li><a href="/ko/kuru-tatli-biber/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="gwmu8body">
+  <div class="mp86qbody">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=dnxtk"
+        src="/img/tillotarim-logo.png?v=x3mfl"
         alt="Tillo Tarim Logo"
-        class="gwmu8bodylogo"
+        class="mp86qbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="gwmu8-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="mp86q-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="gwmu8-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="gwmu8menubody">
-    <div class="gwmu8menu" id="menu-2-root">
-      <div class="gwmu8menulistbody">
-        <div class="gwmu8menulist">
+  <div class="mp86q-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="mp86qmenubody">
+    <div class="mp86qmenu" id="menu-2-root">
+      <button type="button" class="mp86q-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="mp86qmenulistbody">
+        <div class="mp86qmenulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="mp86qmenulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-mp86q"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="gwmu8languages-mobile">
+      <div class="mp86qlanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-tatli-biber/">TR</a></li><li><a href="/en/kuru-tatli-biber/">EN</a></li><li><a href="/ar/kuru-tatli-biber/">AR</a></li><li><a href="/de/kuru-tatli-biber/">DE</a></li><li><a href="/ko/kuru-tatli-biber/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".gwmu8") : null;
+      var wrapper = root.closest ? root.closest(".mp86q") : null;
       var target = wrapper || root;
-      if (target.classList.contains("gwmu8menu-open")) {
-        target.classList.remove("gwmu8menu-open");
+      if (target.classList.contains("mp86qmenu-open")) {
+        target.classList.remove("mp86qmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("gwmu8menu-open");
+        target.classList.add("mp86qmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".mp86q") : null;
+      var target = wrapper || root;
+      target.classList.remove("mp86qmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".mp86qmenulist-menu.dropdown-content-active-mp86q");
+      if (activeWrap) {
+        activeWrap.classList.add("mp86q-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".mp86qmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-mp86q")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("mp86q-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".mp86qmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("mp86q-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("mp86q-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".mp86qmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".mp86qmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("mp86q-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="wwddx-title">
+  <div id="content"><div class="kdzn2-title">
   <h1>건조 Tatlı Biber</h1>
 </div>
-<div class="wwddx">
-  <button type="button" class="wwddx-menu-btn" aria-expanded="false" aria-controls="wwddx-menu">
-    <span class="wwddx-menu-btn-label">메뉴</span>
-    <span class="material-symbols-outlined wwddx-icon" aria-hidden="true">menu</span>
+<div class="kdzn2">
+  <button type="button" class="kdzn2-menu-btn" aria-expanded="false" aria-controls="kdzn2-menu">
+    <span class="kdzn2-menu-btn-label">메뉴</span>
+    <span class="material-symbols-outlined kdzn2-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="wwddx-menu-overlay" id="wwddx-menu-overlay" aria-hidden="true"></div>
-  <nav class="wwddx-menu" id="wwddx-menu" aria-label="메뉴">
-    <button class="wwddx-menu-close" type="button" aria-label="메뉴 닫기">
+  <div class="kdzn2-menu-overlay" id="kdzn2-menu-overlay" aria-hidden="true"></div>
+  <nav class="kdzn2-menu" id="kdzn2-menu" aria-label="메뉴">
+    <button class="kdzn2-menu-close" type="button" aria-label="메뉴 닫기">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="wwddx-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="wwddx-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="wwddx-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="wwddx-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="wwddx-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="wwddx-menu-link-text">아몬드 페이스트·크림</span></a><a class="wwddx-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="wwddx-menu-link-text">땅콩 페이스트·크림</span></a><a class="wwddx-menu-link" href="/ko/kurutulmus-meyveler/"><span class="wwddx-menu-link-text">건과일</span></a><a class="wwddx-menu-link" href="/ko/meyve-cipsleri/"><span class="wwddx-menu-link-text">과일 칩</span></a><a class="wwddx-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="wwddx-menu-link-text">건채소</span></a><a class="wwddx-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="wwddx-menu-link-text">잼·마멀레이드</span></a><a class="wwddx-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wwddx-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="wwddx-menu-link" href="/ko/meyve-sulari/"><span class="wwddx-menu-link-text">과일 주스</span></a><a class="wwddx-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="wwddx-menu-link-text">당밀·시럽</span></a><a class="wwddx-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="wwddx-menu-link-text">우유·유제품</span></a><a class="wwddx-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="wwddx-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="wwddx-menu-link" href="/ko/sivi-yaglar/"><span class="wwddx-menu-link-text">유장류 오일</span></a><a class="wwddx-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="wwddx-menu-link-text">의료용 아로마 오일</span></a><a class="wwddx-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="wwddx-menu-link-text">IQF 채소 슬라이스</span></a><a class="wwddx-menu-link" href="/ko/iqf-meyveler/"><span class="wwddx-menu-link-text">IQF 과일</span></a>
+    <a class="kdzn2-menu-link" href="/ko/antep-fistigi-ezme-ve-krema/"><span class="kdzn2-menu-link-text">가지안테프 피스타치오 페이스트·크림</span></a><a class="kdzn2-menu-link" href="/ko/findik-ezme-ve-krema/"><span class="kdzn2-menu-link-text">헤이즐넛 페이스트·크림</span></a><a class="kdzn2-menu-link" href="/ko/badem-ezme-ve-krema/"><span class="kdzn2-menu-link-text">아몬드 페이스트·크림</span></a><a class="kdzn2-menu-link" href="/ko/yer-fistigi-ezme-ve-krema/"><span class="kdzn2-menu-link-text">땅콩 페이스트·크림</span></a><a class="kdzn2-menu-link" href="/ko/kurutulmus-meyveler/"><span class="kdzn2-menu-link-text">건과일</span></a><a class="kdzn2-menu-link" href="/ko/meyve-cipsleri/"><span class="kdzn2-menu-link-text">과일 칩</span></a><a class="kdzn2-menu-link" href="/ko/kurutulmus-sebzeler/"><span class="kdzn2-menu-link-text">건채소</span></a><a class="kdzn2-menu-link" href="/ko/recel-ve-marmelatlar/"><span class="kdzn2-menu-link-text">잼·마멀레이드</span></a><a class="kdzn2-menu-link" href="/ko/lokum-pestil-ve-geleneksel-tatlilar/"><span class="kdzn2-menu-link-text">로쿰·페스틸·전통 과자</span></a><a class="kdzn2-menu-link" href="/ko/meyve-sulari/"><span class="kdzn2-menu-link-text">과일 주스</span></a><a class="kdzn2-menu-link" href="/ko/pekmez-ve-suruplar/"><span class="kdzn2-menu-link-text">당밀·시럽</span></a><a class="kdzn2-menu-link" href="/ko/sut-ve-sut-urunleri/"><span class="kdzn2-menu-link-text">우유·유제품</span></a><a class="kdzn2-menu-link" href="/ko/salca-tursu-meze-ve-soslar/"><span class="kdzn2-menu-link-text">토마토 페이스트·피클·메제·소스</span></a><a class="kdzn2-menu-link" href="/ko/sivi-yaglar/"><span class="kdzn2-menu-link-text">유장류 오일</span></a><a class="kdzn2-menu-link" href="/ko/tibbi-aromatik-yaglar/"><span class="kdzn2-menu-link-text">의료용 아로마 오일</span></a><a class="kdzn2-menu-link" href="/ko/iqf-dilimlenmis-sebzeler/"><span class="kdzn2-menu-link-text">IQF 채소 슬라이스</span></a><a class="kdzn2-menu-link" href="/ko/iqf-meyveler/"><span class="kdzn2-menu-link-text">IQF 과일</span></a>
   </nav>
-  <div class="wwddx-main">
-    <div class="wwddx-row"><div class="wwddx-row-media"><div class="wwddx-img"><img src="/page/7iaq2myimy/index.webp?v=k5jkk" alt="건조 Tatlı Biber" loading="lazy" /></div></div><div class="wwddx-row-desc"><p class="wwddx-lead">Tillo Tarim 건조 Tatlı Biber: Dolmalık biber kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p><div class="wwddx-desc-tags"><span class="wwddx-desc-tag"><span class="wwddx-desc-tag-label">중량</span><span class="wwddx-desc-tag-value">100 g</span></span><span class="wwddx-desc-tag"><span class="wwddx-desc-tag-label">포장</span><span class="wwddx-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="wwddx-desc-tag"><span class="wwddx-desc-tag-label">원산지</span><span class="wwddx-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="wwddx-body"><h2 style="font-size: 22px;">건조 Tatlı Biber</h2>
+  <div class="kdzn2-main">
+    <div class="kdzn2-row"><div class="kdzn2-row-media"><div class="kdzn2-img"><img src="/page/7iaq2myimy/index.webp?v=mul2f" alt="건조 Tatlı Biber" loading="lazy" /></div></div><div class="kdzn2-row-desc"><p class="kdzn2-lead">Tillo Tarim 건조 Tatlı Biber: Dolmalık biber kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p><div class="kdzn2-desc-tags"><span class="kdzn2-desc-tag"><span class="kdzn2-desc-tag-label">중량</span><span class="kdzn2-desc-tag-value">100 g</span></span><span class="kdzn2-desc-tag"><span class="kdzn2-desc-tag-label">포장</span><span class="kdzn2-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="kdzn2-desc-tag"><span class="kdzn2-desc-tag-label">원산지</span><span class="kdzn2-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="kdzn2-body"><h2 style="font-size: 22px;">건조 Tatlı Biber</h2>
 <p style="font-size: 16px;">Tillo Tarim 건조 Tatlı Biber: Dolmalık biber kurusu. 건채소 카테고리. 제공 중량: 100 g. 가지안테프산 천연 식품.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>중량:</strong> 100 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".wwddx-menu-btn");
-    var menu = document.querySelector(".wwddx-menu");
-    var overlay = document.querySelector(".wwddx-menu-overlay");
-    var closeButton = document.querySelector(".wwddx-menu-close");
+    var menuToggleBtn = document.querySelector(".kdzn2-menu-btn");
+    var menu = document.querySelector(".kdzn2-menu");
+    var overlay = document.querySelector(".kdzn2-menu-overlay");
+    var closeButton = document.querySelector(".kdzn2-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".wwddx-menu-close")) {
+      if (link && !event.target.closest(".kdzn2-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=z7yiy"></script>
-  <script defer src="/src/cookie.js?v=z7yiy"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=p5tc5"></script>
+  <script defer src="/src/cookie.js?v=p5tc5"></script>
 
   <script>
     setTimeout(function() {

@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=kz0lw" />
-  <link rel="preload" href="/src/cookie.css?v=kz0lw" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=g705f" />
+  <link rel="preload" href="/src/cookie.css?v=g705f" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=kz0lw" />
+    <link rel="stylesheet" href="/src/cookie.css?v=g705f" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=kz0lw" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=g705f" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=kz0lw">
+<link rel="stylesheet" href="style.css?v=g705f">
 </head>
 
 <body>
   <div id="header">
-<div class="ane3h">
-  <div class="ane3htitle">
-    <div class="ane3htitlebody">
-      <div class="ane3htitlebodylang">
+<div class="fkal8">
+  <div class="fkal8title">
+    <div class="fkal8titlebody">
+      <div class="fkal8titlebodylang">
         <ul>
           <li><a href="/tr/tam-yagli-beyaz-peynir/">TR</a></li><li><a href="/en/tam-yagli-beyaz-peynir/">EN</a></li><li><a href="/ar/tam-yagli-beyaz-peynir/">AR</a></li><li><a href="/de/tam-yagli-beyaz-peynir/">DE</a></li><li><a href="/ko/tam-yagli-beyaz-peynir/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ane3hbody">
+  <div class="fkal8body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=yewu3"
+        src="/img/tillotarim-logo.png?v=t75xu"
         alt="Tillo Tarim Logo"
-        class="ane3hbodylogo"
+        class="fkal8bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ane3h-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="fkal8-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ane3h-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ane3hmenubody">
-    <div class="ane3hmenu" id="menu-2-root">
-      <div class="ane3hmenulistbody">
-        <div class="ane3hmenulist">
+  <div class="fkal8-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="fkal8menubody">
+    <div class="fkal8menu" id="menu-2-root">
+      <button type="button" class="fkal8-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="fkal8menulistbody">
+        <div class="fkal8menulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="fkal8menulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-fkal8"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="ane3hlanguages-mobile">
+      <div class="fkal8languages-mobile">
         <ul>
           <li><a href="/tr/tam-yagli-beyaz-peynir/">TR</a></li><li><a href="/en/tam-yagli-beyaz-peynir/">EN</a></li><li><a href="/ar/tam-yagli-beyaz-peynir/">AR</a></li><li><a href="/de/tam-yagli-beyaz-peynir/">DE</a></li><li><a href="/ko/tam-yagli-beyaz-peynir/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ane3h") : null;
+      var wrapper = root.closest ? root.closest(".fkal8") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ane3hmenu-open")) {
-        target.classList.remove("ane3hmenu-open");
+      if (target.classList.contains("fkal8menu-open")) {
+        target.classList.remove("fkal8menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ane3hmenu-open");
+        target.classList.add("fkal8menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".fkal8") : null;
+      var target = wrapper || root;
+      target.classList.remove("fkal8menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".fkal8menulist-menu.dropdown-content-active-fkal8");
+      if (activeWrap) {
+        activeWrap.classList.add("fkal8-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".fkal8menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-fkal8")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("fkal8-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".fkal8menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("fkal8-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("fkal8-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".fkal8menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".fkal8menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("fkal8-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="w4tq5-title">
+  <div id="content"><div class="cyk78-title">
   <h1>Tam Yağlı Beyaz Peynir</h1>
 </div>
-<div class="w4tq5">
-  <button type="button" class="w4tq5-menu-btn" aria-expanded="false" aria-controls="w4tq5-menu">
-    <span class="w4tq5-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined w4tq5-icon" aria-hidden="true">menu</span>
+<div class="cyk78">
+  <button type="button" class="cyk78-menu-btn" aria-expanded="false" aria-controls="cyk78-menu">
+    <span class="cyk78-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined cyk78-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="w4tq5-menu-overlay" id="w4tq5-menu-overlay" aria-hidden="true"></div>
-  <nav class="w4tq5-menu" id="w4tq5-menu" aria-label="Menu">
-    <button class="w4tq5-menu-close" type="button" aria-label="Close Menu">
+  <div class="cyk78-menu-overlay" id="cyk78-menu-overlay" aria-hidden="true"></div>
+  <nav class="cyk78-menu" id="cyk78-menu" aria-label="Menu">
+    <button class="cyk78-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="w4tq5-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="w4tq5-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="w4tq5-menu-link" href="/en/findik-ezme-ve-krema/"><span class="w4tq5-menu-link-text">Hazelnut Paste & Cream</span></a><a class="w4tq5-menu-link" href="/en/badem-ezme-ve-krema/"><span class="w4tq5-menu-link-text">Almond Paste & Cream</span></a><a class="w4tq5-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="w4tq5-menu-link-text">Peanut Paste & Cream</span></a><a class="w4tq5-menu-link" href="/en/kurutulmus-meyveler/"><span class="w4tq5-menu-link-text">Dried Fruits</span></a><a class="w4tq5-menu-link" href="/en/meyve-cipsleri/"><span class="w4tq5-menu-link-text">Fruit Chips</span></a><a class="w4tq5-menu-link" href="/en/kurutulmus-sebzeler/"><span class="w4tq5-menu-link-text">Dried Vegetables</span></a><a class="w4tq5-menu-link" href="/en/recel-ve-marmelatlar/"><span class="w4tq5-menu-link-text">Jams & Marmalades</span></a><a class="w4tq5-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="w4tq5-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="w4tq5-menu-link" href="/en/meyve-sulari/"><span class="w4tq5-menu-link-text">Fruit Juices</span></a><a class="w4tq5-menu-link" href="/en/pekmez-ve-suruplar/"><span class="w4tq5-menu-link-text">Molasses & Syrups</span></a><a class="w4tq5-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="w4tq5-menu-link-text">Milk & Dairy Products</span></a><a class="w4tq5-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="w4tq5-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="w4tq5-menu-link" href="/en/sivi-yaglar/"><span class="w4tq5-menu-link-text">Liquid Oils</span></a><a class="w4tq5-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="w4tq5-menu-link-text">Medicinal Aromatic Oils</span></a><a class="w4tq5-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="w4tq5-menu-link-text">IQF Sliced Vegetables</span></a><a class="w4tq5-menu-link" href="/en/iqf-meyveler/"><span class="w4tq5-menu-link-text">IQF Fruits</span></a>
+    <a class="cyk78-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="cyk78-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="cyk78-menu-link" href="/en/findik-ezme-ve-krema/"><span class="cyk78-menu-link-text">Hazelnut Paste & Cream</span></a><a class="cyk78-menu-link" href="/en/badem-ezme-ve-krema/"><span class="cyk78-menu-link-text">Almond Paste & Cream</span></a><a class="cyk78-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="cyk78-menu-link-text">Peanut Paste & Cream</span></a><a class="cyk78-menu-link" href="/en/kurutulmus-meyveler/"><span class="cyk78-menu-link-text">Dried Fruits</span></a><a class="cyk78-menu-link" href="/en/meyve-cipsleri/"><span class="cyk78-menu-link-text">Fruit Chips</span></a><a class="cyk78-menu-link" href="/en/kurutulmus-sebzeler/"><span class="cyk78-menu-link-text">Dried Vegetables</span></a><a class="cyk78-menu-link" href="/en/recel-ve-marmelatlar/"><span class="cyk78-menu-link-text">Jams & Marmalades</span></a><a class="cyk78-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="cyk78-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="cyk78-menu-link" href="/en/meyve-sulari/"><span class="cyk78-menu-link-text">Fruit Juices</span></a><a class="cyk78-menu-link" href="/en/pekmez-ve-suruplar/"><span class="cyk78-menu-link-text">Molasses & Syrups</span></a><a class="cyk78-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="cyk78-menu-link-text">Milk & Dairy Products</span></a><a class="cyk78-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="cyk78-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="cyk78-menu-link" href="/en/sivi-yaglar/"><span class="cyk78-menu-link-text">Liquid Oils</span></a><a class="cyk78-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="cyk78-menu-link-text">Medicinal Aromatic Oils</span></a><a class="cyk78-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="cyk78-menu-link-text">IQF Sliced Vegetables</span></a><a class="cyk78-menu-link" href="/en/iqf-meyveler/"><span class="cyk78-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="w4tq5-main">
-    <div class="w4tq5-row"><div class="w4tq5-row-media"><div class="w4tq5-img"><img src="/page/vim6iua26m/index.webp?v=nipuj" alt="Tam Yağlı Beyaz Peynir" loading="lazy" /></div></div><div class="w4tq5-row-desc"><p class="w4tq5-lead">Tillo Tarim Tam Yağlı Beyaz Peynir: Brine beyaz peynir. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p><div class="w4tq5-desc-tags"><span class="w4tq5-desc-tag"><span class="w4tq5-desc-tag-label">Net weight</span><span class="w4tq5-desc-tag-value">500 g / 1 kg</span></span><span class="w4tq5-desc-tag"><span class="w4tq5-desc-tag-label">Packaging</span><span class="w4tq5-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="w4tq5-desc-tag"><span class="w4tq5-desc-tag-label">Origin</span><span class="w4tq5-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="w4tq5-body"><h2 style="font-size: 22px;">Tam Yağlı Beyaz Peynir</h2>
+  <div class="cyk78-main">
+    <div class="cyk78-row"><div class="cyk78-row-media"><div class="cyk78-img"><img src="/page/vim6iua26m/index.webp?v=ktlma" alt="Tam Yağlı Beyaz Peynir" loading="lazy" /></div></div><div class="cyk78-row-desc"><p class="cyk78-lead">Tillo Tarim Tam Yağlı Beyaz Peynir: Brine beyaz peynir. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p><div class="cyk78-desc-tags"><span class="cyk78-desc-tag"><span class="cyk78-desc-tag-label">Net weight</span><span class="cyk78-desc-tag-value">500 g / 1 kg</span></span><span class="cyk78-desc-tag"><span class="cyk78-desc-tag-label">Packaging</span><span class="cyk78-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="cyk78-desc-tag"><span class="cyk78-desc-tag-label">Origin</span><span class="cyk78-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="cyk78-body"><h2 style="font-size: 22px;">Tam Yağlı Beyaz Peynir</h2>
 <p style="font-size: 16px;">Tillo Tarim Tam Yağlı Beyaz Peynir: Brine beyaz peynir. Milk & Dairy Products category. Available sizes: 500 g / 1 kg. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 500 g / 1 kg</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".w4tq5-menu-btn");
-    var menu = document.querySelector(".w4tq5-menu");
-    var overlay = document.querySelector(".w4tq5-menu-overlay");
-    var closeButton = document.querySelector(".w4tq5-menu-close");
+    var menuToggleBtn = document.querySelector(".cyk78-menu-btn");
+    var menu = document.querySelector(".cyk78-menu");
+    var overlay = document.querySelector(".cyk78-menu-overlay");
+    var closeButton = document.querySelector(".cyk78-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".w4tq5-menu-close")) {
+      if (link && !event.target.closest(".cyk78-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=kz0lw"></script>
-  <script defer src="/src/cookie.js?v=kz0lw"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=g705f"></script>
+  <script defer src="/src/cookie.js?v=g705f"></script>
 
   <script>
     setTimeout(function() {

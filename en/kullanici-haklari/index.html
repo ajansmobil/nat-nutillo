@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=hz9tb" />
-  <link rel="preload" href="/src/cookie.css?v=hz9tb" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=c6go1" />
+  <link rel="preload" href="/src/cookie.css?v=c6go1" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=hz9tb" />
+    <link rel="stylesheet" href="/src/cookie.css?v=c6go1" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=hz9tb" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=c6go1" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=hz9tb">
+<link rel="stylesheet" href="style.css?v=c6go1">
 </head>
 
 <body>
   <div id="header">
-<div class="kmdwg">
-  <div class="kmdwgtitle">
-    <div class="kmdwgtitlebody">
-      <div class="kmdwgtitlebodylang">
+<div class="bah5e">
+  <div class="bah5etitle">
+    <div class="bah5etitlebody">
+      <div class="bah5etitlebodylang">
         <ul>
           <li><a href="/tr/kullanici-haklari/">TR</a></li><li><a href="/en/kullanici-haklari/">EN</a></li><li><a href="/ar/kullanici-haklari/">AR</a></li><li><a href="/de/kullanici-haklari/">DE</a></li><li><a href="/ko/kullanici-haklari/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="kmdwgbody">
+  <div class="bah5ebody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=kgfpk"
+        src="/img/tillotarim-logo.png?v=wegos"
         alt="Tillo Tarim Logo"
-        class="kmdwgbodylogo"
+        class="bah5ebodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="kmdwg-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="bah5e-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="kmdwg-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="kmdwgmenubody">
-    <div class="kmdwgmenu" id="menu-2-root">
-      <div class="kmdwgmenulistbody">
-        <div class="kmdwgmenulist">
+  <div class="bah5e-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="bah5emenubody">
+    <div class="bah5emenu" id="menu-2-root">
+      <button type="button" class="bah5e-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="bah5emenulistbody">
+        <div class="bah5emenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="bah5emenulist-menu dropdown-content-active-bah5e"><a class="bah5e-menu-list-active" href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-bah5e"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a class="bah5e-menu-list-active" href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="kmdwglanguages-mobile">
+      <div class="bah5elanguages-mobile">
         <ul>
           <li><a href="/tr/kullanici-haklari/">TR</a></li><li><a href="/en/kullanici-haklari/">EN</a></li><li><a href="/ar/kullanici-haklari/">AR</a></li><li><a href="/de/kullanici-haklari/">DE</a></li><li><a href="/ko/kullanici-haklari/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".kmdwg") : null;
+      var wrapper = root.closest ? root.closest(".bah5e") : null;
       var target = wrapper || root;
-      if (target.classList.contains("kmdwgmenu-open")) {
-        target.classList.remove("kmdwgmenu-open");
+      if (target.classList.contains("bah5emenu-open")) {
+        target.classList.remove("bah5emenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("kmdwgmenu-open");
+        target.classList.add("bah5emenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".bah5e") : null;
+      var target = wrapper || root;
+      target.classList.remove("bah5emenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".bah5emenulist-menu.dropdown-content-active-bah5e");
+      if (activeWrap) {
+        activeWrap.classList.add("bah5e-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".bah5emenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-bah5e")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("bah5e-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".bah5emenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("bah5e-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("bah5e-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".bah5emenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".bah5emenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("bah5e-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="w0t5u-title f36">
+  <div id="content"><div class="yogw6-title f36">
   <h1>User Rights</h1>
 </div>
-<div class="w0t5u">
+<div class="yogw6">
   <button
     type="button"
-    class="w0t5u-menu-btn"
+    class="yogw6-menu-btn"
     aria-expanded="false"
-    aria-controls="w0t5u-menu"
+    aria-controls="yogw6-menu"
   >
-    <span class="w0t5u-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined w0t5u-icon" aria-hidden="true">menu</span>
+    <span class="yogw6-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined yogw6-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="w0t5u-menu-overlay" id="w0t5u-menu-overlay" aria-hidden="true"></div>
-  <nav class="w0t5u-menu" id="w0t5u-menu" aria-label="Menu">
-    <button class="w0t5u-menu-close" type="button" aria-label="Close Menu" aria-controls="w0t5u-menu">
+  <div class="yogw6-menu-overlay" id="yogw6-menu-overlay" aria-hidden="true"></div>
+  <nav class="yogw6-menu" id="yogw6-menu" aria-label="Menu">
+    <button class="yogw6-menu-close" type="button" aria-label="Close Menu" aria-controls="yogw6-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="w0t5u-menu-link" href="/en/hakkimizda/">About Us</a><a class="w0t5u-menu-link" href="/en/misyon/">Mission</a><a class="w0t5u-menu-link" href="/en/vizyon/">Vision</a><a class="w0t5u-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="w0t5u-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="w0t5u-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="w0t5u-menu-link active" href="/en/kullanici-haklari/">User Rights</a><a class="w0t5u-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
+    <a class="yogw6-menu-link" href="/en/hakkimizda/">About Us</a><a class="yogw6-menu-link" href="/en/misyon/">Mission</a><a class="yogw6-menu-link" href="/en/vizyon/">Vision</a><a class="yogw6-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="yogw6-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="yogw6-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="yogw6-menu-link active" href="/en/kullanici-haklari/">User Rights</a><a class="yogw6-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
   </nav>
-  <div class="w0t5u-main">
+  <div class="yogw6-main">
     
     
-    <div class="w0t5u-body"><h2 style="font-size: 24px;">User Rights</h2>
-<p style="font-size: 16px;">Tillo Tarim user rights. Tüketici hakları, sipariş ve iade süreçleri hakkında bilgi.</p></div>
+    <div class="yogw6-body"><div class="mob-kurum-wrap mob-kurum-legal"><div class="mob-kurum-hero mob-kurum-hero-legal"><span class="mob-kurum-hero-label">User</span><p class="mob-kurum-hero-title">Website and service usage rights</p></div><p class="mob-kurum-lead">You may access informational content on our site; commercial reproduction requires written permission.</p><div class="mob-kurum-section"><h3>Content</h3><p class="mob-kurum-text">Product images and descriptions are for information. Unauthorised scraping or copying is prohibited.</p></div><div class="mob-kurum-section"><h3>Orders</h3><p class="mob-kurum-text">Distance sales and withdrawal rights depend on applicable law and sales channel. Confirm current prices and stock with our sales team.</p></div><div class="mob-kurum-section"><h3>Complaints</h3><p class="mob-kurum-text">Submit product or service complaints via <a href="/en/iletisim/">Contact</a>; they are logged and answered.</p></div><div class="mob-kurum-nav"><span class="mob-kurum-nav-label">Related</span><a href="/en/kurumsal/gizlilik-politikasi/">Privacy</a><a href="/en/kurumsal/yasal-uyari/">Legal Notice</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".w0t5u-menu-btn");
-    var menu = document.querySelector(".w0t5u-menu");
-    var overlay = document.querySelector(".w0t5u-menu-overlay");
-    var closeButton = document.querySelector(".w0t5u-menu-close");
+    var menuToggleBtn = document.querySelector(".yogw6-menu-btn");
+    var menu = document.querySelector(".yogw6-menu");
+    var overlay = document.querySelector(".yogw6-menu-overlay");
+    var closeButton = document.querySelector(".yogw6-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".w0t5u-menu-close");
+      var closeBtn = event.target.closest(".yogw6-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".w0t5u-top");
+    var topButtons = document.querySelectorAll(".yogw6-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".w0t5u-menu-group");
+        var group = this.closest(".yogw6-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".w0t5u-sub");
+        var sub = group.querySelector(".yogw6-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".w0t5u-icon");
+        var icon = this.querySelector(".yogw6-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=hz9tb"></script>
-  <script defer src="/src/cookie.js?v=hz9tb"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=c6go1"></script>
+  <script defer src="/src/cookie.js?v=c6go1"></script>
 
   <script>
     setTimeout(function() {

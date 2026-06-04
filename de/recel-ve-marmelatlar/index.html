@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=xi4e3" />
-  <link rel="preload" href="/src/cookie.css?v=xi4e3" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=l4k7f" />
+  <link rel="preload" href="/src/cookie.css?v=l4k7f" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=xi4e3" />
+    <link rel="stylesheet" href="/src/cookie.css?v=l4k7f" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=xi4e3" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=l4k7f" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=xi4e3">
+<link rel="stylesheet" href="style.css?v=l4k7f">
 </head>
 
 <body>
   <div id="header">
-<div class="qqref">
-  <div class="qqreftitle">
-    <div class="qqreftitlebody">
-      <div class="qqreftitlebodylang">
+<div class="upila">
+  <div class="upilatitle">
+    <div class="upilatitlebody">
+      <div class="upilatitlebodylang">
         <ul>
           <li><a href="/tr/recel-ve-marmelatlar/">TR</a></li><li><a href="/en/recel-ve-marmelatlar/">EN</a></li><li><a href="/ar/recel-ve-marmelatlar/">AR</a></li><li><a href="/de/recel-ve-marmelatlar/">DE</a></li><li><a href="/ko/recel-ve-marmelatlar/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="qqrefbody">
+  <div class="upilabody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=ieyjc"
+        src="/img/tillotarim-logo.png?v=u0j09"
         alt="Tillo Tarim Logo"
-        class="qqrefbodylogo"
+        class="upilabodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="qqref-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="upila-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="qqref-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="qqrefmenubody">
-    <div class="qqrefmenu" id="menu-2-root">
-      <div class="qqrefmenulistbody">
-        <div class="qqrefmenulist">
+  <div class="upila-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="upilamenubody">
+    <div class="upilamenu" id="menu-2-root">
+      <button type="button" class="upila-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="upilamenulistbody">
+        <div class="upilamenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="upilamenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-upila"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="qqreflanguages-mobile">
+      <div class="upilalanguages-mobile">
         <ul>
           <li><a href="/tr/recel-ve-marmelatlar/">TR</a></li><li><a href="/en/recel-ve-marmelatlar/">EN</a></li><li><a href="/ar/recel-ve-marmelatlar/">AR</a></li><li><a href="/de/recel-ve-marmelatlar/">DE</a></li><li><a href="/ko/recel-ve-marmelatlar/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".qqref") : null;
+      var wrapper = root.closest ? root.closest(".upila") : null;
       var target = wrapper || root;
-      if (target.classList.contains("qqrefmenu-open")) {
-        target.classList.remove("qqrefmenu-open");
+      if (target.classList.contains("upilamenu-open")) {
+        target.classList.remove("upilamenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("qqrefmenu-open");
+        target.classList.add("upilamenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".upila") : null;
+      var target = wrapper || root;
+      target.classList.remove("upilamenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".upilamenulist-menu.dropdown-content-active-upila");
+      if (activeWrap) {
+        activeWrap.classList.add("upila-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".upilamenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-upila")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("upila-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".upilamenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("upila-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("upila-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".upilamenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".upilamenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("upila-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="j5lhl-title f36">
+  <div id="content"><div class="uqg54-title f36">
   <h1>Marmeladen & Konfitüren</h1>
 </div>
 
-<div class="j5lhl"><h2 style="font-size: 24px;">Marmeladen & Konfitüren</h2>
+<div class="uqg54"><h2 style="font-size: 24px;">Marmeladen & Konfitüren</h2>
 <p style="font-size: 16px;">Tillo Tarim Marmeladen & Konfitüren. Reçel ve marmelat: vişne, kayısı, çilek, portakal ve özel karışımlar. Geleneksel reçel ve marmelat çeşitleri; kahvaltı ve…</p></div>
 
 
 ------------------------
-<div class="fp6iv fp6ivcat3">
-  <div class="fp6ivbody"><a class="fp6ivbodycardlink" href="/de/visne-receli/" title="Vişne Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/gyiiyqyuqi/index.webp" alt="Vişne Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Vişne Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/kayisi-receli/" title="Kayısı Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/nuu2i2q2i2/index.webp" alt="Kayısı Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Kayısı Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/i-ncir-receli/" title="İncir Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/aam6m2qmea/index.webp" alt="İncir Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>İncir Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/ayva-receli/" title="Ayva Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/h6eu6imi6e/index.webp" alt="Ayva Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Ayva Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/portakal-marmelati/" title="Portakal Marmelatı"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/om626yqequ/index.webp" alt="Portakal Marmelatı" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Portakal Marmelatı</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/cilek-receli/" title="Çilek Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/b6mqqye2i2/index.webp" alt="Çilek Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Çilek Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/cevizli-recel/" title="Cevizli Reçel"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/ieuiqiumui/index.webp" alt="Cevizli Reçel" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Cevizli Reçel</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/orman-meyveleri-marmelati/" title="Orman Meyveleri Marmelatı"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/pu262aeu2u/index.webp" alt="Orman Meyveleri Marmelatı" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Orman Meyveleri Marmelatı</span></div><div class="fp6ivbodyitemaccent"></div></div></a><a class="fp6ivbodycardlink" href="/de/gul-receli/" title="Gül Marmelade"><div class="fp6ivbodycard"><div class="fp6ivbodyitemimg"><img src="/page/wuae66eyum/index.webp" alt="Gül Marmelade" loading="lazy"></div><div class="fp6ivbodyitemtitle"><span>Gül Marmelade</span></div><div class="fp6ivbodyitemaccent"></div></div></a></div>
+<div class="t5kp9 t5kp9cat3">
+  <div class="t5kp9body"><a class="t5kp9bodycardlink" href="/de/visne-receli/" title="Vişne Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/gyiiyqyuqi/index.webp" alt="Vişne Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Vişne Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/kayisi-receli/" title="Kayısı Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/nuu2i2q2i2/index.webp" alt="Kayısı Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Kayısı Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/i-ncir-receli/" title="İncir Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/aam6m2qmea/index.webp" alt="İncir Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>İncir Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/ayva-receli/" title="Ayva Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/h6eu6imi6e/index.webp" alt="Ayva Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Ayva Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/portakal-marmelati/" title="Portakal Marmelatı"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/om626yqequ/index.webp" alt="Portakal Marmelatı" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Portakal Marmelatı</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/cilek-receli/" title="Çilek Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/b6mqqye2i2/index.webp" alt="Çilek Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Çilek Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/cevizli-recel/" title="Cevizli Reçel"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/ieuiqiumui/index.webp" alt="Cevizli Reçel" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Cevizli Reçel</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/orman-meyveleri-marmelati/" title="Orman Meyveleri Marmelatı"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/pu262aeu2u/index.webp" alt="Orman Meyveleri Marmelatı" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Orman Meyveleri Marmelatı</span></div><div class="t5kp9bodyitemaccent"></div></div></a><a class="t5kp9bodycardlink" href="/de/gul-receli/" title="Gül Marmelade"><div class="t5kp9bodycard"><div class="t5kp9bodyitemimg"><img src="/page/wuae66eyum/index.webp" alt="Gül Marmelade" loading="lazy"></div><div class="t5kp9bodyitemtitle"><span>Gül Marmelade</span></div><div class="t5kp9bodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".fp6ivcat3");
+    var moduleRoots = document.querySelectorAll(".t5kp9cat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".fp6ivbodycardlink");
+        var cards = root.querySelectorAll(".t5kp9bodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("fp6ivcardvisible");
+            cards[i].classList.add("t5kp9cardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("fp6ivcardvisible");
+            cards[j].classList.add("t5kp9cardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("fp6ivcardvisible");
+                entry.target.classList.add("t5kp9cardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=xi4e3"></script>
-  <script defer src="/src/cookie.js?v=xi4e3"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=l4k7f"></script>
+  <script defer src="/src/cookie.js?v=l4k7f"></script>
 
   <script>
     setTimeout(function() {

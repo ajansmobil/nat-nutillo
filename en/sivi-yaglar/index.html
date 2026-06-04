@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=odxaz" />
-  <link rel="preload" href="/src/cookie.css?v=odxaz" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=defy0" />
+  <link rel="preload" href="/src/cookie.css?v=defy0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=odxaz" />
+    <link rel="stylesheet" href="/src/cookie.css?v=defy0" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=odxaz" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=defy0" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=odxaz">
+<link rel="stylesheet" href="style.css?v=defy0">
 </head>
 
 <body>
   <div id="header">
-<div class="equ7g">
-  <div class="equ7gtitle">
-    <div class="equ7gtitlebody">
-      <div class="equ7gtitlebodylang">
+<div class="cmvo9">
+  <div class="cmvo9title">
+    <div class="cmvo9titlebody">
+      <div class="cmvo9titlebodylang">
         <ul>
           <li><a href="/tr/sivi-yaglar/">TR</a></li><li><a href="/en/sivi-yaglar/">EN</a></li><li><a href="/ar/sivi-yaglar/">AR</a></li><li><a href="/de/sivi-yaglar/">DE</a></li><li><a href="/ko/sivi-yaglar/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="equ7gbody">
+  <div class="cmvo9body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=pgtnm"
+        src="/img/tillotarim-logo.png?v=cyzs0"
         alt="Tillo Tarim Logo"
-        class="equ7gbodylogo"
+        class="cmvo9bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="equ7g-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="cmvo9-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="equ7g-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="equ7gmenubody">
-    <div class="equ7gmenu" id="menu-2-root">
-      <div class="equ7gmenulistbody">
-        <div class="equ7gmenulist">
+  <div class="cmvo9-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="cmvo9menubody">
+    <div class="cmvo9menu" id="menu-2-root">
+      <button type="button" class="cmvo9-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="cmvo9menulistbody">
+        <div class="cmvo9menulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="cmvo9menulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-cmvo9"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="equ7glanguages-mobile">
+      <div class="cmvo9languages-mobile">
         <ul>
           <li><a href="/tr/sivi-yaglar/">TR</a></li><li><a href="/en/sivi-yaglar/">EN</a></li><li><a href="/ar/sivi-yaglar/">AR</a></li><li><a href="/de/sivi-yaglar/">DE</a></li><li><a href="/ko/sivi-yaglar/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".equ7g") : null;
+      var wrapper = root.closest ? root.closest(".cmvo9") : null;
       var target = wrapper || root;
-      if (target.classList.contains("equ7gmenu-open")) {
-        target.classList.remove("equ7gmenu-open");
+      if (target.classList.contains("cmvo9menu-open")) {
+        target.classList.remove("cmvo9menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("equ7gmenu-open");
+        target.classList.add("cmvo9menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".cmvo9") : null;
+      var target = wrapper || root;
+      target.classList.remove("cmvo9menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".cmvo9menulist-menu.dropdown-content-active-cmvo9");
+      if (activeWrap) {
+        activeWrap.classList.add("cmvo9-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".cmvo9menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-cmvo9")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("cmvo9-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".cmvo9menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("cmvo9-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("cmvo9-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".cmvo9menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".cmvo9menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("cmvo9-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="e0mbo-title f36">
+  <div id="content"><div class="v9be8-title f36">
   <h1>Liquid Oils</h1>
 </div>
 
-<div class="e0mbo"><h2 style="font-size: 24px;">Liquid Oils</h2>
+<div class="v9be8"><h2 style="font-size: 24px;">Liquid Oils</h2>
 <p style="font-size: 16px;">Tillo Tarim Liquid Oils. Sıvı yağlar: natürel sızma zeytinyağı, fındık ve kabak çekirdeği yağı. Soğuk sıkım zeytinyağı ve bitkisel sıvı yağlar. Gaziantep m…</p></div>
 
 
 ------------------------
-<div class="ewnc8 ewnc8cat3">
-  <div class="ewnc8body"><a class="ewnc8bodycardlink" href="/en/naturel-sizma-zeytinyagi/" title="Natürel Sızma Zeytinyağı"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/emem6mmmq6/index.webp" alt="Natürel Sızma Zeytinyağı" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Natürel Sızma Zeytinyağı</span></div><div class="ewnc8bodyitemaccent"></div></div></a><a class="ewnc8bodycardlink" href="/en/riviera-zeytinyagi/" title="Riviera Zeytinyağı"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/lmyuqiq6e2/index.webp" alt="Riviera Zeytinyağı" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Riviera Zeytinyağı</span></div><div class="ewnc8bodyitemaccent"></div></div></a><a class="ewnc8bodycardlink" href="/en/findik-yagi/" title="Fındık Oil"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/sia266eq66/index.webp" alt="Fındık Oil" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Fındık Oil</span></div><div class="ewnc8bodyitemaccent"></div></div></a><a class="ewnc8bodycardlink" href="/en/avokado-yagi/" title="Avokado Oil"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/zy2aiyiyey/index.webp" alt="Avokado Oil" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Avokado Oil</span></div><div class="ewnc8bodyitemaccent"></div></div></a><a class="ewnc8bodycardlink" href="/en/aycicek-yagi/" title="Ayçiçek Oil"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/mmauyy6imy/index.webp" alt="Ayçiçek Oil" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Ayçiçek Oil</span></div><div class="ewnc8bodyitemaccent"></div></div></a><a class="ewnc8bodycardlink" href="/en/kabak-cekirdegi-yagi/" title="Kabak Çekirdeği Oil"><div class="ewnc8bodycard"><div class="ewnc8bodyitemimg"><img src="/page/tam6mayeam/index.webp" alt="Kabak Çekirdeği Oil" loading="lazy"></div><div class="ewnc8bodyitemtitle"><span>Kabak Çekirdeği Oil</span></div><div class="ewnc8bodyitemaccent"></div></div></a></div>
+<div class="ud70e ud70ecat3">
+  <div class="ud70ebody"><a class="ud70ebodycardlink" href="/en/naturel-sizma-zeytinyagi/" title="Natürel Sızma Zeytinyağı"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/emem6mmmq6/index.webp" alt="Natürel Sızma Zeytinyağı" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Natürel Sızma Zeytinyağı</span></div><div class="ud70ebodyitemaccent"></div></div></a><a class="ud70ebodycardlink" href="/en/riviera-zeytinyagi/" title="Riviera Zeytinyağı"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/lmyuqiq6e2/index.webp" alt="Riviera Zeytinyağı" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Riviera Zeytinyağı</span></div><div class="ud70ebodyitemaccent"></div></div></a><a class="ud70ebodycardlink" href="/en/findik-yagi/" title="Fındık Oil"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/sia266eq66/index.webp" alt="Fındık Oil" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Fındık Oil</span></div><div class="ud70ebodyitemaccent"></div></div></a><a class="ud70ebodycardlink" href="/en/avokado-yagi/" title="Avokado Oil"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/zy2aiyiyey/index.webp" alt="Avokado Oil" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Avokado Oil</span></div><div class="ud70ebodyitemaccent"></div></div></a><a class="ud70ebodycardlink" href="/en/aycicek-yagi/" title="Ayçiçek Oil"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/mmauyy6imy/index.webp" alt="Ayçiçek Oil" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Ayçiçek Oil</span></div><div class="ud70ebodyitemaccent"></div></div></a><a class="ud70ebodycardlink" href="/en/kabak-cekirdegi-yagi/" title="Kabak Çekirdeği Oil"><div class="ud70ebodycard"><div class="ud70ebodyitemimg"><img src="/page/tam6mayeam/index.webp" alt="Kabak Çekirdeği Oil" loading="lazy"></div><div class="ud70ebodyitemtitle"><span>Kabak Çekirdeği Oil</span></div><div class="ud70ebodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".ewnc8cat3");
+    var moduleRoots = document.querySelectorAll(".ud70ecat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".ewnc8bodycardlink");
+        var cards = root.querySelectorAll(".ud70ebodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("ewnc8cardvisible");
+            cards[i].classList.add("ud70ecardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("ewnc8cardvisible");
+            cards[j].classList.add("ud70ecardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("ewnc8cardvisible");
+                entry.target.classList.add("ud70ecardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=odxaz"></script>
-  <script defer src="/src/cookie.js?v=odxaz"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=defy0"></script>
+  <script defer src="/src/cookie.js?v=defy0"></script>
 
   <script>
     setTimeout(function() {

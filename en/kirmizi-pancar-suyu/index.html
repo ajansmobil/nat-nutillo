@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=wrsq6" />
-  <link rel="preload" href="/src/cookie.css?v=wrsq6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=ma19z" />
+  <link rel="preload" href="/src/cookie.css?v=ma19z" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=wrsq6" />
+    <link rel="stylesheet" href="/src/cookie.css?v=ma19z" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=wrsq6" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=ma19z" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=wrsq6">
+<link rel="stylesheet" href="style.css?v=ma19z">
 </head>
 
 <body>
   <div id="header">
-<div class="i3rik">
-  <div class="i3riktitle">
-    <div class="i3riktitlebody">
-      <div class="i3riktitlebodylang">
+<div class="wwy5r">
+  <div class="wwy5rtitle">
+    <div class="wwy5rtitlebody">
+      <div class="wwy5rtitlebodylang">
         <ul>
           <li><a href="/tr/kirmizi-pancar-suyu/">TR</a></li><li><a href="/en/kirmizi-pancar-suyu/">EN</a></li><li><a href="/ar/kirmizi-pancar-suyu/">AR</a></li><li><a href="/de/kirmizi-pancar-suyu/">DE</a></li><li><a href="/ko/kirmizi-pancar-suyu/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="i3rikbody">
+  <div class="wwy5rbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=la8mz"
+        src="/img/tillotarim-logo.png?v=soept"
         alt="Tillo Tarim Logo"
-        class="i3rikbodylogo"
+        class="wwy5rbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="i3rik-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="wwy5r-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="i3rik-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="i3rikmenubody">
-    <div class="i3rikmenu" id="menu-2-root">
-      <div class="i3rikmenulistbody">
-        <div class="i3rikmenulist">
+  <div class="wwy5r-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="wwy5rmenubody">
+    <div class="wwy5rmenu" id="menu-2-root">
+      <button type="button" class="wwy5r-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="wwy5rmenulistbody">
+        <div class="wwy5rmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="wwy5rmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-wwy5r"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="i3riklanguages-mobile">
+      <div class="wwy5rlanguages-mobile">
         <ul>
           <li><a href="/tr/kirmizi-pancar-suyu/">TR</a></li><li><a href="/en/kirmizi-pancar-suyu/">EN</a></li><li><a href="/ar/kirmizi-pancar-suyu/">AR</a></li><li><a href="/de/kirmizi-pancar-suyu/">DE</a></li><li><a href="/ko/kirmizi-pancar-suyu/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".i3rik") : null;
+      var wrapper = root.closest ? root.closest(".wwy5r") : null;
       var target = wrapper || root;
-      if (target.classList.contains("i3rikmenu-open")) {
-        target.classList.remove("i3rikmenu-open");
+      if (target.classList.contains("wwy5rmenu-open")) {
+        target.classList.remove("wwy5rmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("i3rikmenu-open");
+        target.classList.add("wwy5rmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".wwy5r") : null;
+      var target = wrapper || root;
+      target.classList.remove("wwy5rmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".wwy5rmenulist-menu.dropdown-content-active-wwy5r");
+      if (activeWrap) {
+        activeWrap.classList.add("wwy5r-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".wwy5rmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-wwy5r")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("wwy5r-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".wwy5rmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("wwy5r-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("wwy5r-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".wwy5rmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".wwy5rmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("wwy5r-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="it5dl-title">
+  <div id="content"><div class="d6cxv-title">
   <h1>Kırmızı Pancar Juice</h1>
 </div>
-<div class="it5dl">
-  <button type="button" class="it5dl-menu-btn" aria-expanded="false" aria-controls="it5dl-menu">
-    <span class="it5dl-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined it5dl-icon" aria-hidden="true">menu</span>
+<div class="d6cxv">
+  <button type="button" class="d6cxv-menu-btn" aria-expanded="false" aria-controls="d6cxv-menu">
+    <span class="d6cxv-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined d6cxv-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="it5dl-menu-overlay" id="it5dl-menu-overlay" aria-hidden="true"></div>
-  <nav class="it5dl-menu" id="it5dl-menu" aria-label="Menu">
-    <button class="it5dl-menu-close" type="button" aria-label="Close Menu">
+  <div class="d6cxv-menu-overlay" id="d6cxv-menu-overlay" aria-hidden="true"></div>
+  <nav class="d6cxv-menu" id="d6cxv-menu" aria-label="Menu">
+    <button class="d6cxv-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="it5dl-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="it5dl-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="it5dl-menu-link" href="/en/findik-ezme-ve-krema/"><span class="it5dl-menu-link-text">Hazelnut Paste & Cream</span></a><a class="it5dl-menu-link" href="/en/badem-ezme-ve-krema/"><span class="it5dl-menu-link-text">Almond Paste & Cream</span></a><a class="it5dl-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="it5dl-menu-link-text">Peanut Paste & Cream</span></a><a class="it5dl-menu-link" href="/en/kurutulmus-meyveler/"><span class="it5dl-menu-link-text">Dried Fruits</span></a><a class="it5dl-menu-link" href="/en/meyve-cipsleri/"><span class="it5dl-menu-link-text">Fruit Chips</span></a><a class="it5dl-menu-link" href="/en/kurutulmus-sebzeler/"><span class="it5dl-menu-link-text">Dried Vegetables</span></a><a class="it5dl-menu-link" href="/en/recel-ve-marmelatlar/"><span class="it5dl-menu-link-text">Jams & Marmalades</span></a><a class="it5dl-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="it5dl-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="it5dl-menu-link" href="/en/meyve-sulari/"><span class="it5dl-menu-link-text">Fruit Juices</span></a><a class="it5dl-menu-link" href="/en/pekmez-ve-suruplar/"><span class="it5dl-menu-link-text">Molasses & Syrups</span></a><a class="it5dl-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="it5dl-menu-link-text">Milk & Dairy Products</span></a><a class="it5dl-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="it5dl-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="it5dl-menu-link" href="/en/sivi-yaglar/"><span class="it5dl-menu-link-text">Liquid Oils</span></a><a class="it5dl-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="it5dl-menu-link-text">Medicinal Aromatic Oils</span></a><a class="it5dl-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="it5dl-menu-link-text">IQF Sliced Vegetables</span></a><a class="it5dl-menu-link" href="/en/iqf-meyveler/"><span class="it5dl-menu-link-text">IQF Fruits</span></a>
+    <a class="d6cxv-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="d6cxv-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="d6cxv-menu-link" href="/en/findik-ezme-ve-krema/"><span class="d6cxv-menu-link-text">Hazelnut Paste & Cream</span></a><a class="d6cxv-menu-link" href="/en/badem-ezme-ve-krema/"><span class="d6cxv-menu-link-text">Almond Paste & Cream</span></a><a class="d6cxv-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="d6cxv-menu-link-text">Peanut Paste & Cream</span></a><a class="d6cxv-menu-link" href="/en/kurutulmus-meyveler/"><span class="d6cxv-menu-link-text">Dried Fruits</span></a><a class="d6cxv-menu-link" href="/en/meyve-cipsleri/"><span class="d6cxv-menu-link-text">Fruit Chips</span></a><a class="d6cxv-menu-link" href="/en/kurutulmus-sebzeler/"><span class="d6cxv-menu-link-text">Dried Vegetables</span></a><a class="d6cxv-menu-link" href="/en/recel-ve-marmelatlar/"><span class="d6cxv-menu-link-text">Jams & Marmalades</span></a><a class="d6cxv-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="d6cxv-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="d6cxv-menu-link" href="/en/meyve-sulari/"><span class="d6cxv-menu-link-text">Fruit Juices</span></a><a class="d6cxv-menu-link" href="/en/pekmez-ve-suruplar/"><span class="d6cxv-menu-link-text">Molasses & Syrups</span></a><a class="d6cxv-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="d6cxv-menu-link-text">Milk & Dairy Products</span></a><a class="d6cxv-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="d6cxv-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="d6cxv-menu-link" href="/en/sivi-yaglar/"><span class="d6cxv-menu-link-text">Liquid Oils</span></a><a class="d6cxv-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="d6cxv-menu-link-text">Medicinal Aromatic Oils</span></a><a class="d6cxv-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="d6cxv-menu-link-text">IQF Sliced Vegetables</span></a><a class="d6cxv-menu-link" href="/en/iqf-meyveler/"><span class="d6cxv-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="it5dl-main">
-    <div class="it5dl-row"><div class="it5dl-row-media"><div class="it5dl-img"><img src="/page/ouyfeum2au/index.webp?v=qtsvj" alt="Kırmızı Pancar Juice" loading="lazy" /></div></div><div class="it5dl-row-desc"><p class="it5dl-lead">Tillo Tarim Kırmızı Pancar Juice: Detoks pancar suyu. Fruit Juices category. Available sizes: 750 ml. natural food from Gaziantep.</p><div class="it5dl-desc-tags"><span class="it5dl-desc-tag"><span class="it5dl-desc-tag-label">Net weight</span><span class="it5dl-desc-tag-value">750 ml</span></span><span class="it5dl-desc-tag"><span class="it5dl-desc-tag-label">Packaging</span><span class="it5dl-desc-tag-value">PET şişe / cam şişe</span></span><span class="it5dl-desc-tag"><span class="it5dl-desc-tag-label">Origin</span><span class="it5dl-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="it5dl-body"><h2 style="font-size: 22px;">Kırmızı Pancar Juice</h2>
+  <div class="d6cxv-main">
+    <div class="d6cxv-row"><div class="d6cxv-row-media"><div class="d6cxv-img"><img src="/page/ouyfeum2au/index.webp?v=r17q7" alt="Kırmızı Pancar Juice" loading="lazy" /></div></div><div class="d6cxv-row-desc"><p class="d6cxv-lead">Tillo Tarim Kırmızı Pancar Juice: Detoks pancar suyu. Fruit Juices category. Available sizes: 750 ml. natural food from Gaziantep.</p><div class="d6cxv-desc-tags"><span class="d6cxv-desc-tag"><span class="d6cxv-desc-tag-label">Net weight</span><span class="d6cxv-desc-tag-value">750 ml</span></span><span class="d6cxv-desc-tag"><span class="d6cxv-desc-tag-label">Packaging</span><span class="d6cxv-desc-tag-value">PET şişe / cam şişe</span></span><span class="d6cxv-desc-tag"><span class="d6cxv-desc-tag-label">Origin</span><span class="d6cxv-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="d6cxv-body"><h2 style="font-size: 22px;">Kırmızı Pancar Juice</h2>
 <p style="font-size: 16px;">Tillo Tarim Kırmızı Pancar Juice: Detoks pancar suyu. Fruit Juices category. Available sizes: 750 ml. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 750 ml</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".it5dl-menu-btn");
-    var menu = document.querySelector(".it5dl-menu");
-    var overlay = document.querySelector(".it5dl-menu-overlay");
-    var closeButton = document.querySelector(".it5dl-menu-close");
+    var menuToggleBtn = document.querySelector(".d6cxv-menu-btn");
+    var menu = document.querySelector(".d6cxv-menu");
+    var overlay = document.querySelector(".d6cxv-menu-overlay");
+    var closeButton = document.querySelector(".d6cxv-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".it5dl-menu-close")) {
+      if (link && !event.target.closest(".d6cxv-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=wrsq6"></script>
-  <script defer src="/src/cookie.js?v=wrsq6"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=ma19z"></script>
+  <script defer src="/src/cookie.js?v=ma19z"></script>
 
   <script>
     setTimeout(function() {

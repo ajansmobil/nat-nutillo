@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=h278m" />
-  <link rel="preload" href="/src/cookie.css?v=h278m" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=w3mgx" />
+  <link rel="preload" href="/src/cookie.css?v=w3mgx" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=h278m" />
+    <link rel="stylesheet" href="/src/cookie.css?v=w3mgx" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=h278m" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=w3mgx" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=h278m">
+<link rel="stylesheet" href="style.css?v=w3mgx">
 </head>
 
 <body>
   <div id="header">
-<div class="irlhn">
-  <div class="irlhntitle">
-    <div class="irlhntitlebody">
-      <div class="irlhntitlebodylang">
+<div class="yulfl">
+  <div class="yulfltitle">
+    <div class="yulfltitlebody">
+      <div class="yulfltitlebodylang">
         <ul>
           <li><a href="/tr/gizlilik-politikasi/">TR</a></li><li><a href="/en/gizlilik-politikasi/">EN</a></li><li><a href="/ar/gizlilik-politikasi/">AR</a></li><li><a href="/de/gizlilik-politikasi/">DE</a></li><li><a href="/ko/gizlilik-politikasi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="irlhnbody">
+  <div class="yulflbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=xy7ll"
+        src="/img/tillotarim-logo.png?v=ft7tw"
         alt="Tillo Tarim Logo"
-        class="irlhnbodylogo"
+        class="yulflbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="irlhn-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="yulfl-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="irlhn-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="irlhnmenubody">
-    <div class="irlhnmenu" id="menu-2-root">
-      <div class="irlhnmenulistbody">
-        <div class="irlhnmenulist">
+  <div class="yulfl-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="yulflmenubody">
+    <div class="yulflmenu" id="menu-2-root">
+      <button type="button" class="yulfl-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="yulflmenulistbody">
+        <div class="yulflmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="yulflmenulist-menu dropdown-content-active-yulfl"><a class="yulfl-menu-list-active" href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-yulfl"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="yulfl-menu-list-active" href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="irlhnlanguages-mobile">
+      <div class="yulfllanguages-mobile">
         <ul>
           <li><a href="/tr/gizlilik-politikasi/">TR</a></li><li><a href="/en/gizlilik-politikasi/">EN</a></li><li><a href="/ar/gizlilik-politikasi/">AR</a></li><li><a href="/de/gizlilik-politikasi/">DE</a></li><li><a href="/ko/gizlilik-politikasi/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".irlhn") : null;
+      var wrapper = root.closest ? root.closest(".yulfl") : null;
       var target = wrapper || root;
-      if (target.classList.contains("irlhnmenu-open")) {
-        target.classList.remove("irlhnmenu-open");
+      if (target.classList.contains("yulflmenu-open")) {
+        target.classList.remove("yulflmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("irlhnmenu-open");
+        target.classList.add("yulflmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".yulfl") : null;
+      var target = wrapper || root;
+      target.classList.remove("yulflmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".yulflmenulist-menu.dropdown-content-active-yulfl");
+      if (activeWrap) {
+        activeWrap.classList.add("yulfl-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".yulflmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-yulfl")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("yulfl-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".yulflmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("yulfl-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("yulfl-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".yulflmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".yulflmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("yulfl-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="xkqrr-title f36">
+  <div id="content"><div class="y84qg-title f36">
   <h1>Privacy Policy</h1>
 </div>
-<div class="xkqrr">
+<div class="y84qg">
   <button
     type="button"
-    class="xkqrr-menu-btn"
+    class="y84qg-menu-btn"
     aria-expanded="false"
-    aria-controls="xkqrr-menu"
+    aria-controls="y84qg-menu"
   >
-    <span class="xkqrr-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined xkqrr-icon" aria-hidden="true">menu</span>
+    <span class="y84qg-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined y84qg-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="xkqrr-menu-overlay" id="xkqrr-menu-overlay" aria-hidden="true"></div>
-  <nav class="xkqrr-menu" id="xkqrr-menu" aria-label="Menu">
-    <button class="xkqrr-menu-close" type="button" aria-label="Close Menu" aria-controls="xkqrr-menu">
+  <div class="y84qg-menu-overlay" id="y84qg-menu-overlay" aria-hidden="true"></div>
+  <nav class="y84qg-menu" id="y84qg-menu" aria-label="Menu">
+    <button class="y84qg-menu-close" type="button" aria-label="Close Menu" aria-controls="y84qg-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="xkqrr-menu-link" href="/en/hakkimizda/">About Us</a><a class="xkqrr-menu-link" href="/en/misyon/">Mission</a><a class="xkqrr-menu-link" href="/en/vizyon/">Vision</a><a class="xkqrr-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="xkqrr-menu-link active" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="xkqrr-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="xkqrr-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="xkqrr-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
+    <a class="y84qg-menu-link" href="/en/hakkimizda/">About Us</a><a class="y84qg-menu-link" href="/en/misyon/">Mission</a><a class="y84qg-menu-link" href="/en/vizyon/">Vision</a><a class="y84qg-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="y84qg-menu-link active" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="y84qg-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="y84qg-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="y84qg-menu-link" href="/en/yasal-uyari/">Legal Notice</a>
   </nav>
-  <div class="xkqrr-main">
+  <div class="y84qg-main">
     
     
-    <div class="xkqrr-body"><h2 style="font-size: 24px;">Privacy Policy</h2>
-<p style="font-size: 16px;">Tillo Tarim privacy policy. Kişisel verilerin korunması ve çerez kullanımı hakkında bilgilendirme.</p></div>
+    <div class="y84qg-body"><div class="mob-kurum-wrap mob-kurum-legal"><div class="mob-kurum-hero mob-kurum-hero-legal"><span class="mob-kurum-hero-label">Legal</span><p class="mob-kurum-hero-title">Privacy and data security</p></div><p class="mob-kurum-meta">Last updated: June 2026</p><p class="mob-kurum-lead">Your privacy is a priority when you use the Tillo Tarim website. This notice summarises what data we process.</p><div class="mob-kurum-section"><h3>Cookies</h3><p class="mob-kurum-text">Technical data (language, session, page views) may be collected via cookies; not shared with third parties for advertising.</p></div><div class="mob-kurum-section"><h3>Contact forms</h3><p class="mob-kurum-text">Name, phone and email are processed only to respond and establish a business relationship; not kept longer than necessary.</p></div><div class="mob-kurum-section"><h3>Security</h3><p class="mob-kurum-text">Technical and administrative measures against unauthorised access. Payment details are not collected directly on this site.</p></div><div class="mob-kurum-nav"><span class="mob-kurum-nav-label">Related</span><a href="/en/kurumsal/kisisel-veriler/">Personal Data</a><a href="/en/kurumsal/kullanici-haklari/">User Rights</a><a href="/en/kurumsal/yasal-uyari/">Legal Notice</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".xkqrr-menu-btn");
-    var menu = document.querySelector(".xkqrr-menu");
-    var overlay = document.querySelector(".xkqrr-menu-overlay");
-    var closeButton = document.querySelector(".xkqrr-menu-close");
+    var menuToggleBtn = document.querySelector(".y84qg-menu-btn");
+    var menu = document.querySelector(".y84qg-menu");
+    var overlay = document.querySelector(".y84qg-menu-overlay");
+    var closeButton = document.querySelector(".y84qg-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".xkqrr-menu-close");
+      var closeBtn = event.target.closest(".y84qg-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".xkqrr-top");
+    var topButtons = document.querySelectorAll(".y84qg-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".xkqrr-menu-group");
+        var group = this.closest(".y84qg-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".xkqrr-sub");
+        var sub = group.querySelector(".y84qg-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".xkqrr-icon");
+        var icon = this.querySelector(".y84qg-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=h278m"></script>
-  <script defer src="/src/cookie.js?v=h278m"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=w3mgx"></script>
+  <script defer src="/src/cookie.js?v=w3mgx"></script>
 
   <script>
     setTimeout(function() {

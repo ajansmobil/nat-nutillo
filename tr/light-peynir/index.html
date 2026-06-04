@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=g7s4b" />
-  <link rel="preload" href="/src/cookie.css?v=g7s4b" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=rgcn7" />
+  <link rel="preload" href="/src/cookie.css?v=rgcn7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=g7s4b" />
+    <link rel="stylesheet" href="/src/cookie.css?v=rgcn7" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=g7s4b" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=rgcn7" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=g7s4b">
+<link rel="stylesheet" href="style.css?v=rgcn7">
 </head>
 
 <body>
   <div id="header">
-<div class="rus82">
-  <div class="rus82title">
-    <div class="rus82titlebody">
-      <div class="rus82titlebodylang">
+<div class="yz05t">
+  <div class="yz05ttitle">
+    <div class="yz05ttitlebody">
+      <div class="yz05ttitlebodylang">
         <ul>
           <li><a href="/tr/light-peynir/">TR</a></li><li><a href="/en/light-peynir/">EN</a></li><li><a href="/ar/light-peynir/">AR</a></li><li><a href="/de/light-peynir/">DE</a></li><li><a href="/ko/light-peynir/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="rus82body">
+  <div class="yz05tbody">
     <a href="/tr/"
       ><img
-        src="/img/tillotarim-logo.png?v=m6dpf"
+        src="/img/tillotarim-logo.png?v=cwbta"
         alt="Tillo Tarim Logo"
-        class="rus82bodylogo"
+        class="yz05tbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="rus82-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="yz05t-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="rus82-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="rus82menubody">
-    <div class="rus82menu" id="menu-2-root">
-      <div class="rus82menulistbody">
-        <div class="rus82menulist">
+  <div class="yz05t-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="yz05tmenubody">
+    <div class="yz05tmenu" id="menu-2-root">
+      <button type="button" class="yz05t-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="yz05tmenulistbody">
+        <div class="yz05tmenulist">
           <ul>
-            <a href="/tr/">Anasayfa </a><a href="/tr/hakkimizda/">Kurumsal</a><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
+            <a href="/tr/">Anasayfa</a><div class="yz05tmenulist-menu"><a href="/tr/hakkimizda/">Kurumsal</a><div class="dropdown-content-yz05t"><a href="/tr/hakkimizda/">Hakkımızda</a><a href="/tr/misyon/">Misyon</a><a href="/tr/vizyon/">Vizyon</a><a href="/tr/kalite-politikamiz/">Kalite Politikamız</a><a href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a><a href="/tr/kisisel-veriler/">Kişisel Veriler</a><a href="/tr/kullanici-haklari/">Kullanıcı Hakları</a><a href="/tr/yasal-uyari/">Yasal Uyarı</a></div></div><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
           </ul>
         </div>
       </div>
       
-      <div class="rus82languages-mobile">
+      <div class="yz05tlanguages-mobile">
         <ul>
           <li><a href="/tr/light-peynir/">TR</a></li><li><a href="/en/light-peynir/">EN</a></li><li><a href="/ar/light-peynir/">AR</a></li><li><a href="/de/light-peynir/">DE</a></li><li><a href="/ko/light-peynir/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".rus82") : null;
+      var wrapper = root.closest ? root.closest(".yz05t") : null;
       var target = wrapper || root;
-      if (target.classList.contains("rus82menu-open")) {
-        target.classList.remove("rus82menu-open");
+      if (target.classList.contains("yz05tmenu-open")) {
+        target.classList.remove("yz05tmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("rus82menu-open");
+        target.classList.add("yz05tmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".yz05t") : null;
+      var target = wrapper || root;
+      target.classList.remove("yz05tmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".yz05tmenulist-menu.dropdown-content-active-yz05t");
+      if (activeWrap) {
+        activeWrap.classList.add("yz05t-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".yz05tmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-yz05t")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("yz05t-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".yz05tmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("yz05t-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("yz05t-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".yz05tmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".yz05tmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("yz05t-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="bl2wc-title">
+  <div id="content"><div class="wjbs1-title">
   <h1>Light Peynir</h1>
 </div>
-<div class="bl2wc">
-  <button type="button" class="bl2wc-menu-btn" aria-expanded="false" aria-controls="bl2wc-menu">
-    <span class="bl2wc-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined bl2wc-icon" aria-hidden="true">menu</span>
+<div class="wjbs1">
+  <button type="button" class="wjbs1-menu-btn" aria-expanded="false" aria-controls="wjbs1-menu">
+    <span class="wjbs1-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined wjbs1-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="bl2wc-menu-overlay" id="bl2wc-menu-overlay" aria-hidden="true"></div>
-  <nav class="bl2wc-menu" id="bl2wc-menu" aria-label="Menü">
-    <button class="bl2wc-menu-close" type="button" aria-label="Menüyü Kapat">
+  <div class="wjbs1-menu-overlay" id="wjbs1-menu-overlay" aria-hidden="true"></div>
+  <nav class="wjbs1-menu" id="wjbs1-menu" aria-label="Menü">
+    <button class="wjbs1-menu-close" type="button" aria-label="Menüyü Kapat">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="bl2wc-menu-link" href="/tr/antep-fistigi-ezme-ve-krema/"><span class="bl2wc-menu-link-text">Antep Fıstığı Ezme ve Krema</span></a><a class="bl2wc-menu-link" href="/tr/findik-ezme-ve-krema/"><span class="bl2wc-menu-link-text">Fındık Ezme ve Krema</span></a><a class="bl2wc-menu-link" href="/tr/badem-ezme-ve-krema/"><span class="bl2wc-menu-link-text">Badem Ezme ve Krema</span></a><a class="bl2wc-menu-link" href="/tr/yer-fistigi-ezme-ve-krema/"><span class="bl2wc-menu-link-text">Yer Fıstığı Ezme ve Krema</span></a><a class="bl2wc-menu-link" href="/tr/kurutulmus-meyveler/"><span class="bl2wc-menu-link-text">Kurutulmuş Meyveler</span></a><a class="bl2wc-menu-link" href="/tr/meyve-cipsleri/"><span class="bl2wc-menu-link-text">Meyve Cipsleri</span></a><a class="bl2wc-menu-link" href="/tr/kurutulmus-sebzeler/"><span class="bl2wc-menu-link-text">Kurutulmuş Sebzeler</span></a><a class="bl2wc-menu-link" href="/tr/recel-ve-marmelatlar/"><span class="bl2wc-menu-link-text">Reçel ve Marmelatlar</span></a><a class="bl2wc-menu-link" href="/tr/lokum-pestil-ve-geleneksel-tatlilar/"><span class="bl2wc-menu-link-text">Lokum, Pestil ve Geleneksel Tatlılar</span></a><a class="bl2wc-menu-link" href="/tr/meyve-sulari/"><span class="bl2wc-menu-link-text">Meyve Suları</span></a><a class="bl2wc-menu-link" href="/tr/pekmez-ve-suruplar/"><span class="bl2wc-menu-link-text">Pekmez ve Şuruplar</span></a><a class="bl2wc-menu-link" href="/tr/sut-ve-sut-urunleri/"><span class="bl2wc-menu-link-text">Süt ve Süt Ürünleri</span></a><a class="bl2wc-menu-link" href="/tr/salca-tursu-meze-ve-soslar/"><span class="bl2wc-menu-link-text">Salça, Turşu, Meze ve Soslar</span></a><a class="bl2wc-menu-link" href="/tr/sivi-yaglar/"><span class="bl2wc-menu-link-text">Sıvı Yağlar</span></a><a class="bl2wc-menu-link" href="/tr/tibbi-aromatik-yaglar/"><span class="bl2wc-menu-link-text">Tıbbi Aromatik Yağlar</span></a><a class="bl2wc-menu-link" href="/tr/iqf-dilimlenmis-sebzeler/"><span class="bl2wc-menu-link-text">IQF Dilimlenmiş Sebzeler</span></a><a class="bl2wc-menu-link" href="/tr/iqf-meyveler/"><span class="bl2wc-menu-link-text">IQF Meyveler</span></a>
+    <a class="wjbs1-menu-link" href="/tr/antep-fistigi-ezme-ve-krema/"><span class="wjbs1-menu-link-text">Antep Fıstığı Ezme ve Krema</span></a><a class="wjbs1-menu-link" href="/tr/findik-ezme-ve-krema/"><span class="wjbs1-menu-link-text">Fındık Ezme ve Krema</span></a><a class="wjbs1-menu-link" href="/tr/badem-ezme-ve-krema/"><span class="wjbs1-menu-link-text">Badem Ezme ve Krema</span></a><a class="wjbs1-menu-link" href="/tr/yer-fistigi-ezme-ve-krema/"><span class="wjbs1-menu-link-text">Yer Fıstığı Ezme ve Krema</span></a><a class="wjbs1-menu-link" href="/tr/kurutulmus-meyveler/"><span class="wjbs1-menu-link-text">Kurutulmuş Meyveler</span></a><a class="wjbs1-menu-link" href="/tr/meyve-cipsleri/"><span class="wjbs1-menu-link-text">Meyve Cipsleri</span></a><a class="wjbs1-menu-link" href="/tr/kurutulmus-sebzeler/"><span class="wjbs1-menu-link-text">Kurutulmuş Sebzeler</span></a><a class="wjbs1-menu-link" href="/tr/recel-ve-marmelatlar/"><span class="wjbs1-menu-link-text">Reçel ve Marmelatlar</span></a><a class="wjbs1-menu-link" href="/tr/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wjbs1-menu-link-text">Lokum, Pestil ve Geleneksel Tatlılar</span></a><a class="wjbs1-menu-link" href="/tr/meyve-sulari/"><span class="wjbs1-menu-link-text">Meyve Suları</span></a><a class="wjbs1-menu-link" href="/tr/pekmez-ve-suruplar/"><span class="wjbs1-menu-link-text">Pekmez ve Şuruplar</span></a><a class="wjbs1-menu-link" href="/tr/sut-ve-sut-urunleri/"><span class="wjbs1-menu-link-text">Süt ve Süt Ürünleri</span></a><a class="wjbs1-menu-link" href="/tr/salca-tursu-meze-ve-soslar/"><span class="wjbs1-menu-link-text">Salça, Turşu, Meze ve Soslar</span></a><a class="wjbs1-menu-link" href="/tr/sivi-yaglar/"><span class="wjbs1-menu-link-text">Sıvı Yağlar</span></a><a class="wjbs1-menu-link" href="/tr/tibbi-aromatik-yaglar/"><span class="wjbs1-menu-link-text">Tıbbi Aromatik Yağlar</span></a><a class="wjbs1-menu-link" href="/tr/iqf-dilimlenmis-sebzeler/"><span class="wjbs1-menu-link-text">IQF Dilimlenmiş Sebzeler</span></a><a class="wjbs1-menu-link" href="/tr/iqf-meyveler/"><span class="wjbs1-menu-link-text">IQF Meyveler</span></a>
   </nav>
-  <div class="bl2wc-main">
-    <div class="bl2wc-row"><div class="bl2wc-row-media"><div class="bl2wc-img"><img src="/page/9emuuiq6i6/index.webp?v=ul0vx" alt="Light Peynir" loading="lazy" /></div></div><div class="bl2wc-row-desc"><p class="bl2wc-lead">Tillo Tarim Light Peynir: Düşük yağlı peynir. Süt ve Süt Ürünleri grubunda. Sunulan gramaj: 400 g. Gaziantep kökenli doğal gıda.</p><div class="bl2wc-desc-tags"><span class="bl2wc-desc-tag"><span class="bl2wc-desc-tag-label">Gramaj</span><span class="bl2wc-desc-tag-value">400 g</span></span><span class="bl2wc-desc-tag"><span class="bl2wc-desc-tag-label">Ambalaj</span><span class="bl2wc-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="bl2wc-desc-tag"><span class="bl2wc-desc-tag-label">Menşei</span><span class="bl2wc-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="bl2wc-body"><h2 style="font-size: 22px;">Light Peynir</h2>
+  <div class="wjbs1-main">
+    <div class="wjbs1-row"><div class="wjbs1-row-media"><div class="wjbs1-img"><img src="/page/9emuuiq6i6/index.webp?v=p2evz" alt="Light Peynir" loading="lazy" /></div></div><div class="wjbs1-row-desc"><p class="wjbs1-lead">Tillo Tarim Light Peynir: Düşük yağlı peynir. Süt ve Süt Ürünleri grubunda. Sunulan gramaj: 400 g. Gaziantep kökenli doğal gıda.</p><div class="wjbs1-desc-tags"><span class="wjbs1-desc-tag"><span class="wjbs1-desc-tag-label">Gramaj</span><span class="wjbs1-desc-tag-value">400 g</span></span><span class="wjbs1-desc-tag"><span class="wjbs1-desc-tag-label">Ambalaj</span><span class="wjbs1-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="wjbs1-desc-tag"><span class="wjbs1-desc-tag-label">Menşei</span><span class="wjbs1-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="wjbs1-body"><h2 style="font-size: 22px;">Light Peynir</h2>
 <p style="font-size: 16px;">Tillo Tarim Light Peynir: Düşük yağlı peynir. Süt ve Süt Ürünleri grubunda. Sunulan gramaj: 400 g. Gaziantep kökenli doğal gıda.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Gramaj:</strong> 400 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".bl2wc-menu-btn");
-    var menu = document.querySelector(".bl2wc-menu");
-    var overlay = document.querySelector(".bl2wc-menu-overlay");
-    var closeButton = document.querySelector(".bl2wc-menu-close");
+    var menuToggleBtn = document.querySelector(".wjbs1-menu-btn");
+    var menu = document.querySelector(".wjbs1-menu");
+    var overlay = document.querySelector(".wjbs1-menu-overlay");
+    var closeButton = document.querySelector(".wjbs1-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".bl2wc-menu-close")) {
+      if (link && !event.target.closest(".wjbs1-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=g7s4b"></script>
-  <script defer src="/src/cookie.js?v=g7s4b"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=rgcn7"></script>
+  <script defer src="/src/cookie.js?v=rgcn7"></script>
 
   <script>
     setTimeout(function() {

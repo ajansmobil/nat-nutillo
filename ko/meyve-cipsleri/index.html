@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=idvea" />
-  <link rel="preload" href="/src/cookie.css?v=idvea" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=dte0t" />
+  <link rel="preload" href="/src/cookie.css?v=dte0t" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=idvea" />
+    <link rel="stylesheet" href="/src/cookie.css?v=dte0t" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=idvea" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=dte0t" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=idvea">
+<link rel="stylesheet" href="style.css?v=dte0t">
 </head>
 
 <body>
   <div id="header">
-<div class="su7bd">
-  <div class="su7bdtitle">
-    <div class="su7bdtitlebody">
-      <div class="su7bdtitlebodylang">
+<div class="trg3m">
+  <div class="trg3mtitle">
+    <div class="trg3mtitlebody">
+      <div class="trg3mtitlebodylang">
         <ul>
           <li><a href="/tr/meyve-cipsleri/">TR</a></li><li><a href="/en/meyve-cipsleri/">EN</a></li><li><a href="/ar/meyve-cipsleri/">AR</a></li><li><a href="/de/meyve-cipsleri/">DE</a></li><li><a href="/ko/meyve-cipsleri/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="su7bdbody">
+  <div class="trg3mbody">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=lxh98"
+        src="/img/tillotarim-logo.png?v=lqt84"
         alt="Tillo Tarim Logo"
-        class="su7bdbodylogo"
+        class="trg3mbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="su7bd-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="trg3m-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="su7bd-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="su7bdmenubody">
-    <div class="su7bdmenu" id="menu-2-root">
-      <div class="su7bdmenulistbody">
-        <div class="su7bdmenulist">
+  <div class="trg3m-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="trg3mmenubody">
+    <div class="trg3mmenu" id="menu-2-root">
+      <button type="button" class="trg3m-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="trg3mmenulistbody">
+        <div class="trg3mmenulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="trg3mmenulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-trg3m"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="su7bdlanguages-mobile">
+      <div class="trg3mlanguages-mobile">
         <ul>
           <li><a href="/tr/meyve-cipsleri/">TR</a></li><li><a href="/en/meyve-cipsleri/">EN</a></li><li><a href="/ar/meyve-cipsleri/">AR</a></li><li><a href="/de/meyve-cipsleri/">DE</a></li><li><a href="/ko/meyve-cipsleri/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".su7bd") : null;
+      var wrapper = root.closest ? root.closest(".trg3m") : null;
       var target = wrapper || root;
-      if (target.classList.contains("su7bdmenu-open")) {
-        target.classList.remove("su7bdmenu-open");
+      if (target.classList.contains("trg3mmenu-open")) {
+        target.classList.remove("trg3mmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("su7bdmenu-open");
+        target.classList.add("trg3mmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".trg3m") : null;
+      var target = wrapper || root;
+      target.classList.remove("trg3mmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".trg3mmenulist-menu.dropdown-content-active-trg3m");
+      if (activeWrap) {
+        activeWrap.classList.add("trg3m-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".trg3mmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-trg3m")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("trg3m-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".trg3mmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("trg3m-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("trg3m-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".trg3mmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".trg3mmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("trg3m-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="kelrs-title f36">
+  <div id="content"><div class="cfa5s-title f36">
   <h1>과일 칩</h1>
 </div>
 
-<div class="kelrs"><h2 style="font-size: 24px;">과일 칩</h2>
+<div class="cfa5s"><h2 style="font-size: 24px;">과일 칩</h2>
 <p style="font-size: 16px;">Tillo Tarim 과일 칩. Meyve cipsleri: elma, armut, kivi ve turunçgil dilimleri. Düşük sıcaklıkta kurutulmuş meyve cipsleri; atıştırmalık ve reçeteler…</p></div>
 
 
 ------------------------
-<div class="pcyjz pcyjzcat3">
-  <div class="pcyjzbody"><a class="pcyjzbodycardlink" href="/ko/elma-cipsi/" title="Elma Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/qeyuamiaeq/index.webp" alt="Elma Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Elma Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/armut-cipsi/" title="Armut Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/xaeimuieym/index.webp" alt="Armut Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Armut Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/ayva-cipsi/" title="Ayva Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/46qyiayqye/index.webp" alt="Ayva Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Ayva Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/portakal-cipsi/" title="Portakal Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/r6aaiuaqi2/index.webp" alt="Portakal Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Portakal Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/kivi-cipsi/" title="Kivi Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/ymy6uyiamy/index.webp" alt="Kivi Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Kivi Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/i-ncir-cipsi/" title="İncir Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/52a2iuyii6/index.webp" alt="İncir Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>İncir Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/greyfurt-cipsi/" title="Greyfurt Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/s66q26qymi/index.webp" alt="Greyfurt Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Greyfurt Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/limon-cipsi/" title="Limon Cipsi"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/zuymem2uem/index.webp" alt="Limon Cipsi" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Limon Cipsi</span></div><div class="pcyjzbodyitemaccent"></div></div></a><a class="pcyjzbodycardlink" href="/ko/meyve-cipsi-karisimi/" title="Meyve Cipsi 믹스"><div class="pcyjzbodycard"><div class="pcyjzbodyitemimg"><img src="/page/6am6eyqeeq/index.webp" alt="Meyve Cipsi 믹스" loading="lazy"></div><div class="pcyjzbodyitemtitle"><span>Meyve Cipsi 믹스</span></div><div class="pcyjzbodyitemaccent"></div></div></a></div>
+<div class="uol8m uol8mcat3">
+  <div class="uol8mbody"><a class="uol8mbodycardlink" href="/ko/elma-cipsi/" title="Elma Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/qeyuamiaeq/index.webp" alt="Elma Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Elma Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/armut-cipsi/" title="Armut Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/xaeimuieym/index.webp" alt="Armut Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Armut Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/ayva-cipsi/" title="Ayva Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/46qyiayqye/index.webp" alt="Ayva Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Ayva Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/portakal-cipsi/" title="Portakal Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/r6aaiuaqi2/index.webp" alt="Portakal Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Portakal Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/kivi-cipsi/" title="Kivi Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/ymy6uyiamy/index.webp" alt="Kivi Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Kivi Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/i-ncir-cipsi/" title="İncir Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/52a2iuyii6/index.webp" alt="İncir Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>İncir Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/greyfurt-cipsi/" title="Greyfurt Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/s66q26qymi/index.webp" alt="Greyfurt Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Greyfurt Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/limon-cipsi/" title="Limon Cipsi"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/zuymem2uem/index.webp" alt="Limon Cipsi" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Limon Cipsi</span></div><div class="uol8mbodyitemaccent"></div></div></a><a class="uol8mbodycardlink" href="/ko/meyve-cipsi-karisimi/" title="Meyve Cipsi 믹스"><div class="uol8mbodycard"><div class="uol8mbodyitemimg"><img src="/page/6am6eyqeeq/index.webp" alt="Meyve Cipsi 믹스" loading="lazy"></div><div class="uol8mbodyitemtitle"><span>Meyve Cipsi 믹스</span></div><div class="uol8mbodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".pcyjzcat3");
+    var moduleRoots = document.querySelectorAll(".uol8mcat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".pcyjzbodycardlink");
+        var cards = root.querySelectorAll(".uol8mbodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("pcyjzcardvisible");
+            cards[i].classList.add("uol8mcardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("pcyjzcardvisible");
+            cards[j].classList.add("uol8mcardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("pcyjzcardvisible");
+                entry.target.classList.add("uol8mcardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=idvea"></script>
-  <script defer src="/src/cookie.js?v=idvea"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=dte0t"></script>
+  <script defer src="/src/cookie.js?v=dte0t"></script>
 
   <script>
     setTimeout(function() {

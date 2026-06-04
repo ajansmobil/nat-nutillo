@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=yi99m" />
-  <link rel="preload" href="/src/cookie.css?v=yi99m" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=dflva" />
+  <link rel="preload" href="/src/cookie.css?v=dflva" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=yi99m" />
+    <link rel="stylesheet" href="/src/cookie.css?v=dflva" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=yi99m" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=dflva" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=yi99m">
+<link rel="stylesheet" href="style.css?v=dflva">
 </head>
 
 <body>
   <div id="header">
-<div class="lewu0">
-  <div class="lewu0title">
-    <div class="lewu0titlebody">
-      <div class="lewu0titlebodylang">
+<div class="z17yx">
+  <div class="z17yxtitle">
+    <div class="z17yxtitlebody">
+      <div class="z17yxtitlebodylang">
         <ul>
           <li><a href="/tr/biber-salcasi/">TR</a></li><li><a href="/en/biber-salcasi/">EN</a></li><li><a href="/ar/biber-salcasi/">AR</a></li><li><a href="/de/biber-salcasi/">DE</a></li><li><a href="/ko/biber-salcasi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="lewu0body">
+  <div class="z17yxbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=iujbk"
+        src="/img/tillotarim-logo.png?v=hqihp"
         alt="Tillo Tarim Logo"
-        class="lewu0bodylogo"
+        class="z17yxbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="lewu0-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="z17yx-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="lewu0-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="lewu0menubody">
-    <div class="lewu0menu" id="menu-2-root">
-      <div class="lewu0menulistbody">
-        <div class="lewu0menulist">
+  <div class="z17yx-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="z17yxmenubody">
+    <div class="z17yxmenu" id="menu-2-root">
+      <button type="button" class="z17yx-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="z17yxmenulistbody">
+        <div class="z17yxmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="z17yxmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-z17yx"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="lewu0languages-mobile">
+      <div class="z17yxlanguages-mobile">
         <ul>
           <li><a href="/tr/biber-salcasi/">TR</a></li><li><a href="/en/biber-salcasi/">EN</a></li><li><a href="/ar/biber-salcasi/">AR</a></li><li><a href="/de/biber-salcasi/">DE</a></li><li><a href="/ko/biber-salcasi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".lewu0") : null;
+      var wrapper = root.closest ? root.closest(".z17yx") : null;
       var target = wrapper || root;
-      if (target.classList.contains("lewu0menu-open")) {
-        target.classList.remove("lewu0menu-open");
+      if (target.classList.contains("z17yxmenu-open")) {
+        target.classList.remove("z17yxmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("lewu0menu-open");
+        target.classList.add("z17yxmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".z17yx") : null;
+      var target = wrapper || root;
+      target.classList.remove("z17yxmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".z17yxmenulist-menu.dropdown-content-active-z17yx");
+      if (activeWrap) {
+        activeWrap.classList.add("z17yx-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".z17yxmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-z17yx")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("z17yx-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".z17yxmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("z17yx-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("z17yx-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".z17yxmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".z17yxmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("z17yx-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="yz9l0-title">
+  <div id="content"><div class="pnllq-title">
   <h1>Biber Salçası</h1>
 </div>
-<div class="yz9l0">
-  <button type="button" class="yz9l0-menu-btn" aria-expanded="false" aria-controls="yz9l0-menu">
-    <span class="yz9l0-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined yz9l0-icon" aria-hidden="true">menu</span>
+<div class="pnllq">
+  <button type="button" class="pnllq-menu-btn" aria-expanded="false" aria-controls="pnllq-menu">
+    <span class="pnllq-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined pnllq-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="yz9l0-menu-overlay" id="yz9l0-menu-overlay" aria-hidden="true"></div>
-  <nav class="yz9l0-menu" id="yz9l0-menu" aria-label="Menü">
-    <button class="yz9l0-menu-close" type="button" aria-label="Menü schließen">
+  <div class="pnllq-menu-overlay" id="pnllq-menu-overlay" aria-hidden="true"></div>
+  <nav class="pnllq-menu" id="pnllq-menu" aria-label="Menü">
+    <button class="pnllq-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="yz9l0-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="yz9l0-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="yz9l0-menu-link" href="/de/findik-ezme-ve-krema/"><span class="yz9l0-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="yz9l0-menu-link" href="/de/badem-ezme-ve-krema/"><span class="yz9l0-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="yz9l0-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="yz9l0-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="yz9l0-menu-link" href="/de/kurutulmus-meyveler/"><span class="yz9l0-menu-link-text">Trockenfrüchte</span></a><a class="yz9l0-menu-link" href="/de/meyve-cipsleri/"><span class="yz9l0-menu-link-text">Fruchtchips</span></a><a class="yz9l0-menu-link" href="/de/kurutulmus-sebzeler/"><span class="yz9l0-menu-link-text">Trockengemüse</span></a><a class="yz9l0-menu-link" href="/de/recel-ve-marmelatlar/"><span class="yz9l0-menu-link-text">Marmeladen & Konfitüren</span></a><a class="yz9l0-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="yz9l0-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="yz9l0-menu-link" href="/de/meyve-sulari/"><span class="yz9l0-menu-link-text">Fruchtsäfte</span></a><a class="yz9l0-menu-link" href="/de/pekmez-ve-suruplar/"><span class="yz9l0-menu-link-text">Melasse & Sirupe</span></a><a class="yz9l0-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="yz9l0-menu-link-text">Milch & Milchprodukte</span></a><a class="yz9l0-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="yz9l0-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="yz9l0-menu-link" href="/de/sivi-yaglar/"><span class="yz9l0-menu-link-text">Flüssige Öle</span></a><a class="yz9l0-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="yz9l0-menu-link-text">Medizinische Aromaöle</span></a><a class="yz9l0-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="yz9l0-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="yz9l0-menu-link" href="/de/iqf-meyveler/"><span class="yz9l0-menu-link-text">IQF-Früchte</span></a>
+    <a class="pnllq-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="pnllq-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="pnllq-menu-link" href="/de/findik-ezme-ve-krema/"><span class="pnllq-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="pnllq-menu-link" href="/de/badem-ezme-ve-krema/"><span class="pnllq-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="pnllq-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="pnllq-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="pnllq-menu-link" href="/de/kurutulmus-meyveler/"><span class="pnllq-menu-link-text">Trockenfrüchte</span></a><a class="pnllq-menu-link" href="/de/meyve-cipsleri/"><span class="pnllq-menu-link-text">Fruchtchips</span></a><a class="pnllq-menu-link" href="/de/kurutulmus-sebzeler/"><span class="pnllq-menu-link-text">Trockengemüse</span></a><a class="pnllq-menu-link" href="/de/recel-ve-marmelatlar/"><span class="pnllq-menu-link-text">Marmeladen & Konfitüren</span></a><a class="pnllq-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="pnllq-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="pnllq-menu-link" href="/de/meyve-sulari/"><span class="pnllq-menu-link-text">Fruchtsäfte</span></a><a class="pnllq-menu-link" href="/de/pekmez-ve-suruplar/"><span class="pnllq-menu-link-text">Melasse & Sirupe</span></a><a class="pnllq-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="pnllq-menu-link-text">Milch & Milchprodukte</span></a><a class="pnllq-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="pnllq-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="pnllq-menu-link" href="/de/sivi-yaglar/"><span class="pnllq-menu-link-text">Flüssige Öle</span></a><a class="pnllq-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="pnllq-menu-link-text">Medizinische Aromaöle</span></a><a class="pnllq-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="pnllq-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="pnllq-menu-link" href="/de/iqf-meyveler/"><span class="pnllq-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="yz9l0-main">
-    <div class="yz9l0-row"><div class="yz9l0-row-media"><div class="yz9l0-img"><img src="/page/4aeiaueqiq/index.webp?v=ha5ow" alt="Biber Salçası" loading="lazy" /></div></div><div class="yz9l0-row-desc"><p class="yz9l0-lead">Tillo Tarim Biber Salçası: Köz biber salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 500 g. Naturkost aus Gaziantep.</p><div class="yz9l0-desc-tags"><span class="yz9l0-desc-tag"><span class="yz9l0-desc-tag-label">Grammatur</span><span class="yz9l0-desc-tag-value">500 g</span></span><span class="yz9l0-desc-tag"><span class="yz9l0-desc-tag-label">Verpackung</span><span class="yz9l0-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="yz9l0-desc-tag"><span class="yz9l0-desc-tag-label">Herkunft</span><span class="yz9l0-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="yz9l0-body"><h2 style="font-size: 22px;">Biber Salçası</h2>
+  <div class="pnllq-main">
+    <div class="pnllq-row"><div class="pnllq-row-media"><div class="pnllq-img"><img src="/page/4aeiaueqiq/index.webp?v=cogz2" alt="Biber Salçası" loading="lazy" /></div></div><div class="pnllq-row-desc"><p class="pnllq-lead">Tillo Tarim Biber Salçası: Köz biber salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 500 g. Naturkost aus Gaziantep.</p><div class="pnllq-desc-tags"><span class="pnllq-desc-tag"><span class="pnllq-desc-tag-label">Grammatur</span><span class="pnllq-desc-tag-value">500 g</span></span><span class="pnllq-desc-tag"><span class="pnllq-desc-tag-label">Verpackung</span><span class="pnllq-desc-tag-value">Cam kavanoz / cam kavanoz</span></span><span class="pnllq-desc-tag"><span class="pnllq-desc-tag-label">Herkunft</span><span class="pnllq-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="pnllq-body"><h2 style="font-size: 22px;">Biber Salçası</h2>
 <p style="font-size: 16px;">Tillo Tarim Biber Salçası: Köz biber salçası. Salça, Essiggurken, Meze & Saucen Kategorie. Verfügbare Grammaturen: 500 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 500 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".yz9l0-menu-btn");
-    var menu = document.querySelector(".yz9l0-menu");
-    var overlay = document.querySelector(".yz9l0-menu-overlay");
-    var closeButton = document.querySelector(".yz9l0-menu-close");
+    var menuToggleBtn = document.querySelector(".pnllq-menu-btn");
+    var menu = document.querySelector(".pnllq-menu");
+    var overlay = document.querySelector(".pnllq-menu-overlay");
+    var closeButton = document.querySelector(".pnllq-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".yz9l0-menu-close")) {
+      if (link && !event.target.closest(".pnllq-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=yi99m"></script>
-  <script defer src="/src/cookie.js?v=yi99m"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=dflva"></script>
+  <script defer src="/src/cookie.js?v=dflva"></script>
 
   <script>
     setTimeout(function() {

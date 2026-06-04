@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=za3tc" />
-  <link rel="preload" href="/src/cookie.css?v=za3tc" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=mw7za" />
+  <link rel="preload" href="/src/cookie.css?v=mw7za" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=za3tc" />
+    <link rel="stylesheet" href="/src/cookie.css?v=mw7za" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=za3tc" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=mw7za" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=za3tc">
+<link rel="stylesheet" href="style.css?v=mw7za">
 </head>
 
 <body>
   <div id="header">
-<div class="hh8g3">
-  <div class="hh8g3title">
-    <div class="hh8g3titlebody">
-      <div class="hh8g3titlebodylang">
+<div class="v512u">
+  <div class="v512utitle">
+    <div class="v512utitlebody">
+      <div class="v512utitlebodylang">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="hh8g3body">
+  <div class="v512ubody">
     <a href="/ar/"
       ><img
-        src="/img/tillotarim-logo.png?v=du6pg"
+        src="/img/tillotarim-logo.png?v=r9lx1"
         alt="Tillo Tarim Logo"
-        class="hh8g3bodylogo"
+        class="v512ubodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="hh8g3-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="v512u-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="hh8g3-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="hh8g3menubody">
-    <div class="hh8g3menu" id="menu-2-root">
-      <div class="hh8g3menulistbody">
-        <div class="hh8g3menulist">
+  <div class="v512u-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="v512umenubody">
+    <div class="v512umenu" id="menu-2-root">
+      <button type="button" class="v512u-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="v512umenulistbody">
+        <div class="v512umenulist">
           <ul>
-            <a href="/ar/">الصفحة الرئيسية </a><a href="/ar/hakkimizda/">مؤسسي</a><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
+            <a href="/ar/">الصفحة الرئيسية</a><div class="v512umenulist-menu dropdown-content-active-v512u"><a class="v512u-menu-list-active" href="/ar/hakkimizda/">مؤسسي</a><div class="dropdown-content-v512u"><a href="/ar/hakkimizda/">من نحن</a><a class="v512u-menu-list-active" href="/ar/misyon/">الرسالة</a><a href="/ar/vizyon/">الرؤية</a><a href="/ar/kalite-politikamiz/">سياسة الجودة</a><a href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a href="/ar/kisisel-veriler/">البيانات الشخصية</a><a href="/ar/kullanici-haklari/">حقوق المستخدم</a><a href="/ar/yasal-uyari/">إشعار قانوني</a></div></div><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
           </ul>
         </div>
       </div>
       
-      <div class="hh8g3languages-mobile">
+      <div class="v512ulanguages-mobile">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".hh8g3") : null;
+      var wrapper = root.closest ? root.closest(".v512u") : null;
       var target = wrapper || root;
-      if (target.classList.contains("hh8g3menu-open")) {
-        target.classList.remove("hh8g3menu-open");
+      if (target.classList.contains("v512umenu-open")) {
+        target.classList.remove("v512umenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("hh8g3menu-open");
+        target.classList.add("v512umenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".v512u") : null;
+      var target = wrapper || root;
+      target.classList.remove("v512umenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".v512umenulist-menu.dropdown-content-active-v512u");
+      if (activeWrap) {
+        activeWrap.classList.add("v512u-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".v512umenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-v512u")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("v512u-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".v512umenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("v512u-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("v512u-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".v512umenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".v512umenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("v512u-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="km78w-title f36">
+  <div id="content"><div class="ns8xp-title f36">
   <h1>الرسالة</h1>
 </div>
-<div class="km78w">
+<div class="ns8xp">
   <button
     type="button"
-    class="km78w-menu-btn"
+    class="ns8xp-menu-btn"
     aria-expanded="false"
-    aria-controls="km78w-menu"
+    aria-controls="ns8xp-menu"
   >
-    <span class="km78w-menu-btn-label">قائمة الصفحات</span>
-    <span class="material-symbols-outlined km78w-icon" aria-hidden="true">menu</span>
+    <span class="ns8xp-menu-btn-label">قائمة الصفحات</span>
+    <span class="material-symbols-outlined ns8xp-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="km78w-menu-overlay" id="km78w-menu-overlay" aria-hidden="true"></div>
-  <nav class="km78w-menu" id="km78w-menu" aria-label="قائمة الصفحات">
-    <button class="km78w-menu-close" type="button" aria-label="إغلاق القائمة" aria-controls="km78w-menu">
+  <div class="ns8xp-menu-overlay" id="ns8xp-menu-overlay" aria-hidden="true"></div>
+  <nav class="ns8xp-menu" id="ns8xp-menu" aria-label="قائمة الصفحات">
+    <button class="ns8xp-menu-close" type="button" aria-label="إغلاق القائمة" aria-controls="ns8xp-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="km78w-menu-link" href="/ar/hakkimizda/">من نحن</a><a class="km78w-menu-link active" href="/ar/misyon/">الرسالة</a><a class="km78w-menu-link" href="/ar/vizyon/">الرؤية</a><a class="km78w-menu-link" href="/ar/kalite-politikamiz/">سياسة الجودة</a><a class="km78w-menu-link" href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a class="km78w-menu-link" href="/ar/kisisel-veriler/">البيانات الشخصية</a><a class="km78w-menu-link" href="/ar/kullanici-haklari/">حقوق المستخدم</a><a class="km78w-menu-link" href="/ar/yasal-uyari/">إشعار قانوني</a>
+    <a class="ns8xp-menu-link" href="/ar/hakkimizda/">من نحن</a><a class="ns8xp-menu-link active" href="/ar/misyon/">الرسالة</a><a class="ns8xp-menu-link" href="/ar/vizyon/">الرؤية</a><a class="ns8xp-menu-link" href="/ar/kalite-politikamiz/">سياسة الجودة</a><a class="ns8xp-menu-link" href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a class="ns8xp-menu-link" href="/ar/kisisel-veriler/">البيانات الشخصية</a><a class="ns8xp-menu-link" href="/ar/kullanici-haklari/">حقوق المستخدم</a><a class="ns8xp-menu-link" href="/ar/yasal-uyari/">إشعار قانوني</a>
   </nav>
-  <div class="km78w-main">
+  <div class="ns8xp-main">
     
     
-    <div class="km78w-body"><h2 style="font-size: 24px;">الرسالة</h2>
-<p style="font-size: 16px;">تيلو تاريم الرسالةu. Doğal hammaddeden katkısız ürünler; çevreye duyarlı ve sürdürülebilir üretim.</p></div>
+    <div class="ns8xp-body"><div class="mob-kurum-wrap"><div class="mob-kurum-hero"><span class="mob-kurum-hero-label">الرسالة</span><p class="mob-kurum-hero-title">من مواد خام طبيعية إلى منتجات موثوقة</p></div><p class="mob-kurum-lead">رسالتنا معالجة المحاصيل المختارة بعمليات متوافقة مع <strong>سلامة الغذاء</strong> وتقديم أغذية طبيعية موثوقة للمستهلكين والشركاء.</p><div class="mob-kurum-grid"><div class="mob-kurum-card"><strong>الطبيعة</strong><span>أقل تدخل ممكن من الاستلام إلى التعبئة.</span></div><div class="mob-kurum-card"><strong>الأمان</strong><span>نظافة وسلسلة تبريد وسجلات دفعات.</span></div><div class="mob-kurum-card"><strong>الاستدامة</strong><span>تقليل الهدر وطاقة فعالة وتوريد مسؤول.</span></div><div class="mob-kurum-card"><strong>الشراكة</strong><span>عينات وموافقة ملصق وشحن في الوقت.</span></div></div><div class="mob-kurum-cta"><p class="mob-kurum-cta-text">لنطبق رسالتنا في سلسلة توريدكم.</p><a class="mob-kurum-cta-link" href="/ar/iletisim/">اطلب عرضاً</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".km78w-menu-btn");
-    var menu = document.querySelector(".km78w-menu");
-    var overlay = document.querySelector(".km78w-menu-overlay");
-    var closeButton = document.querySelector(".km78w-menu-close");
+    var menuToggleBtn = document.querySelector(".ns8xp-menu-btn");
+    var menu = document.querySelector(".ns8xp-menu");
+    var overlay = document.querySelector(".ns8xp-menu-overlay");
+    var closeButton = document.querySelector(".ns8xp-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".km78w-menu-close");
+      var closeBtn = event.target.closest(".ns8xp-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".km78w-top");
+    var topButtons = document.querySelectorAll(".ns8xp-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".km78w-menu-group");
+        var group = this.closest(".ns8xp-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".km78w-sub");
+        var sub = group.querySelector(".ns8xp-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".km78w-icon");
+        var icon = this.querySelector(".ns8xp-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=za3tc"></script>
-  <script defer src="/src/cookie.js?v=za3tc"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=mw7za"></script>
+  <script defer src="/src/cookie.js?v=mw7za"></script>
 
   <script>
     setTimeout(function() {

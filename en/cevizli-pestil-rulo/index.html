@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=hqxfz" />
-  <link rel="preload" href="/src/cookie.css?v=hqxfz" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=quz9m" />
+  <link rel="preload" href="/src/cookie.css?v=quz9m" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=hqxfz" />
+    <link rel="stylesheet" href="/src/cookie.css?v=quz9m" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=hqxfz" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=quz9m" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=hqxfz">
+<link rel="stylesheet" href="style.css?v=quz9m">
 </head>
 
 <body>
   <div id="header">
-<div class="s8miy">
-  <div class="s8miytitle">
-    <div class="s8miytitlebody">
-      <div class="s8miytitlebodylang">
+<div class="matjn">
+  <div class="matjntitle">
+    <div class="matjntitlebody">
+      <div class="matjntitlebodylang">
         <ul>
           <li><a href="/tr/cevizli-pestil-rulo/">TR</a></li><li><a href="/en/cevizli-pestil-rulo/">EN</a></li><li><a href="/ar/cevizli-pestil-rulo/">AR</a></li><li><a href="/de/cevizli-pestil-rulo/">DE</a></li><li><a href="/ko/cevizli-pestil-rulo/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="s8miybody">
+  <div class="matjnbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=n2oim"
+        src="/img/tillotarim-logo.png?v=q4kv5"
         alt="Tillo Tarim Logo"
-        class="s8miybodylogo"
+        class="matjnbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="s8miy-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="matjn-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="s8miy-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="s8miymenubody">
-    <div class="s8miymenu" id="menu-2-root">
-      <div class="s8miymenulistbody">
-        <div class="s8miymenulist">
+  <div class="matjn-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="matjnmenubody">
+    <div class="matjnmenu" id="menu-2-root">
+      <button type="button" class="matjn-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="matjnmenulistbody">
+        <div class="matjnmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="matjnmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-matjn"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="s8miylanguages-mobile">
+      <div class="matjnlanguages-mobile">
         <ul>
           <li><a href="/tr/cevizli-pestil-rulo/">TR</a></li><li><a href="/en/cevizli-pestil-rulo/">EN</a></li><li><a href="/ar/cevizli-pestil-rulo/">AR</a></li><li><a href="/de/cevizli-pestil-rulo/">DE</a></li><li><a href="/ko/cevizli-pestil-rulo/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".s8miy") : null;
+      var wrapper = root.closest ? root.closest(".matjn") : null;
       var target = wrapper || root;
-      if (target.classList.contains("s8miymenu-open")) {
-        target.classList.remove("s8miymenu-open");
+      if (target.classList.contains("matjnmenu-open")) {
+        target.classList.remove("matjnmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("s8miymenu-open");
+        target.classList.add("matjnmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".matjn") : null;
+      var target = wrapper || root;
+      target.classList.remove("matjnmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".matjnmenulist-menu.dropdown-content-active-matjn");
+      if (activeWrap) {
+        activeWrap.classList.add("matjn-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".matjnmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-matjn")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("matjn-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".matjnmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("matjn-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("matjn-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".matjnmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".matjnmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("matjn-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="zxw25-title">
+  <div id="content"><div class="wz6e0-title">
   <h1>Cevizli Pestil Rulo</h1>
 </div>
-<div class="zxw25">
-  <button type="button" class="zxw25-menu-btn" aria-expanded="false" aria-controls="zxw25-menu">
-    <span class="zxw25-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined zxw25-icon" aria-hidden="true">menu</span>
+<div class="wz6e0">
+  <button type="button" class="wz6e0-menu-btn" aria-expanded="false" aria-controls="wz6e0-menu">
+    <span class="wz6e0-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined wz6e0-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="zxw25-menu-overlay" id="zxw25-menu-overlay" aria-hidden="true"></div>
-  <nav class="zxw25-menu" id="zxw25-menu" aria-label="Menu">
-    <button class="zxw25-menu-close" type="button" aria-label="Close Menu">
+  <div class="wz6e0-menu-overlay" id="wz6e0-menu-overlay" aria-hidden="true"></div>
+  <nav class="wz6e0-menu" id="wz6e0-menu" aria-label="Menu">
+    <button class="wz6e0-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="zxw25-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="zxw25-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="zxw25-menu-link" href="/en/findik-ezme-ve-krema/"><span class="zxw25-menu-link-text">Hazelnut Paste & Cream</span></a><a class="zxw25-menu-link" href="/en/badem-ezme-ve-krema/"><span class="zxw25-menu-link-text">Almond Paste & Cream</span></a><a class="zxw25-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="zxw25-menu-link-text">Peanut Paste & Cream</span></a><a class="zxw25-menu-link" href="/en/kurutulmus-meyveler/"><span class="zxw25-menu-link-text">Dried Fruits</span></a><a class="zxw25-menu-link" href="/en/meyve-cipsleri/"><span class="zxw25-menu-link-text">Fruit Chips</span></a><a class="zxw25-menu-link" href="/en/kurutulmus-sebzeler/"><span class="zxw25-menu-link-text">Dried Vegetables</span></a><a class="zxw25-menu-link" href="/en/recel-ve-marmelatlar/"><span class="zxw25-menu-link-text">Jams & Marmalades</span></a><a class="zxw25-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="zxw25-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="zxw25-menu-link" href="/en/meyve-sulari/"><span class="zxw25-menu-link-text">Fruit Juices</span></a><a class="zxw25-menu-link" href="/en/pekmez-ve-suruplar/"><span class="zxw25-menu-link-text">Molasses & Syrups</span></a><a class="zxw25-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="zxw25-menu-link-text">Milk & Dairy Products</span></a><a class="zxw25-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="zxw25-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="zxw25-menu-link" href="/en/sivi-yaglar/"><span class="zxw25-menu-link-text">Liquid Oils</span></a><a class="zxw25-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="zxw25-menu-link-text">Medicinal Aromatic Oils</span></a><a class="zxw25-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="zxw25-menu-link-text">IQF Sliced Vegetables</span></a><a class="zxw25-menu-link" href="/en/iqf-meyveler/"><span class="zxw25-menu-link-text">IQF Fruits</span></a>
+    <a class="wz6e0-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="wz6e0-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="wz6e0-menu-link" href="/en/findik-ezme-ve-krema/"><span class="wz6e0-menu-link-text">Hazelnut Paste & Cream</span></a><a class="wz6e0-menu-link" href="/en/badem-ezme-ve-krema/"><span class="wz6e0-menu-link-text">Almond Paste & Cream</span></a><a class="wz6e0-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="wz6e0-menu-link-text">Peanut Paste & Cream</span></a><a class="wz6e0-menu-link" href="/en/kurutulmus-meyveler/"><span class="wz6e0-menu-link-text">Dried Fruits</span></a><a class="wz6e0-menu-link" href="/en/meyve-cipsleri/"><span class="wz6e0-menu-link-text">Fruit Chips</span></a><a class="wz6e0-menu-link" href="/en/kurutulmus-sebzeler/"><span class="wz6e0-menu-link-text">Dried Vegetables</span></a><a class="wz6e0-menu-link" href="/en/recel-ve-marmelatlar/"><span class="wz6e0-menu-link-text">Jams & Marmalades</span></a><a class="wz6e0-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wz6e0-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="wz6e0-menu-link" href="/en/meyve-sulari/"><span class="wz6e0-menu-link-text">Fruit Juices</span></a><a class="wz6e0-menu-link" href="/en/pekmez-ve-suruplar/"><span class="wz6e0-menu-link-text">Molasses & Syrups</span></a><a class="wz6e0-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="wz6e0-menu-link-text">Milk & Dairy Products</span></a><a class="wz6e0-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="wz6e0-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="wz6e0-menu-link" href="/en/sivi-yaglar/"><span class="wz6e0-menu-link-text">Liquid Oils</span></a><a class="wz6e0-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="wz6e0-menu-link-text">Medicinal Aromatic Oils</span></a><a class="wz6e0-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="wz6e0-menu-link-text">IQF Sliced Vegetables</span></a><a class="wz6e0-menu-link" href="/en/iqf-meyveler/"><span class="wz6e0-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="zxw25-main">
-    <div class="zxw25-row"><div class="zxw25-row-media"><div class="zxw25-img"><img src="/page/0quq6uy22y/index.webp?v=l2rsy" alt="Cevizli Pestil Rulo" loading="lazy" /></div></div><div class="zxw25-row-desc"><p class="zxw25-lead">Tillo Tarim Cevizli Pestil Rulo: Rulo pestil. Turkish Delight, Fruit Leather & Traditional Sweets category. Available sizes: 350 g. natural food from Gaziantep.</p><div class="zxw25-desc-tags"><span class="zxw25-desc-tag"><span class="zxw25-desc-tag-label">Net weight</span><span class="zxw25-desc-tag-value">350 g</span></span><span class="zxw25-desc-tag"><span class="zxw25-desc-tag-label">Packaging</span><span class="zxw25-desc-tag-value">Kutu / vakumlu ambalaj</span></span><span class="zxw25-desc-tag"><span class="zxw25-desc-tag-label">Origin</span><span class="zxw25-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="zxw25-body"><h2 style="font-size: 22px;">Cevizli Pestil Rulo</h2>
+  <div class="wz6e0-main">
+    <div class="wz6e0-row"><div class="wz6e0-row-media"><div class="wz6e0-img"><img src="/page/0quq6uy22y/index.webp?v=xhkm2" alt="Cevizli Pestil Rulo" loading="lazy" /></div></div><div class="wz6e0-row-desc"><p class="wz6e0-lead">Tillo Tarim Cevizli Pestil Rulo: Rulo pestil. Turkish Delight, Fruit Leather & Traditional Sweets category. Available sizes: 350 g. natural food from Gaziantep.</p><div class="wz6e0-desc-tags"><span class="wz6e0-desc-tag"><span class="wz6e0-desc-tag-label">Net weight</span><span class="wz6e0-desc-tag-value">350 g</span></span><span class="wz6e0-desc-tag"><span class="wz6e0-desc-tag-label">Packaging</span><span class="wz6e0-desc-tag-value">Kutu / vakumlu ambalaj</span></span><span class="wz6e0-desc-tag"><span class="wz6e0-desc-tag-label">Origin</span><span class="wz6e0-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="wz6e0-body"><h2 style="font-size: 22px;">Cevizli Pestil Rulo</h2>
 <p style="font-size: 16px;">Tillo Tarim Cevizli Pestil Rulo: Rulo pestil. Turkish Delight, Fruit Leather & Traditional Sweets category. Available sizes: 350 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 350 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".zxw25-menu-btn");
-    var menu = document.querySelector(".zxw25-menu");
-    var overlay = document.querySelector(".zxw25-menu-overlay");
-    var closeButton = document.querySelector(".zxw25-menu-close");
+    var menuToggleBtn = document.querySelector(".wz6e0-menu-btn");
+    var menu = document.querySelector(".wz6e0-menu");
+    var overlay = document.querySelector(".wz6e0-menu-overlay");
+    var closeButton = document.querySelector(".wz6e0-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".zxw25-menu-close")) {
+      if (link && !event.target.closest(".wz6e0-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=hqxfz"></script>
-  <script defer src="/src/cookie.js?v=hqxfz"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=quz9m"></script>
+  <script defer src="/src/cookie.js?v=quz9m"></script>
 
   <script>
     setTimeout(function() {

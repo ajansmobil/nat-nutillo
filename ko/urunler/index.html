@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=eyb4r" />
-  <link rel="preload" href="/src/cookie.css?v=eyb4r" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=dbss6" />
+  <link rel="preload" href="/src/cookie.css?v=dbss6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=eyb4r" />
+    <link rel="stylesheet" href="/src/cookie.css?v=dbss6" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=eyb4r" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=dbss6" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=eyb4r">
+<link rel="stylesheet" href="style.css?v=dbss6">
 </head>
 
 <body>
   <div id="header">
-<div class="ylj9r">
-  <div class="ylj9rtitle">
-    <div class="ylj9rtitlebody">
-      <div class="ylj9rtitlebodylang">
+<div class="jpwo1">
+  <div class="jpwo1title">
+    <div class="jpwo1titlebody">
+      <div class="jpwo1titlebodylang">
         <ul>
           <li><a href="/tr/urunler/">TR</a></li><li><a href="/en/urunler/">EN</a></li><li><a href="/ar/urunler/">AR</a></li><li><a href="/de/urunler/">DE</a></li><li><a href="/ko/urunler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ylj9rbody">
+  <div class="jpwo1body">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=a7e6h"
+        src="/img/tillotarim-logo.png?v=n9vpx"
         alt="Tillo Tarim Logo"
-        class="ylj9rbodylogo"
+        class="jpwo1bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ylj9r-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="jpwo1-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ylj9r-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ylj9rmenubody">
-    <div class="ylj9rmenu" id="menu-2-root">
-      <div class="ylj9rmenulistbody">
-        <div class="ylj9rmenulist">
+  <div class="jpwo1-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="jpwo1menubody">
+    <div class="jpwo1menu" id="menu-2-root">
+      <button type="button" class="jpwo1-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="jpwo1menulistbody">
+        <div class="jpwo1menulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a class="ylj9r-menu-list-active" href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="jpwo1menulist-menu"><a href="/ko/hakkimizda/">기업</a><div class="dropdown-content-jpwo1"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a class="jpwo1-menu-list-active" href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="ylj9rlanguages-mobile">
+      <div class="jpwo1languages-mobile">
         <ul>
           <li><a href="/tr/urunler/">TR</a></li><li><a href="/en/urunler/">EN</a></li><li><a href="/ar/urunler/">AR</a></li><li><a href="/de/urunler/">DE</a></li><li><a href="/ko/urunler/">KO</a></li>
         </ul>
@@ -113,347 +116,464 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ylj9r") : null;
+      var wrapper = root.closest ? root.closest(".jpwo1") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ylj9rmenu-open")) {
-        target.classList.remove("ylj9rmenu-open");
+      if (target.classList.contains("jpwo1menu-open")) {
+        target.classList.remove("jpwo1menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ylj9rmenu-open");
+        target.classList.add("jpwo1menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".jpwo1") : null;
+      var target = wrapper || root;
+      target.classList.remove("jpwo1menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".jpwo1menulist-menu.dropdown-content-active-jpwo1");
+      if (activeWrap) {
+        activeWrap.classList.add("jpwo1-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".jpwo1menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-jpwo1")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("jpwo1-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".jpwo1menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("jpwo1-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("jpwo1-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".jpwo1menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".jpwo1menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("jpwo1-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="hk5qa">
-  <div class="hk5qabody">
-      <div style="animation-delay: 0.3s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/antep-fistigi-ezme-ve-krema/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+  <div id="content"><div class="gfd6h">
+  <div class="gfd6hbody">
+      <div style="animation-delay: 0.3s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/antep-fistigi-ezme-ve-krema/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c01fistik/index.webp" alt="가지안테프 피스타치오 페이스트·크림" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               가지안테프 피스타치오 페이스트·크림
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 가지안테프 피스타치오 페이스트·크림. 가지안테프 피스타치오 페이스트·크림: 로스팅·천연·크리미 제품. 가지안테프산 가지안테프 피스타치오로 생산 e…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 0.6s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/findik-ezme-ve-krema/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 0.6s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/findik-ezme-ve-krema/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c02findik/index.webp" alt="헤이즐넛 페이스트·크림" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               헤이즐넛 페이스트·크림
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 헤이즐넛 페이스트·크림. Seçme fındıktan ezme ve krema; kahvaltı ve pastacılık için. Giresun ve Ordu fındığından ezme ve krema ürünleri. Gaziantep…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 0.8999999999999999s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/badem-ezme-ve-krema/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 0.8999999999999999s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/badem-ezme-ve-krema/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c03badem/index.webp" alt="아몬드 페이스트·크림" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               아몬드 페이스트·크림
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 아몬드 페이스트·크림. Badem ezme ve krema: protein deposu, şekersiz seçenekler. Akdeniz ve İç Anadolu bademinden ezme ve krema çeşitleri. Gazian…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 1.2s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/yer-fistigi-ezme-ve-krema/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 1.2s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/yer-fistigi-ezme-ve-krema/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c04yerfist/index.webp" alt="땅콩 페이스트·크림" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               땅콩 페이스트·크림
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 땅콩 페이스트·크림. Yer fıstığı ezme ve krema; klasik ve kakao aromalı çeşitler. Yer fıstığından üretilen ezme ve krema ürünleri. Gazian…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 1.5s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/kurutulmus-meyveler/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 1.5s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/kurutulmus-meyveler/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c05kurumey/index.webp" alt="건과일" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               건과일
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 건과일. 건조 meyveler: kayısı, incir, hurma, orman meyveleri karışımı. Güneş ve fırın kurutma ile korunan doğal kurutulmuş m…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 1.8s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/meyve-cipsleri/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 1.8s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/meyve-cipsleri/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c06meycip/index.webp" alt="과일 칩" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               과일 칩
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 과일 칩. Meyve cipsleri: elma, armut, kivi ve turunçgil dilimleri. Düşük sıcaklıkta kurutulmuş meyve cipsleri; atıştırmalık ve reçeteler…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 2.1s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/kurutulmus-sebzeler/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 2.1s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/kurutulmus-sebzeler/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c07kuruseb/index.webp" alt="건채소" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               건채소
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 건채소. 건조 sebzeler: biber, patlıcan, kabak; çorba ve yemeklik. Mevsim sebzelerinin kurutulmuş hali; çorba, yemek ve garni…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 2.4s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/recel-ve-marmelatlar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 2.4s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/recel-ve-marmelatlar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c08recel/index.webp" alt="잼·마멀레이드" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               잼·마멀레이드
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 잼·마멀레이드. Reçel ve marmelat: vişne, kayısı, çilek, portakal ve özel karışımlar. Geleneksel reçel ve marmelat çeşitleri; kahvaltı ve…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 2.6999999999999997s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/lokum-pestil-ve-geleneksel-tatlilar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 2.6999999999999997s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/lokum-pestil-ve-geleneksel-tatlilar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c09gelenek/index.webp" alt="로쿰·페스틸·전통 과자" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               로쿰·페스틸·전통 과자
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 로쿰·페스틸·전통 과자. Lokum, pestil, köme, tahin helva ve geleneksel tatlılar. Anadolu mutfağının lokum, pestil, köme ve helva…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 2.9999999999999996s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/meyve-sulari/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 2.9999999999999996s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/meyve-sulari/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c10meyves/index.webp" alt="과일 주스" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               과일 주스
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 과일 주스. Doğal meyve suları: nar, elma, portakal, vişne ve mevsim nektarları. Soğuk sıkım ve pastörize meyve suları; katkısız seçenekler.…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 3.2999999999999994s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/pekmez-ve-suruplar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 3.2999999999999994s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/pekmez-ve-suruplar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c11pekmez/index.webp" alt="당밀·시럽" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               당밀·시럽
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 당밀·시럽. Pekmez ve şuruplar: üzüm, dut, hurma, keçiboynuzu. Doğal pekmez ve meyve şurupları; kahvaltı ve sağlıklı tatlandırıcı. Gazi…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 3.599999999999999s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/sut-ve-sut-urunleri/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 3.599999999999999s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/sut-ve-sut-urunleri/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c12sut/index.webp" alt="우유·유제품" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               우유·유제품
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 우유·유제품. Süt ve süt ürünleri: peynir, tereyağı, kaymak, yoğurt, ayran. Tereyağı, peynir, yoğurt ve geleneksel süt ürünleri. Gaziant…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 3.899999999999999s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/salca-tursu-meze-ve-soslar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 3.899999999999999s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/salca-tursu-meze-ve-soslar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c13konserve/index.webp" alt="토마토 페이스트·피클·메제·소스" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               토마토 페이스트·피클·메제·소스
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 토마토 페이스트·피클·메제·소스. Salça, turşu, meze, salamura ve doğal sirkeler. Salça, turşu, meze, salamura içecek, sirke ve sos çeşitleri. Gazi…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 4.199999999999999s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/sivi-yaglar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 4.199999999999999s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/sivi-yaglar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c14siviya/index.webp" alt="유장류 오일" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               유장류 오일
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 유장류 오일. Sıvı yağlar: natürel sızma zeytinyağı, fındık ve kabak çekirdeği yağı. Soğuk sıkım zeytinyağı ve bitkisel sıvı yağlar. Gaziantep m…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 4.499999999999999s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/tibbi-aromatik-yaglar/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 4.499999999999999s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/tibbi-aromatik-yaglar/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c15aromya/index.webp" alt="의료용 아로마 오일" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               의료용 아로마 오일
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim 의료용 아로마 오일. Tıbbi aromatik yağlar: bıttım, çörek otu, üzüm çekirdeği. Geleneksel ve aromatik yağlar; kozmetik ve beslenme destek ürü…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 4.799999999999999s;" class="hk5qabodyitems right">
-        <div class="hk5qabodyitem rights">
-          <a href="/ko/iqf-dilimlenmis-sebzeler/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 4.799999999999999s;" class="gfd6hbodyitems right">
+        <div class="gfd6hbodyitem rights">
+          <a href="/ko/iqf-dilimlenmis-sebzeler/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c16iqfseb/index.webp" alt="IQF 채소 슬라이스" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               IQF 채소 슬라이스
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim IQF 채소 슬라이스. IQF dilimlenmiş sebzeler: domates, biber, patlıcan, brokoli. Hızlı dondurulmuş (IQF) sebze dilimleri; endüstriyel ve…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div>
-      <div style="animation-delay: 5.099999999999999s;" class="hk5qabodyitems left">
-        <div class="hk5qabodyitem lefts">
-          <a href="/ko/iqf-meyveler/" class="hk5qabodyitemlink">
-            <div class="hk5qabodyitemimg">
+      <div style="animation-delay: 5.099999999999999s;" class="gfd6hbodyitems left">
+        <div class="gfd6hbodyitem lefts">
+          <a href="/ko/iqf-meyveler/" class="gfd6hbodyitemlink">
+            <div class="gfd6hbodyitemimg">
               <img src="/page/c17iqfmey/index.webp" alt="IQF 과일" loading="lazy">
             </div>
-            <h2 class="hk5qabodyitemtitle">
+            <h2 class="gfd6hbodyitemtitle">
               IQF 과일
             </h2>
           </a>
-          <div class="hk5qabodyitechile">
+          <div class="gfd6hbodyitechile">
             Tillo Tarim IQF 과일. IQF meyveler: çilek, kiraz, nar, ahududu ve karışım. Hızlı dondurulmuş bütün ve dilim meyveler; smoothie ve pastacılık. Gaziantep…
           </div>
-          <div class="hk5qabodyitechilesubpagecontainer">
+          <div class="gfd6hbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="hk5qabodybg"></div>
+        <div class="gfd6hbodybg"></div>
       </div></div>
 </div>
 
@@ -481,7 +601,7 @@
           rootMargin: "0px 0px -10px 0px",
         },
       );
-      const items = Array.from(document.querySelectorAll(".hk5qabodyitems"));
+      const items = Array.from(document.querySelectorAll(".gfd6hbodyitems"));
       items
         .sort((a, b) => {
           return a.offsetTop - b.offsetTop;
@@ -498,8 +618,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=eyb4r"></script>
-  <script defer src="/src/cookie.js?v=eyb4r"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=dbss6"></script>
+  <script defer src="/src/cookie.js?v=dbss6"></script>
 
   <script>
     setTimeout(function() {

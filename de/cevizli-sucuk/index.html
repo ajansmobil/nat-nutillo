@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=l6pdh" />
-  <link rel="preload" href="/src/cookie.css?v=l6pdh" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=dqnic" />
+  <link rel="preload" href="/src/cookie.css?v=dqnic" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=l6pdh" />
+    <link rel="stylesheet" href="/src/cookie.css?v=dqnic" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=l6pdh" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=dqnic" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=l6pdh">
+<link rel="stylesheet" href="style.css?v=dqnic">
 </head>
 
 <body>
   <div id="header">
-<div class="xfzsz">
-  <div class="xfzsztitle">
-    <div class="xfzsztitlebody">
-      <div class="xfzsztitlebodylang">
+<div class="zoae4">
+  <div class="zoae4title">
+    <div class="zoae4titlebody">
+      <div class="zoae4titlebodylang">
         <ul>
           <li><a href="/tr/cevizli-sucuk/">TR</a></li><li><a href="/en/cevizli-sucuk/">EN</a></li><li><a href="/ar/cevizli-sucuk/">AR</a></li><li><a href="/de/cevizli-sucuk/">DE</a></li><li><a href="/ko/cevizli-sucuk/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="xfzszbody">
+  <div class="zoae4body">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=ihm7n"
+        src="/img/tillotarim-logo.png?v=b38l0"
         alt="Tillo Tarim Logo"
-        class="xfzszbodylogo"
+        class="zoae4bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="xfzsz-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="zoae4-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="xfzsz-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="xfzszmenubody">
-    <div class="xfzszmenu" id="menu-2-root">
-      <div class="xfzszmenulistbody">
-        <div class="xfzszmenulist">
+  <div class="zoae4-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="zoae4menubody">
+    <div class="zoae4menu" id="menu-2-root">
+      <button type="button" class="zoae4-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="zoae4menulistbody">
+        <div class="zoae4menulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="zoae4menulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-zoae4"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="xfzszlanguages-mobile">
+      <div class="zoae4languages-mobile">
         <ul>
           <li><a href="/tr/cevizli-sucuk/">TR</a></li><li><a href="/en/cevizli-sucuk/">EN</a></li><li><a href="/ar/cevizli-sucuk/">AR</a></li><li><a href="/de/cevizli-sucuk/">DE</a></li><li><a href="/ko/cevizli-sucuk/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".xfzsz") : null;
+      var wrapper = root.closest ? root.closest(".zoae4") : null;
       var target = wrapper || root;
-      if (target.classList.contains("xfzszmenu-open")) {
-        target.classList.remove("xfzszmenu-open");
+      if (target.classList.contains("zoae4menu-open")) {
+        target.classList.remove("zoae4menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("xfzszmenu-open");
+        target.classList.add("zoae4menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".zoae4") : null;
+      var target = wrapper || root;
+      target.classList.remove("zoae4menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".zoae4menulist-menu.dropdown-content-active-zoae4");
+      if (activeWrap) {
+        activeWrap.classList.add("zoae4-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".zoae4menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-zoae4")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("zoae4-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".zoae4menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("zoae4-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("zoae4-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".zoae4menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".zoae4menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("zoae4-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="akmd3-title">
+  <div id="content"><div class="f8ybj-title">
   <h1>Cevizli Sucuk</h1>
 </div>
-<div class="akmd3">
-  <button type="button" class="akmd3-menu-btn" aria-expanded="false" aria-controls="akmd3-menu">
-    <span class="akmd3-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined akmd3-icon" aria-hidden="true">menu</span>
+<div class="f8ybj">
+  <button type="button" class="f8ybj-menu-btn" aria-expanded="false" aria-controls="f8ybj-menu">
+    <span class="f8ybj-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined f8ybj-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="akmd3-menu-overlay" id="akmd3-menu-overlay" aria-hidden="true"></div>
-  <nav class="akmd3-menu" id="akmd3-menu" aria-label="Menü">
-    <button class="akmd3-menu-close" type="button" aria-label="Menü schließen">
+  <div class="f8ybj-menu-overlay" id="f8ybj-menu-overlay" aria-hidden="true"></div>
+  <nav class="f8ybj-menu" id="f8ybj-menu" aria-label="Menü">
+    <button class="f8ybj-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="akmd3-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="akmd3-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="akmd3-menu-link" href="/de/findik-ezme-ve-krema/"><span class="akmd3-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="akmd3-menu-link" href="/de/badem-ezme-ve-krema/"><span class="akmd3-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="akmd3-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="akmd3-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="akmd3-menu-link" href="/de/kurutulmus-meyveler/"><span class="akmd3-menu-link-text">Trockenfrüchte</span></a><a class="akmd3-menu-link" href="/de/meyve-cipsleri/"><span class="akmd3-menu-link-text">Fruchtchips</span></a><a class="akmd3-menu-link" href="/de/kurutulmus-sebzeler/"><span class="akmd3-menu-link-text">Trockengemüse</span></a><a class="akmd3-menu-link" href="/de/recel-ve-marmelatlar/"><span class="akmd3-menu-link-text">Marmeladen & Konfitüren</span></a><a class="akmd3-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="akmd3-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="akmd3-menu-link" href="/de/meyve-sulari/"><span class="akmd3-menu-link-text">Fruchtsäfte</span></a><a class="akmd3-menu-link" href="/de/pekmez-ve-suruplar/"><span class="akmd3-menu-link-text">Melasse & Sirupe</span></a><a class="akmd3-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="akmd3-menu-link-text">Milch & Milchprodukte</span></a><a class="akmd3-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="akmd3-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="akmd3-menu-link" href="/de/sivi-yaglar/"><span class="akmd3-menu-link-text">Flüssige Öle</span></a><a class="akmd3-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="akmd3-menu-link-text">Medizinische Aromaöle</span></a><a class="akmd3-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="akmd3-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="akmd3-menu-link" href="/de/iqf-meyveler/"><span class="akmd3-menu-link-text">IQF-Früchte</span></a>
+    <a class="f8ybj-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="f8ybj-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="f8ybj-menu-link" href="/de/findik-ezme-ve-krema/"><span class="f8ybj-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="f8ybj-menu-link" href="/de/badem-ezme-ve-krema/"><span class="f8ybj-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="f8ybj-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="f8ybj-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="f8ybj-menu-link" href="/de/kurutulmus-meyveler/"><span class="f8ybj-menu-link-text">Trockenfrüchte</span></a><a class="f8ybj-menu-link" href="/de/meyve-cipsleri/"><span class="f8ybj-menu-link-text">Fruchtchips</span></a><a class="f8ybj-menu-link" href="/de/kurutulmus-sebzeler/"><span class="f8ybj-menu-link-text">Trockengemüse</span></a><a class="f8ybj-menu-link" href="/de/recel-ve-marmelatlar/"><span class="f8ybj-menu-link-text">Marmeladen & Konfitüren</span></a><a class="f8ybj-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="f8ybj-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="f8ybj-menu-link" href="/de/meyve-sulari/"><span class="f8ybj-menu-link-text">Fruchtsäfte</span></a><a class="f8ybj-menu-link" href="/de/pekmez-ve-suruplar/"><span class="f8ybj-menu-link-text">Melasse & Sirupe</span></a><a class="f8ybj-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="f8ybj-menu-link-text">Milch & Milchprodukte</span></a><a class="f8ybj-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="f8ybj-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="f8ybj-menu-link" href="/de/sivi-yaglar/"><span class="f8ybj-menu-link-text">Flüssige Öle</span></a><a class="f8ybj-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="f8ybj-menu-link-text">Medizinische Aromaöle</span></a><a class="f8ybj-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="f8ybj-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="f8ybj-menu-link" href="/de/iqf-meyveler/"><span class="f8ybj-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="akmd3-main">
-    <div class="akmd3-row"><div class="akmd3-row-media"><div class="akmd3-img"><img src="/page/smimyqauai/index.webp?v=k7vhh" alt="Cevizli Sucuk" loading="lazy" /></div></div><div class="akmd3-row-desc"><p class="akmd3-lead">Tillo Tarim Cevizli Sucuk: Dut pestili cevizli sucuk. Lokum, Pestil & traditionelle Süßwaren Kategorie. Verfügbare Grammaturen: 300 g. Naturkost aus Gaziantep.</p><div class="akmd3-desc-tags"><span class="akmd3-desc-tag"><span class="akmd3-desc-tag-label">Grammatur</span><span class="akmd3-desc-tag-value">300 g</span></span><span class="akmd3-desc-tag"><span class="akmd3-desc-tag-label">Verpackung</span><span class="akmd3-desc-tag-value">Kutu / vakumlu ambalaj</span></span><span class="akmd3-desc-tag"><span class="akmd3-desc-tag-label">Herkunft</span><span class="akmd3-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="akmd3-body"><h2 style="font-size: 22px;">Cevizli Sucuk</h2>
+  <div class="f8ybj-main">
+    <div class="f8ybj-row"><div class="f8ybj-row-media"><div class="f8ybj-img"><img src="/page/smimyqauai/index.webp?v=r20yp" alt="Cevizli Sucuk" loading="lazy" /></div></div><div class="f8ybj-row-desc"><p class="f8ybj-lead">Tillo Tarim Cevizli Sucuk: Dut pestili cevizli sucuk. Lokum, Pestil & traditionelle Süßwaren Kategorie. Verfügbare Grammaturen: 300 g. Naturkost aus Gaziantep.</p><div class="f8ybj-desc-tags"><span class="f8ybj-desc-tag"><span class="f8ybj-desc-tag-label">Grammatur</span><span class="f8ybj-desc-tag-value">300 g</span></span><span class="f8ybj-desc-tag"><span class="f8ybj-desc-tag-label">Verpackung</span><span class="f8ybj-desc-tag-value">Kutu / vakumlu ambalaj</span></span><span class="f8ybj-desc-tag"><span class="f8ybj-desc-tag-label">Herkunft</span><span class="f8ybj-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="f8ybj-body"><h2 style="font-size: 22px;">Cevizli Sucuk</h2>
 <p style="font-size: 16px;">Tillo Tarim Cevizli Sucuk: Dut pestili cevizli sucuk. Lokum, Pestil & traditionelle Süßwaren Kategorie. Verfügbare Grammaturen: 300 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 300 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".akmd3-menu-btn");
-    var menu = document.querySelector(".akmd3-menu");
-    var overlay = document.querySelector(".akmd3-menu-overlay");
-    var closeButton = document.querySelector(".akmd3-menu-close");
+    var menuToggleBtn = document.querySelector(".f8ybj-menu-btn");
+    var menu = document.querySelector(".f8ybj-menu");
+    var overlay = document.querySelector(".f8ybj-menu-overlay");
+    var closeButton = document.querySelector(".f8ybj-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".akmd3-menu-close")) {
+      if (link && !event.target.closest(".f8ybj-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=l6pdh"></script>
-  <script defer src="/src/cookie.js?v=l6pdh"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=dqnic"></script>
+  <script defer src="/src/cookie.js?v=dqnic"></script>
 
   <script>
     setTimeout(function() {

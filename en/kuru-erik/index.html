@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=okt9v" />
-  <link rel="preload" href="/src/cookie.css?v=okt9v" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=bdh1r" />
+  <link rel="preload" href="/src/cookie.css?v=bdh1r" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=okt9v" />
+    <link rel="stylesheet" href="/src/cookie.css?v=bdh1r" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=okt9v" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=bdh1r" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=okt9v">
+<link rel="stylesheet" href="style.css?v=bdh1r">
 </head>
 
 <body>
   <div id="header">
-<div class="tu21m">
-  <div class="tu21mtitle">
-    <div class="tu21mtitlebody">
-      <div class="tu21mtitlebodylang">
+<div class="ffs6q">
+  <div class="ffs6qtitle">
+    <div class="ffs6qtitlebody">
+      <div class="ffs6qtitlebodylang">
         <ul>
           <li><a href="/tr/kuru-erik/">TR</a></li><li><a href="/en/kuru-erik/">EN</a></li><li><a href="/ar/kuru-erik/">AR</a></li><li><a href="/de/kuru-erik/">DE</a></li><li><a href="/ko/kuru-erik/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="tu21mbody">
+  <div class="ffs6qbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=q3ltq"
+        src="/img/tillotarim-logo.png?v=xetst"
         alt="Tillo Tarim Logo"
-        class="tu21mbodylogo"
+        class="ffs6qbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="tu21m-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="ffs6q-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="tu21m-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="tu21mmenubody">
-    <div class="tu21mmenu" id="menu-2-root">
-      <div class="tu21mmenulistbody">
-        <div class="tu21mmenulist">
+  <div class="ffs6q-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="ffs6qmenubody">
+    <div class="ffs6qmenu" id="menu-2-root">
+      <button type="button" class="ffs6q-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="ffs6qmenulistbody">
+        <div class="ffs6qmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="ffs6qmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-ffs6q"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="tu21mlanguages-mobile">
+      <div class="ffs6qlanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-erik/">TR</a></li><li><a href="/en/kuru-erik/">EN</a></li><li><a href="/ar/kuru-erik/">AR</a></li><li><a href="/de/kuru-erik/">DE</a></li><li><a href="/ko/kuru-erik/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".tu21m") : null;
+      var wrapper = root.closest ? root.closest(".ffs6q") : null;
       var target = wrapper || root;
-      if (target.classList.contains("tu21mmenu-open")) {
-        target.classList.remove("tu21mmenu-open");
+      if (target.classList.contains("ffs6qmenu-open")) {
+        target.classList.remove("ffs6qmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("tu21mmenu-open");
+        target.classList.add("ffs6qmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".ffs6q") : null;
+      var target = wrapper || root;
+      target.classList.remove("ffs6qmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".ffs6qmenulist-menu.dropdown-content-active-ffs6q");
+      if (activeWrap) {
+        activeWrap.classList.add("ffs6q-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".ffs6qmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-ffs6q")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("ffs6q-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".ffs6qmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("ffs6q-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("ffs6q-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".ffs6qmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".ffs6qmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("ffs6q-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="kru30-title">
+  <div id="content"><div class="dhaos-title">
   <h1>Dried Erik</h1>
 </div>
-<div class="kru30">
-  <button type="button" class="kru30-menu-btn" aria-expanded="false" aria-controls="kru30-menu">
-    <span class="kru30-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined kru30-icon" aria-hidden="true">menu</span>
+<div class="dhaos">
+  <button type="button" class="dhaos-menu-btn" aria-expanded="false" aria-controls="dhaos-menu">
+    <span class="dhaos-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined dhaos-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="kru30-menu-overlay" id="kru30-menu-overlay" aria-hidden="true"></div>
-  <nav class="kru30-menu" id="kru30-menu" aria-label="Menu">
-    <button class="kru30-menu-close" type="button" aria-label="Close Menu">
+  <div class="dhaos-menu-overlay" id="dhaos-menu-overlay" aria-hidden="true"></div>
+  <nav class="dhaos-menu" id="dhaos-menu" aria-label="Menu">
+    <button class="dhaos-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="kru30-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="kru30-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="kru30-menu-link" href="/en/findik-ezme-ve-krema/"><span class="kru30-menu-link-text">Hazelnut Paste & Cream</span></a><a class="kru30-menu-link" href="/en/badem-ezme-ve-krema/"><span class="kru30-menu-link-text">Almond Paste & Cream</span></a><a class="kru30-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="kru30-menu-link-text">Peanut Paste & Cream</span></a><a class="kru30-menu-link" href="/en/kurutulmus-meyveler/"><span class="kru30-menu-link-text">Dried Fruits</span></a><a class="kru30-menu-link" href="/en/meyve-cipsleri/"><span class="kru30-menu-link-text">Fruit Chips</span></a><a class="kru30-menu-link" href="/en/kurutulmus-sebzeler/"><span class="kru30-menu-link-text">Dried Vegetables</span></a><a class="kru30-menu-link" href="/en/recel-ve-marmelatlar/"><span class="kru30-menu-link-text">Jams & Marmalades</span></a><a class="kru30-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="kru30-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="kru30-menu-link" href="/en/meyve-sulari/"><span class="kru30-menu-link-text">Fruit Juices</span></a><a class="kru30-menu-link" href="/en/pekmez-ve-suruplar/"><span class="kru30-menu-link-text">Molasses & Syrups</span></a><a class="kru30-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="kru30-menu-link-text">Milk & Dairy Products</span></a><a class="kru30-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="kru30-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="kru30-menu-link" href="/en/sivi-yaglar/"><span class="kru30-menu-link-text">Liquid Oils</span></a><a class="kru30-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="kru30-menu-link-text">Medicinal Aromatic Oils</span></a><a class="kru30-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="kru30-menu-link-text">IQF Sliced Vegetables</span></a><a class="kru30-menu-link" href="/en/iqf-meyveler/"><span class="kru30-menu-link-text">IQF Fruits</span></a>
+    <a class="dhaos-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="dhaos-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="dhaos-menu-link" href="/en/findik-ezme-ve-krema/"><span class="dhaos-menu-link-text">Hazelnut Paste & Cream</span></a><a class="dhaos-menu-link" href="/en/badem-ezme-ve-krema/"><span class="dhaos-menu-link-text">Almond Paste & Cream</span></a><a class="dhaos-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="dhaos-menu-link-text">Peanut Paste & Cream</span></a><a class="dhaos-menu-link" href="/en/kurutulmus-meyveler/"><span class="dhaos-menu-link-text">Dried Fruits</span></a><a class="dhaos-menu-link" href="/en/meyve-cipsleri/"><span class="dhaos-menu-link-text">Fruit Chips</span></a><a class="dhaos-menu-link" href="/en/kurutulmus-sebzeler/"><span class="dhaos-menu-link-text">Dried Vegetables</span></a><a class="dhaos-menu-link" href="/en/recel-ve-marmelatlar/"><span class="dhaos-menu-link-text">Jams & Marmalades</span></a><a class="dhaos-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="dhaos-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="dhaos-menu-link" href="/en/meyve-sulari/"><span class="dhaos-menu-link-text">Fruit Juices</span></a><a class="dhaos-menu-link" href="/en/pekmez-ve-suruplar/"><span class="dhaos-menu-link-text">Molasses & Syrups</span></a><a class="dhaos-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="dhaos-menu-link-text">Milk & Dairy Products</span></a><a class="dhaos-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="dhaos-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="dhaos-menu-link" href="/en/sivi-yaglar/"><span class="dhaos-menu-link-text">Liquid Oils</span></a><a class="dhaos-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="dhaos-menu-link-text">Medicinal Aromatic Oils</span></a><a class="dhaos-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="dhaos-menu-link-text">IQF Sliced Vegetables</span></a><a class="dhaos-menu-link" href="/en/iqf-meyveler/"><span class="dhaos-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="kru30-main">
-    <div class="kru30-row"><div class="kru30-row-media"><div class="kru30-img"><img src="/page/gqqya66e22/index.webp?v=m14nw" alt="Dried Erik" loading="lazy" /></div></div><div class="kru30-row-desc"><p class="kru30-lead">Tillo Tarim Dried Erik: Doğal kurutulmuş erik. Dried Fruits category. Available sizes: 200 g. natural food from Gaziantep.</p><div class="kru30-desc-tags"><span class="kru30-desc-tag"><span class="kru30-desc-tag-label">Net weight</span><span class="kru30-desc-tag-value">200 g</span></span><span class="kru30-desc-tag"><span class="kru30-desc-tag-label">Packaging</span><span class="kru30-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="kru30-desc-tag"><span class="kru30-desc-tag-label">Origin</span><span class="kru30-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="kru30-body"><h2 style="font-size: 22px;">Dried Erik</h2>
+  <div class="dhaos-main">
+    <div class="dhaos-row"><div class="dhaos-row-media"><div class="dhaos-img"><img src="/page/gqqya66e22/index.webp?v=ncd2f" alt="Dried Erik" loading="lazy" /></div></div><div class="dhaos-row-desc"><p class="dhaos-lead">Tillo Tarim Dried Erik: Doğal kurutulmuş erik. Dried Fruits category. Available sizes: 200 g. natural food from Gaziantep.</p><div class="dhaos-desc-tags"><span class="dhaos-desc-tag"><span class="dhaos-desc-tag-label">Net weight</span><span class="dhaos-desc-tag-value">200 g</span></span><span class="dhaos-desc-tag"><span class="dhaos-desc-tag-label">Packaging</span><span class="dhaos-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="dhaos-desc-tag"><span class="dhaos-desc-tag-label">Origin</span><span class="dhaos-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="dhaos-body"><h2 style="font-size: 22px;">Dried Erik</h2>
 <p style="font-size: 16px;">Tillo Tarim Dried Erik: Doğal kurutulmuş erik. Dried Fruits category. Available sizes: 200 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 200 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".kru30-menu-btn");
-    var menu = document.querySelector(".kru30-menu");
-    var overlay = document.querySelector(".kru30-menu-overlay");
-    var closeButton = document.querySelector(".kru30-menu-close");
+    var menuToggleBtn = document.querySelector(".dhaos-menu-btn");
+    var menu = document.querySelector(".dhaos-menu");
+    var overlay = document.querySelector(".dhaos-menu-overlay");
+    var closeButton = document.querySelector(".dhaos-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".kru30-menu-close")) {
+      if (link && !event.target.closest(".dhaos-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=okt9v"></script>
-  <script defer src="/src/cookie.js?v=okt9v"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=bdh1r"></script>
+  <script defer src="/src/cookie.js?v=bdh1r"></script>
 
   <script>
     setTimeout(function() {

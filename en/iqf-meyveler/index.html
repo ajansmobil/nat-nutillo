@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=o7r6y" />
-  <link rel="preload" href="/src/cookie.css?v=o7r6y" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=so1p6" />
+  <link rel="preload" href="/src/cookie.css?v=so1p6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=o7r6y" />
+    <link rel="stylesheet" href="/src/cookie.css?v=so1p6" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=o7r6y" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=so1p6" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=o7r6y">
+<link rel="stylesheet" href="style.css?v=so1p6">
 </head>
 
 <body>
   <div id="header">
-<div class="tjcuj">
-  <div class="tjcujtitle">
-    <div class="tjcujtitlebody">
-      <div class="tjcujtitlebodylang">
+<div class="hbntu">
+  <div class="hbntutitle">
+    <div class="hbntutitlebody">
+      <div class="hbntutitlebodylang">
         <ul>
           <li><a href="/tr/iqf-meyveler/">TR</a></li><li><a href="/en/iqf-meyveler/">EN</a></li><li><a href="/ar/iqf-meyveler/">AR</a></li><li><a href="/de/iqf-meyveler/">DE</a></li><li><a href="/ko/iqf-meyveler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="tjcujbody">
+  <div class="hbntubody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=t9uxc"
+        src="/img/tillotarim-logo.png?v=z90yy"
         alt="Tillo Tarim Logo"
-        class="tjcujbodylogo"
+        class="hbntubodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="tjcuj-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="hbntu-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="tjcuj-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="tjcujmenubody">
-    <div class="tjcujmenu" id="menu-2-root">
-      <div class="tjcujmenulistbody">
-        <div class="tjcujmenulist">
+  <div class="hbntu-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="hbntumenubody">
+    <div class="hbntumenu" id="menu-2-root">
+      <button type="button" class="hbntu-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="hbntumenulistbody">
+        <div class="hbntumenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="hbntumenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-hbntu"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="tjcujlanguages-mobile">
+      <div class="hbntulanguages-mobile">
         <ul>
           <li><a href="/tr/iqf-meyveler/">TR</a></li><li><a href="/en/iqf-meyveler/">EN</a></li><li><a href="/ar/iqf-meyveler/">AR</a></li><li><a href="/de/iqf-meyveler/">DE</a></li><li><a href="/ko/iqf-meyveler/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".tjcuj") : null;
+      var wrapper = root.closest ? root.closest(".hbntu") : null;
       var target = wrapper || root;
-      if (target.classList.contains("tjcujmenu-open")) {
-        target.classList.remove("tjcujmenu-open");
+      if (target.classList.contains("hbntumenu-open")) {
+        target.classList.remove("hbntumenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("tjcujmenu-open");
+        target.classList.add("hbntumenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".hbntu") : null;
+      var target = wrapper || root;
+      target.classList.remove("hbntumenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".hbntumenulist-menu.dropdown-content-active-hbntu");
+      if (activeWrap) {
+        activeWrap.classList.add("hbntu-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".hbntumenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-hbntu")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("hbntu-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".hbntumenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("hbntu-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("hbntu-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".hbntumenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".hbntumenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("hbntu-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="x6qha-title f36">
+  <div id="content"><div class="qfawp-title f36">
   <h1>IQF Fruits</h1>
 </div>
 
-<div class="x6qha"><h2 style="font-size: 24px;">IQF Fruits</h2>
+<div class="qfawp"><h2 style="font-size: 24px;">IQF Fruits</h2>
 <p style="font-size: 16px;">Tillo Tarim IQF Fruits. IQF meyveler: çilek, kiraz, nar, ahududu ve karışım. Hızlı dondurulmuş bütün ve dilim meyveler; smoothie ve pastacılık. Gaziantep…</p></div>
 
 
 ------------------------
-<div class="czpqq czpqqcat3">
-  <div class="czpqqbody"><a class="czpqqbodycardlink" href="/en/iqf-cilek/" title="IQF Çilek"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/cu262a7mym/index.webp" alt="IQF Çilek" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Çilek</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-kiraz/" title="IQF Kiraz"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/jqmqqeiaaa/index.webp" alt="IQF Kiraz" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Kiraz</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-uzum/" title="IQF Üzüm"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/6ieaye2y22/index.webp" alt="IQF Üzüm" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Üzüm</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-nar-tanesi/" title="IQF Nar Tanesi"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/dmiqaeummi/index.webp" alt="IQF Nar Tanesi" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Nar Tanesi</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-ahududu/" title="IQF Ahududu"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/kmei2i6im2/index.webp" alt="IQF Ahududu" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Ahududu</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-dut/" title="IQF Dut"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/ri6qeqm6iy/index.webp" alt="IQF Dut" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Dut</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-orman-meyveleri-mix/" title="IQF Orman Meyveleri Mix"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/e62uqi6yme/index.webp" alt="IQF Orman Meyveleri Mix" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Orman Meyveleri Mix</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-mango-dilim/" title="IQF Mango Slices"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/luq6y26ieq/index.webp" alt="IQF Mango Slices" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Mango Slices</span></div><div class="czpqqbodyitemaccent"></div></div></a><a class="czpqqbodycardlink" href="/en/iqf-ananas-dilim/" title="IQF Ananas Slices"><div class="czpqqbodycard"><div class="czpqqbodyitemimg"><img src="/page/sa2uqym6ey/index.webp" alt="IQF Ananas Slices" loading="lazy"></div><div class="czpqqbodyitemtitle"><span>IQF Ananas Slices</span></div><div class="czpqqbodyitemaccent"></div></div></a></div>
+<div class="oiv6y oiv6ycat3">
+  <div class="oiv6ybody"><a class="oiv6ybodycardlink" href="/en/iqf-cilek/" title="IQF Çilek"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/cu262a7mym/index.webp" alt="IQF Çilek" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Çilek</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-kiraz/" title="IQF Kiraz"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/jqmqqeiaaa/index.webp" alt="IQF Kiraz" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Kiraz</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-uzum/" title="IQF Üzüm"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/6ieaye2y22/index.webp" alt="IQF Üzüm" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Üzüm</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-nar-tanesi/" title="IQF Nar Tanesi"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/dmiqaeummi/index.webp" alt="IQF Nar Tanesi" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Nar Tanesi</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-ahududu/" title="IQF Ahududu"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/kmei2i6im2/index.webp" alt="IQF Ahududu" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Ahududu</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-dut/" title="IQF Dut"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/ri6qeqm6iy/index.webp" alt="IQF Dut" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Dut</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-orman-meyveleri-mix/" title="IQF Orman Meyveleri Mix"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/e62uqi6yme/index.webp" alt="IQF Orman Meyveleri Mix" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Orman Meyveleri Mix</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-mango-dilim/" title="IQF Mango Slices"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/luq6y26ieq/index.webp" alt="IQF Mango Slices" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Mango Slices</span></div><div class="oiv6ybodyitemaccent"></div></div></a><a class="oiv6ybodycardlink" href="/en/iqf-ananas-dilim/" title="IQF Ananas Slices"><div class="oiv6ybodycard"><div class="oiv6ybodyitemimg"><img src="/page/sa2uqym6ey/index.webp" alt="IQF Ananas Slices" loading="lazy"></div><div class="oiv6ybodyitemtitle"><span>IQF Ananas Slices</span></div><div class="oiv6ybodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".czpqqcat3");
+    var moduleRoots = document.querySelectorAll(".oiv6ycat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".czpqqbodycardlink");
+        var cards = root.querySelectorAll(".oiv6ybodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("czpqqcardvisible");
+            cards[i].classList.add("oiv6ycardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("czpqqcardvisible");
+            cards[j].classList.add("oiv6ycardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("czpqqcardvisible");
+                entry.target.classList.add("oiv6ycardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=o7r6y"></script>
-  <script defer src="/src/cookie.js?v=o7r6y"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=so1p6"></script>
+  <script defer src="/src/cookie.js?v=so1p6"></script>
 
   <script>
     setTimeout(function() {

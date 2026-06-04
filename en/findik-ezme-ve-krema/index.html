@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=v0prm" />
-  <link rel="preload" href="/src/cookie.css?v=v0prm" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=gkevb" />
+  <link rel="preload" href="/src/cookie.css?v=gkevb" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=v0prm" />
+    <link rel="stylesheet" href="/src/cookie.css?v=gkevb" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=v0prm" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=gkevb" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=v0prm">
+<link rel="stylesheet" href="style.css?v=gkevb">
 </head>
 
 <body>
   <div id="header">
-<div class="mea6n">
-  <div class="mea6ntitle">
-    <div class="mea6ntitlebody">
-      <div class="mea6ntitlebodylang">
+<div class="e6pw4">
+  <div class="e6pw4title">
+    <div class="e6pw4titlebody">
+      <div class="e6pw4titlebodylang">
         <ul>
           <li><a href="/tr/findik-ezme-ve-krema/">TR</a></li><li><a href="/en/findik-ezme-ve-krema/">EN</a></li><li><a href="/ar/findik-ezme-ve-krema/">AR</a></li><li><a href="/de/findik-ezme-ve-krema/">DE</a></li><li><a href="/ko/findik-ezme-ve-krema/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="mea6nbody">
+  <div class="e6pw4body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=zxsw0"
+        src="/img/tillotarim-logo.png?v=q3cw5"
         alt="Tillo Tarim Logo"
-        class="mea6nbodylogo"
+        class="e6pw4bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="mea6n-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="e6pw4-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="mea6n-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="mea6nmenubody">
-    <div class="mea6nmenu" id="menu-2-root">
-      <div class="mea6nmenulistbody">
-        <div class="mea6nmenulist">
+  <div class="e6pw4-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="e6pw4menubody">
+    <div class="e6pw4menu" id="menu-2-root">
+      <button type="button" class="e6pw4-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="e6pw4menulistbody">
+        <div class="e6pw4menulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="e6pw4menulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-e6pw4"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="mea6nlanguages-mobile">
+      <div class="e6pw4languages-mobile">
         <ul>
           <li><a href="/tr/findik-ezme-ve-krema/">TR</a></li><li><a href="/en/findik-ezme-ve-krema/">EN</a></li><li><a href="/ar/findik-ezme-ve-krema/">AR</a></li><li><a href="/de/findik-ezme-ve-krema/">DE</a></li><li><a href="/ko/findik-ezme-ve-krema/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".mea6n") : null;
+      var wrapper = root.closest ? root.closest(".e6pw4") : null;
       var target = wrapper || root;
-      if (target.classList.contains("mea6nmenu-open")) {
-        target.classList.remove("mea6nmenu-open");
+      if (target.classList.contains("e6pw4menu-open")) {
+        target.classList.remove("e6pw4menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("mea6nmenu-open");
+        target.classList.add("e6pw4menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".e6pw4") : null;
+      var target = wrapper || root;
+      target.classList.remove("e6pw4menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".e6pw4menulist-menu.dropdown-content-active-e6pw4");
+      if (activeWrap) {
+        activeWrap.classList.add("e6pw4-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".e6pw4menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-e6pw4")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("e6pw4-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".e6pw4menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("e6pw4-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("e6pw4-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".e6pw4menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".e6pw4menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("e6pw4-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="rozwu-title f36">
+  <div id="content"><div class="ks3b1-title f36">
   <h1>Hazelnut Paste & Cream</h1>
 </div>
 
-<div class="rozwu"><h2 style="font-size: 24px;">Hazelnut Paste & Cream</h2>
+<div class="ks3b1"><h2 style="font-size: 24px;">Hazelnut Paste & Cream</h2>
 <p style="font-size: 16px;">Tillo Tarim Hazelnut Paste & Cream. Seçme fındıktan ezme ve krema; kahvaltı ve pastacılık için. Giresun ve Ordu fındığından ezme ve krema ürünleri. Gaziantep…</p></div>
 
 
 ------------------------
-<div class="l5iyx l5iyxcat3">
-  <div class="l5iyxbody"><a class="l5iyxbodycardlink" href="/en/findik-ezmesi/" title="Fındık Paste"><div class="l5iyxbodycard"><div class="l5iyxbodyitemimg"><img src="/page/x6aaym2yaa/index.webp" alt="Fındık Paste" loading="lazy"></div><div class="l5iyxbodyitemtitle"><span>Fındık Paste</span></div><div class="l5iyxbodyitemaccent"></div></div></a><a class="l5iyxbodycardlink" href="/en/findik-kremasi/" title="Fındık Cream"><div class="l5iyxbodycard"><div class="l5iyxbodyitemimg"><img src="/page/42m6faueqe/index.webp" alt="Fındık Cream" loading="lazy"></div><div class="l5iyxbodyitemtitle"><span>Fındık Cream</span></div><div class="l5iyxbodyitemaccent"></div></div></a><a class="l5iyxbodycardlink" href="/en/findik-ezmesi-sekersiz/" title="Fındık Paste (Şekersiz)"><div class="l5iyxbodycard"><div class="l5iyxbodyitemimg"><img src="/page/ryyeua2a2i/index.webp" alt="Fındık Paste (Şekersiz)" loading="lazy"></div><div class="l5iyxbodyitemtitle"><span>Fındık Paste (Şekersiz)</span></div><div class="l5iyxbodyitemaccent"></div></div></a><a class="l5iyxbodycardlink" href="/en/findik-kremasi-kakao/" title="Fındık Cream (Kakao)"><div class="l5iyxbodycard"><div class="l5iyxbodyitemimg"><img src="/page/ye6meya62y/index.webp" alt="Fındık Cream (Kakao)" loading="lazy"></div><div class="l5iyxbodyitemtitle"><span>Fındık Cream (Kakao)</span></div><div class="l5iyxbodyitemaccent"></div></div></a><a class="l5iyxbodycardlink" href="/en/findik-ezmesi-premium/" title="Fındık Paste (Premium)"><div class="l5iyxbodycard"><div class="l5iyxbodyitemimg"><img src="/page/5aqqa6a6iy/index.webp" alt="Fındık Paste (Premium)" loading="lazy"></div><div class="l5iyxbodyitemtitle"><span>Fındık Paste (Premium)</span></div><div class="l5iyxbodyitemaccent"></div></div></a></div>
+<div class="mua9e mua9ecat3">
+  <div class="mua9ebody"><a class="mua9ebodycardlink" href="/en/findik-ezmesi/" title="Fındık Paste"><div class="mua9ebodycard"><div class="mua9ebodyitemimg"><img src="/page/x6aaym2yaa/index.webp" alt="Fındık Paste" loading="lazy"></div><div class="mua9ebodyitemtitle"><span>Fındık Paste</span></div><div class="mua9ebodyitemaccent"></div></div></a><a class="mua9ebodycardlink" href="/en/findik-kremasi/" title="Fındık Cream"><div class="mua9ebodycard"><div class="mua9ebodyitemimg"><img src="/page/42m6faueqe/index.webp" alt="Fındık Cream" loading="lazy"></div><div class="mua9ebodyitemtitle"><span>Fındık Cream</span></div><div class="mua9ebodyitemaccent"></div></div></a><a class="mua9ebodycardlink" href="/en/findik-ezmesi-sekersiz/" title="Fındık Paste (Şekersiz)"><div class="mua9ebodycard"><div class="mua9ebodyitemimg"><img src="/page/ryyeua2a2i/index.webp" alt="Fındık Paste (Şekersiz)" loading="lazy"></div><div class="mua9ebodyitemtitle"><span>Fındık Paste (Şekersiz)</span></div><div class="mua9ebodyitemaccent"></div></div></a><a class="mua9ebodycardlink" href="/en/findik-kremasi-kakao/" title="Fındık Cream (Kakao)"><div class="mua9ebodycard"><div class="mua9ebodyitemimg"><img src="/page/ye6meya62y/index.webp" alt="Fındık Cream (Kakao)" loading="lazy"></div><div class="mua9ebodyitemtitle"><span>Fındık Cream (Kakao)</span></div><div class="mua9ebodyitemaccent"></div></div></a><a class="mua9ebodycardlink" href="/en/findik-ezmesi-premium/" title="Fındık Paste (Premium)"><div class="mua9ebodycard"><div class="mua9ebodyitemimg"><img src="/page/5aqqa6a6iy/index.webp" alt="Fındık Paste (Premium)" loading="lazy"></div><div class="mua9ebodyitemtitle"><span>Fındık Paste (Premium)</span></div><div class="mua9ebodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".l5iyxcat3");
+    var moduleRoots = document.querySelectorAll(".mua9ecat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".l5iyxbodycardlink");
+        var cards = root.querySelectorAll(".mua9ebodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("l5iyxcardvisible");
+            cards[i].classList.add("mua9ecardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("l5iyxcardvisible");
+            cards[j].classList.add("mua9ecardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("l5iyxcardvisible");
+                entry.target.classList.add("mua9ecardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=v0prm"></script>
-  <script defer src="/src/cookie.js?v=v0prm"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=gkevb"></script>
+  <script defer src="/src/cookie.js?v=gkevb"></script>
 
   <script>
     setTimeout(function() {

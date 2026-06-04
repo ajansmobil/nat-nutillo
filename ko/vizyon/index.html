@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=eol17" />
-  <link rel="preload" href="/src/cookie.css?v=eol17" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=xghz6" />
+  <link rel="preload" href="/src/cookie.css?v=xghz6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=eol17" />
+    <link rel="stylesheet" href="/src/cookie.css?v=xghz6" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=eol17" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=xghz6" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=eol17">
+<link rel="stylesheet" href="style.css?v=xghz6">
 </head>
 
 <body>
   <div id="header">
-<div class="rk7v4">
-  <div class="rk7v4title">
-    <div class="rk7v4titlebody">
-      <div class="rk7v4titlebodylang">
+<div class="ge9e1">
+  <div class="ge9e1title">
+    <div class="ge9e1titlebody">
+      <div class="ge9e1titlebodylang">
         <ul>
           <li><a href="/tr/vizyon/">TR</a></li><li><a href="/en/vizyon/">EN</a></li><li><a href="/ar/vizyon/">AR</a></li><li><a href="/de/vizyon/">DE</a></li><li><a href="/ko/vizyon/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="rk7v4body">
+  <div class="ge9e1body">
     <a href="/ko/"
       ><img
-        src="/img/tillotarim-logo.png?v=an0m3"
+        src="/img/tillotarim-logo.png?v=crczx"
         alt="Tillo Tarim Logo"
-        class="rk7v4bodylogo"
+        class="ge9e1bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="rk7v4-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="ge9e1-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="rk7v4-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="rk7v4menubody">
-    <div class="rk7v4menu" id="menu-2-root">
-      <div class="rk7v4menulistbody">
-        <div class="rk7v4menulist">
+  <div class="ge9e1-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="ge9e1menubody">
+    <div class="ge9e1menu" id="menu-2-root">
+      <button type="button" class="ge9e1-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="ge9e1menulistbody">
+        <div class="ge9e1menulist">
           <ul>
-            <a href="/ko/">홈페이지 </a><a href="/ko/hakkimizda/">기업</a><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
+            <a href="/ko/">홈페이지</a><div class="ge9e1menulist-menu dropdown-content-active-ge9e1"><a class="ge9e1-menu-list-active" href="/ko/hakkimizda/">기업</a><div class="dropdown-content-ge9e1"><a href="/ko/hakkimizda/">회사 소개</a><a href="/ko/misyon/">미션</a><a class="ge9e1-menu-list-active" href="/ko/vizyon/">비전</a><a href="/ko/kalite-politikamiz/">품질 정책</a><a href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a href="/ko/kisisel-veriler/">개인정보</a><a href="/ko/kullanici-haklari/">이용자 권리</a><a href="/ko/yasal-uyari/">법적 고지</a></div></div><a href="/ko/urunler/">제품</a><a href="/ko/iletisim/">문의</a>
           </ul>
         </div>
       </div>
       
-      <div class="rk7v4languages-mobile">
+      <div class="ge9e1languages-mobile">
         <ul>
           <li><a href="/tr/vizyon/">TR</a></li><li><a href="/en/vizyon/">EN</a></li><li><a href="/ar/vizyon/">AR</a></li><li><a href="/de/vizyon/">DE</a></li><li><a href="/ko/vizyon/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".rk7v4") : null;
+      var wrapper = root.closest ? root.closest(".ge9e1") : null;
       var target = wrapper || root;
-      if (target.classList.contains("rk7v4menu-open")) {
-        target.classList.remove("rk7v4menu-open");
+      if (target.classList.contains("ge9e1menu-open")) {
+        target.classList.remove("ge9e1menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("rk7v4menu-open");
+        target.classList.add("ge9e1menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".ge9e1") : null;
+      var target = wrapper || root;
+      target.classList.remove("ge9e1menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".ge9e1menulist-menu.dropdown-content-active-ge9e1");
+      if (activeWrap) {
+        activeWrap.classList.add("ge9e1-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".ge9e1menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-ge9e1")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("ge9e1-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".ge9e1menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("ge9e1-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("ge9e1-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".ge9e1menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".ge9e1menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("ge9e1-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="ngf1j-title f36">
+  <div id="content"><div class="as8hr-title f36">
   <h1>비전</h1>
 </div>
-<div class="ngf1j">
+<div class="as8hr">
   <button
     type="button"
-    class="ngf1j-menu-btn"
+    class="as8hr-menu-btn"
     aria-expanded="false"
-    aria-controls="ngf1j-menu"
+    aria-controls="as8hr-menu"
   >
-    <span class="ngf1j-menu-btn-label">메뉴</span>
-    <span class="material-symbols-outlined ngf1j-icon" aria-hidden="true">menu</span>
+    <span class="as8hr-menu-btn-label">메뉴</span>
+    <span class="material-symbols-outlined as8hr-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="ngf1j-menu-overlay" id="ngf1j-menu-overlay" aria-hidden="true"></div>
-  <nav class="ngf1j-menu" id="ngf1j-menu" aria-label="메뉴">
-    <button class="ngf1j-menu-close" type="button" aria-label="메뉴 닫기" aria-controls="ngf1j-menu">
+  <div class="as8hr-menu-overlay" id="as8hr-menu-overlay" aria-hidden="true"></div>
+  <nav class="as8hr-menu" id="as8hr-menu" aria-label="메뉴">
+    <button class="as8hr-menu-close" type="button" aria-label="메뉴 닫기" aria-controls="as8hr-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="ngf1j-menu-link" href="/ko/hakkimizda/">회사 소개</a><a class="ngf1j-menu-link" href="/ko/misyon/">미션</a><a class="ngf1j-menu-link active" href="/ko/vizyon/">비전</a><a class="ngf1j-menu-link" href="/ko/kalite-politikamiz/">품질 정책</a><a class="ngf1j-menu-link" href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a class="ngf1j-menu-link" href="/ko/kisisel-veriler/">개인정보</a><a class="ngf1j-menu-link" href="/ko/kullanici-haklari/">이용자 권리</a><a class="ngf1j-menu-link" href="/ko/yasal-uyari/">법적 고지</a>
+    <a class="as8hr-menu-link" href="/ko/hakkimizda/">회사 소개</a><a class="as8hr-menu-link" href="/ko/misyon/">미션</a><a class="as8hr-menu-link active" href="/ko/vizyon/">비전</a><a class="as8hr-menu-link" href="/ko/kalite-politikamiz/">품질 정책</a><a class="as8hr-menu-link" href="/ko/gizlilik-politikasi/">개인정보 처리방침</a><a class="as8hr-menu-link" href="/ko/kisisel-veriler/">개인정보</a><a class="as8hr-menu-link" href="/ko/kullanici-haklari/">이용자 권리</a><a class="as8hr-menu-link" href="/ko/yasal-uyari/">법적 고지</a>
   </nav>
-  <div class="ngf1j-main">
+  <div class="as8hr-main">
     
     
-    <div class="ngf1j-body"><h2 style="font-size: 24px;">비전</h2>
-<p style="font-size: 16px;">Tillo Tarim 비전u. 터키 ve uluslararası pazarda tercih edilen 천연 식품 markası olmak.</p></div>
+    <div class="as8hr-body"><div class="mob-kurum-wrap"><div class="mob-kurum-hero"><span class="mob-kurum-hero-label">비전</span><p class="mob-kurum-hero-title">터키와 해외에서 선호되는 천연 식품 브랜드</p></div><p class="mob-kurum-lead"><strong>가지안테프 기반</strong> 생산 역량과 내수·수출 성장을 결합해 천연 식품 분야의 기준 브랜드가 되는 것이 비전입니다.</p><div class="mob-kurum-grid"><div class="mob-kurum-card"><strong>브랜드</strong><span>국내·수출 시장에서 신뢰받는 Tillo Tarim.</span></div><div class="mob-kurum-card"><strong>혁신</strong><span>새 포장 규격과 제품 개발.</span></div><div class="mob-kurum-card"><strong>수출</strong><span>규정 준수 라벨로 글로벌 공급.</span></div><div class="mob-kurum-card"><strong>규모</strong><span>용량·자동화 투자로 일관된 품질.</span></div></div><div class="mob-kurum-cta"><p class="mob-kurum-cta-text">유통·수출 협력을 문의하세요.</p><a class="mob-kurum-cta-link" href="/ko/iletisim/">문의</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".ngf1j-menu-btn");
-    var menu = document.querySelector(".ngf1j-menu");
-    var overlay = document.querySelector(".ngf1j-menu-overlay");
-    var closeButton = document.querySelector(".ngf1j-menu-close");
+    var menuToggleBtn = document.querySelector(".as8hr-menu-btn");
+    var menu = document.querySelector(".as8hr-menu");
+    var overlay = document.querySelector(".as8hr-menu-overlay");
+    var closeButton = document.querySelector(".as8hr-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".ngf1j-menu-close");
+      var closeBtn = event.target.closest(".as8hr-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".ngf1j-top");
+    var topButtons = document.querySelectorAll(".as8hr-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".ngf1j-menu-group");
+        var group = this.closest(".as8hr-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".ngf1j-sub");
+        var sub = group.querySelector(".as8hr-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".ngf1j-icon");
+        var icon = this.querySelector(".as8hr-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=eol17"></script>
-  <script defer src="/src/cookie.js?v=eol17"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=xghz6"></script>
+  <script defer src="/src/cookie.js?v=xghz6"></script>
 
   <script>
     setTimeout(function() {

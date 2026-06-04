@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=gtekf" />
-  <link rel="preload" href="/src/cookie.css?v=gtekf" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=eirxm" />
+  <link rel="preload" href="/src/cookie.css?v=eirxm" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=gtekf" />
+    <link rel="stylesheet" href="/src/cookie.css?v=eirxm" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=gtekf" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=eirxm" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=gtekf">
+<link rel="stylesheet" href="style.css?v=eirxm">
 </head>
 
 <body>
   <div id="header">
-<div class="mcp9a">
-  <div class="mcp9atitle">
-    <div class="mcp9atitlebody">
-      <div class="mcp9atitlebodylang">
+<div class="qi3if">
+  <div class="qi3iftitle">
+    <div class="qi3iftitlebody">
+      <div class="qi3iftitlebodylang">
         <ul>
           <li><a href="/tr/kaymak/">TR</a></li><li><a href="/en/kaymak/">EN</a></li><li><a href="/ar/kaymak/">AR</a></li><li><a href="/de/kaymak/">DE</a></li><li><a href="/ko/kaymak/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="mcp9abody">
+  <div class="qi3ifbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=vb2ux"
+        src="/img/tillotarim-logo.png?v=qnvb2"
         alt="Tillo Tarim Logo"
-        class="mcp9abodylogo"
+        class="qi3ifbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="mcp9a-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="qi3if-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="mcp9a-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="mcp9amenubody">
-    <div class="mcp9amenu" id="menu-2-root">
-      <div class="mcp9amenulistbody">
-        <div class="mcp9amenulist">
+  <div class="qi3if-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="qi3ifmenubody">
+    <div class="qi3ifmenu" id="menu-2-root">
+      <button type="button" class="qi3if-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="qi3ifmenulistbody">
+        <div class="qi3ifmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="qi3ifmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-qi3if"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="mcp9alanguages-mobile">
+      <div class="qi3iflanguages-mobile">
         <ul>
           <li><a href="/tr/kaymak/">TR</a></li><li><a href="/en/kaymak/">EN</a></li><li><a href="/ar/kaymak/">AR</a></li><li><a href="/de/kaymak/">DE</a></li><li><a href="/ko/kaymak/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".mcp9a") : null;
+      var wrapper = root.closest ? root.closest(".qi3if") : null;
       var target = wrapper || root;
-      if (target.classList.contains("mcp9amenu-open")) {
-        target.classList.remove("mcp9amenu-open");
+      if (target.classList.contains("qi3ifmenu-open")) {
+        target.classList.remove("qi3ifmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("mcp9amenu-open");
+        target.classList.add("qi3ifmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".qi3if") : null;
+      var target = wrapper || root;
+      target.classList.remove("qi3ifmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".qi3ifmenulist-menu.dropdown-content-active-qi3if");
+      if (activeWrap) {
+        activeWrap.classList.add("qi3if-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".qi3ifmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-qi3if")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("qi3if-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".qi3ifmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("qi3if-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("qi3if-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".qi3ifmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".qi3ifmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("qi3if-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="nitjo-title">
+  <div id="content"><div class="n1fyd-title">
   <h1>Kaymak</h1>
 </div>
-<div class="nitjo">
-  <button type="button" class="nitjo-menu-btn" aria-expanded="false" aria-controls="nitjo-menu">
-    <span class="nitjo-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined nitjo-icon" aria-hidden="true">menu</span>
+<div class="n1fyd">
+  <button type="button" class="n1fyd-menu-btn" aria-expanded="false" aria-controls="n1fyd-menu">
+    <span class="n1fyd-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined n1fyd-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="nitjo-menu-overlay" id="nitjo-menu-overlay" aria-hidden="true"></div>
-  <nav class="nitjo-menu" id="nitjo-menu" aria-label="Menü">
-    <button class="nitjo-menu-close" type="button" aria-label="Menü schließen">
+  <div class="n1fyd-menu-overlay" id="n1fyd-menu-overlay" aria-hidden="true"></div>
+  <nav class="n1fyd-menu" id="n1fyd-menu" aria-label="Menü">
+    <button class="n1fyd-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="nitjo-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="nitjo-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="nitjo-menu-link" href="/de/findik-ezme-ve-krema/"><span class="nitjo-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="nitjo-menu-link" href="/de/badem-ezme-ve-krema/"><span class="nitjo-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="nitjo-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="nitjo-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="nitjo-menu-link" href="/de/kurutulmus-meyveler/"><span class="nitjo-menu-link-text">Trockenfrüchte</span></a><a class="nitjo-menu-link" href="/de/meyve-cipsleri/"><span class="nitjo-menu-link-text">Fruchtchips</span></a><a class="nitjo-menu-link" href="/de/kurutulmus-sebzeler/"><span class="nitjo-menu-link-text">Trockengemüse</span></a><a class="nitjo-menu-link" href="/de/recel-ve-marmelatlar/"><span class="nitjo-menu-link-text">Marmeladen & Konfitüren</span></a><a class="nitjo-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="nitjo-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="nitjo-menu-link" href="/de/meyve-sulari/"><span class="nitjo-menu-link-text">Fruchtsäfte</span></a><a class="nitjo-menu-link" href="/de/pekmez-ve-suruplar/"><span class="nitjo-menu-link-text">Melasse & Sirupe</span></a><a class="nitjo-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="nitjo-menu-link-text">Milch & Milchprodukte</span></a><a class="nitjo-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="nitjo-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="nitjo-menu-link" href="/de/sivi-yaglar/"><span class="nitjo-menu-link-text">Flüssige Öle</span></a><a class="nitjo-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="nitjo-menu-link-text">Medizinische Aromaöle</span></a><a class="nitjo-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="nitjo-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="nitjo-menu-link" href="/de/iqf-meyveler/"><span class="nitjo-menu-link-text">IQF-Früchte</span></a>
+    <a class="n1fyd-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="n1fyd-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="n1fyd-menu-link" href="/de/findik-ezme-ve-krema/"><span class="n1fyd-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="n1fyd-menu-link" href="/de/badem-ezme-ve-krema/"><span class="n1fyd-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="n1fyd-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="n1fyd-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="n1fyd-menu-link" href="/de/kurutulmus-meyveler/"><span class="n1fyd-menu-link-text">Trockenfrüchte</span></a><a class="n1fyd-menu-link" href="/de/meyve-cipsleri/"><span class="n1fyd-menu-link-text">Fruchtchips</span></a><a class="n1fyd-menu-link" href="/de/kurutulmus-sebzeler/"><span class="n1fyd-menu-link-text">Trockengemüse</span></a><a class="n1fyd-menu-link" href="/de/recel-ve-marmelatlar/"><span class="n1fyd-menu-link-text">Marmeladen & Konfitüren</span></a><a class="n1fyd-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="n1fyd-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="n1fyd-menu-link" href="/de/meyve-sulari/"><span class="n1fyd-menu-link-text">Fruchtsäfte</span></a><a class="n1fyd-menu-link" href="/de/pekmez-ve-suruplar/"><span class="n1fyd-menu-link-text">Melasse & Sirupe</span></a><a class="n1fyd-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="n1fyd-menu-link-text">Milch & Milchprodukte</span></a><a class="n1fyd-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="n1fyd-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="n1fyd-menu-link" href="/de/sivi-yaglar/"><span class="n1fyd-menu-link-text">Flüssige Öle</span></a><a class="n1fyd-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="n1fyd-menu-link-text">Medizinische Aromaöle</span></a><a class="n1fyd-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="n1fyd-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="n1fyd-menu-link" href="/de/iqf-meyveler/"><span class="n1fyd-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="nitjo-main">
-    <div class="nitjo-row"><div class="nitjo-row-media"><div class="nitjo-img"><img src="/page/t2uem22mqa/index.webp?v=y2tfl" alt="Kaymak" loading="lazy" /></div></div><div class="nitjo-row-desc"><p class="nitjo-lead">Tillo Tarim Kaymak: Taze kaymak. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 250 g. Naturkost aus Gaziantep.</p><div class="nitjo-desc-tags"><span class="nitjo-desc-tag"><span class="nitjo-desc-tag-label">Grammatur</span><span class="nitjo-desc-tag-value">250 g</span></span><span class="nitjo-desc-tag"><span class="nitjo-desc-tag-label">Verpackung</span><span class="nitjo-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="nitjo-desc-tag"><span class="nitjo-desc-tag-label">Herkunft</span><span class="nitjo-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="nitjo-body"><h2 style="font-size: 22px;">Kaymak</h2>
+  <div class="n1fyd-main">
+    <div class="n1fyd-row"><div class="n1fyd-row-media"><div class="n1fyd-img"><img src="/page/t2uem22mqa/index.webp?v=meh85" alt="Kaymak" loading="lazy" /></div></div><div class="n1fyd-row-desc"><p class="n1fyd-lead">Tillo Tarim Kaymak: Taze kaymak. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 250 g. Naturkost aus Gaziantep.</p><div class="n1fyd-desc-tags"><span class="n1fyd-desc-tag"><span class="n1fyd-desc-tag-label">Grammatur</span><span class="n1fyd-desc-tag-value">250 g</span></span><span class="n1fyd-desc-tag"><span class="n1fyd-desc-tag-label">Verpackung</span><span class="n1fyd-desc-tag-value">Plastik kap / cam kavanoz</span></span><span class="n1fyd-desc-tag"><span class="n1fyd-desc-tag-label">Herkunft</span><span class="n1fyd-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="n1fyd-body"><h2 style="font-size: 22px;">Kaymak</h2>
 <p style="font-size: 16px;">Tillo Tarim Kaymak: Taze kaymak. Milch & Milchprodukte Kategorie. Verfügbare Grammaturen: 250 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 250 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".nitjo-menu-btn");
-    var menu = document.querySelector(".nitjo-menu");
-    var overlay = document.querySelector(".nitjo-menu-overlay");
-    var closeButton = document.querySelector(".nitjo-menu-close");
+    var menuToggleBtn = document.querySelector(".n1fyd-menu-btn");
+    var menu = document.querySelector(".n1fyd-menu");
+    var overlay = document.querySelector(".n1fyd-menu-overlay");
+    var closeButton = document.querySelector(".n1fyd-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".nitjo-menu-close")) {
+      if (link && !event.target.closest(".n1fyd-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=gtekf"></script>
-  <script defer src="/src/cookie.js?v=gtekf"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=eirxm"></script>
+  <script defer src="/src/cookie.js?v=eirxm"></script>
 
   <script>
     setTimeout(function() {

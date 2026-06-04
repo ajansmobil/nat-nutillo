@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=xz0c8" />
-  <link rel="preload" href="/src/cookie.css?v=xz0c8" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=xf6kj" />
+  <link rel="preload" href="/src/cookie.css?v=xf6kj" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=xz0c8" />
+    <link rel="stylesheet" href="/src/cookie.css?v=xf6kj" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=xz0c8" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=xf6kj" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=xz0c8">
+<link rel="stylesheet" href="style.css?v=xf6kj">
 </head>
 
 <body>
   <div id="header">
-<div class="ap4ii">
-  <div class="ap4iititle">
-    <div class="ap4iititlebody">
-      <div class="ap4iititlebodylang">
+<div class="fk722">
+  <div class="fk722title">
+    <div class="fk722titlebody">
+      <div class="fk722titlebodylang">
         <ul>
           <li><a href="/tr/kurutulmus-meyveler/">TR</a></li><li><a href="/en/kurutulmus-meyveler/">EN</a></li><li><a href="/ar/kurutulmus-meyveler/">AR</a></li><li><a href="/de/kurutulmus-meyveler/">DE</a></li><li><a href="/ko/kurutulmus-meyveler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ap4iibody">
+  <div class="fk722body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=wmh1a"
+        src="/img/tillotarim-logo.png?v=khv0l"
         alt="Tillo Tarim Logo"
-        class="ap4iibodylogo"
+        class="fk722bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ap4ii-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="fk722-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ap4ii-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ap4iimenubody">
-    <div class="ap4iimenu" id="menu-2-root">
-      <div class="ap4iimenulistbody">
-        <div class="ap4iimenulist">
+  <div class="fk722-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="fk722menubody">
+    <div class="fk722menu" id="menu-2-root">
+      <button type="button" class="fk722-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="fk722menulistbody">
+        <div class="fk722menulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="fk722menulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-fk722"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="ap4iilanguages-mobile">
+      <div class="fk722languages-mobile">
         <ul>
           <li><a href="/tr/kurutulmus-meyveler/">TR</a></li><li><a href="/en/kurutulmus-meyveler/">EN</a></li><li><a href="/ar/kurutulmus-meyveler/">AR</a></li><li><a href="/de/kurutulmus-meyveler/">DE</a></li><li><a href="/ko/kurutulmus-meyveler/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ap4ii") : null;
+      var wrapper = root.closest ? root.closest(".fk722") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ap4iimenu-open")) {
-        target.classList.remove("ap4iimenu-open");
+      if (target.classList.contains("fk722menu-open")) {
+        target.classList.remove("fk722menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ap4iimenu-open");
+        target.classList.add("fk722menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".fk722") : null;
+      var target = wrapper || root;
+      target.classList.remove("fk722menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".fk722menulist-menu.dropdown-content-active-fk722");
+      if (activeWrap) {
+        activeWrap.classList.add("fk722-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".fk722menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-fk722")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("fk722-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".fk722menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("fk722-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("fk722-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".fk722menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".fk722menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("fk722-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="ug31a-title f36">
+  <div id="content"><div class="cv16r-title f36">
   <h1>Dried Fruits</h1>
 </div>
 
-<div class="ug31a"><h2 style="font-size: 24px;">Dried Fruits</h2>
+<div class="cv16r"><h2 style="font-size: 24px;">Dried Fruits</h2>
 <p style="font-size: 16px;">Tillo Tarim Dried Fruits. Dried meyveler: kayısı, incir, hurma, orman meyveleri karışımı. Güneş ve fırın kurutma ile korunan doğal kurutulmuş m…</p></div>
 
 
 ------------------------
-<div class="fdsje fdsjecat3">
-  <div class="fdsjebody"><a class="fdsjebodycardlink" href="/en/kuru-kayisi-malatya/" title="Dried Kayısı (Malatya)"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/me62eqy6iu/index.webp" alt="Dried Kayısı (Malatya)" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Kayısı (Malatya)</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-i-ncir/" title="Dried İncir"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/9uaqaq2ea2/index.webp" alt="Dried İncir" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried İncir</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-erik/" title="Dried Erik"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/gqqya66e22/index.webp" alt="Dried Erik" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Erik</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-uzum-sultani/" title="Dried Üzüm (Sultani)"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/nmi6ammqaa/index.webp" alt="Dried Üzüm (Sultani)" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Üzüm (Sultani)</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-kivi-dilim/" title="Dried Kivi Slices"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/a2queyqeq2/index.webp" alt="Dried Kivi Slices" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Kivi Slices</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-muz-dilim/" title="Dried Muz Slices"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/hieaaiuae2/index.webp" alt="Dried Muz Slices" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Muz Slices</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-dut/" title="Dried Dut"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/ou662auq2q/index.webp" alt="Dried Dut" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Dut</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-cilek/" title="Dried Çilek"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/va6iyaym2i/index.webp" alt="Dried Çilek" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Çilek</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-hurma-medjoul/" title="Dried Hurma (Medjoul)"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/iq26miaz66/index.webp" alt="Dried Hurma (Medjoul)" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Hurma (Medjoul)</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/cennet-hurmasi-kuru/" title="Cennet Hurması (Kuru)"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/pmq6y66qiu/index.webp" alt="Cennet Hurması (Kuru)" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Cennet Hurması (Kuru)</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/orman-meyveleri-karisimi/" title="Orman Meyveleri Mix"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/wiuiy2m62m/index.webp" alt="Orman Meyveleri Mix" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Orman Meyveleri Mix</span></div><div class="fdsjebodyitemaccent"></div></div></a><a class="fdsjebodycardlink" href="/en/kuru-gun-kurusu-karisim/" title="Dried Gün Kurusu Karışım"><div class="fdsjebodycard"><div class="fdsjebodyitemimg"><img src="/page/jeeeimqeia/index.webp" alt="Dried Gün Kurusu Karışım" loading="lazy"></div><div class="fdsjebodyitemtitle"><span>Dried Gün Kurusu Karışım</span></div><div class="fdsjebodyitemaccent"></div></div></a></div>
+<div class="lx5ur lx5urcat3">
+  <div class="lx5urbody"><a class="lx5urbodycardlink" href="/en/kuru-kayisi-malatya/" title="Dried Kayısı (Malatya)"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/me62eqy6iu/index.webp" alt="Dried Kayısı (Malatya)" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Kayısı (Malatya)</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-i-ncir/" title="Dried İncir"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/9uaqaq2ea2/index.webp" alt="Dried İncir" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried İncir</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-erik/" title="Dried Erik"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/gqqya66e22/index.webp" alt="Dried Erik" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Erik</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-uzum-sultani/" title="Dried Üzüm (Sultani)"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/nmi6ammqaa/index.webp" alt="Dried Üzüm (Sultani)" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Üzüm (Sultani)</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-kivi-dilim/" title="Dried Kivi Slices"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/a2queyqeq2/index.webp" alt="Dried Kivi Slices" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Kivi Slices</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-muz-dilim/" title="Dried Muz Slices"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/hieaaiuae2/index.webp" alt="Dried Muz Slices" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Muz Slices</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-dut/" title="Dried Dut"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/ou662auq2q/index.webp" alt="Dried Dut" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Dut</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-cilek/" title="Dried Çilek"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/va6iyaym2i/index.webp" alt="Dried Çilek" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Çilek</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-hurma-medjoul/" title="Dried Hurma (Medjoul)"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/iq26miaz66/index.webp" alt="Dried Hurma (Medjoul)" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Hurma (Medjoul)</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/cennet-hurmasi-kuru/" title="Cennet Hurması (Kuru)"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/pmq6y66qiu/index.webp" alt="Cennet Hurması (Kuru)" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Cennet Hurması (Kuru)</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/orman-meyveleri-karisimi/" title="Orman Meyveleri Mix"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/wiuiy2m62m/index.webp" alt="Orman Meyveleri Mix" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Orman Meyveleri Mix</span></div><div class="lx5urbodyitemaccent"></div></div></a><a class="lx5urbodycardlink" href="/en/kuru-gun-kurusu-karisim/" title="Dried Gün Kurusu Karışım"><div class="lx5urbodycard"><div class="lx5urbodyitemimg"><img src="/page/jeeeimqeia/index.webp" alt="Dried Gün Kurusu Karışım" loading="lazy"></div><div class="lx5urbodyitemtitle"><span>Dried Gün Kurusu Karışım</span></div><div class="lx5urbodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".fdsjecat3");
+    var moduleRoots = document.querySelectorAll(".lx5urcat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".fdsjebodycardlink");
+        var cards = root.querySelectorAll(".lx5urbodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("fdsjecardvisible");
+            cards[i].classList.add("lx5urcardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("fdsjecardvisible");
+            cards[j].classList.add("lx5urcardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("fdsjecardvisible");
+                entry.target.classList.add("lx5urcardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=xz0c8"></script>
-  <script defer src="/src/cookie.js?v=xz0c8"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=xf6kj"></script>
+  <script defer src="/src/cookie.js?v=xf6kj"></script>
 
   <script>
     setTimeout(function() {

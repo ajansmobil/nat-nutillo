@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=bss4a" />
-  <link rel="preload" href="/src/cookie.css?v=bss4a" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=fvajg" />
+  <link rel="preload" href="/src/cookie.css?v=fvajg" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=bss4a" />
+    <link rel="stylesheet" href="/src/cookie.css?v=fvajg" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=bss4a" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=fvajg" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=bss4a">
+<link rel="stylesheet" href="style.css?v=fvajg">
 </head>
 
 <body>
   <div id="header">
-<div class="ezglm">
-  <div class="ezglmtitle">
-    <div class="ezglmtitlebody">
-      <div class="ezglmtitlebodylang">
+<div class="vc5uq">
+  <div class="vc5uqtitle">
+    <div class="vc5uqtitlebody">
+      <div class="vc5uqtitlebodylang">
         <ul>
           <li><a href="/tr/urunler/">TR</a></li><li><a href="/en/urunler/">EN</a></li><li><a href="/ar/urunler/">AR</a></li><li><a href="/de/urunler/">DE</a></li><li><a href="/ko/urunler/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="ezglmbody">
+  <div class="vc5uqbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=y8ys6"
+        src="/img/tillotarim-logo.png?v=yyxlv"
         alt="Tillo Tarim Logo"
-        class="ezglmbodylogo"
+        class="vc5uqbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="ezglm-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="vc5uq-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="ezglm-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="ezglmmenubody">
-    <div class="ezglmmenu" id="menu-2-root">
-      <div class="ezglmmenulistbody">
-        <div class="ezglmmenulist">
+  <div class="vc5uq-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="vc5uqmenubody">
+    <div class="vc5uqmenu" id="menu-2-root">
+      <button type="button" class="vc5uq-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="vc5uqmenulistbody">
+        <div class="vc5uqmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a class="ezglm-menu-list-active" href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="vc5uqmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-vc5uq"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a class="vc5uq-menu-list-active" href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="ezglmlanguages-mobile">
+      <div class="vc5uqlanguages-mobile">
         <ul>
           <li><a href="/tr/urunler/">TR</a></li><li><a href="/en/urunler/">EN</a></li><li><a href="/ar/urunler/">AR</a></li><li><a href="/de/urunler/">DE</a></li><li><a href="/ko/urunler/">KO</a></li>
         </ul>
@@ -113,347 +116,464 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".ezglm") : null;
+      var wrapper = root.closest ? root.closest(".vc5uq") : null;
       var target = wrapper || root;
-      if (target.classList.contains("ezglmmenu-open")) {
-        target.classList.remove("ezglmmenu-open");
+      if (target.classList.contains("vc5uqmenu-open")) {
+        target.classList.remove("vc5uqmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("ezglmmenu-open");
+        target.classList.add("vc5uqmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".vc5uq") : null;
+      var target = wrapper || root;
+      target.classList.remove("vc5uqmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".vc5uqmenulist-menu.dropdown-content-active-vc5uq");
+      if (activeWrap) {
+        activeWrap.classList.add("vc5uq-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".vc5uqmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-vc5uq")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("vc5uq-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".vc5uqmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("vc5uq-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("vc5uq-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".vc5uqmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".vc5uqmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("vc5uq-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="zwdn6">
-  <div class="zwdn6body">
-      <div style="animation-delay: 0.3s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/antep-fistigi-ezme-ve-krema/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+  <div id="content"><div class="iwbnt">
+  <div class="iwbntbody">
+      <div style="animation-delay: 0.3s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/antep-fistigi-ezme-ve-krema/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c01fistik/index.webp" alt="Gaziantep Pistachio Paste & Cream" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Gaziantep Pistachio Paste & Cream
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Gaziantep Pistachio Paste & Cream. Gaziantep pistachio paste and cream: roasted, natural and creamy varieties. produced from Gaziantep pistachios from Gaziantep e…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 0.6s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/findik-ezme-ve-krema/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 0.6s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/findik-ezme-ve-krema/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c02findik/index.webp" alt="Hazelnut Paste & Cream" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Hazelnut Paste & Cream
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Hazelnut Paste & Cream. Seçme fındıktan ezme ve krema; kahvaltı ve pastacılık için. Giresun ve Ordu fındığından ezme ve krema ürünleri. Gaziantep…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 0.8999999999999999s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/badem-ezme-ve-krema/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 0.8999999999999999s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/badem-ezme-ve-krema/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c03badem/index.webp" alt="Almond Paste & Cream" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Almond Paste & Cream
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Almond Paste & Cream. Badem ezme ve krema: protein deposu, şekersiz seçenekler. Akdeniz ve İç Anadolu bademinden ezme ve krema çeşitleri. Gazian…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 1.2s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/yer-fistigi-ezme-ve-krema/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 1.2s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/yer-fistigi-ezme-ve-krema/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c04yerfist/index.webp" alt="Peanut Paste & Cream" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Peanut Paste & Cream
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Peanut Paste & Cream. Yer fıstığı ezme ve krema; klasik ve kakao aromalı çeşitler. Yer fıstığından üretilen ezme ve krema ürünleri. Gazian…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 1.5s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/kurutulmus-meyveler/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 1.5s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/kurutulmus-meyveler/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c05kurumey/index.webp" alt="Dried Fruits" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Dried Fruits
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Dried Fruits. Dried meyveler: kayısı, incir, hurma, orman meyveleri karışımı. Güneş ve fırın kurutma ile korunan doğal kurutulmuş m…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 1.8s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/meyve-cipsleri/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 1.8s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/meyve-cipsleri/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c06meycip/index.webp" alt="Fruit Chips" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Fruit Chips
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Fruit Chips. Meyve cipsleri: elma, armut, kivi ve turunçgil dilimleri. Düşük sıcaklıkta kurutulmuş meyve cipsleri; atıştırmalık ve reçeteler…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 2.1s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/kurutulmus-sebzeler/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 2.1s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/kurutulmus-sebzeler/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c07kuruseb/index.webp" alt="Dried Vegetables" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Dried Vegetables
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Dried Vegetables. Dried sebzeler: biber, patlıcan, kabak; çorba ve yemeklik. Mevsim sebzelerinin kurutulmuş hali; çorba, yemek ve garni…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 2.4s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/recel-ve-marmelatlar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 2.4s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/recel-ve-marmelatlar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c08recel/index.webp" alt="Jams & Marmalades" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Jams & Marmalades
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Jams & Marmalades. Reçel ve marmelat: vişne, kayısı, çilek, portakal ve özel karışımlar. Geleneksel reçel ve marmelat çeşitleri; kahvaltı ve…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 2.6999999999999997s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/lokum-pestil-ve-geleneksel-tatlilar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 2.6999999999999997s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/lokum-pestil-ve-geleneksel-tatlilar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c09gelenek/index.webp" alt="Turkish Delight, Fruit Leather & Traditional Sweets" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Turkish Delight, Fruit Leather & Traditional Sweets
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Turkish Delight, Fruit Leather & Traditional Sweets. Lokum, pestil, köme, tahin helva ve geleneksel tatlılar. Anadolu mutfağının lokum, pestil, köme ve helva…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 2.9999999999999996s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/meyve-sulari/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 2.9999999999999996s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/meyve-sulari/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c10meyves/index.webp" alt="Fruit Juices" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Fruit Juices
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Fruit Juices. Doğal meyve suları: nar, elma, portakal, vişne ve mevsim nektarları. Soğuk sıkım ve pastörize meyve suları; katkısız seçenekler.…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 3.2999999999999994s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/pekmez-ve-suruplar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 3.2999999999999994s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/pekmez-ve-suruplar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c11pekmez/index.webp" alt="Molasses & Syrups" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Molasses & Syrups
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Molasses & Syrups. Pekmez ve şuruplar: üzüm, dut, hurma, keçiboynuzu. Doğal pekmez ve meyve şurupları; kahvaltı ve sağlıklı tatlandırıcı. Gazi…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 3.599999999999999s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/sut-ve-sut-urunleri/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 3.599999999999999s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/sut-ve-sut-urunleri/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c12sut/index.webp" alt="Milk & Dairy Products" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Milk & Dairy Products
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Milk & Dairy Products. Süt ve süt ürünleri: peynir, tereyağı, kaymak, yoğurt, ayran. Tereyağı, peynir, yoğurt ve geleneksel süt ürünleri. Gaziant…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 3.899999999999999s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/salca-tursu-meze-ve-soslar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 3.899999999999999s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/salca-tursu-meze-ve-soslar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c13konserve/index.webp" alt="Tomato Paste, Pickles, Meze & Sauces" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Tomato Paste, Pickles, Meze & Sauces
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Tomato Paste, Pickles, Meze & Sauces. Salça, turşu, meze, salamura ve doğal sirkeler. Salça, turşu, meze, salamura içecek, sirke ve sos çeşitleri. Gazi…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 4.199999999999999s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/sivi-yaglar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 4.199999999999999s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/sivi-yaglar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c14siviya/index.webp" alt="Liquid Oils" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Liquid Oils
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Liquid Oils. Sıvı yağlar: natürel sızma zeytinyağı, fındık ve kabak çekirdeği yağı. Soğuk sıkım zeytinyağı ve bitkisel sıvı yağlar. Gaziantep m…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 4.499999999999999s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/tibbi-aromatik-yaglar/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 4.499999999999999s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/tibbi-aromatik-yaglar/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c15aromya/index.webp" alt="Medicinal Aromatic Oils" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               Medicinal Aromatic Oils
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim Medicinal Aromatic Oils. Tıbbi aromatik yağlar: bıttım, çörek otu, üzüm çekirdeği. Geleneksel ve aromatik yağlar; kozmetik ve beslenme destek ürü…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 4.799999999999999s;" class="zwdn6bodyitems right">
-        <div class="zwdn6bodyitem rights">
-          <a href="/en/iqf-dilimlenmis-sebzeler/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 4.799999999999999s;" class="iwbntbodyitems right">
+        <div class="iwbntbodyitem rights">
+          <a href="/en/iqf-dilimlenmis-sebzeler/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c16iqfseb/index.webp" alt="IQF Sliced Vegetables" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               IQF Sliced Vegetables
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim IQF Sliced Vegetables. IQF dilimlenmiş sebzeler: domates, biber, patlıcan, brokoli. Hızlı dondurulmuş (IQF) sebze dilimleri; endüstriyel ve…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div>
-      <div style="animation-delay: 5.099999999999999s;" class="zwdn6bodyitems left">
-        <div class="zwdn6bodyitem lefts">
-          <a href="/en/iqf-meyveler/" class="zwdn6bodyitemlink">
-            <div class="zwdn6bodyitemimg">
+      <div style="animation-delay: 5.099999999999999s;" class="iwbntbodyitems left">
+        <div class="iwbntbodyitem lefts">
+          <a href="/en/iqf-meyveler/" class="iwbntbodyitemlink">
+            <div class="iwbntbodyitemimg">
               <img src="/page/c17iqfmey/index.webp" alt="IQF Fruits" loading="lazy">
             </div>
-            <h2 class="zwdn6bodyitemtitle">
+            <h2 class="iwbntbodyitemtitle">
               IQF Fruits
             </h2>
           </a>
-          <div class="zwdn6bodyitechile">
+          <div class="iwbntbodyitechile">
             Tillo Tarim IQF Fruits. IQF meyveler: çilek, kiraz, nar, ahududu ve karışım. Hızlı dondurulmuş bütün ve dilim meyveler; smoothie ve pastacılık. Gaziantep…
           </div>
-          <div class="zwdn6bodyitechilesubpagecontainer">
+          <div class="iwbntbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="zwdn6bodybg"></div>
+        <div class="iwbntbodybg"></div>
       </div></div>
 </div>
 
@@ -481,7 +601,7 @@
           rootMargin: "0px 0px -10px 0px",
         },
       );
-      const items = Array.from(document.querySelectorAll(".zwdn6bodyitems"));
+      const items = Array.from(document.querySelectorAll(".iwbntbodyitems"));
       items
         .sort((a, b) => {
           return a.offsetTop - b.offsetTop;
@@ -498,8 +618,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=bss4a"></script>
-  <script defer src="/src/cookie.js?v=bss4a"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=fvajg"></script>
+  <script defer src="/src/cookie.js?v=fvajg"></script>
 
   <script>
     setTimeout(function() {

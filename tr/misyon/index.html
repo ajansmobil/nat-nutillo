@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=y0mwj" />
-  <link rel="preload" href="/src/cookie.css?v=y0mwj" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=jtxzp" />
+  <link rel="preload" href="/src/cookie.css?v=jtxzp" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=y0mwj" />
+    <link rel="stylesheet" href="/src/cookie.css?v=jtxzp" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=y0mwj" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=jtxzp" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=y0mwj">
+<link rel="stylesheet" href="style.css?v=jtxzp">
 </head>
 
 <body>
   <div id="header">
-<div class="llcf2">
-  <div class="llcf2title">
-    <div class="llcf2titlebody">
-      <div class="llcf2titlebodylang">
+<div class="itcbe">
+  <div class="itcbetitle">
+    <div class="itcbetitlebody">
+      <div class="itcbetitlebodylang">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="llcf2body">
+  <div class="itcbebody">
     <a href="/tr/"
       ><img
-        src="/img/tillotarim-logo.png?v=qhhup"
+        src="/img/tillotarim-logo.png?v=v3q38"
         alt="Tillo Tarim Logo"
-        class="llcf2bodylogo"
+        class="itcbebodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="llcf2-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="itcbe-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="llcf2-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="llcf2menubody">
-    <div class="llcf2menu" id="menu-2-root">
-      <div class="llcf2menulistbody">
-        <div class="llcf2menulist">
+  <div class="itcbe-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="itcbemenubody">
+    <div class="itcbemenu" id="menu-2-root">
+      <button type="button" class="itcbe-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="itcbemenulistbody">
+        <div class="itcbemenulist">
           <ul>
-            <a href="/tr/">Anasayfa </a><a href="/tr/hakkimizda/">Kurumsal</a><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
+            <a href="/tr/">Anasayfa</a><div class="itcbemenulist-menu dropdown-content-active-itcbe"><a class="itcbe-menu-list-active" href="/tr/hakkimizda/">Kurumsal</a><div class="dropdown-content-itcbe"><a href="/tr/hakkimizda/">Hakkımızda</a><a class="itcbe-menu-list-active" href="/tr/misyon/">Misyon</a><a href="/tr/vizyon/">Vizyon</a><a href="/tr/kalite-politikamiz/">Kalite Politikamız</a><a href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a><a href="/tr/kisisel-veriler/">Kişisel Veriler</a><a href="/tr/kullanici-haklari/">Kullanıcı Hakları</a><a href="/tr/yasal-uyari/">Yasal Uyarı</a></div></div><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
           </ul>
         </div>
       </div>
       
-      <div class="llcf2languages-mobile">
+      <div class="itcbelanguages-mobile">
         <ul>
           <li><a href="/tr/misyon/">TR</a></li><li><a href="/en/misyon/">EN</a></li><li><a href="/ar/misyon/">AR</a></li><li><a href="/de/misyon/">DE</a></li><li><a href="/ko/misyon/">KO</a></li>
         </ul>
@@ -113,58 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".llcf2") : null;
+      var wrapper = root.closest ? root.closest(".itcbe") : null;
       var target = wrapper || root;
-      if (target.classList.contains("llcf2menu-open")) {
-        target.classList.remove("llcf2menu-open");
+      if (target.classList.contains("itcbemenu-open")) {
+        target.classList.remove("itcbemenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("llcf2menu-open");
+        target.classList.add("itcbemenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".itcbe") : null;
+      var target = wrapper || root;
+      target.classList.remove("itcbemenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".itcbemenulist-menu.dropdown-content-active-itcbe");
+      if (activeWrap) {
+        activeWrap.classList.add("itcbe-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".itcbemenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-itcbe")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("itcbe-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".itcbemenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("itcbe-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("itcbe-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".itcbemenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".itcbemenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("itcbe-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="xf81j-title f36">
+  <div id="content"><div class="cujkx-title f36">
   <h1>Misyon</h1>
 </div>
-<div class="xf81j">
+<div class="cujkx">
   <button
     type="button"
-    class="xf81j-menu-btn"
+    class="cujkx-menu-btn"
     aria-expanded="false"
-    aria-controls="xf81j-menu"
+    aria-controls="cujkx-menu"
   >
-    <span class="xf81j-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined xf81j-icon" aria-hidden="true">menu</span>
+    <span class="cujkx-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined cujkx-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="xf81j-menu-overlay" id="xf81j-menu-overlay" aria-hidden="true"></div>
-  <nav class="xf81j-menu" id="xf81j-menu" aria-label="Menü">
-    <button class="xf81j-menu-close" type="button" aria-label="Menüyü Kapat" aria-controls="xf81j-menu">
+  <div class="cujkx-menu-overlay" id="cujkx-menu-overlay" aria-hidden="true"></div>
+  <nav class="cujkx-menu" id="cujkx-menu" aria-label="Menü">
+    <button class="cujkx-menu-close" type="button" aria-label="Menüyü Kapat" aria-controls="cujkx-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="xf81j-menu-link" href="/tr/hakkimizda/">Hakkımızda</a><a class="xf81j-menu-link active" href="/tr/misyon/">Misyon</a><a class="xf81j-menu-link" href="/tr/vizyon/">Vizyon</a><a class="xf81j-menu-link" href="/tr/kalite-politikamiz/">Kalite Politikamız</a><a class="xf81j-menu-link" href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a><a class="xf81j-menu-link" href="/tr/kisisel-veriler/">Kişisel Veriler</a><a class="xf81j-menu-link" href="/tr/kullanici-haklari/">Kullanıcı Hakları</a><a class="xf81j-menu-link" href="/tr/yasal-uyari/">Yasal Uyarı</a>
+    <a class="cujkx-menu-link" href="/tr/hakkimizda/">Hakkımızda</a><a class="cujkx-menu-link active" href="/tr/misyon/">Misyon</a><a class="cujkx-menu-link" href="/tr/vizyon/">Vizyon</a><a class="cujkx-menu-link" href="/tr/kalite-politikamiz/">Kalite Politikamız</a><a class="cujkx-menu-link" href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a><a class="cujkx-menu-link" href="/tr/kisisel-veriler/">Kişisel Veriler</a><a class="cujkx-menu-link" href="/tr/kullanici-haklari/">Kullanıcı Hakları</a><a class="cujkx-menu-link" href="/tr/yasal-uyari/">Yasal Uyarı</a>
   </nav>
-  <div class="xf81j-main">
+  <div class="cujkx-main">
     
     
-    <div class="xf81j-body"><h2 style="font-size: 24px;">Misyon</h2>
-<p style="font-size: 16px;">Tillo Tarim misyonu. Doğal hammaddeden katkısız ürünler; çevreye duyarlı ve sürdürülebilir üretim.</p></div>
+    <div class="cujkx-body"><div class="mob-kurum-wrap"><div class="mob-kurum-hero"><span class="mob-kurum-hero-label">Misyon</span><p class="mob-kurum-hero-title">Doğal hammaddeden güvenilir ürün</p></div><p class="mob-kurum-lead">Misyonumuz; seçilmiş tarım ürünlerini <strong>katkı odaklı olmayan</strong>, gıda güvenliği standartlarına uygun süreçlerle işleyerek tüketici ve iş ortaklarımıza güvenilir doğal gıda sunmaktır.</p><div class="mob-kurum-grid"><div class="mob-kurum-card"><strong>Doğallık</strong><span>Hammadde kabulünden ambalaja kadar minimum müdahale; lezzet ve besin değeri korunur.</span></div><div class="mob-kurum-card"><strong>Güvenlik</strong><span>Hijyen, soğuk zincir ve parti kayıtlarıyla izlenebilir üretim.</span></div><div class="mob-kurum-card"><strong>Sürdürülebilirlik</strong><span>Fire azaltma, verimli enerji kullanımı ve sorumlu tedarik.</span></div><div class="mob-kurum-card"><strong>Müşteri</strong><span>Numune, etiket onayı ve zamanında sevkiyat ile iş ortaklığı.</span></div></div><p class="mob-kurum-text">Toptan ve perakende kanallarda aynı kalite disiplinini korur; ihracat müşterilerine teknik dosya ve analiz desteği sağlarız.</p><div class="mob-kurum-highlight"><span class="mob-kurum-highlight-label">Taahhüdümüz</span> Her ürün grubunda şeffaf içerik listesi ve tutarlı lezzet profili.</div><div class="mob-kurum-cta"><p class="mob-kurum-cta-text">Misyonumuzu tedarik zincirinizde birlikte uygulayalım.</p><a class="mob-kurum-cta-link" href="/tr/iletisim/">Teklif alın</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".xf81j-menu-btn");
-    var menu = document.querySelector(".xf81j-menu");
-    var overlay = document.querySelector(".xf81j-menu-overlay");
-    var closeButton = document.querySelector(".xf81j-menu-close");
+    var menuToggleBtn = document.querySelector(".cujkx-menu-btn");
+    var menu = document.querySelector(".cujkx-menu");
+    var overlay = document.querySelector(".cujkx-menu-overlay");
+    var closeButton = document.querySelector(".cujkx-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -221,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".xf81j-menu-close");
+      var closeBtn = event.target.closest(".cujkx-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -262,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".xf81j-top");
+    var topButtons = document.querySelectorAll(".cujkx-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".xf81j-menu-group");
+        var group = this.closest(".cujkx-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".xf81j-sub");
+        var sub = group.querySelector(".cujkx-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".xf81j-icon");
+        var icon = this.querySelector(".cujkx-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -291,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=y0mwj"></script>
-  <script defer src="/src/cookie.js?v=y0mwj"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=jtxzp"></script>
+  <script defer src="/src/cookie.js?v=jtxzp"></script>
 
   <script>
     setTimeout(function() {

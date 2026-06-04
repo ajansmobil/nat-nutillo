@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=eu188" />
-  <link rel="preload" href="/src/cookie.css?v=eu188" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=tiker" />
+  <link rel="preload" href="/src/cookie.css?v=tiker" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=eu188" />
+    <link rel="stylesheet" href="/src/cookie.css?v=tiker" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=eu188" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=tiker" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=eu188">
+<link rel="stylesheet" href="style.css?v=tiker">
 </head>
 
 <body>
   <div id="header">
-<div class="pf3n1">
-  <div class="pf3n1title">
-    <div class="pf3n1titlebody">
-      <div class="pf3n1titlebodylang">
+<div class="fehqs">
+  <div class="fehqstitle">
+    <div class="fehqstitlebody">
+      <div class="fehqstitlebodylang">
         <ul>
           <li><a href="/tr/iqf-brokoli/">TR</a></li><li><a href="/en/iqf-brokoli/">EN</a></li><li><a href="/ar/iqf-brokoli/">AR</a></li><li><a href="/de/iqf-brokoli/">DE</a></li><li><a href="/ko/iqf-brokoli/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="pf3n1body">
+  <div class="fehqsbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=k3xva"
+        src="/img/tillotarim-logo.png?v=b7xng"
         alt="Tillo Tarim Logo"
-        class="pf3n1bodylogo"
+        class="fehqsbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="pf3n1-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="fehqs-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="pf3n1-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="pf3n1menubody">
-    <div class="pf3n1menu" id="menu-2-root">
-      <div class="pf3n1menulistbody">
-        <div class="pf3n1menulist">
+  <div class="fehqs-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="fehqsmenubody">
+    <div class="fehqsmenu" id="menu-2-root">
+      <button type="button" class="fehqs-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="fehqsmenulistbody">
+        <div class="fehqsmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="fehqsmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-fehqs"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="pf3n1languages-mobile">
+      <div class="fehqslanguages-mobile">
         <ul>
           <li><a href="/tr/iqf-brokoli/">TR</a></li><li><a href="/en/iqf-brokoli/">EN</a></li><li><a href="/ar/iqf-brokoli/">AR</a></li><li><a href="/de/iqf-brokoli/">DE</a></li><li><a href="/ko/iqf-brokoli/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".pf3n1") : null;
+      var wrapper = root.closest ? root.closest(".fehqs") : null;
       var target = wrapper || root;
-      if (target.classList.contains("pf3n1menu-open")) {
-        target.classList.remove("pf3n1menu-open");
+      if (target.classList.contains("fehqsmenu-open")) {
+        target.classList.remove("fehqsmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("pf3n1menu-open");
+        target.classList.add("fehqsmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".fehqs") : null;
+      var target = wrapper || root;
+      target.classList.remove("fehqsmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".fehqsmenulist-menu.dropdown-content-active-fehqs");
+      if (activeWrap) {
+        activeWrap.classList.add("fehqs-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".fehqsmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-fehqs")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("fehqs-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".fehqsmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("fehqs-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("fehqs-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".fehqsmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".fehqsmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("fehqs-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="fzcwg-title">
+  <div id="content"><div class="wr739-title">
   <h1>IQF Brokoli</h1>
 </div>
-<div class="fzcwg">
-  <button type="button" class="fzcwg-menu-btn" aria-expanded="false" aria-controls="fzcwg-menu">
-    <span class="fzcwg-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined fzcwg-icon" aria-hidden="true">menu</span>
+<div class="wr739">
+  <button type="button" class="wr739-menu-btn" aria-expanded="false" aria-controls="wr739-menu">
+    <span class="wr739-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined wr739-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="fzcwg-menu-overlay" id="fzcwg-menu-overlay" aria-hidden="true"></div>
-  <nav class="fzcwg-menu" id="fzcwg-menu" aria-label="Menu">
-    <button class="fzcwg-menu-close" type="button" aria-label="Close Menu">
+  <div class="wr739-menu-overlay" id="wr739-menu-overlay" aria-hidden="true"></div>
+  <nav class="wr739-menu" id="wr739-menu" aria-label="Menu">
+    <button class="wr739-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="fzcwg-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="fzcwg-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="fzcwg-menu-link" href="/en/findik-ezme-ve-krema/"><span class="fzcwg-menu-link-text">Hazelnut Paste & Cream</span></a><a class="fzcwg-menu-link" href="/en/badem-ezme-ve-krema/"><span class="fzcwg-menu-link-text">Almond Paste & Cream</span></a><a class="fzcwg-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="fzcwg-menu-link-text">Peanut Paste & Cream</span></a><a class="fzcwg-menu-link" href="/en/kurutulmus-meyveler/"><span class="fzcwg-menu-link-text">Dried Fruits</span></a><a class="fzcwg-menu-link" href="/en/meyve-cipsleri/"><span class="fzcwg-menu-link-text">Fruit Chips</span></a><a class="fzcwg-menu-link" href="/en/kurutulmus-sebzeler/"><span class="fzcwg-menu-link-text">Dried Vegetables</span></a><a class="fzcwg-menu-link" href="/en/recel-ve-marmelatlar/"><span class="fzcwg-menu-link-text">Jams & Marmalades</span></a><a class="fzcwg-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="fzcwg-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="fzcwg-menu-link" href="/en/meyve-sulari/"><span class="fzcwg-menu-link-text">Fruit Juices</span></a><a class="fzcwg-menu-link" href="/en/pekmez-ve-suruplar/"><span class="fzcwg-menu-link-text">Molasses & Syrups</span></a><a class="fzcwg-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="fzcwg-menu-link-text">Milk & Dairy Products</span></a><a class="fzcwg-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="fzcwg-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="fzcwg-menu-link" href="/en/sivi-yaglar/"><span class="fzcwg-menu-link-text">Liquid Oils</span></a><a class="fzcwg-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="fzcwg-menu-link-text">Medicinal Aromatic Oils</span></a><a class="fzcwg-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="fzcwg-menu-link-text">IQF Sliced Vegetables</span></a><a class="fzcwg-menu-link" href="/en/iqf-meyveler/"><span class="fzcwg-menu-link-text">IQF Fruits</span></a>
+    <a class="wr739-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="wr739-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="wr739-menu-link" href="/en/findik-ezme-ve-krema/"><span class="wr739-menu-link-text">Hazelnut Paste & Cream</span></a><a class="wr739-menu-link" href="/en/badem-ezme-ve-krema/"><span class="wr739-menu-link-text">Almond Paste & Cream</span></a><a class="wr739-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="wr739-menu-link-text">Peanut Paste & Cream</span></a><a class="wr739-menu-link" href="/en/kurutulmus-meyveler/"><span class="wr739-menu-link-text">Dried Fruits</span></a><a class="wr739-menu-link" href="/en/meyve-cipsleri/"><span class="wr739-menu-link-text">Fruit Chips</span></a><a class="wr739-menu-link" href="/en/kurutulmus-sebzeler/"><span class="wr739-menu-link-text">Dried Vegetables</span></a><a class="wr739-menu-link" href="/en/recel-ve-marmelatlar/"><span class="wr739-menu-link-text">Jams & Marmalades</span></a><a class="wr739-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wr739-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="wr739-menu-link" href="/en/meyve-sulari/"><span class="wr739-menu-link-text">Fruit Juices</span></a><a class="wr739-menu-link" href="/en/pekmez-ve-suruplar/"><span class="wr739-menu-link-text">Molasses & Syrups</span></a><a class="wr739-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="wr739-menu-link-text">Milk & Dairy Products</span></a><a class="wr739-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="wr739-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="wr739-menu-link" href="/en/sivi-yaglar/"><span class="wr739-menu-link-text">Liquid Oils</span></a><a class="wr739-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="wr739-menu-link-text">Medicinal Aromatic Oils</span></a><a class="wr739-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="wr739-menu-link-text">IQF Sliced Vegetables</span></a><a class="wr739-menu-link" href="/en/iqf-meyveler/"><span class="wr739-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="fzcwg-main">
-    <div class="fzcwg-row"><div class="fzcwg-row-media"><div class="fzcwg-img"><img src="/page/b2yyauiyq6/index.webp?v=izro9" alt="IQF Brokoli" loading="lazy" /></div></div><div class="fzcwg-row-desc"><p class="fzcwg-lead">Tillo Tarim IQF Brokoli: Çiçek brokoli. IQF Sliced Vegetables category. Available sizes: 10 kg. natural food from Gaziantep.</p><div class="fzcwg-desc-tags"><span class="fzcwg-desc-tag"><span class="fzcwg-desc-tag-label">Net weight</span><span class="fzcwg-desc-tag-value">10 kg</span></span><span class="fzcwg-desc-tag"><span class="fzcwg-desc-tag-label">Packaging</span><span class="fzcwg-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="fzcwg-desc-tag"><span class="fzcwg-desc-tag-label">Origin</span><span class="fzcwg-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="fzcwg-body"><h2 style="font-size: 22px;">IQF Brokoli</h2>
+  <div class="wr739-main">
+    <div class="wr739-row"><div class="wr739-row-media"><div class="wr739-img"><img src="/page/b2yyauiyq6/index.webp?v=smfsd" alt="IQF Brokoli" loading="lazy" /></div></div><div class="wr739-row-desc"><p class="wr739-lead">Tillo Tarim IQF Brokoli: Çiçek brokoli. IQF Sliced Vegetables category. Available sizes: 10 kg. natural food from Gaziantep.</p><div class="wr739-desc-tags"><span class="wr739-desc-tag"><span class="wr739-desc-tag-label">Net weight</span><span class="wr739-desc-tag-value">10 kg</span></span><span class="wr739-desc-tag"><span class="wr739-desc-tag-label">Packaging</span><span class="wr739-desc-tag-value">Endüstriyel koli (10 kg)</span></span><span class="wr739-desc-tag"><span class="wr739-desc-tag-label">Origin</span><span class="wr739-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="wr739-body"><h2 style="font-size: 22px;">IQF Brokoli</h2>
 <p style="font-size: 16px;">Tillo Tarim IQF Brokoli: Çiçek brokoli. IQF Sliced Vegetables category. Available sizes: 10 kg. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 10 kg</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".fzcwg-menu-btn");
-    var menu = document.querySelector(".fzcwg-menu");
-    var overlay = document.querySelector(".fzcwg-menu-overlay");
-    var closeButton = document.querySelector(".fzcwg-menu-close");
+    var menuToggleBtn = document.querySelector(".wr739-menu-btn");
+    var menu = document.querySelector(".wr739-menu");
+    var overlay = document.querySelector(".wr739-menu-overlay");
+    var closeButton = document.querySelector(".wr739-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".fzcwg-menu-close")) {
+      if (link && !event.target.closest(".wr739-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=eu188"></script>
-  <script defer src="/src/cookie.js?v=eu188"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=tiker"></script>
+  <script defer src="/src/cookie.js?v=tiker"></script>
 
   <script>
     setTimeout(function() {

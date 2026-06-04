@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=u8le2" />
-  <link rel="preload" href="/src/cookie.css?v=u8le2" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=gcmv7" />
+  <link rel="preload" href="/src/cookie.css?v=gcmv7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=u8le2" />
+    <link rel="stylesheet" href="/src/cookie.css?v=gcmv7" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=u8le2" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=gcmv7" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=u8le2">
+<link rel="stylesheet" href="style.css?v=gcmv7">
 </head>
 
 <body>
   <div id="header">
-<div class="otfq5">
-  <div class="otfq5title">
-    <div class="otfq5titlebody">
-      <div class="otfq5titlebodylang">
+<div class="e209x">
+  <div class="e209xtitle">
+    <div class="e209xtitlebody">
+      <div class="e209xtitlebodylang">
         <ul>
           <li><a href="/tr/meyve-cipsleri/">TR</a></li><li><a href="/en/meyve-cipsleri/">EN</a></li><li><a href="/ar/meyve-cipsleri/">AR</a></li><li><a href="/de/meyve-cipsleri/">DE</a></li><li><a href="/ko/meyve-cipsleri/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="otfq5body">
+  <div class="e209xbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=qg2cm"
+        src="/img/tillotarim-logo.png?v=ei7ky"
         alt="Tillo Tarim Logo"
-        class="otfq5bodylogo"
+        class="e209xbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="otfq5-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="e209x-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="otfq5-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="otfq5menubody">
-    <div class="otfq5menu" id="menu-2-root">
-      <div class="otfq5menulistbody">
-        <div class="otfq5menulist">
+  <div class="e209x-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="e209xmenubody">
+    <div class="e209xmenu" id="menu-2-root">
+      <button type="button" class="e209x-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="e209xmenulistbody">
+        <div class="e209xmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="e209xmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-e209x"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="otfq5languages-mobile">
+      <div class="e209xlanguages-mobile">
         <ul>
           <li><a href="/tr/meyve-cipsleri/">TR</a></li><li><a href="/en/meyve-cipsleri/">EN</a></li><li><a href="/ar/meyve-cipsleri/">AR</a></li><li><a href="/de/meyve-cipsleri/">DE</a></li><li><a href="/ko/meyve-cipsleri/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".otfq5") : null;
+      var wrapper = root.closest ? root.closest(".e209x") : null;
       var target = wrapper || root;
-      if (target.classList.contains("otfq5menu-open")) {
-        target.classList.remove("otfq5menu-open");
+      if (target.classList.contains("e209xmenu-open")) {
+        target.classList.remove("e209xmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("otfq5menu-open");
+        target.classList.add("e209xmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".e209x") : null;
+      var target = wrapper || root;
+      target.classList.remove("e209xmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".e209xmenulist-menu.dropdown-content-active-e209x");
+      if (activeWrap) {
+        activeWrap.classList.add("e209x-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".e209xmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-e209x")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("e209x-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".e209xmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("e209x-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("e209x-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".e209xmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".e209xmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("e209x-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="vlmp6-title f36">
+  <div id="content"><div class="l0feh-title f36">
   <h1>Fruit Chips</h1>
 </div>
 
-<div class="vlmp6"><h2 style="font-size: 24px;">Fruit Chips</h2>
+<div class="l0feh"><h2 style="font-size: 24px;">Fruit Chips</h2>
 <p style="font-size: 16px;">Tillo Tarim Fruit Chips. Meyve cipsleri: elma, armut, kivi ve turunçgil dilimleri. Düşük sıcaklıkta kurutulmuş meyve cipsleri; atıştırmalık ve reçeteler…</p></div>
 
 
 ------------------------
-<div class="xnmnk xnmnkcat3">
-  <div class="xnmnkbody"><a class="xnmnkbodycardlink" href="/en/elma-cipsi/" title="Elma Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/qeyuamiaeq/index.webp" alt="Elma Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Elma Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/armut-cipsi/" title="Armut Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/xaeimuieym/index.webp" alt="Armut Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Armut Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/ayva-cipsi/" title="Ayva Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/46qyiayqye/index.webp" alt="Ayva Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Ayva Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/portakal-cipsi/" title="Portakal Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/r6aaiuaqi2/index.webp" alt="Portakal Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Portakal Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/kivi-cipsi/" title="Kivi Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/ymy6uyiamy/index.webp" alt="Kivi Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Kivi Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/i-ncir-cipsi/" title="İncir Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/52a2iuyii6/index.webp" alt="İncir Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>İncir Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/greyfurt-cipsi/" title="Greyfurt Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/s66q26qymi/index.webp" alt="Greyfurt Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Greyfurt Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/limon-cipsi/" title="Limon Cipsi"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/zuymem2uem/index.webp" alt="Limon Cipsi" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Limon Cipsi</span></div><div class="xnmnkbodyitemaccent"></div></div></a><a class="xnmnkbodycardlink" href="/en/meyve-cipsi-karisimi/" title="Meyve Cipsi Mix"><div class="xnmnkbodycard"><div class="xnmnkbodyitemimg"><img src="/page/6am6eyqeeq/index.webp" alt="Meyve Cipsi Mix" loading="lazy"></div><div class="xnmnkbodyitemtitle"><span>Meyve Cipsi Mix</span></div><div class="xnmnkbodyitemaccent"></div></div></a></div>
+<div class="ejbe7 ejbe7cat3">
+  <div class="ejbe7body"><a class="ejbe7bodycardlink" href="/en/elma-cipsi/" title="Elma Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/qeyuamiaeq/index.webp" alt="Elma Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Elma Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/armut-cipsi/" title="Armut Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/xaeimuieym/index.webp" alt="Armut Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Armut Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/ayva-cipsi/" title="Ayva Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/46qyiayqye/index.webp" alt="Ayva Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Ayva Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/portakal-cipsi/" title="Portakal Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/r6aaiuaqi2/index.webp" alt="Portakal Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Portakal Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/kivi-cipsi/" title="Kivi Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/ymy6uyiamy/index.webp" alt="Kivi Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Kivi Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/i-ncir-cipsi/" title="İncir Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/52a2iuyii6/index.webp" alt="İncir Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>İncir Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/greyfurt-cipsi/" title="Greyfurt Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/s66q26qymi/index.webp" alt="Greyfurt Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Greyfurt Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/limon-cipsi/" title="Limon Cipsi"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/zuymem2uem/index.webp" alt="Limon Cipsi" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Limon Cipsi</span></div><div class="ejbe7bodyitemaccent"></div></div></a><a class="ejbe7bodycardlink" href="/en/meyve-cipsi-karisimi/" title="Meyve Cipsi Mix"><div class="ejbe7bodycard"><div class="ejbe7bodyitemimg"><img src="/page/6am6eyqeeq/index.webp" alt="Meyve Cipsi Mix" loading="lazy"></div><div class="ejbe7bodyitemtitle"><span>Meyve Cipsi Mix</span></div><div class="ejbe7bodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".xnmnkcat3");
+    var moduleRoots = document.querySelectorAll(".ejbe7cat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".xnmnkbodycardlink");
+        var cards = root.querySelectorAll(".ejbe7bodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("xnmnkcardvisible");
+            cards[i].classList.add("ejbe7cardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("xnmnkcardvisible");
+            cards[j].classList.add("ejbe7cardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("xnmnkcardvisible");
+                entry.target.classList.add("ejbe7cardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=u8le2"></script>
-  <script defer src="/src/cookie.js?v=u8le2"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=gcmv7"></script>
+  <script defer src="/src/cookie.js?v=gcmv7"></script>
 
   <script>
     setTimeout(function() {

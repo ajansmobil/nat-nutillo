@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=vj6vn" />
-  <link rel="preload" href="/src/cookie.css?v=vj6vn" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=hc8dt" />
+  <link rel="preload" href="/src/cookie.css?v=hc8dt" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=vj6vn" />
+    <link rel="stylesheet" href="/src/cookie.css?v=hc8dt" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=vj6vn" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=hc8dt" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=vj6vn">
+<link rel="stylesheet" href="style.css?v=hc8dt">
 </head>
 
 <body>
   <div id="header">
-<div class="zese3">
-  <div class="zese3title">
-    <div class="zese3titlebody">
-      <div class="zese3titlebodylang">
+<div class="zcgs2">
+  <div class="zcgs2title">
+    <div class="zcgs2titlebody">
+      <div class="zcgs2titlebodylang">
         <ul>
           <li><a href="/tr/portakal-cipsi/">TR</a></li><li><a href="/en/portakal-cipsi/">EN</a></li><li><a href="/ar/portakal-cipsi/">AR</a></li><li><a href="/de/portakal-cipsi/">DE</a></li><li><a href="/ko/portakal-cipsi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="zese3body">
+  <div class="zcgs2body">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=s4jlw"
+        src="/img/tillotarim-logo.png?v=o4n9r"
         alt="Tillo Tarim Logo"
-        class="zese3bodylogo"
+        class="zcgs2bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="zese3-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="zcgs2-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="zese3-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="zese3menubody">
-    <div class="zese3menu" id="menu-2-root">
-      <div class="zese3menulistbody">
-        <div class="zese3menulist">
+  <div class="zcgs2-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="zcgs2menubody">
+    <div class="zcgs2menu" id="menu-2-root">
+      <button type="button" class="zcgs2-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="zcgs2menulistbody">
+        <div class="zcgs2menulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="zcgs2menulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-zcgs2"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="zese3languages-mobile">
+      <div class="zcgs2languages-mobile">
         <ul>
           <li><a href="/tr/portakal-cipsi/">TR</a></li><li><a href="/en/portakal-cipsi/">EN</a></li><li><a href="/ar/portakal-cipsi/">AR</a></li><li><a href="/de/portakal-cipsi/">DE</a></li><li><a href="/ko/portakal-cipsi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".zese3") : null;
+      var wrapper = root.closest ? root.closest(".zcgs2") : null;
       var target = wrapper || root;
-      if (target.classList.contains("zese3menu-open")) {
-        target.classList.remove("zese3menu-open");
+      if (target.classList.contains("zcgs2menu-open")) {
+        target.classList.remove("zcgs2menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("zese3menu-open");
+        target.classList.add("zcgs2menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".zcgs2") : null;
+      var target = wrapper || root;
+      target.classList.remove("zcgs2menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".zcgs2menulist-menu.dropdown-content-active-zcgs2");
+      if (activeWrap) {
+        activeWrap.classList.add("zcgs2-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".zcgs2menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-zcgs2")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("zcgs2-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".zcgs2menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("zcgs2-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("zcgs2-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".zcgs2menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".zcgs2menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("zcgs2-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="qwsqq-title">
+  <div id="content"><div class="hkylk-title">
   <h1>Portakal Cipsi</h1>
 </div>
-<div class="qwsqq">
-  <button type="button" class="qwsqq-menu-btn" aria-expanded="false" aria-controls="qwsqq-menu">
-    <span class="qwsqq-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined qwsqq-icon" aria-hidden="true">menu</span>
+<div class="hkylk">
+  <button type="button" class="hkylk-menu-btn" aria-expanded="false" aria-controls="hkylk-menu">
+    <span class="hkylk-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined hkylk-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="qwsqq-menu-overlay" id="qwsqq-menu-overlay" aria-hidden="true"></div>
-  <nav class="qwsqq-menu" id="qwsqq-menu" aria-label="Menü">
-    <button class="qwsqq-menu-close" type="button" aria-label="Menü schließen">
+  <div class="hkylk-menu-overlay" id="hkylk-menu-overlay" aria-hidden="true"></div>
+  <nav class="hkylk-menu" id="hkylk-menu" aria-label="Menü">
+    <button class="hkylk-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="qwsqq-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="qwsqq-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="qwsqq-menu-link" href="/de/findik-ezme-ve-krema/"><span class="qwsqq-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="qwsqq-menu-link" href="/de/badem-ezme-ve-krema/"><span class="qwsqq-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="qwsqq-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="qwsqq-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="qwsqq-menu-link" href="/de/kurutulmus-meyveler/"><span class="qwsqq-menu-link-text">Trockenfrüchte</span></a><a class="qwsqq-menu-link" href="/de/meyve-cipsleri/"><span class="qwsqq-menu-link-text">Fruchtchips</span></a><a class="qwsqq-menu-link" href="/de/kurutulmus-sebzeler/"><span class="qwsqq-menu-link-text">Trockengemüse</span></a><a class="qwsqq-menu-link" href="/de/recel-ve-marmelatlar/"><span class="qwsqq-menu-link-text">Marmeladen & Konfitüren</span></a><a class="qwsqq-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="qwsqq-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="qwsqq-menu-link" href="/de/meyve-sulari/"><span class="qwsqq-menu-link-text">Fruchtsäfte</span></a><a class="qwsqq-menu-link" href="/de/pekmez-ve-suruplar/"><span class="qwsqq-menu-link-text">Melasse & Sirupe</span></a><a class="qwsqq-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="qwsqq-menu-link-text">Milch & Milchprodukte</span></a><a class="qwsqq-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="qwsqq-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="qwsqq-menu-link" href="/de/sivi-yaglar/"><span class="qwsqq-menu-link-text">Flüssige Öle</span></a><a class="qwsqq-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="qwsqq-menu-link-text">Medizinische Aromaöle</span></a><a class="qwsqq-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="qwsqq-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="qwsqq-menu-link" href="/de/iqf-meyveler/"><span class="qwsqq-menu-link-text">IQF-Früchte</span></a>
+    <a class="hkylk-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="hkylk-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="hkylk-menu-link" href="/de/findik-ezme-ve-krema/"><span class="hkylk-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="hkylk-menu-link" href="/de/badem-ezme-ve-krema/"><span class="hkylk-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="hkylk-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="hkylk-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="hkylk-menu-link" href="/de/kurutulmus-meyveler/"><span class="hkylk-menu-link-text">Trockenfrüchte</span></a><a class="hkylk-menu-link" href="/de/meyve-cipsleri/"><span class="hkylk-menu-link-text">Fruchtchips</span></a><a class="hkylk-menu-link" href="/de/kurutulmus-sebzeler/"><span class="hkylk-menu-link-text">Trockengemüse</span></a><a class="hkylk-menu-link" href="/de/recel-ve-marmelatlar/"><span class="hkylk-menu-link-text">Marmeladen & Konfitüren</span></a><a class="hkylk-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="hkylk-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="hkylk-menu-link" href="/de/meyve-sulari/"><span class="hkylk-menu-link-text">Fruchtsäfte</span></a><a class="hkylk-menu-link" href="/de/pekmez-ve-suruplar/"><span class="hkylk-menu-link-text">Melasse & Sirupe</span></a><a class="hkylk-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="hkylk-menu-link-text">Milch & Milchprodukte</span></a><a class="hkylk-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="hkylk-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="hkylk-menu-link" href="/de/sivi-yaglar/"><span class="hkylk-menu-link-text">Flüssige Öle</span></a><a class="hkylk-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="hkylk-menu-link-text">Medizinische Aromaöle</span></a><a class="hkylk-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="hkylk-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="hkylk-menu-link" href="/de/iqf-meyveler/"><span class="hkylk-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="qwsqq-main">
-    <div class="qwsqq-row"><div class="qwsqq-row-media"><div class="qwsqq-img"><img src="/page/r6aaiuaqi2/index.webp?v=ok08j" alt="Portakal Cipsi" loading="lazy" /></div></div><div class="qwsqq-row-desc"><p class="qwsqq-lead">Tillo Tarim Portakal Cipsi: Kabuklu portakal dilim. Fruchtchips Kategorie. Verfügbare Grammaturen: 70 g. Naturkost aus Gaziantep.</p><div class="qwsqq-desc-tags"><span class="qwsqq-desc-tag"><span class="qwsqq-desc-tag-label">Grammatur</span><span class="qwsqq-desc-tag-value">70 g</span></span><span class="qwsqq-desc-tag"><span class="qwsqq-desc-tag-label">Verpackung</span><span class="qwsqq-desc-tag-value">Doypack / kilitli poşet</span></span><span class="qwsqq-desc-tag"><span class="qwsqq-desc-tag-label">Herkunft</span><span class="qwsqq-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="qwsqq-body"><h2 style="font-size: 22px;">Portakal Cipsi</h2>
+  <div class="hkylk-main">
+    <div class="hkylk-row"><div class="hkylk-row-media"><div class="hkylk-img"><img src="/page/r6aaiuaqi2/index.webp?v=x7swl" alt="Portakal Cipsi" loading="lazy" /></div></div><div class="hkylk-row-desc"><p class="hkylk-lead">Tillo Tarim Portakal Cipsi: Kabuklu portakal dilim. Fruchtchips Kategorie. Verfügbare Grammaturen: 70 g. Naturkost aus Gaziantep.</p><div class="hkylk-desc-tags"><span class="hkylk-desc-tag"><span class="hkylk-desc-tag-label">Grammatur</span><span class="hkylk-desc-tag-value">70 g</span></span><span class="hkylk-desc-tag"><span class="hkylk-desc-tag-label">Verpackung</span><span class="hkylk-desc-tag-value">Doypack / kilitli poşet</span></span><span class="hkylk-desc-tag"><span class="hkylk-desc-tag-label">Herkunft</span><span class="hkylk-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="hkylk-body"><h2 style="font-size: 22px;">Portakal Cipsi</h2>
 <p style="font-size: 16px;">Tillo Tarim Portakal Cipsi: Kabuklu portakal dilim. Fruchtchips Kategorie. Verfügbare Grammaturen: 70 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 70 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".qwsqq-menu-btn");
-    var menu = document.querySelector(".qwsqq-menu");
-    var overlay = document.querySelector(".qwsqq-menu-overlay");
-    var closeButton = document.querySelector(".qwsqq-menu-close");
+    var menuToggleBtn = document.querySelector(".hkylk-menu-btn");
+    var menu = document.querySelector(".hkylk-menu");
+    var overlay = document.querySelector(".hkylk-menu-overlay");
+    var closeButton = document.querySelector(".hkylk-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".qwsqq-menu-close")) {
+      if (link && !event.target.closest(".hkylk-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=vj6vn"></script>
-  <script defer src="/src/cookie.js?v=vj6vn"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=hc8dt"></script>
+  <script defer src="/src/cookie.js?v=hc8dt"></script>
 
   <script>
     setTimeout(function() {

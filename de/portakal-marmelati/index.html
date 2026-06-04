@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=jjhys" />
-  <link rel="preload" href="/src/cookie.css?v=jjhys" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=o2yp8" />
+  <link rel="preload" href="/src/cookie.css?v=o2yp8" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=jjhys" />
+    <link rel="stylesheet" href="/src/cookie.css?v=o2yp8" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=jjhys" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=o2yp8" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=jjhys">
+<link rel="stylesheet" href="style.css?v=o2yp8">
 </head>
 
 <body>
   <div id="header">
-<div class="wzgyc">
-  <div class="wzgyctitle">
-    <div class="wzgyctitlebody">
-      <div class="wzgyctitlebodylang">
+<div class="bnjjd">
+  <div class="bnjjdtitle">
+    <div class="bnjjdtitlebody">
+      <div class="bnjjdtitlebodylang">
         <ul>
           <li><a href="/tr/portakal-marmelati/">TR</a></li><li><a href="/en/portakal-marmelati/">EN</a></li><li><a href="/ar/portakal-marmelati/">AR</a></li><li><a href="/de/portakal-marmelati/">DE</a></li><li><a href="/ko/portakal-marmelati/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="wzgycbody">
+  <div class="bnjjdbody">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=e4ta7"
+        src="/img/tillotarim-logo.png?v=aznym"
         alt="Tillo Tarim Logo"
-        class="wzgycbodylogo"
+        class="bnjjdbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="wzgyc-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="bnjjd-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="wzgyc-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="wzgycmenubody">
-    <div class="wzgycmenu" id="menu-2-root">
-      <div class="wzgycmenulistbody">
-        <div class="wzgycmenulist">
+  <div class="bnjjd-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="bnjjdmenubody">
+    <div class="bnjjdmenu" id="menu-2-root">
+      <button type="button" class="bnjjd-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="bnjjdmenulistbody">
+        <div class="bnjjdmenulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="bnjjdmenulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-bnjjd"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="wzgyclanguages-mobile">
+      <div class="bnjjdlanguages-mobile">
         <ul>
           <li><a href="/tr/portakal-marmelati/">TR</a></li><li><a href="/en/portakal-marmelati/">EN</a></li><li><a href="/ar/portakal-marmelati/">AR</a></li><li><a href="/de/portakal-marmelati/">DE</a></li><li><a href="/ko/portakal-marmelati/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".wzgyc") : null;
+      var wrapper = root.closest ? root.closest(".bnjjd") : null;
       var target = wrapper || root;
-      if (target.classList.contains("wzgycmenu-open")) {
-        target.classList.remove("wzgycmenu-open");
+      if (target.classList.contains("bnjjdmenu-open")) {
+        target.classList.remove("bnjjdmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("wzgycmenu-open");
+        target.classList.add("bnjjdmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".bnjjd") : null;
+      var target = wrapper || root;
+      target.classList.remove("bnjjdmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".bnjjdmenulist-menu.dropdown-content-active-bnjjd");
+      if (activeWrap) {
+        activeWrap.classList.add("bnjjd-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".bnjjdmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-bnjjd")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("bnjjd-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".bnjjdmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("bnjjd-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("bnjjd-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".bnjjdmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".bnjjdmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("bnjjd-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="lhxtx-title">
+  <div id="content"><div class="ryg0o-title">
   <h1>Portakal Marmelatı</h1>
 </div>
-<div class="lhxtx">
-  <button type="button" class="lhxtx-menu-btn" aria-expanded="false" aria-controls="lhxtx-menu">
-    <span class="lhxtx-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined lhxtx-icon" aria-hidden="true">menu</span>
+<div class="ryg0o">
+  <button type="button" class="ryg0o-menu-btn" aria-expanded="false" aria-controls="ryg0o-menu">
+    <span class="ryg0o-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined ryg0o-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="lhxtx-menu-overlay" id="lhxtx-menu-overlay" aria-hidden="true"></div>
-  <nav class="lhxtx-menu" id="lhxtx-menu" aria-label="Menü">
-    <button class="lhxtx-menu-close" type="button" aria-label="Menü schließen">
+  <div class="ryg0o-menu-overlay" id="ryg0o-menu-overlay" aria-hidden="true"></div>
+  <nav class="ryg0o-menu" id="ryg0o-menu" aria-label="Menü">
+    <button class="ryg0o-menu-close" type="button" aria-label="Menü schließen">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="lhxtx-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="lhxtx-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="lhxtx-menu-link" href="/de/findik-ezme-ve-krema/"><span class="lhxtx-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="lhxtx-menu-link" href="/de/badem-ezme-ve-krema/"><span class="lhxtx-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="lhxtx-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="lhxtx-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="lhxtx-menu-link" href="/de/kurutulmus-meyveler/"><span class="lhxtx-menu-link-text">Trockenfrüchte</span></a><a class="lhxtx-menu-link" href="/de/meyve-cipsleri/"><span class="lhxtx-menu-link-text">Fruchtchips</span></a><a class="lhxtx-menu-link" href="/de/kurutulmus-sebzeler/"><span class="lhxtx-menu-link-text">Trockengemüse</span></a><a class="lhxtx-menu-link" href="/de/recel-ve-marmelatlar/"><span class="lhxtx-menu-link-text">Marmeladen & Konfitüren</span></a><a class="lhxtx-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="lhxtx-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="lhxtx-menu-link" href="/de/meyve-sulari/"><span class="lhxtx-menu-link-text">Fruchtsäfte</span></a><a class="lhxtx-menu-link" href="/de/pekmez-ve-suruplar/"><span class="lhxtx-menu-link-text">Melasse & Sirupe</span></a><a class="lhxtx-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="lhxtx-menu-link-text">Milch & Milchprodukte</span></a><a class="lhxtx-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="lhxtx-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="lhxtx-menu-link" href="/de/sivi-yaglar/"><span class="lhxtx-menu-link-text">Flüssige Öle</span></a><a class="lhxtx-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="lhxtx-menu-link-text">Medizinische Aromaöle</span></a><a class="lhxtx-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="lhxtx-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="lhxtx-menu-link" href="/de/iqf-meyveler/"><span class="lhxtx-menu-link-text">IQF-Früchte</span></a>
+    <a class="ryg0o-menu-link" href="/de/antep-fistigi-ezme-ve-krema/"><span class="ryg0o-menu-link-text">Antep-Pistazien-Aufstrich & Creme</span></a><a class="ryg0o-menu-link" href="/de/findik-ezme-ve-krema/"><span class="ryg0o-menu-link-text">Haselnuss-Aufstrich & Creme</span></a><a class="ryg0o-menu-link" href="/de/badem-ezme-ve-krema/"><span class="ryg0o-menu-link-text">Mandel-Aufstrich & Creme</span></a><a class="ryg0o-menu-link" href="/de/yer-fistigi-ezme-ve-krema/"><span class="ryg0o-menu-link-text">Erdnuss-Aufstrich & Creme</span></a><a class="ryg0o-menu-link" href="/de/kurutulmus-meyveler/"><span class="ryg0o-menu-link-text">Trockenfrüchte</span></a><a class="ryg0o-menu-link" href="/de/meyve-cipsleri/"><span class="ryg0o-menu-link-text">Fruchtchips</span></a><a class="ryg0o-menu-link" href="/de/kurutulmus-sebzeler/"><span class="ryg0o-menu-link-text">Trockengemüse</span></a><a class="ryg0o-menu-link" href="/de/recel-ve-marmelatlar/"><span class="ryg0o-menu-link-text">Marmeladen & Konfitüren</span></a><a class="ryg0o-menu-link" href="/de/lokum-pestil-ve-geleneksel-tatlilar/"><span class="ryg0o-menu-link-text">Lokum, Pestil & traditionelle Süßwaren</span></a><a class="ryg0o-menu-link" href="/de/meyve-sulari/"><span class="ryg0o-menu-link-text">Fruchtsäfte</span></a><a class="ryg0o-menu-link" href="/de/pekmez-ve-suruplar/"><span class="ryg0o-menu-link-text">Melasse & Sirupe</span></a><a class="ryg0o-menu-link" href="/de/sut-ve-sut-urunleri/"><span class="ryg0o-menu-link-text">Milch & Milchprodukte</span></a><a class="ryg0o-menu-link" href="/de/salca-tursu-meze-ve-soslar/"><span class="ryg0o-menu-link-text">Salça, Essiggurken, Meze & Saucen</span></a><a class="ryg0o-menu-link" href="/de/sivi-yaglar/"><span class="ryg0o-menu-link-text">Flüssige Öle</span></a><a class="ryg0o-menu-link" href="/de/tibbi-aromatik-yaglar/"><span class="ryg0o-menu-link-text">Medizinische Aromaöle</span></a><a class="ryg0o-menu-link" href="/de/iqf-dilimlenmis-sebzeler/"><span class="ryg0o-menu-link-text">IQF-Gemüse in Scheiben</span></a><a class="ryg0o-menu-link" href="/de/iqf-meyveler/"><span class="ryg0o-menu-link-text">IQF-Früchte</span></a>
   </nav>
-  <div class="lhxtx-main">
-    <div class="lhxtx-row"><div class="lhxtx-row-media"><div class="lhxtx-img"><img src="/page/om626yqequ/index.webp?v=xuvmq" alt="Portakal Marmelatı" loading="lazy" /></div></div><div class="lhxtx-row-desc"><p class="lhxtx-lead">Tillo Tarim Portakal Marmelatı: Kabuklu portakal. Marmeladen & Konfitüren Kategorie. Verfügbare Grammaturen: 380 g. Naturkost aus Gaziantep.</p><div class="lhxtx-desc-tags"><span class="lhxtx-desc-tag"><span class="lhxtx-desc-tag-label">Grammatur</span><span class="lhxtx-desc-tag-value">380 g</span></span><span class="lhxtx-desc-tag"><span class="lhxtx-desc-tag-label">Verpackung</span><span class="lhxtx-desc-tag-value">Cam kavanoz</span></span><span class="lhxtx-desc-tag"><span class="lhxtx-desc-tag-label">Herkunft</span><span class="lhxtx-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="lhxtx-body"><h2 style="font-size: 22px;">Portakal Marmelatı</h2>
+  <div class="ryg0o-main">
+    <div class="ryg0o-row"><div class="ryg0o-row-media"><div class="ryg0o-img"><img src="/page/om626yqequ/index.webp?v=wbp3r" alt="Portakal Marmelatı" loading="lazy" /></div></div><div class="ryg0o-row-desc"><p class="ryg0o-lead">Tillo Tarim Portakal Marmelatı: Kabuklu portakal. Marmeladen & Konfitüren Kategorie. Verfügbare Grammaturen: 380 g. Naturkost aus Gaziantep.</p><div class="ryg0o-desc-tags"><span class="ryg0o-desc-tag"><span class="ryg0o-desc-tag-label">Grammatur</span><span class="ryg0o-desc-tag-value">380 g</span></span><span class="ryg0o-desc-tag"><span class="ryg0o-desc-tag-label">Verpackung</span><span class="ryg0o-desc-tag-value">Cam kavanoz</span></span><span class="ryg0o-desc-tag"><span class="ryg0o-desc-tag-label">Herkunft</span><span class="ryg0o-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="ryg0o-body"><h2 style="font-size: 22px;">Portakal Marmelatı</h2>
 <p style="font-size: 16px;">Tillo Tarim Portakal Marmelatı: Kabuklu portakal. Marmeladen & Konfitüren Kategorie. Verfügbare Grammaturen: 380 g. Naturkost aus Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Grammatur:</strong> 380 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".lhxtx-menu-btn");
-    var menu = document.querySelector(".lhxtx-menu");
-    var overlay = document.querySelector(".lhxtx-menu-overlay");
-    var closeButton = document.querySelector(".lhxtx-menu-close");
+    var menuToggleBtn = document.querySelector(".ryg0o-menu-btn");
+    var menu = document.querySelector(".ryg0o-menu");
+    var overlay = document.querySelector(".ryg0o-menu-overlay");
+    var closeButton = document.querySelector(".ryg0o-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".lhxtx-menu-close")) {
+      if (link && !event.target.closest(".ryg0o-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=jjhys"></script>
-  <script defer src="/src/cookie.js?v=jjhys"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=o2yp8"></script>
+  <script defer src="/src/cookie.js?v=o2yp8"></script>
 
   <script>
     setTimeout(function() {

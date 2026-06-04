@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=fh5e8" />
-  <link rel="preload" href="/src/cookie.css?v=fh5e8" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=ctvrr" />
+  <link rel="preload" href="/src/cookie.css?v=ctvrr" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=fh5e8" />
+    <link rel="stylesheet" href="/src/cookie.css?v=ctvrr" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=fh5e8" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=ctvrr" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=fh5e8">
+<link rel="stylesheet" href="style.css?v=ctvrr">
 </head>
 
 <body>
   <div id="header">
-<div class="rrigl">
-  <div class="rrigltitle">
-    <div class="rrigltitlebody">
-      <div class="rrigltitlebodylang">
+<div class="of0ci">
+  <div class="of0cititle">
+    <div class="of0cititlebody">
+      <div class="of0cititlebodylang">
         <ul>
           <li><a href="/tr/findik-kremasi-kakao/">TR</a></li><li><a href="/en/findik-kremasi-kakao/">EN</a></li><li><a href="/ar/findik-kremasi-kakao/">AR</a></li><li><a href="/de/findik-kremasi-kakao/">DE</a></li><li><a href="/ko/findik-kremasi-kakao/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="rriglbody">
+  <div class="of0cibody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=dk089"
+        src="/img/tillotarim-logo.png?v=x9uze"
         alt="Tillo Tarim Logo"
-        class="rriglbodylogo"
+        class="of0cibodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="rrigl-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="of0ci-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="rrigl-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="rriglmenubody">
-    <div class="rriglmenu" id="menu-2-root">
-      <div class="rriglmenulistbody">
-        <div class="rriglmenulist">
+  <div class="of0ci-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="of0cimenubody">
+    <div class="of0cimenu" id="menu-2-root">
+      <button type="button" class="of0ci-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="of0cimenulistbody">
+        <div class="of0cimenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="of0cimenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-of0ci"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="rrigllanguages-mobile">
+      <div class="of0cilanguages-mobile">
         <ul>
           <li><a href="/tr/findik-kremasi-kakao/">TR</a></li><li><a href="/en/findik-kremasi-kakao/">EN</a></li><li><a href="/ar/findik-kremasi-kakao/">AR</a></li><li><a href="/de/findik-kremasi-kakao/">DE</a></li><li><a href="/ko/findik-kremasi-kakao/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".rrigl") : null;
+      var wrapper = root.closest ? root.closest(".of0ci") : null;
       var target = wrapper || root;
-      if (target.classList.contains("rriglmenu-open")) {
-        target.classList.remove("rriglmenu-open");
+      if (target.classList.contains("of0cimenu-open")) {
+        target.classList.remove("of0cimenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("rriglmenu-open");
+        target.classList.add("of0cimenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".of0ci") : null;
+      var target = wrapper || root;
+      target.classList.remove("of0cimenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".of0cimenulist-menu.dropdown-content-active-of0ci");
+      if (activeWrap) {
+        activeWrap.classList.add("of0ci-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".of0cimenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-of0ci")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("of0ci-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".of0cimenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("of0ci-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("of0ci-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".of0cimenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".of0cimenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("of0ci-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="g90vw-title">
+  <div id="content"><div class="ksh7m-title">
   <h1>Fındık Cream (Kakao)</h1>
 </div>
-<div class="g90vw">
-  <button type="button" class="g90vw-menu-btn" aria-expanded="false" aria-controls="g90vw-menu">
-    <span class="g90vw-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined g90vw-icon" aria-hidden="true">menu</span>
+<div class="ksh7m">
+  <button type="button" class="ksh7m-menu-btn" aria-expanded="false" aria-controls="ksh7m-menu">
+    <span class="ksh7m-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined ksh7m-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="g90vw-menu-overlay" id="g90vw-menu-overlay" aria-hidden="true"></div>
-  <nav class="g90vw-menu" id="g90vw-menu" aria-label="Menu">
-    <button class="g90vw-menu-close" type="button" aria-label="Close Menu">
+  <div class="ksh7m-menu-overlay" id="ksh7m-menu-overlay" aria-hidden="true"></div>
+  <nav class="ksh7m-menu" id="ksh7m-menu" aria-label="Menu">
+    <button class="ksh7m-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="g90vw-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="g90vw-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="g90vw-menu-link" href="/en/findik-ezme-ve-krema/"><span class="g90vw-menu-link-text">Hazelnut Paste & Cream</span></a><a class="g90vw-menu-link" href="/en/badem-ezme-ve-krema/"><span class="g90vw-menu-link-text">Almond Paste & Cream</span></a><a class="g90vw-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="g90vw-menu-link-text">Peanut Paste & Cream</span></a><a class="g90vw-menu-link" href="/en/kurutulmus-meyveler/"><span class="g90vw-menu-link-text">Dried Fruits</span></a><a class="g90vw-menu-link" href="/en/meyve-cipsleri/"><span class="g90vw-menu-link-text">Fruit Chips</span></a><a class="g90vw-menu-link" href="/en/kurutulmus-sebzeler/"><span class="g90vw-menu-link-text">Dried Vegetables</span></a><a class="g90vw-menu-link" href="/en/recel-ve-marmelatlar/"><span class="g90vw-menu-link-text">Jams & Marmalades</span></a><a class="g90vw-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="g90vw-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="g90vw-menu-link" href="/en/meyve-sulari/"><span class="g90vw-menu-link-text">Fruit Juices</span></a><a class="g90vw-menu-link" href="/en/pekmez-ve-suruplar/"><span class="g90vw-menu-link-text">Molasses & Syrups</span></a><a class="g90vw-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="g90vw-menu-link-text">Milk & Dairy Products</span></a><a class="g90vw-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="g90vw-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="g90vw-menu-link" href="/en/sivi-yaglar/"><span class="g90vw-menu-link-text">Liquid Oils</span></a><a class="g90vw-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="g90vw-menu-link-text">Medicinal Aromatic Oils</span></a><a class="g90vw-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="g90vw-menu-link-text">IQF Sliced Vegetables</span></a><a class="g90vw-menu-link" href="/en/iqf-meyveler/"><span class="g90vw-menu-link-text">IQF Fruits</span></a>
+    <a class="ksh7m-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="ksh7m-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="ksh7m-menu-link" href="/en/findik-ezme-ve-krema/"><span class="ksh7m-menu-link-text">Hazelnut Paste & Cream</span></a><a class="ksh7m-menu-link" href="/en/badem-ezme-ve-krema/"><span class="ksh7m-menu-link-text">Almond Paste & Cream</span></a><a class="ksh7m-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="ksh7m-menu-link-text">Peanut Paste & Cream</span></a><a class="ksh7m-menu-link" href="/en/kurutulmus-meyveler/"><span class="ksh7m-menu-link-text">Dried Fruits</span></a><a class="ksh7m-menu-link" href="/en/meyve-cipsleri/"><span class="ksh7m-menu-link-text">Fruit Chips</span></a><a class="ksh7m-menu-link" href="/en/kurutulmus-sebzeler/"><span class="ksh7m-menu-link-text">Dried Vegetables</span></a><a class="ksh7m-menu-link" href="/en/recel-ve-marmelatlar/"><span class="ksh7m-menu-link-text">Jams & Marmalades</span></a><a class="ksh7m-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="ksh7m-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="ksh7m-menu-link" href="/en/meyve-sulari/"><span class="ksh7m-menu-link-text">Fruit Juices</span></a><a class="ksh7m-menu-link" href="/en/pekmez-ve-suruplar/"><span class="ksh7m-menu-link-text">Molasses & Syrups</span></a><a class="ksh7m-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="ksh7m-menu-link-text">Milk & Dairy Products</span></a><a class="ksh7m-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="ksh7m-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="ksh7m-menu-link" href="/en/sivi-yaglar/"><span class="ksh7m-menu-link-text">Liquid Oils</span></a><a class="ksh7m-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="ksh7m-menu-link-text">Medicinal Aromatic Oils</span></a><a class="ksh7m-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="ksh7m-menu-link-text">IQF Sliced Vegetables</span></a><a class="ksh7m-menu-link" href="/en/iqf-meyveler/"><span class="ksh7m-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="g90vw-main">
-    <div class="g90vw-row"><div class="g90vw-row-media"><div class="g90vw-img"><img src="/page/ye6meya62y/index.webp?v=jlxhd" alt="Fındık Cream (Kakao)" loading="lazy" /></div></div><div class="g90vw-row-desc"><p class="g90vw-lead">Tillo Tarim Fındık Cream (Kakao): Kakao aromalı fındık kreması. Hazelnut Paste & Cream category. Available sizes: 400 g. natural food from Gaziantep.</p><div class="g90vw-desc-tags"><span class="g90vw-desc-tag"><span class="g90vw-desc-tag-label">Net weight</span><span class="g90vw-desc-tag-value">400 g</span></span><span class="g90vw-desc-tag"><span class="g90vw-desc-tag-label">Packaging</span><span class="g90vw-desc-tag-value">Plastik kova / cam kavanoz</span></span><span class="g90vw-desc-tag"><span class="g90vw-desc-tag-label">Origin</span><span class="g90vw-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="g90vw-body"><h2 style="font-size: 22px;">Fındık Cream (Kakao)</h2>
+  <div class="ksh7m-main">
+    <div class="ksh7m-row"><div class="ksh7m-row-media"><div class="ksh7m-img"><img src="/page/ye6meya62y/index.webp?v=xfijy" alt="Fındık Cream (Kakao)" loading="lazy" /></div></div><div class="ksh7m-row-desc"><p class="ksh7m-lead">Tillo Tarim Fındık Cream (Kakao): Kakao aromalı fındık kreması. Hazelnut Paste & Cream category. Available sizes: 400 g. natural food from Gaziantep.</p><div class="ksh7m-desc-tags"><span class="ksh7m-desc-tag"><span class="ksh7m-desc-tag-label">Net weight</span><span class="ksh7m-desc-tag-value">400 g</span></span><span class="ksh7m-desc-tag"><span class="ksh7m-desc-tag-label">Packaging</span><span class="ksh7m-desc-tag-value">Plastik kova / cam kavanoz</span></span><span class="ksh7m-desc-tag"><span class="ksh7m-desc-tag-label">Origin</span><span class="ksh7m-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="ksh7m-body"><h2 style="font-size: 22px;">Fındık Cream (Kakao)</h2>
 <p style="font-size: 16px;">Tillo Tarim Fındık Cream (Kakao): Kakao aromalı fındık kreması. Hazelnut Paste & Cream category. Available sizes: 400 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 400 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".g90vw-menu-btn");
-    var menu = document.querySelector(".g90vw-menu");
-    var overlay = document.querySelector(".g90vw-menu-overlay");
-    var closeButton = document.querySelector(".g90vw-menu-close");
+    var menuToggleBtn = document.querySelector(".ksh7m-menu-btn");
+    var menu = document.querySelector(".ksh7m-menu");
+    var overlay = document.querySelector(".ksh7m-menu-overlay");
+    var closeButton = document.querySelector(".ksh7m-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".g90vw-menu-close")) {
+      if (link && !event.target.closest(".ksh7m-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=fh5e8"></script>
-  <script defer src="/src/cookie.js?v=fh5e8"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=ctvrr"></script>
+  <script defer src="/src/cookie.js?v=ctvrr"></script>
 
   <script>
     setTimeout(function() {

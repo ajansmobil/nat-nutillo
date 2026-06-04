@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=lahlw" />
-  <link rel="preload" href="/src/cookie.css?v=lahlw" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=itx74" />
+  <link rel="preload" href="/src/cookie.css?v=itx74" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=lahlw" />
+    <link rel="stylesheet" href="/src/cookie.css?v=itx74" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=lahlw" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=itx74" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=lahlw">
+<link rel="stylesheet" href="style.css?v=itx74">
 </head>
 
 <body>
   <div id="header">
-<div class="mksvd">
-  <div class="mksvdtitle">
-    <div class="mksvdtitlebody">
-      <div class="mksvdtitlebodylang">
+<div class="xwtma">
+  <div class="xwtmatitle">
+    <div class="xwtmatitlebody">
+      <div class="xwtmatitlebodylang">
         <ul>
           <li><a href="/tr/kivi-cipsi/">TR</a></li><li><a href="/en/kivi-cipsi/">EN</a></li><li><a href="/ar/kivi-cipsi/">AR</a></li><li><a href="/de/kivi-cipsi/">DE</a></li><li><a href="/ko/kivi-cipsi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="mksvdbody">
+  <div class="xwtmabody">
     <a href="/ar/"
       ><img
-        src="/img/tillotarim-logo.png?v=eun77"
+        src="/img/tillotarim-logo.png?v=u2gqj"
         alt="Tillo Tarim Logo"
-        class="mksvdbodylogo"
+        class="xwtmabodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="mksvd-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="xwtma-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="mksvd-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="mksvdmenubody">
-    <div class="mksvdmenu" id="menu-2-root">
-      <div class="mksvdmenulistbody">
-        <div class="mksvdmenulist">
+  <div class="xwtma-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="xwtmamenubody">
+    <div class="xwtmamenu" id="menu-2-root">
+      <button type="button" class="xwtma-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="xwtmamenulistbody">
+        <div class="xwtmamenulist">
           <ul>
-            <a href="/ar/">الصفحة الرئيسية </a><a href="/ar/hakkimizda/">مؤسسي</a><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
+            <a href="/ar/">الصفحة الرئيسية</a><div class="xwtmamenulist-menu"><a href="/ar/hakkimizda/">مؤسسي</a><div class="dropdown-content-xwtma"><a href="/ar/hakkimizda/">من نحن</a><a href="/ar/misyon/">الرسالة</a><a href="/ar/vizyon/">الرؤية</a><a href="/ar/kalite-politikamiz/">سياسة الجودة</a><a href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a href="/ar/kisisel-veriler/">البيانات الشخصية</a><a href="/ar/kullanici-haklari/">حقوق المستخدم</a><a href="/ar/yasal-uyari/">إشعار قانوني</a></div></div><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
           </ul>
         </div>
       </div>
       
-      <div class="mksvdlanguages-mobile">
+      <div class="xwtmalanguages-mobile">
         <ul>
           <li><a href="/tr/kivi-cipsi/">TR</a></li><li><a href="/en/kivi-cipsi/">EN</a></li><li><a href="/ar/kivi-cipsi/">AR</a></li><li><a href="/de/kivi-cipsi/">DE</a></li><li><a href="/ko/kivi-cipsi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".mksvd") : null;
+      var wrapper = root.closest ? root.closest(".xwtma") : null;
       var target = wrapper || root;
-      if (target.classList.contains("mksvdmenu-open")) {
-        target.classList.remove("mksvdmenu-open");
+      if (target.classList.contains("xwtmamenu-open")) {
+        target.classList.remove("xwtmamenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("mksvdmenu-open");
+        target.classList.add("xwtmamenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".xwtma") : null;
+      var target = wrapper || root;
+      target.classList.remove("xwtmamenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".xwtmamenulist-menu.dropdown-content-active-xwtma");
+      if (activeWrap) {
+        activeWrap.classList.add("xwtma-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".xwtmamenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-xwtma")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("xwtma-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".xwtmamenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("xwtma-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("xwtma-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".xwtmamenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".xwtmamenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("xwtma-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="nyp3a-title">
+  <div id="content"><div class="yyljh-title">
   <h1>Kivi Cipsi</h1>
 </div>
-<div class="nyp3a">
-  <button type="button" class="nyp3a-menu-btn" aria-expanded="false" aria-controls="nyp3a-menu">
-    <span class="nyp3a-menu-btn-label">قائمة الصفحات</span>
-    <span class="material-symbols-outlined nyp3a-icon" aria-hidden="true">menu</span>
+<div class="yyljh">
+  <button type="button" class="yyljh-menu-btn" aria-expanded="false" aria-controls="yyljh-menu">
+    <span class="yyljh-menu-btn-label">قائمة الصفحات</span>
+    <span class="material-symbols-outlined yyljh-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="nyp3a-menu-overlay" id="nyp3a-menu-overlay" aria-hidden="true"></div>
-  <nav class="nyp3a-menu" id="nyp3a-menu" aria-label="قائمة الصفحات">
-    <button class="nyp3a-menu-close" type="button" aria-label="إغلاق القائمة">
+  <div class="yyljh-menu-overlay" id="yyljh-menu-overlay" aria-hidden="true"></div>
+  <nav class="yyljh-menu" id="yyljh-menu" aria-label="قائمة الصفحات">
+    <button class="yyljh-menu-close" type="button" aria-label="إغلاق القائمة">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="nyp3a-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="nyp3a-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="nyp3a-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="nyp3a-menu-link-text">معجون وكريمة بندق</span></a><a class="nyp3a-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="nyp3a-menu-link-text">معجون وكريمة لوز</span></a><a class="nyp3a-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="nyp3a-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="nyp3a-menu-link" href="/ar/kurutulmus-meyveler/"><span class="nyp3a-menu-link-text">فواكه مجففة</span></a><a class="nyp3a-menu-link" href="/ar/meyve-cipsleri/"><span class="nyp3a-menu-link-text">رقائق فواكه</span></a><a class="nyp3a-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="nyp3a-menu-link-text">خضروات مجففة</span></a><a class="nyp3a-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="nyp3a-menu-link-text">مربى ومربيات</span></a><a class="nyp3a-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="nyp3a-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="nyp3a-menu-link" href="/ar/meyve-sulari/"><span class="nyp3a-menu-link-text">عصائر فواكه</span></a><a class="nyp3a-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="nyp3a-menu-link-text">دبس وشراب</span></a><a class="nyp3a-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="nyp3a-menu-link-text">حليب ومنتجات ألبان</span></a><a class="nyp3a-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="nyp3a-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="nyp3a-menu-link" href="/ar/sivi-yaglar/"><span class="nyp3a-menu-link-text">زيوت سائلة</span></a><a class="nyp3a-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="nyp3a-menu-link-text">زيوت عطرية طبية</span></a><a class="nyp3a-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="nyp3a-menu-link-text">خضروات IQF مقطعة</span></a><a class="nyp3a-menu-link" href="/ar/iqf-meyveler/"><span class="nyp3a-menu-link-text">فواكه IQF</span></a>
+    <a class="yyljh-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="yyljh-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="yyljh-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="yyljh-menu-link-text">معجون وكريمة بندق</span></a><a class="yyljh-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="yyljh-menu-link-text">معجون وكريمة لوز</span></a><a class="yyljh-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="yyljh-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="yyljh-menu-link" href="/ar/kurutulmus-meyveler/"><span class="yyljh-menu-link-text">فواكه مجففة</span></a><a class="yyljh-menu-link" href="/ar/meyve-cipsleri/"><span class="yyljh-menu-link-text">رقائق فواكه</span></a><a class="yyljh-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="yyljh-menu-link-text">خضروات مجففة</span></a><a class="yyljh-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="yyljh-menu-link-text">مربى ومربيات</span></a><a class="yyljh-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="yyljh-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="yyljh-menu-link" href="/ar/meyve-sulari/"><span class="yyljh-menu-link-text">عصائر فواكه</span></a><a class="yyljh-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="yyljh-menu-link-text">دبس وشراب</span></a><a class="yyljh-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="yyljh-menu-link-text">حليب ومنتجات ألبان</span></a><a class="yyljh-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="yyljh-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="yyljh-menu-link" href="/ar/sivi-yaglar/"><span class="yyljh-menu-link-text">زيوت سائلة</span></a><a class="yyljh-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="yyljh-menu-link-text">زيوت عطرية طبية</span></a><a class="yyljh-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="yyljh-menu-link-text">خضروات IQF مقطعة</span></a><a class="yyljh-menu-link" href="/ar/iqf-meyveler/"><span class="yyljh-menu-link-text">فواكه IQF</span></a>
   </nav>
-  <div class="nyp3a-main">
-    <div class="nyp3a-row"><div class="nyp3a-row-media"><div class="nyp3a-img"><img src="/page/ymy6uyiamy/index.webp?v=vnuyy" alt="Kivi Cipsi" loading="lazy" /></div></div><div class="nyp3a-row-desc"><p class="nyp3a-lead">تيلو تاريم Kivi Cipsi: Ekşi-tatlı kivi cipsi. رقائق فواكه ضمن فئة  الأحجام المتوفرة: 60 g. أغذية طبيعية من غازي عنتاب.</p><div class="nyp3a-desc-tags"><span class="nyp3a-desc-tag"><span class="nyp3a-desc-tag-label">الوزن الصافي</span><span class="nyp3a-desc-tag-value">60 g</span></span><span class="nyp3a-desc-tag"><span class="nyp3a-desc-tag-label">التعبئة</span><span class="nyp3a-desc-tag-value">Doypack / kilitli poşet</span></span><span class="nyp3a-desc-tag"><span class="nyp3a-desc-tag-label">منشأ المنتج</span><span class="nyp3a-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="nyp3a-body"><h2 style="font-size: 22px;">Kivi Cipsi</h2>
+  <div class="yyljh-main">
+    <div class="yyljh-row"><div class="yyljh-row-media"><div class="yyljh-img"><img src="/page/ymy6uyiamy/index.webp?v=ky9cq" alt="Kivi Cipsi" loading="lazy" /></div></div><div class="yyljh-row-desc"><p class="yyljh-lead">تيلو تاريم Kivi Cipsi: Ekşi-tatlı kivi cipsi. رقائق فواكه ضمن فئة  الأحجام المتوفرة: 60 g. أغذية طبيعية من غازي عنتاب.</p><div class="yyljh-desc-tags"><span class="yyljh-desc-tag"><span class="yyljh-desc-tag-label">الوزن الصافي</span><span class="yyljh-desc-tag-value">60 g</span></span><span class="yyljh-desc-tag"><span class="yyljh-desc-tag-label">التعبئة</span><span class="yyljh-desc-tag-value">Doypack / kilitli poşet</span></span><span class="yyljh-desc-tag"><span class="yyljh-desc-tag-label">منشأ المنتج</span><span class="yyljh-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="yyljh-body"><h2 style="font-size: 22px;">Kivi Cipsi</h2>
 <p style="font-size: 16px;">تيلو تاريم Kivi Cipsi: Ekşi-tatlı kivi cipsi. رقائق فواكه ضمن فئة  الأحجام المتوفرة: 60 g. أغذية طبيعية من غازي عنتاب.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>الوزن الصافي:</strong> 60 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".nyp3a-menu-btn");
-    var menu = document.querySelector(".nyp3a-menu");
-    var overlay = document.querySelector(".nyp3a-menu-overlay");
-    var closeButton = document.querySelector(".nyp3a-menu-close");
+    var menuToggleBtn = document.querySelector(".yyljh-menu-btn");
+    var menu = document.querySelector(".yyljh-menu");
+    var overlay = document.querySelector(".yyljh-menu-overlay");
+    var closeButton = document.querySelector(".yyljh-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".nyp3a-menu-close")) {
+      if (link && !event.target.closest(".yyljh-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=lahlw"></script>
-  <script defer src="/src/cookie.js?v=lahlw"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=itx74"></script>
+  <script defer src="/src/cookie.js?v=itx74"></script>
 
   <script>
     setTimeout(function() {

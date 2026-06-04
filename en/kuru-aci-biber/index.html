@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=gni9m" />
-  <link rel="preload" href="/src/cookie.css?v=gni9m" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=pz72n" />
+  <link rel="preload" href="/src/cookie.css?v=pz72n" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=gni9m" />
+    <link rel="stylesheet" href="/src/cookie.css?v=pz72n" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=gni9m" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=pz72n" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=gni9m">
+<link rel="stylesheet" href="style.css?v=pz72n">
 </head>
 
 <body>
   <div id="header">
-<div class="qrred">
-  <div class="qrredtitle">
-    <div class="qrredtitlebody">
-      <div class="qrredtitlebodylang">
+<div class="u7axi">
+  <div class="u7axititle">
+    <div class="u7axititlebody">
+      <div class="u7axititlebodylang">
         <ul>
           <li><a href="/tr/kuru-aci-biber/">TR</a></li><li><a href="/en/kuru-aci-biber/">EN</a></li><li><a href="/ar/kuru-aci-biber/">AR</a></li><li><a href="/de/kuru-aci-biber/">DE</a></li><li><a href="/ko/kuru-aci-biber/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="qrredbody">
+  <div class="u7axibody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=il1xn"
+        src="/img/tillotarim-logo.png?v=t5xui"
         alt="Tillo Tarim Logo"
-        class="qrredbodylogo"
+        class="u7axibodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="qrred-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="u7axi-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="qrred-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="qrredmenubody">
-    <div class="qrredmenu" id="menu-2-root">
-      <div class="qrredmenulistbody">
-        <div class="qrredmenulist">
+  <div class="u7axi-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="u7aximenubody">
+    <div class="u7aximenu" id="menu-2-root">
+      <button type="button" class="u7axi-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="u7aximenulistbody">
+        <div class="u7aximenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="u7aximenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-u7axi"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="qrredlanguages-mobile">
+      <div class="u7axilanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-aci-biber/">TR</a></li><li><a href="/en/kuru-aci-biber/">EN</a></li><li><a href="/ar/kuru-aci-biber/">AR</a></li><li><a href="/de/kuru-aci-biber/">DE</a></li><li><a href="/ko/kuru-aci-biber/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".qrred") : null;
+      var wrapper = root.closest ? root.closest(".u7axi") : null;
       var target = wrapper || root;
-      if (target.classList.contains("qrredmenu-open")) {
-        target.classList.remove("qrredmenu-open");
+      if (target.classList.contains("u7aximenu-open")) {
+        target.classList.remove("u7aximenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("qrredmenu-open");
+        target.classList.add("u7aximenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".u7axi") : null;
+      var target = wrapper || root;
+      target.classList.remove("u7aximenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".u7aximenulist-menu.dropdown-content-active-u7axi");
+      if (activeWrap) {
+        activeWrap.classList.add("u7axi-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".u7aximenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-u7axi")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("u7axi-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".u7aximenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("u7axi-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("u7axi-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".u7aximenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".u7aximenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("u7axi-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="e784r-title">
+  <div id="content"><div class="vobum-title">
   <h1>Dried Acı Biber</h1>
 </div>
-<div class="e784r">
-  <button type="button" class="e784r-menu-btn" aria-expanded="false" aria-controls="e784r-menu">
-    <span class="e784r-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined e784r-icon" aria-hidden="true">menu</span>
+<div class="vobum">
+  <button type="button" class="vobum-menu-btn" aria-expanded="false" aria-controls="vobum-menu">
+    <span class="vobum-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined vobum-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="e784r-menu-overlay" id="e784r-menu-overlay" aria-hidden="true"></div>
-  <nav class="e784r-menu" id="e784r-menu" aria-label="Menu">
-    <button class="e784r-menu-close" type="button" aria-label="Close Menu">
+  <div class="vobum-menu-overlay" id="vobum-menu-overlay" aria-hidden="true"></div>
+  <nav class="vobum-menu" id="vobum-menu" aria-label="Menu">
+    <button class="vobum-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="e784r-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="e784r-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="e784r-menu-link" href="/en/findik-ezme-ve-krema/"><span class="e784r-menu-link-text">Hazelnut Paste & Cream</span></a><a class="e784r-menu-link" href="/en/badem-ezme-ve-krema/"><span class="e784r-menu-link-text">Almond Paste & Cream</span></a><a class="e784r-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="e784r-menu-link-text">Peanut Paste & Cream</span></a><a class="e784r-menu-link" href="/en/kurutulmus-meyveler/"><span class="e784r-menu-link-text">Dried Fruits</span></a><a class="e784r-menu-link" href="/en/meyve-cipsleri/"><span class="e784r-menu-link-text">Fruit Chips</span></a><a class="e784r-menu-link" href="/en/kurutulmus-sebzeler/"><span class="e784r-menu-link-text">Dried Vegetables</span></a><a class="e784r-menu-link" href="/en/recel-ve-marmelatlar/"><span class="e784r-menu-link-text">Jams & Marmalades</span></a><a class="e784r-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="e784r-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="e784r-menu-link" href="/en/meyve-sulari/"><span class="e784r-menu-link-text">Fruit Juices</span></a><a class="e784r-menu-link" href="/en/pekmez-ve-suruplar/"><span class="e784r-menu-link-text">Molasses & Syrups</span></a><a class="e784r-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="e784r-menu-link-text">Milk & Dairy Products</span></a><a class="e784r-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="e784r-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="e784r-menu-link" href="/en/sivi-yaglar/"><span class="e784r-menu-link-text">Liquid Oils</span></a><a class="e784r-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="e784r-menu-link-text">Medicinal Aromatic Oils</span></a><a class="e784r-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="e784r-menu-link-text">IQF Sliced Vegetables</span></a><a class="e784r-menu-link" href="/en/iqf-meyveler/"><span class="e784r-menu-link-text">IQF Fruits</span></a>
+    <a class="vobum-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="vobum-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="vobum-menu-link" href="/en/findik-ezme-ve-krema/"><span class="vobum-menu-link-text">Hazelnut Paste & Cream</span></a><a class="vobum-menu-link" href="/en/badem-ezme-ve-krema/"><span class="vobum-menu-link-text">Almond Paste & Cream</span></a><a class="vobum-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="vobum-menu-link-text">Peanut Paste & Cream</span></a><a class="vobum-menu-link" href="/en/kurutulmus-meyveler/"><span class="vobum-menu-link-text">Dried Fruits</span></a><a class="vobum-menu-link" href="/en/meyve-cipsleri/"><span class="vobum-menu-link-text">Fruit Chips</span></a><a class="vobum-menu-link" href="/en/kurutulmus-sebzeler/"><span class="vobum-menu-link-text">Dried Vegetables</span></a><a class="vobum-menu-link" href="/en/recel-ve-marmelatlar/"><span class="vobum-menu-link-text">Jams & Marmalades</span></a><a class="vobum-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="vobum-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="vobum-menu-link" href="/en/meyve-sulari/"><span class="vobum-menu-link-text">Fruit Juices</span></a><a class="vobum-menu-link" href="/en/pekmez-ve-suruplar/"><span class="vobum-menu-link-text">Molasses & Syrups</span></a><a class="vobum-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="vobum-menu-link-text">Milk & Dairy Products</span></a><a class="vobum-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="vobum-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="vobum-menu-link" href="/en/sivi-yaglar/"><span class="vobum-menu-link-text">Liquid Oils</span></a><a class="vobum-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="vobum-menu-link-text">Medicinal Aromatic Oils</span></a><a class="vobum-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="vobum-menu-link-text">IQF Sliced Vegetables</span></a><a class="vobum-menu-link" href="/en/iqf-meyveler/"><span class="vobum-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="e784r-main">
-    <div class="e784r-row"><div class="e784r-row-media"><div class="e784r-img"><img src="/page/02aimeaaeu/index.webp?v=czr62" alt="Dried Acı Biber" loading="lazy" /></div></div><div class="e784r-row-desc"><p class="e784r-lead">Tillo Tarim Dried Acı Biber: Acı biber halka. Dried Vegetables category. Available sizes: 80 g. natural food from Gaziantep.</p><div class="e784r-desc-tags"><span class="e784r-desc-tag"><span class="e784r-desc-tag-label">Net weight</span><span class="e784r-desc-tag-value">80 g</span></span><span class="e784r-desc-tag"><span class="e784r-desc-tag-label">Packaging</span><span class="e784r-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="e784r-desc-tag"><span class="e784r-desc-tag-label">Origin</span><span class="e784r-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="e784r-body"><h2 style="font-size: 22px;">Dried Acı Biber</h2>
+  <div class="vobum-main">
+    <div class="vobum-row"><div class="vobum-row-media"><div class="vobum-img"><img src="/page/02aimeaaeu/index.webp?v=hh0y7" alt="Dried Acı Biber" loading="lazy" /></div></div><div class="vobum-row-desc"><p class="vobum-lead">Tillo Tarim Dried Acı Biber: Acı biber halka. Dried Vegetables category. Available sizes: 80 g. natural food from Gaziantep.</p><div class="vobum-desc-tags"><span class="vobum-desc-tag"><span class="vobum-desc-tag-label">Net weight</span><span class="vobum-desc-tag-value">80 g</span></span><span class="vobum-desc-tag"><span class="vobum-desc-tag-label">Packaging</span><span class="vobum-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="vobum-desc-tag"><span class="vobum-desc-tag-label">Origin</span><span class="vobum-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="vobum-body"><h2 style="font-size: 22px;">Dried Acı Biber</h2>
 <p style="font-size: 16px;">Tillo Tarim Dried Acı Biber: Acı biber halka. Dried Vegetables category. Available sizes: 80 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 80 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".e784r-menu-btn");
-    var menu = document.querySelector(".e784r-menu");
-    var overlay = document.querySelector(".e784r-menu-overlay");
-    var closeButton = document.querySelector(".e784r-menu-close");
+    var menuToggleBtn = document.querySelector(".vobum-menu-btn");
+    var menu = document.querySelector(".vobum-menu");
+    var overlay = document.querySelector(".vobum-menu-overlay");
+    var closeButton = document.querySelector(".vobum-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".e784r-menu-close")) {
+      if (link && !event.target.closest(".vobum-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=gni9m"></script>
-  <script defer src="/src/cookie.js?v=gni9m"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=pz72n"></script>
+  <script defer src="/src/cookie.js?v=pz72n"></script>
 
   <script>
     setTimeout(function() {

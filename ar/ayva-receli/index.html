@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=vnw5t" />
-  <link rel="preload" href="/src/cookie.css?v=vnw5t" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=m5511" />
+  <link rel="preload" href="/src/cookie.css?v=m5511" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=vnw5t" />
+    <link rel="stylesheet" href="/src/cookie.css?v=m5511" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=vnw5t" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=m5511" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=vnw5t">
+<link rel="stylesheet" href="style.css?v=m5511">
 </head>
 
 <body>
   <div id="header">
-<div class="vkigq">
-  <div class="vkigqtitle">
-    <div class="vkigqtitlebody">
-      <div class="vkigqtitlebodylang">
+<div class="dbqch">
+  <div class="dbqchtitle">
+    <div class="dbqchtitlebody">
+      <div class="dbqchtitlebodylang">
         <ul>
           <li><a href="/tr/ayva-receli/">TR</a></li><li><a href="/en/ayva-receli/">EN</a></li><li><a href="/ar/ayva-receli/">AR</a></li><li><a href="/de/ayva-receli/">DE</a></li><li><a href="/ko/ayva-receli/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="vkigqbody">
+  <div class="dbqchbody">
     <a href="/ar/"
       ><img
-        src="/img/tillotarim-logo.png?v=zrcka"
+        src="/img/tillotarim-logo.png?v=re8qa"
         alt="Tillo Tarim Logo"
-        class="vkigqbodylogo"
+        class="dbqchbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="vkigq-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="dbqch-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="vkigq-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="vkigqmenubody">
-    <div class="vkigqmenu" id="menu-2-root">
-      <div class="vkigqmenulistbody">
-        <div class="vkigqmenulist">
+  <div class="dbqch-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="dbqchmenubody">
+    <div class="dbqchmenu" id="menu-2-root">
+      <button type="button" class="dbqch-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="dbqchmenulistbody">
+        <div class="dbqchmenulist">
           <ul>
-            <a href="/ar/">الصفحة الرئيسية </a><a href="/ar/hakkimizda/">مؤسسي</a><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
+            <a href="/ar/">الصفحة الرئيسية</a><div class="dbqchmenulist-menu"><a href="/ar/hakkimizda/">مؤسسي</a><div class="dropdown-content-dbqch"><a href="/ar/hakkimizda/">من نحن</a><a href="/ar/misyon/">الرسالة</a><a href="/ar/vizyon/">الرؤية</a><a href="/ar/kalite-politikamiz/">سياسة الجودة</a><a href="/ar/gizlilik-politikasi/">سياسة الخصوصية</a><a href="/ar/kisisel-veriler/">البيانات الشخصية</a><a href="/ar/kullanici-haklari/">حقوق المستخدم</a><a href="/ar/yasal-uyari/">إشعار قانوني</a></div></div><a href="/ar/urunler/">المنتجات</a><a href="/ar/iletisim/">اتصل بنا</a>
           </ul>
         </div>
       </div>
       
-      <div class="vkigqlanguages-mobile">
+      <div class="dbqchlanguages-mobile">
         <ul>
           <li><a href="/tr/ayva-receli/">TR</a></li><li><a href="/en/ayva-receli/">EN</a></li><li><a href="/ar/ayva-receli/">AR</a></li><li><a href="/de/ayva-receli/">DE</a></li><li><a href="/ko/ayva-receli/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".vkigq") : null;
+      var wrapper = root.closest ? root.closest(".dbqch") : null;
       var target = wrapper || root;
-      if (target.classList.contains("vkigqmenu-open")) {
-        target.classList.remove("vkigqmenu-open");
+      if (target.classList.contains("dbqchmenu-open")) {
+        target.classList.remove("dbqchmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("vkigqmenu-open");
+        target.classList.add("dbqchmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".dbqch") : null;
+      var target = wrapper || root;
+      target.classList.remove("dbqchmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".dbqchmenulist-menu.dropdown-content-active-dbqch");
+      if (activeWrap) {
+        activeWrap.classList.add("dbqch-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".dbqchmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-dbqch")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("dbqch-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".dbqchmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("dbqch-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("dbqch-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".dbqchmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".dbqchmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("dbqch-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="c1rr0-title">
+  <div id="content"><div class="mj5k3-title">
   <h1>Ayva مربى</h1>
 </div>
-<div class="c1rr0">
-  <button type="button" class="c1rr0-menu-btn" aria-expanded="false" aria-controls="c1rr0-menu">
-    <span class="c1rr0-menu-btn-label">قائمة الصفحات</span>
-    <span class="material-symbols-outlined c1rr0-icon" aria-hidden="true">menu</span>
+<div class="mj5k3">
+  <button type="button" class="mj5k3-menu-btn" aria-expanded="false" aria-controls="mj5k3-menu">
+    <span class="mj5k3-menu-btn-label">قائمة الصفحات</span>
+    <span class="material-symbols-outlined mj5k3-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="c1rr0-menu-overlay" id="c1rr0-menu-overlay" aria-hidden="true"></div>
-  <nav class="c1rr0-menu" id="c1rr0-menu" aria-label="قائمة الصفحات">
-    <button class="c1rr0-menu-close" type="button" aria-label="إغلاق القائمة">
+  <div class="mj5k3-menu-overlay" id="mj5k3-menu-overlay" aria-hidden="true"></div>
+  <nav class="mj5k3-menu" id="mj5k3-menu" aria-label="قائمة الصفحات">
+    <button class="mj5k3-menu-close" type="button" aria-label="إغلاق القائمة">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="c1rr0-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="c1rr0-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="c1rr0-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="c1rr0-menu-link-text">معجون وكريمة بندق</span></a><a class="c1rr0-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="c1rr0-menu-link-text">معجون وكريمة لوز</span></a><a class="c1rr0-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="c1rr0-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="c1rr0-menu-link" href="/ar/kurutulmus-meyveler/"><span class="c1rr0-menu-link-text">فواكه مجففة</span></a><a class="c1rr0-menu-link" href="/ar/meyve-cipsleri/"><span class="c1rr0-menu-link-text">رقائق فواكه</span></a><a class="c1rr0-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="c1rr0-menu-link-text">خضروات مجففة</span></a><a class="c1rr0-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="c1rr0-menu-link-text">مربى ومربيات</span></a><a class="c1rr0-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="c1rr0-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="c1rr0-menu-link" href="/ar/meyve-sulari/"><span class="c1rr0-menu-link-text">عصائر فواكه</span></a><a class="c1rr0-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="c1rr0-menu-link-text">دبس وشراب</span></a><a class="c1rr0-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="c1rr0-menu-link-text">حليب ومنتجات ألبان</span></a><a class="c1rr0-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="c1rr0-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="c1rr0-menu-link" href="/ar/sivi-yaglar/"><span class="c1rr0-menu-link-text">زيوت سائلة</span></a><a class="c1rr0-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="c1rr0-menu-link-text">زيوت عطرية طبية</span></a><a class="c1rr0-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="c1rr0-menu-link-text">خضروات IQF مقطعة</span></a><a class="c1rr0-menu-link" href="/ar/iqf-meyveler/"><span class="c1rr0-menu-link-text">فواكه IQF</span></a>
+    <a class="mj5k3-menu-link" href="/ar/antep-fistigi-ezme-ve-krema/"><span class="mj5k3-menu-link-text">معجون وكريمة فستق عنتاب</span></a><a class="mj5k3-menu-link" href="/ar/findik-ezme-ve-krema/"><span class="mj5k3-menu-link-text">معجون وكريمة بندق</span></a><a class="mj5k3-menu-link" href="/ar/badem-ezme-ve-krema/"><span class="mj5k3-menu-link-text">معجون وكريمة لوز</span></a><a class="mj5k3-menu-link" href="/ar/yer-fistigi-ezme-ve-krema/"><span class="mj5k3-menu-link-text">معجون وكريمة فول سوداني</span></a><a class="mj5k3-menu-link" href="/ar/kurutulmus-meyveler/"><span class="mj5k3-menu-link-text">فواكه مجففة</span></a><a class="mj5k3-menu-link" href="/ar/meyve-cipsleri/"><span class="mj5k3-menu-link-text">رقائق فواكه</span></a><a class="mj5k3-menu-link" href="/ar/kurutulmus-sebzeler/"><span class="mj5k3-menu-link-text">خضروات مجففة</span></a><a class="mj5k3-menu-link" href="/ar/recel-ve-marmelatlar/"><span class="mj5k3-menu-link-text">مربى ومربيات</span></a><a class="mj5k3-menu-link" href="/ar/lokum-pestil-ve-geleneksel-tatlilar/"><span class="mj5k3-menu-link-text">راحة وpestil وحلويات تقليدية</span></a><a class="mj5k3-menu-link" href="/ar/meyve-sulari/"><span class="mj5k3-menu-link-text">عصائر فواكه</span></a><a class="mj5k3-menu-link" href="/ar/pekmez-ve-suruplar/"><span class="mj5k3-menu-link-text">دبس وشراب</span></a><a class="mj5k3-menu-link" href="/ar/sut-ve-sut-urunleri/"><span class="mj5k3-menu-link-text">حليب ومنتجات ألبان</span></a><a class="mj5k3-menu-link" href="/ar/salca-tursu-meze-ve-soslar/"><span class="mj5k3-menu-link-text">معجون، مخللات، مقبلات وصلصات</span></a><a class="mj5k3-menu-link" href="/ar/sivi-yaglar/"><span class="mj5k3-menu-link-text">زيوت سائلة</span></a><a class="mj5k3-menu-link" href="/ar/tibbi-aromatik-yaglar/"><span class="mj5k3-menu-link-text">زيوت عطرية طبية</span></a><a class="mj5k3-menu-link" href="/ar/iqf-dilimlenmis-sebzeler/"><span class="mj5k3-menu-link-text">خضروات IQF مقطعة</span></a><a class="mj5k3-menu-link" href="/ar/iqf-meyveler/"><span class="mj5k3-menu-link-text">فواكه IQF</span></a>
   </nav>
-  <div class="c1rr0-main">
-    <div class="c1rr0-row"><div class="c1rr0-row-media"><div class="c1rr0-img"><img src="/page/h6eu6imi6e/index.webp?v=jtr3i" alt="Ayva مربى" loading="lazy" /></div></div><div class="c1rr0-row-desc"><p class="c1rr0-lead">تيلو تاريم Ayva مربى: Geleneksel ayva. مربى ومربيات ضمن فئة  الأحجام المتوفرة: 380 g. أغذية طبيعية من غازي عنتاب.</p><div class="c1rr0-desc-tags"><span class="c1rr0-desc-tag"><span class="c1rr0-desc-tag-label">الوزن الصافي</span><span class="c1rr0-desc-tag-value">380 g</span></span><span class="c1rr0-desc-tag"><span class="c1rr0-desc-tag-label">التعبئة</span><span class="c1rr0-desc-tag-value">Cam kavanoz</span></span><span class="c1rr0-desc-tag"><span class="c1rr0-desc-tag-label">منشأ المنتج</span><span class="c1rr0-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="c1rr0-body"><h2 style="font-size: 22px;">Ayva مربى</h2>
+  <div class="mj5k3-main">
+    <div class="mj5k3-row"><div class="mj5k3-row-media"><div class="mj5k3-img"><img src="/page/h6eu6imi6e/index.webp?v=qvnxb" alt="Ayva مربى" loading="lazy" /></div></div><div class="mj5k3-row-desc"><p class="mj5k3-lead">تيلو تاريم Ayva مربى: Geleneksel ayva. مربى ومربيات ضمن فئة  الأحجام المتوفرة: 380 g. أغذية طبيعية من غازي عنتاب.</p><div class="mj5k3-desc-tags"><span class="mj5k3-desc-tag"><span class="mj5k3-desc-tag-label">الوزن الصافي</span><span class="mj5k3-desc-tag-value">380 g</span></span><span class="mj5k3-desc-tag"><span class="mj5k3-desc-tag-label">التعبئة</span><span class="mj5k3-desc-tag-value">Cam kavanoz</span></span><span class="mj5k3-desc-tag"><span class="mj5k3-desc-tag-label">منشأ المنتج</span><span class="mj5k3-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="mj5k3-body"><h2 style="font-size: 22px;">Ayva مربى</h2>
 <p style="font-size: 16px;">تيلو تاريم Ayva مربى: Geleneksel ayva. مربى ومربيات ضمن فئة  الأحجام المتوفرة: 380 g. أغذية طبيعية من غازي عنتاب.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>الوزن الصافي:</strong> 380 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".c1rr0-menu-btn");
-    var menu = document.querySelector(".c1rr0-menu");
-    var overlay = document.querySelector(".c1rr0-menu-overlay");
-    var closeButton = document.querySelector(".c1rr0-menu-close");
+    var menuToggleBtn = document.querySelector(".mj5k3-menu-btn");
+    var menu = document.querySelector(".mj5k3-menu");
+    var overlay = document.querySelector(".mj5k3-menu-overlay");
+    var closeButton = document.querySelector(".mj5k3-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".c1rr0-menu-close")) {
+      if (link && !event.target.closest(".mj5k3-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=vnw5t"></script>
-  <script defer src="/src/cookie.js?v=vnw5t"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=m5511"></script>
+  <script defer src="/src/cookie.js?v=m5511"></script>
 
   <script>
     setTimeout(function() {

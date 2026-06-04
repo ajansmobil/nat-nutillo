@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=w4l9u" />
-  <link rel="preload" href="/src/cookie.css?v=w4l9u" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=bb64w" />
+  <link rel="preload" href="/src/cookie.css?v=bb64w" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=w4l9u" />
+    <link rel="stylesheet" href="/src/cookie.css?v=bb64w" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=w4l9u" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=bb64w" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=w4l9u">
+<link rel="stylesheet" href="style.css?v=bb64w">
 </head>
 
 <body>
   <div id="header">
-<div class="di9x5">
-  <div class="di9x5title">
-    <div class="di9x5titlebody">
-      <div class="di9x5titlebodylang">
+<div class="jmnne">
+  <div class="jmnnetitle">
+    <div class="jmnnetitlebody">
+      <div class="jmnnetitlebodylang">
         <ul>
           <li><a href="/tr/kuru-hurma-medjoul/">TR</a></li><li><a href="/en/kuru-hurma-medjoul/">EN</a></li><li><a href="/ar/kuru-hurma-medjoul/">AR</a></li><li><a href="/de/kuru-hurma-medjoul/">DE</a></li><li><a href="/ko/kuru-hurma-medjoul/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="di9x5body">
+  <div class="jmnnebody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=foexr"
+        src="/img/tillotarim-logo.png?v=lfitn"
         alt="Tillo Tarim Logo"
-        class="di9x5bodylogo"
+        class="jmnnebodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="di9x5-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="jmnne-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="di9x5-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="di9x5menubody">
-    <div class="di9x5menu" id="menu-2-root">
-      <div class="di9x5menulistbody">
-        <div class="di9x5menulist">
+  <div class="jmnne-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="jmnnemenubody">
+    <div class="jmnnemenu" id="menu-2-root">
+      <button type="button" class="jmnne-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="jmnnemenulistbody">
+        <div class="jmnnemenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="jmnnemenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-jmnne"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="di9x5languages-mobile">
+      <div class="jmnnelanguages-mobile">
         <ul>
           <li><a href="/tr/kuru-hurma-medjoul/">TR</a></li><li><a href="/en/kuru-hurma-medjoul/">EN</a></li><li><a href="/ar/kuru-hurma-medjoul/">AR</a></li><li><a href="/de/kuru-hurma-medjoul/">DE</a></li><li><a href="/ko/kuru-hurma-medjoul/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".di9x5") : null;
+      var wrapper = root.closest ? root.closest(".jmnne") : null;
       var target = wrapper || root;
-      if (target.classList.contains("di9x5menu-open")) {
-        target.classList.remove("di9x5menu-open");
+      if (target.classList.contains("jmnnemenu-open")) {
+        target.classList.remove("jmnnemenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("di9x5menu-open");
+        target.classList.add("jmnnemenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".jmnne") : null;
+      var target = wrapper || root;
+      target.classList.remove("jmnnemenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".jmnnemenulist-menu.dropdown-content-active-jmnne");
+      if (activeWrap) {
+        activeWrap.classList.add("jmnne-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".jmnnemenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-jmnne")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("jmnne-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".jmnnemenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("jmnne-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("jmnne-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".jmnnemenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".jmnnemenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("jmnne-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="x85r4-title">
+  <div id="content"><div class="wnleq-title">
   <h1>Dried Hurma (Medjoul)</h1>
 </div>
-<div class="x85r4">
-  <button type="button" class="x85r4-menu-btn" aria-expanded="false" aria-controls="x85r4-menu">
-    <span class="x85r4-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined x85r4-icon" aria-hidden="true">menu</span>
+<div class="wnleq">
+  <button type="button" class="wnleq-menu-btn" aria-expanded="false" aria-controls="wnleq-menu">
+    <span class="wnleq-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined wnleq-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="x85r4-menu-overlay" id="x85r4-menu-overlay" aria-hidden="true"></div>
-  <nav class="x85r4-menu" id="x85r4-menu" aria-label="Menu">
-    <button class="x85r4-menu-close" type="button" aria-label="Close Menu">
+  <div class="wnleq-menu-overlay" id="wnleq-menu-overlay" aria-hidden="true"></div>
+  <nav class="wnleq-menu" id="wnleq-menu" aria-label="Menu">
+    <button class="wnleq-menu-close" type="button" aria-label="Close Menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="x85r4-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="x85r4-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="x85r4-menu-link" href="/en/findik-ezme-ve-krema/"><span class="x85r4-menu-link-text">Hazelnut Paste & Cream</span></a><a class="x85r4-menu-link" href="/en/badem-ezme-ve-krema/"><span class="x85r4-menu-link-text">Almond Paste & Cream</span></a><a class="x85r4-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="x85r4-menu-link-text">Peanut Paste & Cream</span></a><a class="x85r4-menu-link" href="/en/kurutulmus-meyveler/"><span class="x85r4-menu-link-text">Dried Fruits</span></a><a class="x85r4-menu-link" href="/en/meyve-cipsleri/"><span class="x85r4-menu-link-text">Fruit Chips</span></a><a class="x85r4-menu-link" href="/en/kurutulmus-sebzeler/"><span class="x85r4-menu-link-text">Dried Vegetables</span></a><a class="x85r4-menu-link" href="/en/recel-ve-marmelatlar/"><span class="x85r4-menu-link-text">Jams & Marmalades</span></a><a class="x85r4-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="x85r4-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="x85r4-menu-link" href="/en/meyve-sulari/"><span class="x85r4-menu-link-text">Fruit Juices</span></a><a class="x85r4-menu-link" href="/en/pekmez-ve-suruplar/"><span class="x85r4-menu-link-text">Molasses & Syrups</span></a><a class="x85r4-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="x85r4-menu-link-text">Milk & Dairy Products</span></a><a class="x85r4-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="x85r4-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="x85r4-menu-link" href="/en/sivi-yaglar/"><span class="x85r4-menu-link-text">Liquid Oils</span></a><a class="x85r4-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="x85r4-menu-link-text">Medicinal Aromatic Oils</span></a><a class="x85r4-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="x85r4-menu-link-text">IQF Sliced Vegetables</span></a><a class="x85r4-menu-link" href="/en/iqf-meyveler/"><span class="x85r4-menu-link-text">IQF Fruits</span></a>
+    <a class="wnleq-menu-link" href="/en/antep-fistigi-ezme-ve-krema/"><span class="wnleq-menu-link-text">Gaziantep Pistachio Paste & Cream</span></a><a class="wnleq-menu-link" href="/en/findik-ezme-ve-krema/"><span class="wnleq-menu-link-text">Hazelnut Paste & Cream</span></a><a class="wnleq-menu-link" href="/en/badem-ezme-ve-krema/"><span class="wnleq-menu-link-text">Almond Paste & Cream</span></a><a class="wnleq-menu-link" href="/en/yer-fistigi-ezme-ve-krema/"><span class="wnleq-menu-link-text">Peanut Paste & Cream</span></a><a class="wnleq-menu-link" href="/en/kurutulmus-meyveler/"><span class="wnleq-menu-link-text">Dried Fruits</span></a><a class="wnleq-menu-link" href="/en/meyve-cipsleri/"><span class="wnleq-menu-link-text">Fruit Chips</span></a><a class="wnleq-menu-link" href="/en/kurutulmus-sebzeler/"><span class="wnleq-menu-link-text">Dried Vegetables</span></a><a class="wnleq-menu-link" href="/en/recel-ve-marmelatlar/"><span class="wnleq-menu-link-text">Jams & Marmalades</span></a><a class="wnleq-menu-link" href="/en/lokum-pestil-ve-geleneksel-tatlilar/"><span class="wnleq-menu-link-text">Turkish Delight, Fruit Leather & Traditional Sweets</span></a><a class="wnleq-menu-link" href="/en/meyve-sulari/"><span class="wnleq-menu-link-text">Fruit Juices</span></a><a class="wnleq-menu-link" href="/en/pekmez-ve-suruplar/"><span class="wnleq-menu-link-text">Molasses & Syrups</span></a><a class="wnleq-menu-link" href="/en/sut-ve-sut-urunleri/"><span class="wnleq-menu-link-text">Milk & Dairy Products</span></a><a class="wnleq-menu-link" href="/en/salca-tursu-meze-ve-soslar/"><span class="wnleq-menu-link-text">Tomato Paste, Pickles, Meze & Sauces</span></a><a class="wnleq-menu-link" href="/en/sivi-yaglar/"><span class="wnleq-menu-link-text">Liquid Oils</span></a><a class="wnleq-menu-link" href="/en/tibbi-aromatik-yaglar/"><span class="wnleq-menu-link-text">Medicinal Aromatic Oils</span></a><a class="wnleq-menu-link" href="/en/iqf-dilimlenmis-sebzeler/"><span class="wnleq-menu-link-text">IQF Sliced Vegetables</span></a><a class="wnleq-menu-link" href="/en/iqf-meyveler/"><span class="wnleq-menu-link-text">IQF Fruits</span></a>
   </nav>
-  <div class="x85r4-main">
-    <div class="x85r4-row"><div class="x85r4-row-media"><div class="x85r4-img"><img src="/page/iq26miaz66/index.webp?v=d9fzq" alt="Dried Hurma (Medjoul)" loading="lazy" /></div></div><div class="x85r4-row-desc"><p class="x85r4-lead">Tillo Tarim Dried Hurma (Medjoul): İri taneli hurma. Dried Fruits category. Available sizes: 500 g. natural food from Gaziantep.</p><div class="x85r4-desc-tags"><span class="x85r4-desc-tag"><span class="x85r4-desc-tag-label">Net weight</span><span class="x85r4-desc-tag-value">500 g</span></span><span class="x85r4-desc-tag"><span class="x85r4-desc-tag-label">Packaging</span><span class="x85r4-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="x85r4-desc-tag"><span class="x85r4-desc-tag-label">Origin</span><span class="x85r4-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="x85r4-body"><h2 style="font-size: 22px;">Dried Hurma (Medjoul)</h2>
+  <div class="wnleq-main">
+    <div class="wnleq-row"><div class="wnleq-row-media"><div class="wnleq-img"><img src="/page/iq26miaz66/index.webp?v=s4nj0" alt="Dried Hurma (Medjoul)" loading="lazy" /></div></div><div class="wnleq-row-desc"><p class="wnleq-lead">Tillo Tarim Dried Hurma (Medjoul): İri taneli hurma. Dried Fruits category. Available sizes: 500 g. natural food from Gaziantep.</p><div class="wnleq-desc-tags"><span class="wnleq-desc-tag"><span class="wnleq-desc-tag-label">Net weight</span><span class="wnleq-desc-tag-value">500 g</span></span><span class="wnleq-desc-tag"><span class="wnleq-desc-tag-label">Packaging</span><span class="wnleq-desc-tag-value">Doypack / vakumlu poşet</span></span><span class="wnleq-desc-tag"><span class="wnleq-desc-tag-label">Origin</span><span class="wnleq-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="wnleq-body"><h2 style="font-size: 22px;">Dried Hurma (Medjoul)</h2>
 <p style="font-size: 16px;">Tillo Tarim Dried Hurma (Medjoul): İri taneli hurma. Dried Fruits category. Available sizes: 500 g. natural food from Gaziantep.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Net weight:</strong> 500 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".x85r4-menu-btn");
-    var menu = document.querySelector(".x85r4-menu");
-    var overlay = document.querySelector(".x85r4-menu-overlay");
-    var closeButton = document.querySelector(".x85r4-menu-close");
+    var menuToggleBtn = document.querySelector(".wnleq-menu-btn");
+    var menu = document.querySelector(".wnleq-menu");
+    var overlay = document.querySelector(".wnleq-menu-overlay");
+    var closeButton = document.querySelector(".wnleq-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".x85r4-menu-close")) {
+      if (link && !event.target.closest(".wnleq-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=w4l9u"></script>
-  <script defer src="/src/cookie.js?v=w4l9u"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=bb64w"></script>
+  <script defer src="/src/cookie.js?v=bb64w"></script>
 
   <script>
     setTimeout(function() {

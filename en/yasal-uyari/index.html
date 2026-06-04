@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=tibz3" />
-  <link rel="preload" href="/src/cookie.css?v=tibz3" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=gsakr" />
+  <link rel="preload" href="/src/cookie.css?v=gsakr" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=tibz3" />
+    <link rel="stylesheet" href="/src/cookie.css?v=gsakr" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=tibz3" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=gsakr" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=tibz3">
+<link rel="stylesheet" href="style.css?v=gsakr">
 </head>
 
 <body>
   <div id="header">
-<div class="zs6jr">
-  <div class="zs6jrtitle">
-    <div class="zs6jrtitlebody">
-      <div class="zs6jrtitlebodylang">
+<div class="abhx0">
+  <div class="abhx0title">
+    <div class="abhx0titlebody">
+      <div class="abhx0titlebodylang">
         <ul>
           <li><a href="/tr/yasal-uyari/">TR</a></li><li><a href="/en/yasal-uyari/">EN</a></li><li><a href="/ar/yasal-uyari/">AR</a></li><li><a href="/de/yasal-uyari/">DE</a></li><li><a href="/ko/yasal-uyari/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="zs6jrbody">
+  <div class="abhx0body">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=jlk05"
+        src="/img/tillotarim-logo.png?v=zw9zg"
         alt="Tillo Tarim Logo"
-        class="zs6jrbodylogo"
+        class="abhx0bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="zs6jr-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="abhx0-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="zs6jr-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="zs6jrmenubody">
-    <div class="zs6jrmenu" id="menu-2-root">
-      <div class="zs6jrmenulistbody">
-        <div class="zs6jrmenulist">
+  <div class="abhx0-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="abhx0menubody">
+    <div class="abhx0menu" id="menu-2-root">
+      <button type="button" class="abhx0-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="abhx0menulistbody">
+        <div class="abhx0menulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="abhx0menulist-menu dropdown-content-active-abhx0"><a class="abhx0-menu-list-active" href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-abhx0"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a class="abhx0-menu-list-active" href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="zs6jrlanguages-mobile">
+      <div class="abhx0languages-mobile">
         <ul>
           <li><a href="/tr/yasal-uyari/">TR</a></li><li><a href="/en/yasal-uyari/">EN</a></li><li><a href="/ar/yasal-uyari/">AR</a></li><li><a href="/de/yasal-uyari/">DE</a></li><li><a href="/ko/yasal-uyari/">KO</a></li>
         </ul>
@@ -113,59 +116,174 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".zs6jr") : null;
+      var wrapper = root.closest ? root.closest(".abhx0") : null;
       var target = wrapper || root;
-      if (target.classList.contains("zs6jrmenu-open")) {
-        target.classList.remove("zs6jrmenu-open");
+      if (target.classList.contains("abhx0menu-open")) {
+        target.classList.remove("abhx0menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("zs6jrmenu-open");
+        target.classList.add("abhx0menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".abhx0") : null;
+      var target = wrapper || root;
+      target.classList.remove("abhx0menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".abhx0menulist-menu.dropdown-content-active-abhx0");
+      if (activeWrap) {
+        activeWrap.classList.add("abhx0-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".abhx0menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-abhx0")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("abhx0-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".abhx0menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("abhx0-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("abhx0-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".abhx0menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".abhx0menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("abhx0-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="v8lp0-title f36">
+  <div id="content"><div class="h6nsu-title f36">
   <h1>Legal Notice</h1>
 </div>
-<div class="v8lp0">
+<div class="h6nsu">
   <button
     type="button"
-    class="v8lp0-menu-btn"
+    class="h6nsu-menu-btn"
     aria-expanded="false"
-    aria-controls="v8lp0-menu"
+    aria-controls="h6nsu-menu"
   >
-    <span class="v8lp0-menu-btn-label">Menu</span>
-    <span class="material-symbols-outlined v8lp0-icon" aria-hidden="true">menu</span>
+    <span class="h6nsu-menu-btn-label">Menu</span>
+    <span class="material-symbols-outlined h6nsu-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="v8lp0-menu-overlay" id="v8lp0-menu-overlay" aria-hidden="true"></div>
-  <nav class="v8lp0-menu" id="v8lp0-menu" aria-label="Menu">
-    <button class="v8lp0-menu-close" type="button" aria-label="Close Menu" aria-controls="v8lp0-menu">
+  <div class="h6nsu-menu-overlay" id="h6nsu-menu-overlay" aria-hidden="true"></div>
+  <nav class="h6nsu-menu" id="h6nsu-menu" aria-label="Menu">
+    <button class="h6nsu-menu-close" type="button" aria-label="Close Menu" aria-controls="h6nsu-menu">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="v8lp0-menu-link" href="/en/hakkimizda/">About Us</a><a class="v8lp0-menu-link" href="/en/misyon/">Mission</a><a class="v8lp0-menu-link" href="/en/vizyon/">Vision</a><a class="v8lp0-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="v8lp0-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="v8lp0-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="v8lp0-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="v8lp0-menu-link active" href="/en/yasal-uyari/">Legal Notice</a>
+    <a class="h6nsu-menu-link" href="/en/hakkimizda/">About Us</a><a class="h6nsu-menu-link" href="/en/misyon/">Mission</a><a class="h6nsu-menu-link" href="/en/vizyon/">Vision</a><a class="h6nsu-menu-link" href="/en/kalite-politikamiz/">Our Quality Policy</a><a class="h6nsu-menu-link" href="/en/gizlilik-politikasi/">Privacy Policy</a><a class="h6nsu-menu-link" href="/en/kisisel-veriler/">Personal Data</a><a class="h6nsu-menu-link" href="/en/kullanici-haklari/">User Rights</a><a class="h6nsu-menu-link active" href="/en/yasal-uyari/">Legal Notice</a>
   </nav>
-  <div class="v8lp0-main">
+  <div class="h6nsu-main">
     
     
-    <div class="v8lp0-body"><h2 style="font-size: 24px;">Legal Notice</h2>
-    <p style="font-size: 16px;">Bu web sitesindeki ürün görselleri ve açıklamaları tanıtım amaçlıdır; etiket bilgileri ve güncel fiyatlar için satış ekibimizle iletişime geçiniz. Site içeriğinin izinsiz kopyalanması yasaktır.</p>
-    <p style="font-size: 16px;">Sitede yer alan tüm içerik, 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi Hakkında Kanun kapsamında korunmaktadır. İzinsiz kopyalama, çoğaltma, dağıtım veya ticari kullanım yasaktır.</p></div>
+    <div class="h6nsu-body"><div class="mob-kurum-wrap mob-kurum-legal"><div class="mob-kurum-hero mob-kurum-hero-legal"><span class="mob-kurum-hero-label">Legal</span><p class="mob-kurum-hero-title">Legal notice and disclaimer</p></div><p class="mob-kurum-lead">This notice governs use of the Tillo Tarim website. By using the site you are deemed to have read these terms.</p><div class="mob-kurum-section"><h3>Product images and pricing</h3><p class="mob-kurum-text">Images and descriptions are illustrative; contact <a href="/en/iletisim/">sales</a> for label data, allergens and current prices.</p></div><div class="mob-kurum-section"><h3>Copyright</h3><p class="mob-kurum-text">Site content is protected under Turkish law. Unauthorised copying or commercial use is prohibited.</p></div><div class="mob-kurum-section"><h3>Liability</h3><p class="mob-kurum-text">Tillo Tarim is not liable for indirect damages, third-party links or temporary outages. Binding terms are only in written quotes and contracts.</p></div><div class="mob-kurum-nav"><span class="mob-kurum-nav-label">Related</span><a href="/en/kurumsal/gizlilik-politikasi/">Privacy</a><a href="/en/kurumsal/kisisel-veriler/">Personal Data</a></div></div></div>
     
   </div>
 </div>
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".v8lp0-menu-btn");
-    var menu = document.querySelector(".v8lp0-menu");
-    var overlay = document.querySelector(".v8lp0-menu-overlay");
-    var closeButton = document.querySelector(".v8lp0-menu-close");
+    var menuToggleBtn = document.querySelector(".h6nsu-menu-btn");
+    var menu = document.querySelector(".h6nsu-menu");
+    var overlay = document.querySelector(".h6nsu-menu-overlay");
+    var closeButton = document.querySelector(".h6nsu-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -222,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".v8lp0-menu-close");
+      var closeBtn = event.target.closest(".h6nsu-menu-close");
       if (link && !closeBtn) {
         closeMenu();
       }
@@ -263,19 +381,19 @@
     }
     handleBreakpoint();
 
-    var topButtons = document.querySelectorAll(".v8lp0-top");
+    var topButtons = document.querySelectorAll(".h6nsu-top");
     var bi;
     for (bi = 0; bi < topButtons.length; bi++) {
       topButtons[bi].addEventListener("click", function(e) {
         e.stopPropagation();
-        var group = this.closest(".v8lp0-menu-group");
+        var group = this.closest(".h6nsu-menu-group");
         if (!group) {
           return;
         }
-        var sub = group.querySelector(".v8lp0-sub");
+        var sub = group.querySelector(".h6nsu-sub");
         var isOpen = group.classList.toggle("open");
         this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".v8lp0-icon");
+        var icon = this.querySelector(".h6nsu-icon");
         if (icon) {
           icon.textContent = isOpen ? "expand_less" : "expand_more";
         }
@@ -292,8 +410,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=tibz3"></script>
-  <script defer src="/src/cookie.js?v=tibz3"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=gsakr"></script>
+  <script defer src="/src/cookie.js?v=gsakr"></script>
 
   <script>
     setTimeout(function() {

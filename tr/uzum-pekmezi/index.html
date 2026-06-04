@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=t7h1p" />
-  <link rel="preload" href="/src/cookie.css?v=t7h1p" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=mngmf" />
+  <link rel="preload" href="/src/cookie.css?v=mngmf" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=t7h1p" />
+    <link rel="stylesheet" href="/src/cookie.css?v=mngmf" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=t7h1p" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=mngmf" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=t7h1p">
+<link rel="stylesheet" href="style.css?v=mngmf">
 </head>
 
 <body>
   <div id="header">
-<div class="jbb32">
-  <div class="jbb32title">
-    <div class="jbb32titlebody">
-      <div class="jbb32titlebodylang">
+<div class="t6eni">
+  <div class="t6enititle">
+    <div class="t6enititlebody">
+      <div class="t6enititlebodylang">
         <ul>
           <li><a href="/tr/uzum-pekmezi/">TR</a></li><li><a href="/en/uzum-pekmezi/">EN</a></li><li><a href="/ar/uzum-pekmezi/">AR</a></li><li><a href="/de/uzum-pekmezi/">DE</a></li><li><a href="/ko/uzum-pekmezi/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="jbb32body">
+  <div class="t6enibody">
     <a href="/tr/"
       ><img
-        src="/img/tillotarim-logo.png?v=odsuh"
+        src="/img/tillotarim-logo.png?v=esder"
         alt="Tillo Tarim Logo"
-        class="jbb32bodylogo"
+        class="t6enibodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="jbb32-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="t6eni-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="jbb32-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="jbb32menubody">
-    <div class="jbb32menu" id="menu-2-root">
-      <div class="jbb32menulistbody">
-        <div class="jbb32menulist">
+  <div class="t6eni-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="t6enimenubody">
+    <div class="t6enimenu" id="menu-2-root">
+      <button type="button" class="t6eni-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="t6enimenulistbody">
+        <div class="t6enimenulist">
           <ul>
-            <a href="/tr/">Anasayfa </a><a href="/tr/hakkimizda/">Kurumsal</a><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
+            <a href="/tr/">Anasayfa</a><div class="t6enimenulist-menu"><a href="/tr/hakkimizda/">Kurumsal</a><div class="dropdown-content-t6eni"><a href="/tr/hakkimizda/">Hakkımızda</a><a href="/tr/misyon/">Misyon</a><a href="/tr/vizyon/">Vizyon</a><a href="/tr/kalite-politikamiz/">Kalite Politikamız</a><a href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a><a href="/tr/kisisel-veriler/">Kişisel Veriler</a><a href="/tr/kullanici-haklari/">Kullanıcı Hakları</a><a href="/tr/yasal-uyari/">Yasal Uyarı</a></div></div><a href="/tr/urunler/">Ürünler</a><a href="/tr/iletisim/">İletişim</a>
           </ul>
         </div>
       </div>
       
-      <div class="jbb32languages-mobile">
+      <div class="t6enilanguages-mobile">
         <ul>
           <li><a href="/tr/uzum-pekmezi/">TR</a></li><li><a href="/en/uzum-pekmezi/">EN</a></li><li><a href="/ar/uzum-pekmezi/">AR</a></li><li><a href="/de/uzum-pekmezi/">DE</a></li><li><a href="/ko/uzum-pekmezi/">KO</a></li>
         </ul>
@@ -113,41 +116,158 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".jbb32") : null;
+      var wrapper = root.closest ? root.closest(".t6eni") : null;
       var target = wrapper || root;
-      if (target.classList.contains("jbb32menu-open")) {
-        target.classList.remove("jbb32menu-open");
+      if (target.classList.contains("t6enimenu-open")) {
+        target.classList.remove("t6enimenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("jbb32menu-open");
+        target.classList.add("t6enimenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".t6eni") : null;
+      var target = wrapper || root;
+      target.classList.remove("t6enimenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".t6enimenulist-menu.dropdown-content-active-t6eni");
+      if (activeWrap) {
+        activeWrap.classList.add("t6eni-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".t6enimenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-t6eni")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("t6eni-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".t6enimenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("t6eni-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("t6eni-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".t6enimenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".t6enimenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("t6eni-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="rdyzq-title">
+  <div id="content"><div class="ol2fw-title">
   <h1>Üzüm Pekmezi</h1>
 </div>
-<div class="rdyzq">
-  <button type="button" class="rdyzq-menu-btn" aria-expanded="false" aria-controls="rdyzq-menu">
-    <span class="rdyzq-menu-btn-label">Menü</span>
-    <span class="material-symbols-outlined rdyzq-icon" aria-hidden="true">menu</span>
+<div class="ol2fw">
+  <button type="button" class="ol2fw-menu-btn" aria-expanded="false" aria-controls="ol2fw-menu">
+    <span class="ol2fw-menu-btn-label">Menü</span>
+    <span class="material-symbols-outlined ol2fw-icon" aria-hidden="true">menu</span>
   </button>
-  <div class="rdyzq-menu-overlay" id="rdyzq-menu-overlay" aria-hidden="true"></div>
-  <nav class="rdyzq-menu" id="rdyzq-menu" aria-label="Menü">
-    <button class="rdyzq-menu-close" type="button" aria-label="Menüyü Kapat">
+  <div class="ol2fw-menu-overlay" id="ol2fw-menu-overlay" aria-hidden="true"></div>
+  <nav class="ol2fw-menu" id="ol2fw-menu" aria-label="Menü">
+    <button class="ol2fw-menu-close" type="button" aria-label="Menüyü Kapat">
       <span class="material-symbols-outlined" aria-hidden="true">close</span>
     </button>
-    <a class="rdyzq-menu-link" href="/tr/antep-fistigi-ezme-ve-krema/"><span class="rdyzq-menu-link-text">Antep Fıstığı Ezme ve Krema</span></a><a class="rdyzq-menu-link" href="/tr/findik-ezme-ve-krema/"><span class="rdyzq-menu-link-text">Fındık Ezme ve Krema</span></a><a class="rdyzq-menu-link" href="/tr/badem-ezme-ve-krema/"><span class="rdyzq-menu-link-text">Badem Ezme ve Krema</span></a><a class="rdyzq-menu-link" href="/tr/yer-fistigi-ezme-ve-krema/"><span class="rdyzq-menu-link-text">Yer Fıstığı Ezme ve Krema</span></a><a class="rdyzq-menu-link" href="/tr/kurutulmus-meyveler/"><span class="rdyzq-menu-link-text">Kurutulmuş Meyveler</span></a><a class="rdyzq-menu-link" href="/tr/meyve-cipsleri/"><span class="rdyzq-menu-link-text">Meyve Cipsleri</span></a><a class="rdyzq-menu-link" href="/tr/kurutulmus-sebzeler/"><span class="rdyzq-menu-link-text">Kurutulmuş Sebzeler</span></a><a class="rdyzq-menu-link" href="/tr/recel-ve-marmelatlar/"><span class="rdyzq-menu-link-text">Reçel ve Marmelatlar</span></a><a class="rdyzq-menu-link" href="/tr/lokum-pestil-ve-geleneksel-tatlilar/"><span class="rdyzq-menu-link-text">Lokum, Pestil ve Geleneksel Tatlılar</span></a><a class="rdyzq-menu-link" href="/tr/meyve-sulari/"><span class="rdyzq-menu-link-text">Meyve Suları</span></a><a class="rdyzq-menu-link" href="/tr/pekmez-ve-suruplar/"><span class="rdyzq-menu-link-text">Pekmez ve Şuruplar</span></a><a class="rdyzq-menu-link" href="/tr/sut-ve-sut-urunleri/"><span class="rdyzq-menu-link-text">Süt ve Süt Ürünleri</span></a><a class="rdyzq-menu-link" href="/tr/salca-tursu-meze-ve-soslar/"><span class="rdyzq-menu-link-text">Salça, Turşu, Meze ve Soslar</span></a><a class="rdyzq-menu-link" href="/tr/sivi-yaglar/"><span class="rdyzq-menu-link-text">Sıvı Yağlar</span></a><a class="rdyzq-menu-link" href="/tr/tibbi-aromatik-yaglar/"><span class="rdyzq-menu-link-text">Tıbbi Aromatik Yağlar</span></a><a class="rdyzq-menu-link" href="/tr/iqf-dilimlenmis-sebzeler/"><span class="rdyzq-menu-link-text">IQF Dilimlenmiş Sebzeler</span></a><a class="rdyzq-menu-link" href="/tr/iqf-meyveler/"><span class="rdyzq-menu-link-text">IQF Meyveler</span></a>
+    <a class="ol2fw-menu-link" href="/tr/antep-fistigi-ezme-ve-krema/"><span class="ol2fw-menu-link-text">Antep Fıstığı Ezme ve Krema</span></a><a class="ol2fw-menu-link" href="/tr/findik-ezme-ve-krema/"><span class="ol2fw-menu-link-text">Fındık Ezme ve Krema</span></a><a class="ol2fw-menu-link" href="/tr/badem-ezme-ve-krema/"><span class="ol2fw-menu-link-text">Badem Ezme ve Krema</span></a><a class="ol2fw-menu-link" href="/tr/yer-fistigi-ezme-ve-krema/"><span class="ol2fw-menu-link-text">Yer Fıstığı Ezme ve Krema</span></a><a class="ol2fw-menu-link" href="/tr/kurutulmus-meyveler/"><span class="ol2fw-menu-link-text">Kurutulmuş Meyveler</span></a><a class="ol2fw-menu-link" href="/tr/meyve-cipsleri/"><span class="ol2fw-menu-link-text">Meyve Cipsleri</span></a><a class="ol2fw-menu-link" href="/tr/kurutulmus-sebzeler/"><span class="ol2fw-menu-link-text">Kurutulmuş Sebzeler</span></a><a class="ol2fw-menu-link" href="/tr/recel-ve-marmelatlar/"><span class="ol2fw-menu-link-text">Reçel ve Marmelatlar</span></a><a class="ol2fw-menu-link" href="/tr/lokum-pestil-ve-geleneksel-tatlilar/"><span class="ol2fw-menu-link-text">Lokum, Pestil ve Geleneksel Tatlılar</span></a><a class="ol2fw-menu-link" href="/tr/meyve-sulari/"><span class="ol2fw-menu-link-text">Meyve Suları</span></a><a class="ol2fw-menu-link" href="/tr/pekmez-ve-suruplar/"><span class="ol2fw-menu-link-text">Pekmez ve Şuruplar</span></a><a class="ol2fw-menu-link" href="/tr/sut-ve-sut-urunleri/"><span class="ol2fw-menu-link-text">Süt ve Süt Ürünleri</span></a><a class="ol2fw-menu-link" href="/tr/salca-tursu-meze-ve-soslar/"><span class="ol2fw-menu-link-text">Salça, Turşu, Meze ve Soslar</span></a><a class="ol2fw-menu-link" href="/tr/sivi-yaglar/"><span class="ol2fw-menu-link-text">Sıvı Yağlar</span></a><a class="ol2fw-menu-link" href="/tr/tibbi-aromatik-yaglar/"><span class="ol2fw-menu-link-text">Tıbbi Aromatik Yağlar</span></a><a class="ol2fw-menu-link" href="/tr/iqf-dilimlenmis-sebzeler/"><span class="ol2fw-menu-link-text">IQF Dilimlenmiş Sebzeler</span></a><a class="ol2fw-menu-link" href="/tr/iqf-meyveler/"><span class="ol2fw-menu-link-text">IQF Meyveler</span></a>
   </nav>
-  <div class="rdyzq-main">
-    <div class="rdyzq-row"><div class="rdyzq-row-media"><div class="rdyzq-img"><img src="/page/i62q2eiy66/index.webp?v=rlj45" alt="Üzüm Pekmezi" loading="lazy" /></div></div><div class="rdyzq-row-desc"><p class="rdyzq-lead">Tillo Tarim Üzüm Pekmezi: Köy üzümü pekmezi. Pekmez ve Şuruplar grubunda. Sunulan gramaj: 400 g / 800 g. Gaziantep kökenli doğal gıda.</p><div class="rdyzq-desc-tags"><span class="rdyzq-desc-tag"><span class="rdyzq-desc-tag-label">Gramaj</span><span class="rdyzq-desc-tag-value">400 g / 800 g</span></span><span class="rdyzq-desc-tag"><span class="rdyzq-desc-tag-label">Ambalaj</span><span class="rdyzq-desc-tag-value">Cam kavanoz / plastik şişe</span></span><span class="rdyzq-desc-tag"><span class="rdyzq-desc-tag-label">Menşei</span><span class="rdyzq-desc-tag-value">Türkiye</span></span></div></div></div>
-    <div class="rdyzq-body"><h2 style="font-size: 22px;">Üzüm Pekmezi</h2>
+  <div class="ol2fw-main">
+    <div class="ol2fw-row"><div class="ol2fw-row-media"><div class="ol2fw-img"><img src="/page/i62q2eiy66/index.webp?v=uk1vi" alt="Üzüm Pekmezi" loading="lazy" /></div></div><div class="ol2fw-row-desc"><p class="ol2fw-lead">Tillo Tarim Üzüm Pekmezi: Köy üzümü pekmezi. Pekmez ve Şuruplar grubunda. Sunulan gramaj: 400 g / 800 g. Gaziantep kökenli doğal gıda.</p><div class="ol2fw-desc-tags"><span class="ol2fw-desc-tag"><span class="ol2fw-desc-tag-label">Gramaj</span><span class="ol2fw-desc-tag-value">400 g / 800 g</span></span><span class="ol2fw-desc-tag"><span class="ol2fw-desc-tag-label">Ambalaj</span><span class="ol2fw-desc-tag-value">Cam kavanoz / plastik şişe</span></span><span class="ol2fw-desc-tag"><span class="ol2fw-desc-tag-label">Menşei</span><span class="ol2fw-desc-tag-value">Türkiye</span></span></div></div></div>
+    <div class="ol2fw-body"><h2 style="font-size: 22px;">Üzüm Pekmezi</h2>
 <p style="font-size: 16px;">Tillo Tarim Üzüm Pekmezi: Köy üzümü pekmezi. Pekmez ve Şuruplar grubunda. Sunulan gramaj: 400 g / 800 g. Gaziantep kökenli doğal gıda.</p>
 <ul style="font-size: 16px; line-height: 1.7;">
 <li><strong>Gramaj:</strong> 400 g / 800 g</li>
@@ -160,10 +280,10 @@
 
 <script>
   setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".rdyzq-menu-btn");
-    var menu = document.querySelector(".rdyzq-menu");
-    var overlay = document.querySelector(".rdyzq-menu-overlay");
-    var closeButton = document.querySelector(".rdyzq-menu-close");
+    var menuToggleBtn = document.querySelector(".ol2fw-menu-btn");
+    var menu = document.querySelector(".ol2fw-menu");
+    var overlay = document.querySelector(".ol2fw-menu-overlay");
+    var closeButton = document.querySelector(".ol2fw-menu-close");
 
     if (!menuToggleBtn || !menu) {
       return;
@@ -220,7 +340,7 @@
 
     menu.addEventListener("click", function(event) {
       var link = event.target.closest("a");
-      if (link && !event.target.closest(".rdyzq-menu-close")) {
+      if (link && !event.target.closest(".ol2fw-menu-close")) {
         closeMenu();
       }
     });
@@ -262,8 +382,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=t7h1p"></script>
-  <script defer src="/src/cookie.js?v=t7h1p"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=mngmf"></script>
+  <script defer src="/src/cookie.js?v=mngmf"></script>
 
   <script>
     setTimeout(function() {

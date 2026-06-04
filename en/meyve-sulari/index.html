@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=gha5k" />
-  <link rel="preload" href="/src/cookie.css?v=gha5k" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=kh2a9" />
+  <link rel="preload" href="/src/cookie.css?v=kh2a9" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=gha5k" />
+    <link rel="stylesheet" href="/src/cookie.css?v=kh2a9" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=gha5k" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=kh2a9" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=gha5k">
+<link rel="stylesheet" href="style.css?v=kh2a9">
 </head>
 
 <body>
   <div id="header">
-<div class="p05a1">
-  <div class="p05a1title">
-    <div class="p05a1titlebody">
-      <div class="p05a1titlebodylang">
+<div class="c5ehq">
+  <div class="c5ehqtitle">
+    <div class="c5ehqtitlebody">
+      <div class="c5ehqtitlebodylang">
         <ul>
           <li><a href="/tr/meyve-sulari/">TR</a></li><li><a href="/en/meyve-sulari/">EN</a></li><li><a href="/ar/meyve-sulari/">AR</a></li><li><a href="/de/meyve-sulari/">DE</a></li><li><a href="/ko/meyve-sulari/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="p05a1body">
+  <div class="c5ehqbody">
     <a href="/en/"
       ><img
-        src="/img/tillotarim-logo.png?v=zuu5m"
+        src="/img/tillotarim-logo.png?v=l8xga"
         alt="Tillo Tarim Logo"
-        class="p05a1bodylogo"
+        class="c5ehqbodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="p05a1-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="c5ehq-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="p05a1-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="p05a1menubody">
-    <div class="p05a1menu" id="menu-2-root">
-      <div class="p05a1menulistbody">
-        <div class="p05a1menulist">
+  <div class="c5ehq-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="c5ehqmenubody">
+    <div class="c5ehqmenu" id="menu-2-root">
+      <button type="button" class="c5ehq-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="c5ehqmenulistbody">
+        <div class="c5ehqmenulist">
           <ul>
-            <a href="/en/">Home </a><a href="/en/hakkimizda/">Corporate</a><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
+            <a href="/en/">Home</a><div class="c5ehqmenulist-menu"><a href="/en/hakkimizda/">Corporate</a><div class="dropdown-content-c5ehq"><a href="/en/hakkimizda/">About Us</a><a href="/en/misyon/">Mission</a><a href="/en/vizyon/">Vision</a><a href="/en/kalite-politikamiz/">Our Quality Policy</a><a href="/en/gizlilik-politikasi/">Privacy Policy</a><a href="/en/kisisel-veriler/">Personal Data</a><a href="/en/kullanici-haklari/">User Rights</a><a href="/en/yasal-uyari/">Legal Notice</a></div></div><a href="/en/urunler/">Products</a><a href="/en/iletisim/">Contact</a>
           </ul>
         </div>
       </div>
       
-      <div class="p05a1languages-mobile">
+      <div class="c5ehqlanguages-mobile">
         <ul>
           <li><a href="/tr/meyve-sulari/">TR</a></li><li><a href="/en/meyve-sulari/">EN</a></li><li><a href="/ar/meyve-sulari/">AR</a></li><li><a href="/de/meyve-sulari/">DE</a></li><li><a href="/ko/meyve-sulari/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".p05a1") : null;
+      var wrapper = root.closest ? root.closest(".c5ehq") : null;
       var target = wrapper || root;
-      if (target.classList.contains("p05a1menu-open")) {
-        target.classList.remove("p05a1menu-open");
+      if (target.classList.contains("c5ehqmenu-open")) {
+        target.classList.remove("c5ehqmenu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("p05a1menu-open");
+        target.classList.add("c5ehqmenu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".c5ehq") : null;
+      var target = wrapper || root;
+      target.classList.remove("c5ehqmenu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".c5ehqmenulist-menu.dropdown-content-active-c5ehq");
+      if (activeWrap) {
+        activeWrap.classList.add("c5ehq-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".c5ehqmenulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-c5ehq")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("c5ehq-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".c5ehqmenulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("c5ehq-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("c5ehq-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".c5ehqmenulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".c5ehqmenulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("c5ehq-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
 </div>
-  <div id="content"><div class="n9zry-title f36">
+  <div id="content"><div class="ejb50-title f36">
   <h1>Fruit Juices</h1>
 </div>
 
-<div class="n9zry"><h2 style="font-size: 24px;">Fruit Juices</h2>
+<div class="ejb50"><h2 style="font-size: 24px;">Fruit Juices</h2>
 <p style="font-size: 16px;">Tillo Tarim Fruit Juices. Doğal meyve suları: nar, elma, portakal, vişne ve mevsim nektarları. Soğuk sıkım ve pastörize meyve suları; katkısız seçenekler.…</p></div>
 
 
 ------------------------
-<div class="tdtye tdtyecat3">
-  <div class="tdtyebody"><a class="tdtyebodycardlink" href="/en/nar-suyu/" title="Nar Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/7aa2aueuee/index.webp" alt="Nar Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Nar Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/elma-suyu/" title="Elma Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/ue6iqa2m6n/index.webp" alt="Elma Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Elma Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/portakal-suyu/" title="Portakal Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/1i2euaayue/index.webp" alt="Portakal Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Portakal Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/limonata-limon-suyu/" title="Limonata (Limon Juice)"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/8i666ymi66/index.webp" alt="Limonata (Limon Juice)" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Limonata (Limon Juice)</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/visne-suyu/" title="Vişne Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/feqaquumyq/index.webp" alt="Vişne Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Vişne Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/kayisi-nektari/" title="Kayısı Nektarı"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/2ayy22aiy2/index.webp" alt="Kayısı Nektarı" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Kayısı Nektarı</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/i-ncir-suyu/" title="İncir Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/9qaaqi2umi/index.webp" alt="İncir Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>İncir Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/karpuz-suyu/" title="Karpuz Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/g6ui2qe6qq/index.webp" alt="Karpuz Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Karpuz Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/kavun-suyu/" title="Kavun Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/32emeaauie/index.webp" alt="Kavun Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Kavun Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/erik-suyu/" title="Erik Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/aieymu2eie/index.webp" alt="Erik Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Erik Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/kivi-suyu/" title="Kivi Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/he6euymea6/index.webp" alt="Kivi Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Kivi Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/kirmizi-pancar-suyu/" title="Kırmızı Pancar Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/ouyfeum2au/index.webp" alt="Kırmızı Pancar Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Kırmızı Pancar Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a><a class="tdtyebodycardlink" href="/en/uzum-suyu/" title="Üzüm Juice"><div class="tdtyebodycard"><div class="tdtyebodyitemimg"><img src="/page/bqa2iyuiq2/index.webp" alt="Üzüm Juice" loading="lazy"></div><div class="tdtyebodyitemtitle"><span>Üzüm Juice</span></div><div class="tdtyebodyitemaccent"></div></div></a></div>
+<div class="tl96b tl96bcat3">
+  <div class="tl96bbody"><a class="tl96bbodycardlink" href="/en/nar-suyu/" title="Nar Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/7aa2aueuee/index.webp" alt="Nar Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Nar Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/elma-suyu/" title="Elma Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/ue6iqa2m6n/index.webp" alt="Elma Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Elma Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/portakal-suyu/" title="Portakal Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/1i2euaayue/index.webp" alt="Portakal Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Portakal Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/limonata-limon-suyu/" title="Limonata (Limon Juice)"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/8i666ymi66/index.webp" alt="Limonata (Limon Juice)" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Limonata (Limon Juice)</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/visne-suyu/" title="Vişne Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/feqaquumyq/index.webp" alt="Vişne Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Vişne Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/kayisi-nektari/" title="Kayısı Nektarı"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/2ayy22aiy2/index.webp" alt="Kayısı Nektarı" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Kayısı Nektarı</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/i-ncir-suyu/" title="İncir Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/9qaaqi2umi/index.webp" alt="İncir Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>İncir Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/karpuz-suyu/" title="Karpuz Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/g6ui2qe6qq/index.webp" alt="Karpuz Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Karpuz Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/kavun-suyu/" title="Kavun Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/32emeaauie/index.webp" alt="Kavun Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Kavun Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/erik-suyu/" title="Erik Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/aieymu2eie/index.webp" alt="Erik Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Erik Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/kivi-suyu/" title="Kivi Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/he6euymea6/index.webp" alt="Kivi Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Kivi Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/kirmizi-pancar-suyu/" title="Kırmızı Pancar Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/ouyfeum2au/index.webp" alt="Kırmızı Pancar Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Kırmızı Pancar Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a><a class="tl96bbodycardlink" href="/en/uzum-suyu/" title="Üzüm Juice"><div class="tl96bbodycard"><div class="tl96bbodyitemimg"><img src="/page/bqa2iyuiq2/index.webp" alt="Üzüm Juice" loading="lazy"></div><div class="tl96bbodyitemtitle"><span>Üzüm Juice</span></div><div class="tl96bbodyitemaccent"></div></div></a></div>
 </div>
 
 <script>
   
   setTimeout(function () {
-    var moduleRoots = document.querySelectorAll(".tdtyecat3");
+    var moduleRoots = document.querySelectorAll(".tl96bcat3");
 
     for (var r = 0; r < moduleRoots.length; r++) {
       (function (root) {
-        var cards = root.querySelectorAll(".tdtyebodycardlink");
+        var cards = root.querySelectorAll(".tl96bbodycardlink");
 
         if (!cards.length) {
           return;
@@ -162,14 +282,14 @@
           window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ) {
           for (var i = 0; i < cards.length; i++) {
-            cards[i].classList.add("tdtyecardvisible");
+            cards[i].classList.add("tl96bcardvisible");
           }
           return;
         }
 
         if (typeof IntersectionObserver === "undefined") {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].classList.add("tdtyecardvisible");
+            cards[j].classList.add("tl96bcardvisible");
           }
           return;
         }
@@ -179,7 +299,7 @@
             for (var k = 0; k < entries.length; k++) {
               var entry = entries[k];
               if (entry.isIntersecting) {
-                entry.target.classList.add("tdtyecardvisible");
+                entry.target.classList.add("tl96bcardvisible");
                 observer.unobserve(entry.target);
               }
             }
@@ -203,8 +323,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=gha5k"></script>
-  <script defer src="/src/cookie.js?v=gha5k"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=kh2a9"></script>
+  <script defer src="/src/cookie.js?v=kh2a9"></script>
 
   <script>
     setTimeout(function() {

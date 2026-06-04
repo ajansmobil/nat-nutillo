@@ -29,16 +29,16 @@
   <link rel="preload" href="/src/fonts/rubik/rubik-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="/src/rubik.css" />
-  <link rel="stylesheet" href="/src/css.css?v=os4ea" />
-  <link rel="preload" href="/src/cookie.css?v=os4ea" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="stylesheet" href="/src/css.css?v=yvrxi" />
+  <link rel="preload" href="/src/cookie.css?v=yvrxi" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <link rel="preload" href="/src/material-symbols-outlined.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="/src/cookie.css?v=os4ea" />
+    <link rel="stylesheet" href="/src/cookie.css?v=yvrxi" />
     <link rel="stylesheet" href="/src/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/material-symbols-outlined.css" />
   </noscript>
-  <link rel="shortcut icon" href="/img/icon.png?v=os4ea" type="image/png" />
+  <link rel="shortcut icon" href="/img/icon.png?v=yvrxi" type="image/png" />
   <link rel="apple-touch-icon" href="/img/icon.png" />
   <script type="application/ld+json">
 {
@@ -63,46 +63,49 @@
   
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#2196f3">
-<link rel="stylesheet" href="style.css?v=os4ea">
+<link rel="stylesheet" href="style.css?v=yvrxi">
 </head>
 
 <body>
   <div id="header">
-<div class="xjg9u">
-  <div class="xjg9utitle">
-    <div class="xjg9utitlebody">
-      <div class="xjg9utitlebodylang">
+<div class="ujgk9">
+  <div class="ujgk9title">
+    <div class="ujgk9titlebody">
+      <div class="ujgk9titlebodylang">
         <ul>
           <li><a href="/tr/">TR</a></li><li><a href="/en/">EN</a></li><li><a href="/ar/">AR</a></li><li><a href="/de/">DE</a></li><li><a href="/ko/">KO</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="xjg9ubody">
+  <div class="ujgk9body">
     <a href="/de/"
       ><img
-        src="/img/tillotarim-logo.png?v=d83rv"
+        src="/img/tillotarim-logo.png?v=qb868"
         alt="Tillo Tarim Logo"
-        class="xjg9ubodylogo"
+        class="ujgk9bodylogo"
         loading="lazy"
     /></a>
-    <button type="button" class="xjg9u-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
+    <button type="button" class="ujgk9-mobile-toggle" onclick="menu2_toggle()" aria-label="Menüyü aç/kapat">
       <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </div>
   
-  <div class="xjg9u-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
-  <div class="xjg9umenubody">
-    <div class="xjg9umenu" id="menu-2-root">
-      <div class="xjg9umenulistbody">
-        <div class="xjg9umenulist">
+  <div class="ujgk9-menu-backdrop" onclick="menu2_toggle()" aria-hidden="true"></div>
+  <div class="ujgk9menubody">
+    <div class="ujgk9menu" id="menu-2-root">
+      <button type="button" class="ujgk9-menu2-drawer-close" onclick="menu2_toggle()" aria-label="Menüyü kapat">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="ujgk9menulistbody">
+        <div class="ujgk9menulist">
           <ul>
-            <a href="/de/">Startseite </a><a href="/de/hakkimizda/">Unternehmen</a><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
+            <a href="/de/">Startseite</a><div class="ujgk9menulist-menu"><a href="/de/hakkimizda/">Unternehmen</a><div class="dropdown-content-ujgk9"><a href="/de/hakkimizda/">Über uns</a><a href="/de/misyon/">Mission</a><a href="/de/vizyon/">Vision</a><a href="/de/kalite-politikamiz/">Unsere Qualitätspolitik</a><a href="/de/gizlilik-politikasi/">Datenschutz</a><a href="/de/kisisel-veriler/">Personenbezogene Daten</a><a href="/de/kullanici-haklari/">Nutzerrechte</a><a href="/de/yasal-uyari/">Impressum</a></div></div><a href="/de/urunler/">Produkte</a><a href="/de/iletisim/">Kontakt</a>
           </ul>
         </div>
       </div>
       
-      <div class="xjg9ulanguages-mobile">
+      <div class="ujgk9languages-mobile">
         <ul>
           <li><a href="/tr/">TR</a></li><li><a href="/en/">EN</a></li><li><a href="/ar/">AR</a></li><li><a href="/de/">DE</a></li><li><a href="/ko/">KO</a></li>
         </ul>
@@ -113,44 +116,161 @@
 
 <script>
   
+  if (typeof menu2_isMobileLayout === "undefined") {
+    function menu2_isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+  }
+  if (typeof menu2_isTouchNav === "undefined") {
+    function menu2_isTouchNav() {
+      return window.innerWidth <= 1024;
+    }
+  }
+  if (typeof menu2_setBodyScroll === "undefined") {
+    function menu2_setBodyScroll(lock) {
+      if (!menu2_isMobileLayout()) {
+        document.body.style.overflow = "";
+        return;
+      }
+      document.body.style.overflow = lock ? "hidden" : "";
+    }
+  }
   if (typeof menu2_toggle === "undefined") {
     function menu2_toggle() {
       var root = document.getElementById("menu-2-root");
       if (!root) {
         return;
       }
-      var wrapper = root.closest ? root.closest(".xjg9u") : null;
+      var wrapper = root.closest ? root.closest(".ujgk9") : null;
       var target = wrapper || root;
-      if (target.classList.contains("xjg9umenu-open")) {
-        target.classList.remove("xjg9umenu-open");
+      if (target.classList.contains("ujgk9menu-open")) {
+        target.classList.remove("ujgk9menu-open");
+        menu2_setBodyScroll(false);
       } else {
-        target.classList.add("xjg9umenu-open");
+        target.classList.add("ujgk9menu-open");
+        menu2_setBodyScroll(true);
+        menu2_openActiveBranch();
       }
     }
   }
+  if (typeof menu2_closeDrawer === "undefined") {
+    function menu2_closeDrawer() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var wrapper = root.closest ? root.closest(".ujgk9") : null;
+      var target = wrapper || root;
+      target.classList.remove("ujgk9menu-open");
+      menu2_setBodyScroll(false);
+    }
+  }
+  if (typeof menu2_openActiveBranch === "undefined") {
+    function menu2_openActiveBranch() {
+      if (!menu2_isMobileLayout()) {
+        return;
+      }
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var activeWrap = root.querySelector(".ujgk9menulist-menu.dropdown-content-active-ujgk9");
+      if (activeWrap) {
+        activeWrap.classList.add("ujgk9-dropdown-open");
+      }
+    }
+  }
+  if (typeof menu2_setup === "undefined") {
+    function menu2_setup() {
+      var root = document.getElementById("menu-2-root");
+      if (!root) {
+        return;
+      }
+      var dropdownLinks = root.querySelectorAll(".ujgk9menulist-menu > a");
+      for (var i = 0; i < dropdownLinks.length; i++) {
+        if (dropdownLinks[i].getAttribute("data-menu2-listener") === "true") {
+          continue;
+        }
+        dropdownLinks[i].setAttribute("data-menu2-listener", "true");
+        dropdownLinks[i].addEventListener("click", function(event) {
+          if (!menu2_isTouchNav()) {
+            return;
+          }
+          var parent = this.parentNode;
+          if (!parent || !parent.querySelector(".dropdown-content-ujgk9")) {
+            return;
+          }
+          event.preventDefault();
+          var menuRoot = parent.parentNode;
+          var toggled = parent.classList.contains("ujgk9-dropdown-open");
+          var siblings = menuRoot.querySelectorAll(".ujgk9menulist-menu");
+          for (var j = 0; j < siblings.length; j++) {
+            siblings[j].classList.remove("ujgk9-dropdown-open");
+          }
+          if (!toggled) {
+            parent.classList.add("ujgk9-dropdown-open");
+          }
+        });
+      }
+      var navLinks = root.querySelectorAll(".ujgk9menulist a[href]");
+      for (var k = 0; k < navLinks.length; k++) {
+        if (navLinks[k].getAttribute("data-menu2-nav-close") === "true") {
+          continue;
+        }
+        navLinks[k].setAttribute("data-menu2-nav-close", "true");
+        navLinks[k].addEventListener("click", function(event) {
+          if (!menu2_isMobileLayout()) {
+            return;
+          }
+          if (event.defaultPrevented) {
+            return;
+          }
+          menu2_closeDrawer();
+        });
+      }
+      menu2_openActiveBranch();
+    }
+    function menu2_resetDropdowns() {
+      if (!menu2_isTouchNav()) {
+        var root = document.getElementById("menu-2-root");
+        if (!root) {
+          return;
+        }
+        var items = root.querySelectorAll(".ujgk9menulist-menu");
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.remove("ujgk9-dropdown-open");
+        }
+      }
+      if (!menu2_isMobileLayout()) {
+        menu2_setBodyScroll(false);
+      }
+    }
+    setTimeout(menu2_setup, 150);
+    window.addEventListener("resize", menu2_resetDropdowns);
+  }
 </script>
-<div class="f58v5-textslider-wrap" style="margin: 0px 0 0 0;">
-  <div class="swiper-container f58v5-textslider">
-    <div class="swiper-wrapper"><div class="swiper-slide f58v5-textslide" data-href="/de/urunler/" style="--slide-bg--:#1B3A4B;"><div class="f58v5-textslide-media"><img class="f58v5-textslide-bg" src="/img/k4t90c/1.webp?v=f8w24" alt="Natürliche Aromen"  loading="lazy"/><div class="f58v5-textslide-overlay"></div></div><div class="f58v5-textslide-inner f58v5-textslide-textonly f58v5-textslide-align-center"><div class="f58v5-textslide-content"><h2 class="f58v5-textslide-title">Natürliche Aromen</h2><p class="f58v5-textslide-desc">Verfeinern Sie Ihren Tisch mit Premium-Nüssen und Naturprodukten.</p><a class="f58v5-textslide-btn" href="/de/urunler/"><span class="f58v5-textslide-btn-label">Produkte entdecken</span></a></div></div></div><div class="swiper-slide f58v5-textslide" data-href="/de/hakkimizda/" style="--slide-bg--:#1B3A4B;"><div class="f58v5-textslide-media"><img class="f58v5-textslide-bg" loading="lazy" src="/img/k4t90c/2.webp?v=f8w24" alt="Traditionelle Produktion" /><div class="f58v5-textslide-overlay"></div></div><div class="f58v5-textslide-inner f58v5-textslide-textonly f58v5-textslide-align-center"><div class="f58v5-textslide-content"><h2 class="f58v5-textslide-title">Traditionelle Produktion</h2><p class="f58v5-textslide-desc">Frische Produkte mit jahrelanger Erfahrung ausgewählt.</p><a class="f58v5-textslide-btn" href="/de/hakkimizda/"><span class="f58v5-textslide-btn-label">Über uns</span></a></div></div></div><div class="swiper-slide f58v5-textslide" data-href="/de/iletisim/" style="--slide-bg--:#1B3A4B;"><div class="f58v5-textslide-media"><img class="f58v5-textslide-bg" loading="lazy" src="/img/k4t90c/3.webp?v=f8w24" alt="Großhandel" /><div class="f58v5-textslide-overlay"></div></div><div class="f58v5-textslide-inner f58v5-textslide-textonly f58v5-textslide-align-center"><div class="f58v5-textslide-content"><h2 class="f58v5-textslide-title">Großhandel</h2><p class="f58v5-textslide-desc">Günstige Großhandelslösungen für Ihr Unternehmen.</p><a class="f58v5-textslide-btn" href="/de/iletisim/"><span class="f58v5-textslide-btn-label">Kontakt</span></a></div></div></div></div>
-    <div class="f58v5-textslider-pagination swiper-pagination"></div>
-    <div class="f58v5-textslider-prev swiper-button-prev" title="Önceki slayt" aria-label="Önceki slayt"></div>
-    <div class="f58v5-textslider-next swiper-button-next" title="Sonraki slayt" aria-label="Sonraki slayt"></div>
+<div class="rakj4-textslider-wrap" style="margin: 0px 0 0 0;">
+  <div class="swiper-container rakj4-textslider">
+    <div class="swiper-wrapper"><div class="swiper-slide rakj4-textslide" data-href="/de/urunler/" style="--slide-bg--:#1B3A4B;"><div class="rakj4-textslide-media"><img class="rakj4-textslide-bg" src="/img/k4t90c/1.webp?v=lvhp4" alt="Natürliche Aromen"  loading="lazy"/><div class="rakj4-textslide-overlay"></div></div><div class="rakj4-textslide-inner rakj4-textslide-textonly rakj4-textslide-align-center"><div class="rakj4-textslide-content"><h2 class="rakj4-textslide-title">Natürliche Aromen</h2><p class="rakj4-textslide-desc">Verfeinern Sie Ihren Tisch mit Premium-Nüssen und Naturprodukten.</p><a class="rakj4-textslide-btn" href="/de/urunler/"><span class="rakj4-textslide-btn-label">Produkte entdecken</span></a></div></div></div><div class="swiper-slide rakj4-textslide" data-href="/de/hakkimizda/" style="--slide-bg--:#1B3A4B;"><div class="rakj4-textslide-media"><img class="rakj4-textslide-bg" loading="lazy" src="/img/k4t90c/2.webp?v=lvhp4" alt="Traditionelle Produktion" /><div class="rakj4-textslide-overlay"></div></div><div class="rakj4-textslide-inner rakj4-textslide-textonly rakj4-textslide-align-center"><div class="rakj4-textslide-content"><h2 class="rakj4-textslide-title">Traditionelle Produktion</h2><p class="rakj4-textslide-desc">Frische Produkte mit jahrelanger Erfahrung ausgewählt.</p><a class="rakj4-textslide-btn" href="/de/hakkimizda/"><span class="rakj4-textslide-btn-label">Über uns</span></a></div></div></div><div class="swiper-slide rakj4-textslide" data-href="/de/iletisim/" style="--slide-bg--:#1B3A4B;"><div class="rakj4-textslide-media"><img class="rakj4-textslide-bg" loading="lazy" src="/img/k4t90c/3.webp?v=lvhp4" alt="Großhandel" /><div class="rakj4-textslide-overlay"></div></div><div class="rakj4-textslide-inner rakj4-textslide-textonly rakj4-textslide-align-center"><div class="rakj4-textslide-content"><h2 class="rakj4-textslide-title">Großhandel</h2><p class="rakj4-textslide-desc">Günstige Großhandelslösungen für Ihr Unternehmen.</p><a class="rakj4-textslide-btn" href="/de/iletisim/"><span class="rakj4-textslide-btn-label">Kontakt</span></a></div></div></div></div>
+    <div class="rakj4-textslider-pagination swiper-pagination"></div>
+    <div class="rakj4-textslider-prev swiper-button-prev" title="Önceki slayt" aria-label="Önceki slayt"></div>
+    <div class="rakj4-textslider-next swiper-button-next" title="Sonraki slayt" aria-label="Sonraki slayt"></div>
   </div>
 </div>
 
 
 
 <script>
-(function f58v5TextsliderInit() {
+(function rakj4TextsliderInit() {
   var attempts = 0;
   var maxAttempts = 20;
-  function f58v5TextsliderBindClicks() {
-    var slideNodes = document.querySelectorAll(".f58v5-textslide");
+  function rakj4TextsliderBindClicks() {
+    var slideNodes = document.querySelectorAll(".rakj4-textslide");
     var s = 0;
     for (s = 0; s < slideNodes.length; s++) {
       slideNodes[s].addEventListener("click", function (ev) {
         var href = this.getAttribute("data-href");
-        var isBtn = ev.target && ev.target.closest && ev.target.closest(".f58v5-textslide-btn");
+        var isBtn = ev.target && ev.target.closest && ev.target.closest(".rakj4-textslide-btn");
         if (href && !isBtn) {
           window.location.href = href;
         }
@@ -163,7 +283,7 @@
     if (typeof Swiper === "function") {
       clearInterval(timer);
 
-      new Swiper(".f58v5-textslider", {
+      new Swiper(".rakj4-textslider", {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
@@ -178,19 +298,19 @@
           pauseOnMouseEnter: true
         },
         pagination: {
-          el: ".f58v5-textslider-pagination",
+          el: ".rakj4-textslider-pagination",
           clickable: true
         },
         navigation: {
-          nextEl: ".f58v5-textslider-next",
-          prevEl: ".f58v5-textslider-prev"
+          nextEl: ".rakj4-textslider-next",
+          prevEl: ".rakj4-textslider-prev"
         },
         keyboard: {
           enabled: true
         }
       });
 
-      f58v5TextsliderBindClicks();
+      rakj4TextsliderBindClicks();
     } else if (attempts >= maxAttempts) {
       clearInterval(timer);
       console.warn("header/slider-text: Swiper bulunamadi, slider baslatilamadi.");
@@ -199,330 +319,330 @@
 })();
 </script>
 </div>
-  <div id="content"><div class="xxbs9">
-  <div class="xxbs9body">
-      <div style="animation-delay: 0.3s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/antep-fistigi-ezme-ve-krema/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+  <div id="content"><div class="c472x">
+  <div class="c472xbody">
+      <div style="animation-delay: 0.3s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/antep-fistigi-ezme-ve-krema/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c01fistik/index.webp" alt="Antep-Pistazien-Aufstrich & Creme" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Antep-Pistazien-Aufstrich & Creme
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Antep-Pistazien-Aufstrich & Creme. Antep-Pistazienpaste und -creme: geröstete, natürliche und cremige Sorten. hergestellt aus Antep-Pistazien aus Gaziantep e…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 0.6s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/findik-ezme-ve-krema/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 0.6s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/findik-ezme-ve-krema/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c02findik/index.webp" alt="Haselnuss-Aufstrich & Creme" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Haselnuss-Aufstrich & Creme
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Haselnuss-Aufstrich & Creme. Seçme fındıktan ezme ve krema; kahvaltı ve pastacılık için. Giresun ve Ordu fındığından ezme ve krema ürünleri. Gaziantep…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 0.8999999999999999s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/badem-ezme-ve-krema/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 0.8999999999999999s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/badem-ezme-ve-krema/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c03badem/index.webp" alt="Mandel-Aufstrich & Creme" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Mandel-Aufstrich & Creme
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Mandel-Aufstrich & Creme. Badem ezme ve krema: protein deposu, şekersiz seçenekler. Akdeniz ve İç Anadolu bademinden ezme ve krema çeşitleri. Gazian…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 1.2s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/yer-fistigi-ezme-ve-krema/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 1.2s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/yer-fistigi-ezme-ve-krema/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c04yerfist/index.webp" alt="Erdnuss-Aufstrich & Creme" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Erdnuss-Aufstrich & Creme
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Erdnuss-Aufstrich & Creme. Yer fıstığı ezme ve krema; klasik ve kakao aromalı çeşitler. Yer fıstığından üretilen ezme ve krema ürünleri. Gazian…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 1.5s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/kurutulmus-meyveler/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 1.5s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/kurutulmus-meyveler/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c05kurumey/index.webp" alt="Trockenfrüchte" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Trockenfrüchte
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Trockenfrüchte. Getrocknete meyveler: kayısı, incir, hurma, orman meyveleri karışımı. Güneş ve fırın kurutma ile korunan doğal kurutulmuş m…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 1.8s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/meyve-cipsleri/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 1.8s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/meyve-cipsleri/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c06meycip/index.webp" alt="Fruchtchips" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Fruchtchips
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Fruchtchips. Meyve cipsleri: elma, armut, kivi ve turunçgil dilimleri. Düşük sıcaklıkta kurutulmuş meyve cipsleri; atıştırmalık ve reçeteler…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 2.1s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/kurutulmus-sebzeler/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 2.1s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/kurutulmus-sebzeler/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c07kuruseb/index.webp" alt="Trockengemüse" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Trockengemüse
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Trockengemüse. Getrocknete sebzeler: biber, patlıcan, kabak; çorba ve yemeklik. Mevsim sebzelerinin kurutulmuş hali; çorba, yemek ve garni…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 2.4s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/recel-ve-marmelatlar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 2.4s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/recel-ve-marmelatlar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c08recel/index.webp" alt="Marmeladen & Konfitüren" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Marmeladen & Konfitüren
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Marmeladen & Konfitüren. Reçel ve marmelat: vişne, kayısı, çilek, portakal ve özel karışımlar. Geleneksel reçel ve marmelat çeşitleri; kahvaltı ve…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 2.6999999999999997s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/lokum-pestil-ve-geleneksel-tatlilar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 2.6999999999999997s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/lokum-pestil-ve-geleneksel-tatlilar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c09gelenek/index.webp" alt="Lokum, Pestil & traditionelle Süßwaren" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Lokum, Pestil & traditionelle Süßwaren
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Lokum, Pestil & traditionelle Süßwaren. Lokum, pestil, köme, tahin helva ve geleneksel tatlılar. Anadolu mutfağının lokum, pestil, köme ve helva…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 2.9999999999999996s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/meyve-sulari/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 2.9999999999999996s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/meyve-sulari/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c10meyves/index.webp" alt="Fruchtsäfte" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Fruchtsäfte
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Fruchtsäfte. Doğal meyve suları: nar, elma, portakal, vişne ve mevsim nektarları. Soğuk sıkım ve pastörize meyve suları; katkısız seçenekler.…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 3.2999999999999994s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/pekmez-ve-suruplar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 3.2999999999999994s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/pekmez-ve-suruplar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c11pekmez/index.webp" alt="Melasse & Sirupe" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Melasse & Sirupe
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Melasse & Sirupe. Pekmez ve şuruplar: üzüm, dut, hurma, keçiboynuzu. Doğal pekmez ve meyve şurupları; kahvaltı ve sağlıklı tatlandırıcı. Gazi…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 3.599999999999999s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/sut-ve-sut-urunleri/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 3.599999999999999s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/sut-ve-sut-urunleri/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c12sut/index.webp" alt="Milch & Milchprodukte" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Milch & Milchprodukte
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Milch & Milchprodukte. Süt ve süt ürünleri: peynir, tereyağı, kaymak, yoğurt, ayran. Tereyağı, peynir, yoğurt ve geleneksel süt ürünleri. Gaziant…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 3.899999999999999s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/salca-tursu-meze-ve-soslar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 3.899999999999999s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/salca-tursu-meze-ve-soslar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c13konserve/index.webp" alt="Salça, Essiggurken, Meze & Saucen" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Salça, Essiggurken, Meze & Saucen
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Salça, Essiggurken, Meze & Saucen. Salça, turşu, meze, salamura ve doğal sirkeler. Salça, turşu, meze, salamura içecek, sirke ve sos çeşitleri. Gazi…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 4.199999999999999s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/sivi-yaglar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 4.199999999999999s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/sivi-yaglar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c14siviya/index.webp" alt="Flüssige Öle" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Flüssige Öle
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Flüssige Öle. Sıvı yağlar: natürel sızma zeytinyağı, fındık ve kabak çekirdeği yağı. Soğuk sıkım zeytinyağı ve bitkisel sıvı yağlar. Gaziantep m…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 4.499999999999999s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/tibbi-aromatik-yaglar/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 4.499999999999999s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/tibbi-aromatik-yaglar/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c15aromya/index.webp" alt="Medizinische Aromaöle" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               Medizinische Aromaöle
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim Medizinische Aromaöle. Tıbbi aromatik yağlar: bıttım, çörek otu, üzüm çekirdeği. Geleneksel ve aromatik yağlar; kozmetik ve beslenme destek ürü…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 4.799999999999999s;" class="xxbs9bodyitems right">
-        <div class="xxbs9bodyitem rights">
-          <a href="/de/iqf-dilimlenmis-sebzeler/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 4.799999999999999s;" class="c472xbodyitems right">
+        <div class="c472xbodyitem rights">
+          <a href="/de/iqf-dilimlenmis-sebzeler/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c16iqfseb/index.webp" alt="IQF-Gemüse in Scheiben" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               IQF-Gemüse in Scheiben
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim IQF-Gemüse in Scheiben. IQF dilimlenmiş sebzeler: domates, biber, patlıcan, brokoli. Hızlı dondurulmuş (IQF) sebze dilimleri; endüstriyel ve…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div>
-      <div style="animation-delay: 5.099999999999999s;" class="xxbs9bodyitems left">
-        <div class="xxbs9bodyitem lefts">
-          <a href="/de/iqf-meyveler/" class="xxbs9bodyitemlink">
-            <div class="xxbs9bodyitemimg">
+      <div style="animation-delay: 5.099999999999999s;" class="c472xbodyitems left">
+        <div class="c472xbodyitem lefts">
+          <a href="/de/iqf-meyveler/" class="c472xbodyitemlink">
+            <div class="c472xbodyitemimg">
               <img src="/page/c17iqfmey/index.webp" alt="IQF-Früchte" loading="lazy">
             </div>
-            <h2 class="xxbs9bodyitemtitle">
+            <h2 class="c472xbodyitemtitle">
               IQF-Früchte
             </h2>
           </a>
-          <div class="xxbs9bodyitechile">
+          <div class="c472xbodyitechile">
             Tillo Tarim IQF-Früchte. IQF meyveler: çilek, kiraz, nar, ahududu ve karışım. Hızlı dondurulmuş bütün ve dilim meyveler; smoothie ve pastacılık. Gaziantep…
           </div>
-          <div class="xxbs9bodyitechilesubpagecontainer">
+          <div class="c472xbodyitechilesubpagecontainer">
             
           </div>
         </div>
-        <div class="xxbs9bodybg"></div>
+        <div class="c472xbodybg"></div>
       </div></div>
 </div>
 
@@ -550,7 +670,7 @@
           rootMargin: "0px 0px -10px 0px",
         },
       );
-      const items = Array.from(document.querySelectorAll(".xxbs9bodyitems"));
+      const items = Array.from(document.querySelectorAll(".c472xbodyitems"));
       items
         .sort((a, b) => {
           return a.offsetTop - b.offsetTop;
@@ -567,8 +687,8 @@
   
 
   <script defer src="/src/swiper-bundle.min.js"></script>
-  <script defer type="text/javascript" src="/src/js.js?v=os4ea"></script>
-  <script defer src="/src/cookie.js?v=os4ea"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=yvrxi"></script>
+  <script defer src="/src/cookie.js?v=yvrxi"></script>
 
   <script>
     setTimeout(function() {
