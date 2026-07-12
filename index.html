@@ -17,6 +17,11 @@
   var available = ["tr","en","ar","de","ko"];
   var fallbackLang = "en";
   var defaultLang = "tr";
+  var settingDefaultLang = "";
+  if (settingDefaultLang && available.indexOf(settingDefaultLang) !== -1) {
+    location.replace('/' + settingDefaultLang + '/' + (location.search || '') + (location.hash || ''));
+    return;
+  }
   var browserLangs = [];
   if (navigator.languages && navigator.languages.length) {
     navigator.languages.forEach(function(l) {
