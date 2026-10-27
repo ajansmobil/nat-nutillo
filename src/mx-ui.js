@@ -9,7 +9,8 @@
     toastify: { js: "/src/vendor/toastify.min.js", css: "/src/vendor/toastify.min.css", globalName: "Toastify" },
     sweetalert2: { js: "/src/vendor/sweetalert2.all.min.js", globalName: "Swal" },
     dayjs: { js: "/src/vendor/dayjs.min.js", globalName: "dayjs" },
-    justvalidate: { js: "/src/vendor/just-validate.min.js", globalName: "JustValidate" }
+    justvalidate: { js: "/src/vendor/just-validate.min.js", globalName: "JustValidate" },
+    embla: { js: "/src/vendor/embla-carousel.min.js", globalName: "EmblaCarousel" }
   };
 
   var mxLoadPromises = {};
@@ -254,6 +255,19 @@
         gsap.registerPlugin(ScrollTrigger);
         return gsap;
       });
+    });
+  };
+
+  
+
+  
+  window.mxEmbla = function (root, options) {
+    if (!root) {
+      return Promise.reject(new Error("mx-ui: mxEmbla icin gecerli kok eleman gerekli"));
+    }
+    return window.mxLoad("embla").then(function (EmblaCarousel) {
+      var factory = EmblaCarousel && EmblaCarousel.default ? EmblaCarousel.default : EmblaCarousel;
+      return factory(root, options || {});
     });
   };
 
